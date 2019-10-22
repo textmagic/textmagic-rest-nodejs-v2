@@ -36,7 +36,7 @@
   /**
    * The MessagePriceItem model module.
    * @module model/MessagePriceItem
-   * @version 
+   * @version 2.0.658
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The DoAuthResponseMinVersions model module.
    * @module model/DoAuthResponseMinVersions
-   * @version 
+   * @version 2.0.658
    */
 
   /**

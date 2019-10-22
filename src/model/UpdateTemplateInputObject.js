@@ -36,7 +36,7 @@
   /**
    * The UpdateTemplateInputObject model module.
    * @module model/UpdateTemplateInputObject
-   * @version 
+   * @version 2.0.658
    */
 
   /**

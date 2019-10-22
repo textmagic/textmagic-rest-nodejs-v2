@@ -36,7 +36,7 @@
   /**
    * The UpdateSurveyCountryItem model module.
    * @module model/UpdateSurveyCountryItem
-   * @version 
+   * @version 2.0.658
    */
 
   /**

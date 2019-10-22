@@ -36,7 +36,7 @@
   /**
    * The SearchListsPaginatedResponse model module.
    * @module model/SearchListsPaginatedResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

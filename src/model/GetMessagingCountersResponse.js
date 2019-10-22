@@ -36,7 +36,7 @@
   /**
    * The GetMessagingCountersResponse model module.
    * @module model/GetMessagingCountersResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

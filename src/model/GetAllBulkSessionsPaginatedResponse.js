@@ -36,7 +36,7 @@
   /**
    * The GetAllBulkSessionsPaginatedResponse model module.
    * @module model/GetAllBulkSessionsPaginatedResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

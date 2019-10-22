@@ -36,7 +36,7 @@
   /**
    * The DeleteContactNotesBulkInputObject model module.
    * @module model/DeleteContactNotesBulkInputObject
-   * @version 
+   * @version 2.0.658
    */
 
   /**

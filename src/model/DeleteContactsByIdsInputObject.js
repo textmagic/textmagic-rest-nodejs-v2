@@ -36,7 +36,7 @@
   /**
    * The DeleteContactsByIdsInputObject model module.
    * @module model/DeleteContactsByIdsInputObject
-   * @version 
+   * @version 2.0.658
    */
 
   /**

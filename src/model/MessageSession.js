@@ -36,7 +36,7 @@
   /**
    * The MessageSession model module.
    * @module model/MessageSession
-   * @version 
+   * @version 2.0.658
    */
 
   /**

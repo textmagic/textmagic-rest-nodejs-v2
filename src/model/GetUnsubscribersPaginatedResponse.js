@@ -36,7 +36,7 @@
   /**
    * The GetUnsubscribersPaginatedResponse model module.
    * @module model/GetUnsubscribersPaginatedResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

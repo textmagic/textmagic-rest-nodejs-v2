@@ -36,7 +36,7 @@
   /**
    * The SendPhoneVerificationCodeResponse model module.
    * @module model/SendPhoneVerificationCodeResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

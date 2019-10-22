@@ -36,7 +36,7 @@
   /**
    * The ReopenChatsBulkInputObject model module.
    * @module model/ReopenChatsBulkInputObject
-   * @version 
+   * @version 2.0.658
    */
 
   /**

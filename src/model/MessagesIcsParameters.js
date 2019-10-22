@@ -36,7 +36,7 @@
   /**
    * The MessagesIcsParameters model module.
    * @module model/MessagesIcsParameters
-   * @version 
+   * @version 2.0.658
    */
 
   /**

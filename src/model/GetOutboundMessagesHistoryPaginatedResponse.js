@@ -36,7 +36,7 @@
   /**
    * The GetOutboundMessagesHistoryPaginatedResponse model module.
    * @module model/GetOutboundMessagesHistoryPaginatedResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

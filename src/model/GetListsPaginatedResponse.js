@@ -36,7 +36,7 @@
   /**
    * The GetListsPaginatedResponse model module.
    * @module model/GetListsPaginatedResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

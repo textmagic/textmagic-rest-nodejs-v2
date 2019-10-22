@@ -36,7 +36,7 @@
   /**
    * The GetSenderIdsPaginatedResponse model module.
    * @module model/GetSenderIdsPaginatedResponse
-   * @version 
+   * @version 2.0.658
    */
 
   /**

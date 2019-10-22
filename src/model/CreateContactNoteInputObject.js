@@ -36,7 +36,7 @@
   /**
    * The CreateContactNoteInputObject model module.
    * @module model/CreateContactNoteInputObject
-   * @version 
+   * @version 2.0.658
    */
 
   /**

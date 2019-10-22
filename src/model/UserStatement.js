@@ -36,7 +36,7 @@
   /**
    * The UserStatement model module.
    * @module model/UserStatement
-   * @version 
+   * @version 2.0.658
    */
 
   /**
