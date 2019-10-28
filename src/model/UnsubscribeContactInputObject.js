@@ -36,7 +36,7 @@
   /**
    * The UnsubscribeContactInputObject model module.
    * @module model/UnsubscribeContactInputObject
-   * @version 2.0.658
+   * @version 2.0.806
    */
 
   /**

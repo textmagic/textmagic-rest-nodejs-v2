@@ -36,7 +36,7 @@
   /**
    * The GetContactsAutocompleteResponseItem model module.
    * @module model/GetContactsAutocompleteResponseItem
-   * @version 2.0.658
+   * @version 2.0.806
    */
 
   /**
@@ -48,6 +48,7 @@
    * @param value {String} Id of contact/list if entityType is contact/list OR phone number if entityType is reply.
    * @param label {String} Name of the contact/list if entityType is contact/list OR phone number if entityType is reply.
    * @param sharedBy {String} If contact or list was shared by another sub-account then name if this user will be shown.
+   * @param isShared {Boolean} If contact or list was shared by another sub-account then `true` will be set.
    * @param avatar {String} Contact avatar URI.
    * @param favorited {Boolean} If contact has been marked as favorite.
    * @param userId {Number} Owner id of the contact/list (if it was shared).
@@ -55,7 +56,7 @@
    * @param qposition {Number} 
    * @param rposition {Number} 
    */
-  var exports = function(entityId, entityType, value, label, sharedBy, avatar, favorited, userId, countryName, qposition, rposition) {
+  var exports = function(entityId, entityType, value, label, sharedBy, isShared, avatar, favorited, userId, countryName, qposition, rposition) {
     var _this = this;
 
     _this['entityId'] = entityId;
@@ -63,6 +64,7 @@
     _this['value'] = value;
     _this['label'] = label;
     _this['sharedBy'] = sharedBy;
+    _this['isShared'] = isShared;
     _this['avatar'] = avatar;
     _this['favorited'] = favorited;
     _this['userId'] = userId;
@@ -96,6 +98,9 @@
       }
       if (data.hasOwnProperty('sharedBy')) {
         obj['sharedBy'] = ApiClient.convertToType(data['sharedBy'], 'String');
+      }
+      if (data.hasOwnProperty('isShared')) {
+        obj['isShared'] = ApiClient.convertToType(data['isShared'], 'Boolean');
       }
       if (data.hasOwnProperty('avatar')) {
         obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
@@ -144,6 +149,11 @@
    * @member {String} sharedBy
    */
   exports.prototype['sharedBy'] = undefined;
+  /**
+   * If contact or list was shared by another sub-account then `true` will be set.
+   * @member {Boolean} isShared
+   */
+  exports.prototype['isShared'] = undefined;
   /**
    * Contact avatar URI.
    * @member {String} avatar
