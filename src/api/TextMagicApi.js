@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.816
+   * @version 2.0.817
    */
 
   /**
@@ -4127,7 +4127,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find contacts or lists by specified search query
+     * @param {String} opts.query Find contacts or lists by specified search query.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetFavoritesPaginatedResponse} and HTTP response
      */
     this.getFavoritesWithHttpInfo = function(opts) {
@@ -4167,7 +4167,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find contacts or lists by specified search query
+     * @param {String} opts.query Find contacts or lists by specified search query.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetFavoritesPaginatedResponse}
      */
     this.getFavorites = function(opts) {
@@ -4994,7 +4994,7 @@
      * Get messaging statistics
      * 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  (default to off)
+     * @param {module:model/String} opts.by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year.  (default to off)
      * @param {Number} opts.start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
      * @param {Number} opts.end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagingStatResponse} and HTTP response
@@ -5034,7 +5034,7 @@
      * Get messaging statistics
      * 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.by *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  (default to off)
+     * @param {module:model/String} opts.by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year.  (default to off)
      * @param {Number} opts.start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
      * @param {Number} opts.end Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagingStatResponse}
@@ -5488,7 +5488,7 @@
 
 
     /**
-     * Get sub-accounts list
+     * Get a sub-accounts list
      * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -5526,7 +5526,7 @@
     }
 
     /**
-     * Get sub-accounts list
+     * Get a sub-accounts list
      * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -5542,7 +5542,7 @@
 
 
     /**
-     * Get all sub-accounts with their REST API tokens associated with app name
+     * Get all sub-accounts with their REST API tokens associated with a specified app name
      * Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
      * @param {module:model/GetSubaccountsWithTokensInputObject} getSubaccountsWithTokensInputObject 
      * @param {Object} opts Optional parameters
@@ -5586,7 +5586,7 @@
     }
 
     /**
-     * Get all sub-accounts with their REST API tokens associated with app name
+     * Get all sub-accounts with their REST API tokens associated with a specified app name
      * Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
      * @param {module:model/GetSubaccountsWithTokensInputObject} getSubaccountsWithTokensInputObject 
      * @param {Object} opts Optional parameters
@@ -5659,7 +5659,7 @@
      * Get timezones
      * Return all available timezone IDs
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.full Return full info about timezones in array (0 or 1). Default is 0 (default to 0)
+     * @param {Number} opts.full Return full info about timezones in array (0 or 1). Default is 0. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTimezonesResponse} and HTTP response
      */
     this.getTimezonesWithHttpInfo = function(opts) {
@@ -5695,7 +5695,7 @@
      * Get timezones
      * Return all available timezone IDs
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.full Return full info about timezones in array (0 or 1). Default is 0 (default to 0)
+     * @param {Number} opts.full Return full info about timezones in array (0 or 1). Default is 0. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTimezonesResponse}
      */
     this.getTimezones = function(opts) {
@@ -6247,7 +6247,7 @@
 
     /**
      * Ping
-     * Make a simple ping request
+     * Make a simple ping request.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PingResponse} and HTTP response
      */
     this.pingWithHttpInfo = function() {
@@ -6279,7 +6279,7 @@
 
     /**
      * Ping
-     * Make a simple ping request
+     * Make a simple ping request.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PingResponse}
      */
     this.ping = function() {
@@ -8083,7 +8083,7 @@
     /**
      * Upload an avatar
      * 
-     * @param {File} image User avatar. Should be PNG or JPG file not more than 10 MB
+     * @param {File} image User avatar. Should be a PNG or JPG file not more than 10 MB.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.uploadAvatarWithHttpInfo = function(image) {
@@ -8122,7 +8122,7 @@
     /**
      * Upload an avatar
      * 
-     * @param {File} image User avatar. Should be PNG or JPG file not more than 10 MB
+     * @param {File} image User avatar. Should be a PNG or JPG file not more than 10 MB.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.uploadAvatar = function(image) {

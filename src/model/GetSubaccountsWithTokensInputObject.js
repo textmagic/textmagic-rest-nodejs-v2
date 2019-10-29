@@ -36,15 +36,15 @@
   /**
    * The GetSubaccountsWithTokensInputObject model module.
    * @module model/GetSubaccountsWithTokensInputObject
-   * @version 2.0.816
+   * @version 2.0.817
    */
 
   /**
    * Constructs a new <code>GetSubaccountsWithTokensInputObject</code>.
    * @alias module:model/GetSubaccountsWithTokensInputObject
    * @class
-   * @param appName {String} Application name
-   * @param password {String} Your account password
+   * @param appName {String} Application name.
+   * @param password {String} Your account password.
    */
   var exports = function(appName, password) {
     var _this = this;
@@ -75,12 +75,12 @@
   }
 
   /**
-   * Application name
+   * Application name.
    * @member {String} appName
    */
   exports.prototype['appName'] = undefined;
   /**
-   * Your account password
+   * Your account password.
    * @member {String} password
    */
   exports.prototype['password'] = undefined;

@@ -36,7 +36,7 @@
   /**
    * The PingResponse model module.
    * @module model/PingResponse
-   * @version 2.0.816
+   * @version 2.0.817
    */
 
   /**
@@ -44,7 +44,7 @@
    * @alias module:model/PingResponse
    * @class
    * @param ping {String} Pong.
-   * @param utcDateTime {String} Current date time
+   * @param utcDateTime {String} Current date and time.
    */
   var exports = function(ping, utcDateTime) {
     var _this = this;
@@ -80,7 +80,7 @@
    */
   exports.prototype['ping'] = undefined;
   /**
-   * Current date time
+   * Current date and time.
    * @member {String} utcDateTime
    */
   exports.prototype['utcDateTime'] = undefined;

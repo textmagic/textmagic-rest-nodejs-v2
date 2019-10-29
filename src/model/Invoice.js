@@ -36,7 +36,7 @@
   /**
    * The Invoice model module.
    * @module model/Invoice
-   * @version 2.0.816
+   * @version 2.0.817
    */
 
   /**
@@ -44,8 +44,8 @@
    * @alias module:model/Invoice
    * @class
    * @param id {Number} The invoice ID.
-   * @param bundle {Number} Top up amount.
-   * @param currency {String} Top up currency.
+   * @param bundle {Number} Top-up amount.
+   * @param currency {String} Top-up currency.
    * @param vat {Number} VAT charged (if any).
    * @param paymentMethod {String} Payment method description.
    */
@@ -95,12 +95,12 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * Top up amount.
+   * Top-up amount.
    * @member {Number} bundle
    */
   exports.prototype['bundle'] = undefined;
   /**
-   * Top up currency.
+   * Top-up currency.
    * @member {String} currency
    */
   exports.prototype['currency'] = undefined;

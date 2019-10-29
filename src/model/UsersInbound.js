@@ -36,7 +36,7 @@
   /**
    * The UsersInbound model module.
    * @module model/UsersInbound
-   * @version 2.0.816
+   * @version 2.0.817
    */
 
   /**
@@ -108,7 +108,7 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * Format for representation of time
+   * Format for representation of time.
    * @member {String} displayTimeFormat
    */
   exports.prototype['displayTimeFormat'] = undefined;

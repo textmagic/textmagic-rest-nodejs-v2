@@ -102,8 +102,8 @@ Method | HTTP request | Description
 [**getSenderSettings**](TextMagicApi.md#getSenderSettings) | **GET** /api/v2/sender/settings/normalized | Get current sender settings
 [**getSpendingStat**](TextMagicApi.md#getSpendingStat) | **GET** /api/v2/stats/spending | Get spending statistics
 [**getSubaccount**](TextMagicApi.md#getSubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
-[**getSubaccounts**](TextMagicApi.md#getSubaccounts) | **GET** /api/v2/subaccounts | Get sub-accounts list
-[**getSubaccountsWithTokens**](TextMagicApi.md#getSubaccountsWithTokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
+[**getSubaccounts**](TextMagicApi.md#getSubaccounts) | **GET** /api/v2/subaccounts | Get a sub-accounts list
+[**getSubaccountsWithTokens**](TextMagicApi.md#getSubaccountsWithTokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with a specified app name
 [**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template&#x60;s details
 [**getTimezones**](TextMagicApi.md#getTimezones) | **GET** /api/v2/timezones | Get timezones
 [**getUnreadMessagesTotal**](TextMagicApi.md#getUnreadMessagesTotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
@@ -3936,7 +3936,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'query': "\"A\"" // String | Find contacts or lists by specified search query
+  'query': "\"A\"" // String | Find contacts or lists by specified search query.
 };
 apiInstance.getFavorites(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3952,7 +3952,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **query** | **String**| Find contacts or lists by specified search query | [optional] 
+ **query** | **String**| Find contacts or lists by specified search query. | [optional] 
 
 ### Return type
 
@@ -4715,7 +4715,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
-  'by': "off", // String | *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year 
+  'by': "off", // String | *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year. 
   'start': 1430438400, // Number | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
   'end': 1431648000 // Number | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 };
@@ -4731,7 +4731,7 @@ apiInstance.getMessagingStat(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **by** | **String**| *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  | [optional] [default to off]
+ **by** | **String**| *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year.  | [optional] [default to off]
  **start** | **Number**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
  **end** | **Number**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
@@ -5164,7 +5164,7 @@ Name | Type | Description  | Notes
 # **getSubaccounts**
 > User getSubaccounts(opts)
 
-Get sub-accounts list
+Get a sub-accounts list
 
 
 
@@ -5216,7 +5216,7 @@ Name | Type | Description  | Notes
 # **getSubaccountsWithTokens**
 > GetSubaccountsWithTokensResponse getSubaccountsWithTokens(getSubaccountsWithTokensInputObject, opts)
 
-Get all sub-accounts with their REST API tokens associated with app name
+Get all sub-accounts with their REST API tokens associated with a specified app name
 
 Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
 
@@ -5337,7 +5337,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
-  'full': 0 // Number | Return full info about timezones in array (0 or 1). Default is 0
+  'full': 0 // Number | Return full info about timezones in array (0 or 1). Default is 0.
 };
 apiInstance.getTimezones(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -5351,7 +5351,7 @@ apiInstance.getTimezones(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **full** | **Number**| Return full info about timezones in array (0 or 1). Default is 0 | [optional] [default to 0]
+ **full** | **Number**| Return full info about timezones in array (0 or 1). Default is 0. | [optional] [default to 0]
 
 ### Return type
 
@@ -5873,7 +5873,7 @@ null (empty response body)
 
 Ping
 
-Make a simple ping request
+Make a simple ping request.
 
 ### Example
 ```javascript
@@ -7571,7 +7571,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var image = "/path/to/file.txt"; // File | User avatar. Should be PNG or JPG file not more than 10 MB
+var image = "/path/to/file.txt"; // File | User avatar. Should be a PNG or JPG file not more than 10 MB.
 
 apiInstance.uploadAvatar(image).then(function() {
   console.log('API called successfully.');
@@ -7585,7 +7585,7 @@ apiInstance.uploadAvatar(image).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **image** | **File**| User avatar. Should be PNG or JPG file not more than 10 MB | 
+ **image** | **File**| User avatar. Should be a PNG or JPG file not more than 10 MB. | 
 
 ### Return type
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userId** | **Number** | Subaccount ID | 
-**password** | **String** | Your account password | 
-**appName** | **String** | Application name | [optional] 
+**userId** | **Number** | Sub-account ID. | 
+**password** | **String** | Your account password. | 
+**appName** | **String** | Application name. | [optional] 
 
 

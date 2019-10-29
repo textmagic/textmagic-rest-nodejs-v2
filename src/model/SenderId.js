@@ -36,7 +36,7 @@
   /**
    * The SenderId model module.
    * @module model/SenderId
-   * @version 2.0.816
+   * @version 2.0.817
    */
 
   /**
@@ -46,7 +46,7 @@
    * @param id {Number} Numeric sender ID.
    * @param senderId {String} Alphanumeric ID.
    * @param user {module:model/User} 
-   * @param status {module:model/SenderId.StatusEnum} *   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. 
+   * @param status {module:model/SenderId.StatusEnum} *   **P** for Pending - this Sender ID is being reviewed by our support team; *   **R** for Rejected - our support team rejected your application for this Sender ID; *   **A** for Active. 
    */
   var exports = function(id, senderId, user, status) {
     var _this = this;
@@ -94,7 +94,7 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * Format for representation of time
+   * Format for representation of time.
    * @member {String} displayTimeFormat
    */
   exports.prototype['displayTimeFormat'] = undefined;
@@ -108,7 +108,7 @@
    */
   exports.prototype['user'] = undefined;
   /**
-   * *   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. 
+   * *   **P** for Pending - this Sender ID is being reviewed by our support team; *   **R** for Rejected - our support team rejected your application for this Sender ID; *   **A** for Active. 
    * @member {module:model/SenderId.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
