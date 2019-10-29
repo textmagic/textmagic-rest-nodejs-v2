@@ -36,7 +36,7 @@
   /**
    * The DeleteChatMessagesBulkInputObject model module.
    * @module model/DeleteChatMessagesBulkInputObject
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -96,7 +96,7 @@
    */
   exports.prototype['calls_ids'] = undefined;
   /**
-   * Default is 0 (false). If set to 1, all entities will be removed.
+   * Default is 0 (false). If set to 1, all the entities will be removed.
    * @member {Boolean} all
    */
   exports.prototype['all'] = undefined;

@@ -36,15 +36,15 @@
   /**
    * The SendPhoneVerificationCodeInputObject model module.
    * @module model/SendPhoneVerificationCodeInputObject
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
    * Constructs a new <code>SendPhoneVerificationCodeInputObject</code>.
    * @alias module:model/SendPhoneVerificationCodeInputObject
    * @class
-   * @param phone {String} Use the phone number in international E.164 format. If you need to pass phone numbers in the local format, please use them with the **country** parameter to specify the origin country of the phone number. 
-   * @param brand {String} Alphanumeric string with up to 18 characters you can use to personalize the verification text message body, to help users identify your company or application name. For example: “Your TextMagic PIN is …” 
+   * @param phone {String} Use the phone number in international E.164 format. If you need to pass a phone number in the local format, please use it with the **country** parameter to specify the origin country of the phone number. 
+   * @param brand {String} An alphanumeric string with up to 18 characters you can use to personalize the verification text message body, to help users identify your company or application name. For example: “Your TextMagic PIN is …” 
    * @param codeLength {Number} The length of the verification code. The value can be 4 or 6 characters. 
    */
   var exports = function(phone, brand, codeLength) {
@@ -92,12 +92,12 @@
   }
 
   /**
-   * Use the phone number in international E.164 format. If you need to pass phone numbers in the local format, please use them with the **country** parameter to specify the origin country of the phone number. 
+   * Use the phone number in international E.164 format. If you need to pass a phone number in the local format, please use it with the **country** parameter to specify the origin country of the phone number. 
    * @member {String} phone
    */
   exports.prototype['phone'] = undefined;
   /**
-   * Alphanumeric string with up to 18 characters you can use to personalize the verification text message body, to help users identify your company or application name. For example: “Your TextMagic PIN is …” 
+   * An alphanumeric string with up to 18 characters you can use to personalize the verification text message body, to help users identify your company or application name. For example: “Your TextMagic PIN is …” 
    * @member {String} brand
    */
   exports.prototype['brand'] = undefined;
@@ -107,17 +107,17 @@
    */
   exports.prototype['codeLength'] = undefined;
   /**
-   * By default, the SMS or text-to-speech (TTS) voice message is generated in the locale that matches the number. For example, the text message or TTS message for a 33\\* number is sent in French. Use this parameter to explicitly control the language, accent, and gender used for the verification request.Can be one of the following: `de-de`, `en-au`, `en-gb`, `en-us`, `en-in`, `es-es`, `es-mx`, `es-us`, `fr-ca`, `fr-fr`, `is-is`, `it-it`, `ja-jp`, `ko-kr`, `nl-nl`, `pl-pl`, `pt-pt`, `pt-br`, `ro-ro`, `ru-ru`, `sv-se`, `tr-tr`, `zh-cn` or `zh-tw`. 
+   * By default, the SMS or text-to-speech (TTS) voice message is generated in the locale that matches the number. For example, the text message or TTS message for a 33\\* number is sent in French. Use this parameter to explicitly control the language, accent, and gender used for the verification request. Choosing one of the following: `de-de`, `en-au`, `en-gb`, `en-us`, `en-in`, `es-es`, `es-mx`, `es-us`, `fr-ca`, `fr-fr`, `is-is`, `it-it`, `ja-jp`, `ko-kr`, `nl-nl`, `pl-pl`, `pt-pt`, `pt-br`, `ro-ro`, `ru-ru`, `sv-se`, `tr-tr`, `zh-cn` or `zh-tw`. 
    * @member {String} language
    */
   exports.prototype['language'] = undefined;
   /**
-   * One of the available [sender settings](https://my.textmagic.com/online/reply-options/) on your TextMagic account. If specified sender setting type is not allowed for some destinations, a fallback default sender will be used to ensure the message delivery. More info about known restrictions can be found [here](https://support.textmagic.com/article/how-to-understand-sender-setting-restrictions/). 
+   * One of the available [sender settings](https://my.textmagic.com/online/reply-options/) on your TextMagic account. If the specified sender setting type is not allowed for some destinations, a fallback default sender will be used to ensure message delivery. More info about known restrictions can be found [here](https://support.textmagic.com/article/how-to-understand-sender-setting-restrictions/). 
    * @member {String} senderId
    */
   exports.prototype['senderId'] = undefined;
   /**
-   * 2-letter ISO country code for local phone number.
+   * The 2-letter ISO country code for the local phone number.
    * @member {String} country
    */
   exports.prototype['country'] = undefined;

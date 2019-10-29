@@ -36,7 +36,7 @@
   /**
    * The SendPhoneVerificationCodeResponse model module.
    * @module model/SendPhoneVerificationCodeResponse
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -44,7 +44,7 @@
    * @alias module:model/SendPhoneVerificationCodeResponse
    * @class
    * @param verifyId {String} The ID of a verification request. This is required to finish the verification request in the next step.
-   * @param price {Number} Amount of credit which will be deducted from your account balance when this verification is successfully completed.
+   * @param price {Number} An amount of credit which will be deducted from your account balance when this verification is successfully completed.
    */
   var exports = function(verifyId, price) {
     var _this = this;
@@ -80,7 +80,7 @@
    */
   exports.prototype['verifyId'] = undefined;
   /**
-   * Amount of credit which will be deducted from your account balance when this verification is successfully completed.
+   * An amount of credit which will be deducted from your account balance when this verification is successfully completed.
    * @member {Number} price
    */
   exports.prototype['price'] = undefined;

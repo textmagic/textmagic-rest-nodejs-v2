@@ -36,7 +36,7 @@
   /**
    * The DeleteMessageSessionsBulkInputObject model module.
    * @module model/DeleteMessageSessionsBulkInputObject
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -78,7 +78,7 @@
    */
   exports.prototype['ids'] = undefined;
   /**
-   * Default is 0 (false). If set to 1, all entities will be removed.
+   * Default is 0 (false). If set to 1, all the entities will be removed.
    * @member {Number} all
    */
   exports.prototype['all'] = undefined;

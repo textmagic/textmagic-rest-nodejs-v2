@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new TextmagicClient.GetFavouritesPaginatedResponse();
+    instance = new TextmagicClient.GetFavoritesPaginatedResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,34 +49,34 @@
       object[property] = value;
   }
 
-  describe('GetFavouritesPaginatedResponse', function() {
-    it('should create an instance of GetFavouritesPaginatedResponse', function() {
-      // uncomment below and update the code to test GetFavouritesPaginatedResponse
-      //var instance = new TextmagicClient.GetFavouritesPaginatedResponse();
-      //expect(instance).to.be.a(TextmagicClient.GetFavouritesPaginatedResponse);
+  describe('GetFavoritesPaginatedResponse', function() {
+    it('should create an instance of GetFavoritesPaginatedResponse', function() {
+      // uncomment below and update the code to test GetFavoritesPaginatedResponse
+      //var instance = new TextmagicClient.GetFavoritesPaginatedResponse();
+      //expect(instance).to.be.a(TextmagicClient.GetFavoritesPaginatedResponse);
     });
 
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
-      //var instance = new TextmagicClient.GetFavouritesPaginatedResponse();
+      //var instance = new TextmagicClient.GetFavoritesPaginatedResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property pageCount (base name: "pageCount")', function() {
       // uncomment below and update the code to test the property pageCount
-      //var instance = new TextmagicClient.GetFavouritesPaginatedResponse();
+      //var instance = new TextmagicClient.GetFavoritesPaginatedResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property limit (base name: "limit")', function() {
       // uncomment below and update the code to test the property limit
-      //var instance = new TextmagicClient.GetFavouritesPaginatedResponse();
+      //var instance = new TextmagicClient.GetFavoritesPaginatedResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property resources (base name: "resources")', function() {
       // uncomment below and update the code to test the property resources
-      //var instance = new TextmagicClient.GetFavouritesPaginatedResponse();
+      //var instance = new TextmagicClient.GetFavoritesPaginatedResponse();
       //expect(instance).to.be();
     });
 

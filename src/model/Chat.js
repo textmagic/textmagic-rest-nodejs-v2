@@ -36,7 +36,7 @@
   /**
    * The Chat model module.
    * @module model/Chat
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -45,18 +45,18 @@
    * @class
    * @param id {Number} Chat ID.
    * @param originalId {Number} 
-   * @param phone {String} Chat partner phone number.
+   * @param phone {String} Chat partner's phone number.
    * @param contact {module:model/Contact} 
-   * @param unsubscribedContactId {Number} If this field has a value then it means that chat phone number has been unsubscribed from you and this value is a ID of a Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
+   * @param unsubscribedContactId {Number} If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
    * @param unread {Number} Total unread incoming messages.
-   * @param updatedAt {Date} Time when last incoming message arrived at this chat.
+   * @param updatedAt {Date} Time when the last incoming message arrived at this chat.
    * @param status {module:model/Chat.StatusEnum} Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted 
-   * @param mute {Number} Indicates when chat is muted.
+   * @param mute {Number} Indicates when the chat is muted.
    * @param lastMessage {String} The last message content of a chat.
-   * @param direction {module:model/Chat.DirectionEnum} Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message 
-   * @param from {String} If filled then value will be used as a sender number for all outgoing messages of a chat.
-   * @param mutedUntil {Date} Date and time until chat will be mutted.
-   * @param timeLeftMute {Number} Time left till chat will be unmutted (seconds).
+   * @param direction {module:model/Chat.DirectionEnum} Last message type: * **ci** - incoming call; * **co** - outgoing call; * **i** - incoming message; * **o** - outgoing message. 
+   * @param from {String} If filled, the value will be used as a sender number for all outgoing messages of a chat.
+   * @param mutedUntil {Date} Date and time until the chat will be muted.
+   * @param timeLeftMute {Number} Time left untill the chat will be unmuted (seconds).
    * @param country {module:model/Country} 
    */
   var exports = function(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, from, mutedUntil, timeLeftMute, country) {
@@ -149,7 +149,7 @@
    */
   exports.prototype['originalId'] = undefined;
   /**
-   * Chat partner phone number.
+   * Chat partner's phone number.
    * @member {String} phone
    */
   exports.prototype['phone'] = undefined;
@@ -158,7 +158,7 @@
    */
   exports.prototype['contact'] = undefined;
   /**
-   * If this field has a value then it means that chat phone number has been unsubscribed from you and this value is a ID of a Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
+   * If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
    * @member {Number} unsubscribedContactId
    */
   exports.prototype['unsubscribedContactId'] = undefined;
@@ -168,7 +168,7 @@
    */
   exports.prototype['unread'] = undefined;
   /**
-   * Time when last incoming message arrived at this chat.
+   * Time when the last incoming message arrived at this chat.
    * @member {Date} updatedAt
    */
   exports.prototype['updatedAt'] = undefined;
@@ -178,7 +178,7 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * Indicates when chat is muted.
+   * Indicates when the chat is muted.
    * @member {Number} mute
    */
   exports.prototype['mute'] = undefined;
@@ -188,22 +188,22 @@
    */
   exports.prototype['lastMessage'] = undefined;
   /**
-   * Last message type: * **ci** - incoming call * **co** - outgoing call * **i** - incoming message * **o** - outgoing message 
+   * Last message type: * **ci** - incoming call; * **co** - outgoing call; * **i** - incoming message; * **o** - outgoing message. 
    * @member {module:model/Chat.DirectionEnum} direction
    */
   exports.prototype['direction'] = undefined;
   /**
-   * If filled then value will be used as a sender number for all outgoing messages of a chat.
+   * If filled, the value will be used as a sender number for all outgoing messages of a chat.
    * @member {String} from
    */
   exports.prototype['from'] = undefined;
   /**
-   * Date and time until chat will be mutted.
+   * Date and time until the chat will be muted.
    * @member {Date} mutedUntil
    */
   exports.prototype['mutedUntil'] = undefined;
   /**
-   * Time left till chat will be unmutted (seconds).
+   * Time left untill the chat will be unmuted (seconds).
    * @member {Number} timeLeftMute
    */
   exports.prototype['timeLeftMute'] = undefined;

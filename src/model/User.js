@@ -36,7 +36,7 @@
   /**
    * The User model module.
    * @module model/User
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -50,12 +50,12 @@
    * @param email {String} User email address.
    * @param status {module:model/User.StatusEnum} Current account status: * **A** for Active; * **T** for Trial. 
    * @param balance {Number} Account balance (in account currency).
-   * @param phone {String} User`s phone number.
+   * @param phone {String} User's phone number.
    * @param company {String} Account company name.
    * @param currency {module:model/Currency} 
    * @param country {module:model/Country} 
    * @param timezone {module:model/Timezone} 
-   * @param subaccountType {module:model/User.SubaccountTypeEnum} Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User 
+   * @param subaccountType {module:model/User.SubaccountTypeEnum} Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User. 
    * @param emailAccepted {Boolean} Does the account have a confirmed email?
    * @param phoneAccepted {Boolean} Does the account have a confirmed phone number?
    * @param avatar {module:model/UserImage} 
@@ -154,7 +154,7 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * User's preferred format of time display: * *12h* – AM/PM format; * *24h* – 24 hour clock format. 
+   * User's preferred format of time display: * *12h* - AM/PM format; * *24h* - 24-hour clock format. 
    * @member {module:model/User.DisplayTimeFormatEnum} displayTimeFormat
    */
   exports.prototype['displayTimeFormat'] = undefined;
@@ -189,7 +189,7 @@
    */
   exports.prototype['balance'] = undefined;
   /**
-   * User`s phone number.
+   * User's phone number.
    * @member {String} phone
    */
   exports.prototype['phone'] = undefined;
@@ -211,7 +211,7 @@
    */
   exports.prototype['timezone'] = undefined;
   /**
-   * Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User 
+   * Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User. 
    * @member {module:model/User.SubaccountTypeEnum} subaccountType
    */
   exports.prototype['subaccountType'] = undefined;

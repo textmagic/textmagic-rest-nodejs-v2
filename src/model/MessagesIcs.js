@@ -36,7 +36,7 @@
   /**
    * The MessagesIcs model module.
    * @module model/MessagesIcs
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -44,11 +44,11 @@
    * @alias module:model/MessagesIcs
    * @class
    * @param id {Number} Schedule ID.
-   * @param nextSend {Date} Next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format. 
+   * @param nextSend {Date} The next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format. 
    * @param rrule {String} [iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string. 
    * @param session {module:model/MessageSession} 
-   * @param lastSent {Date} Date and time when last message has been sent.
-   * @param contactName {String} Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned.
+   * @param lastSent {Date} The date and time when the last message was sent.
+   * @param contactName {String} Aggregated contact information. If the message was scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount of contacts will be returned.
    * @param parameters {module:model/MessagesIcsParameters} 
    * @param type {module:model/MessagesIcs.TypeEnum} 
    * @param summary {String} A human-readable summary of the sending schedule.
@@ -57,7 +57,7 @@
    * @param lastOccurrence {Date} Last occurence date (could be `null` if the schedule is endless).
    * @param recipientsCount {Number} Amount of actual recipients.
    * @param timezone {String} User-friendly timezone name (with spaces replaced by underscores).
-   * @param completed {Boolean} Indicates that schedling has been completed.
+   * @param completed {Boolean} Indicates that scheduling has been completed.
    * @param avatar {String} A relative link to the contact avatar.
    * @param createdAt {Date} Scheduling creation time.
    */
@@ -155,7 +155,7 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * Next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format. 
+   * The next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format. 
    * @member {Date} nextSend
    */
   exports.prototype['nextSend'] = undefined;
@@ -169,12 +169,12 @@
    */
   exports.prototype['session'] = undefined;
   /**
-   * Date and time when last message has been sent.
+   * The date and time when the last message was sent.
    * @member {Date} lastSent
    */
   exports.prototype['lastSent'] = undefined;
   /**
-   * Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned.
+   * Aggregated contact information. If the message was scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount of contacts will be returned.
    * @member {String} contactName
    */
   exports.prototype['contactName'] = undefined;
@@ -216,7 +216,7 @@
    */
   exports.prototype['timezone'] = undefined;
   /**
-   * Indicates that schedling has been completed.
+   * Indicates that scheduling has been completed.
    * @member {Boolean} completed
    */
   exports.prototype['completed'] = undefined;

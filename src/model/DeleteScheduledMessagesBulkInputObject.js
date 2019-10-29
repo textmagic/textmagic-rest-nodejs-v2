@@ -36,7 +36,7 @@
   /**
    * The DeleteScheduledMessagesBulkInputObject model module.
    * @module model/DeleteScheduledMessagesBulkInputObject
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -82,12 +82,12 @@
    */
   exports.prototype['ids'] = undefined;
   /**
-   * Default is 0 (false). If set to 1 all the entities will be removed.
+   * Default is 0 (false). If set to 1, all the entities will be removed.
    * @member {Number} all
    */
   exports.prototype['all'] = undefined;
   /**
-   * Default is empty string (false). If set then all entities with specified status will be affected.
+   * Default is an empty string (false). If set, all entities with specified status will be affected.
    * @member {String} status
    * @default ''
    */

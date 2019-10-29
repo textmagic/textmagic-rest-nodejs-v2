@@ -36,7 +36,7 @@
   /**
    * The SubaccountWithToken model module.
    * @module model/SubaccountWithToken
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -56,8 +56,8 @@
    * @param country {module:model/Country} 
    * @param timezone {module:model/Timezone} 
    * @param subaccountType {module:model/SubaccountWithToken.SubaccountTypeEnum} Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
-   * @param emailAccepted {Boolean} Is account has confirmed Email.
-   * @param phoneAccepted {Boolean} Is account has confirmed Phone number.
+   * @param emailAccepted {Boolean} Does the account have a confirmed Email?.
+   * @param phoneAccepted {Boolean} Does the account have a confirmed Phone Number?.
    * @param avatar {module:model/UserImage} 
    * @param token {String} Access token of account.
    */
@@ -212,12 +212,12 @@
    */
   exports.prototype['subaccountType'] = undefined;
   /**
-   * Is account has confirmed Email.
+   * Does the account have a confirmed Email?.
    * @member {Boolean} emailAccepted
    */
   exports.prototype['emailAccepted'] = undefined;
   /**
-   * Is account has confirmed Phone number.
+   * Does the account have a confirmed Phone Number?.
    * @member {Boolean} phoneAccepted
    */
   exports.prototype['phoneAccepted'] = undefined;

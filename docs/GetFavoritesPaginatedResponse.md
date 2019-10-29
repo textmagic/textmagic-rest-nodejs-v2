@@ -1,4 +1,4 @@
-# TextmagicClient.GetFavouritesPaginatedResponse
+# TextmagicClient.GetFavoritesPaginatedResponse
 
 ## Properties
 Name | Type | Description | Notes

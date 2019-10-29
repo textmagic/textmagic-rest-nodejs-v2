@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ids** | **String** | Entity ID(s), separated by comma | [optional] 
 **all** | **Boolean** | Entity ID(s), separated by comma | [optional] 
-**status** | **String** | Default is empty string. If set, all entities with specified status will be affected. | [optional] 
+**status** | **String** | Default is an empty string. If set, all entities with specified status will be affected. | [optional] 
 
 
 <a name="StatusEnum"></a>

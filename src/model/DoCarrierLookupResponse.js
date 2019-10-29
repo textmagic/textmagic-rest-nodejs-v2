@@ -36,14 +36,14 @@
   /**
    * The DoCarrierLookupResponse model module.
    * @module model/DoCarrierLookupResponse
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
    * Constructs a new <code>DoCarrierLookupResponse</code>.
    * @alias module:model/DoCarrierLookupResponse
    * @class
-   * @param cost {Number} Cost to check one number is constant – 0.04 in your account currency.
+   * @param cost {Number} Cost to check that one number is constant – 0.04 in your account currency.
    * @param local {String} Phone number in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).
    * @param type {module:model/DoCarrierLookupResponse.TypeEnum} Phone number type.
    * @param carrier {String} Carrier name.
@@ -99,7 +99,7 @@
   }
 
   /**
-   * Cost to check one number is constant – 0.04 in your account currency.
+   * Cost to check that one number is constant – 0.04 in your account currency.
    * @member {Number} cost
    */
   exports.prototype['cost'] = undefined;

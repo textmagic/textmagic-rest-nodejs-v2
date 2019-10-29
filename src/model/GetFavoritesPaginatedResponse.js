@@ -25,7 +25,7 @@
     if (!root.TextmagicClient) {
       root.TextmagicClient = {};
     }
-    root.TextmagicClient.GetFavouritesPaginatedResponse = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.FavoriteContact);
+    root.TextmagicClient.GetFavoritesPaginatedResponse = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.FavoriteContact);
   }
 }(this, function(ApiClient, FavoriteContact) {
   'use strict';
@@ -34,14 +34,14 @@
 
 
   /**
-   * The GetFavouritesPaginatedResponse model module.
-   * @module model/GetFavouritesPaginatedResponse
-   * @version 2.0.810
+   * The GetFavoritesPaginatedResponse model module.
+   * @module model/GetFavoritesPaginatedResponse
+   * @version 2.0.811
    */
 
   /**
-   * Constructs a new <code>GetFavouritesPaginatedResponse</code>.
-   * @alias module:model/GetFavouritesPaginatedResponse
+   * Constructs a new <code>GetFavoritesPaginatedResponse</code>.
+   * @alias module:model/GetFavoritesPaginatedResponse
    * @class
    * @param page {Number} 
    * @param pageCount {Number} The total number of pages.
@@ -58,11 +58,11 @@
   };
 
   /**
-   * Constructs a <code>GetFavouritesPaginatedResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetFavoritesPaginatedResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetFavouritesPaginatedResponse} obj Optional instance to populate.
-   * @return {module:model/GetFavouritesPaginatedResponse} The populated <code>GetFavouritesPaginatedResponse</code> instance.
+   * @param {module:model/GetFavoritesPaginatedResponse} obj Optional instance to populate.
+   * @return {module:model/GetFavoritesPaginatedResponse} The populated <code>GetFavoritesPaginatedResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

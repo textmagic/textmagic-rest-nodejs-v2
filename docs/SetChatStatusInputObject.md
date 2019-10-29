@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Chat ID. | 
-**status** | **String** | Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted  | 
+**status** | **String** | Chat status:   * **a** - Active;   * **c** - Closed;   * **d** - Deleted.  | 
 
 
 <a name="StatusEnum"></a>

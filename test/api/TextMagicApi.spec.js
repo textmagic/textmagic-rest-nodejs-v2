@@ -800,10 +800,10 @@
         done();
       });
     });
-    describe('getFavourites', function() {
-      it('should call getFavourites successfully', function(done) {
-        //uncomment below and update the code to test getFavourites
-        //instance.getFavourites(function(error) {
+    describe('getFavorites', function() {
+      it('should call getFavorites successfully', function(done) {
+        //uncomment below and update the code to test getFavorites
+        //instance.getFavorites(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

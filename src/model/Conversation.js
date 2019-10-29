@@ -36,7 +36,7 @@
   /**
    * The Conversation model module.
    * @module model/Conversation
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -46,9 +46,9 @@
    * @param id {Number} 
    * @param direction {module:model/Conversation.DirectionEnum} Message type: inbound or outbound. 
    * @param sender {String} Sender phone number.
-   * @param messageTime {Date} Time when message arrived at TextMagic.
+   * @param messageTime {Date} Time when  the message arrived at TextMagic.
    * @param text {String} Message text.
-   * @param receiver {String} Receiver phone number.
+   * @param receiver {String} Receiver's phone number.
    * @param status {String} Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.
    * @param firstName {String} Contact first name.
    * @param lastName {String} Contact last name.
@@ -129,7 +129,7 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * Time when message arrived at TextMagic.
+   * Time when  the message arrived at TextMagic.
    * @member {Date} messageTime
    */
   exports.prototype['messageTime'] = undefined;
@@ -139,7 +139,7 @@
    */
   exports.prototype['text'] = undefined;
   /**
-   * Receiver phone number.
+   * Receiver's phone number.
    * @member {String} receiver
    */
   exports.prototype['receiver'] = undefined;

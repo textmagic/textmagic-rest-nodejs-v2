@@ -36,7 +36,7 @@
   /**
    * The Contact model module.
    * @module model/Contact
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -44,7 +44,7 @@
    * @alias module:model/Contact
    * @class
    * @param id {Number} Contact ID.
-   * @param favorited {Boolean} Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).
+   * @param favorited {Boolean} Is the Contact favorite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavorites).
    * @param blocked {Boolean} Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts).
    * @param firstName {String} Contact first name.
    * @param lastName {String} Contact last name.
@@ -52,10 +52,10 @@
    * @param phone {String} Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * @param email {String} Contact email address.
    * @param country {module:model/Country} Contact country.
-   * @param customFields {Array.<module:model/ContactCustomField>} See [Custom Fields](http://docs.textmagictesting.com/#tag/Custom-Fields) section.
+   * @param customFields {Array.<module:model/ContactCustomField>} See the [Custom Fields](http://docs.textmagictesting.com/#tag/Custom-Fields) section.
    * @param user {module:model/User} 
    * @param lists {Array.<Array>} 
-   * @param phoneType {String} Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is an Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
+   * @param phoneType {String} Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is a Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
    * @param avatar {module:model/ContactImage} 
    * @param notes {Array.<module:model/ContactNote>} 
    */
@@ -145,7 +145,7 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).
+   * Is the Contact favorite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavorites).
    * @member {Boolean} favorited
    */
   exports.prototype['favorited'] = undefined;
@@ -185,7 +185,7 @@
    */
   exports.prototype['country'] = undefined;
   /**
-   * See [Custom Fields](http://docs.textmagictesting.com/#tag/Custom-Fields) section.
+   * See the [Custom Fields](http://docs.textmagictesting.com/#tag/Custom-Fields) section.
    * @member {Array.<module:model/ContactCustomField>} customFields
    */
   exports.prototype['customFields'] = undefined;
@@ -198,7 +198,7 @@
    */
   exports.prototype['lists'] = undefined;
   /**
-   * Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is an Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
+   * Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is a Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
    * @member {String} phoneType
    */
   exports.prototype['phoneType'] = undefined;

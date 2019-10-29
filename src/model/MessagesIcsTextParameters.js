@@ -36,19 +36,19 @@
   /**
    * The MessagesIcsTextParameters model module.
    * @module model/MessagesIcsTextParameters
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
    * Constructs a new <code>MessagesIcsTextParameters</code>.
    * @alias module:model/MessagesIcsTextParameters
    * @class
-   * @param cost {Number} Cost to check one number is constant – 0.04 in your account currency.
+   * @param cost {Number} Cost to check that one number is constant – 0.04 in your account currency.
    * @param parts {Number} Message parts (multiples of 160 characters) count.
    * @param chars {Number} Characters count.
-   * @param encoding {module:model/MessagesIcsTextParameters.EncodingEnum} Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS 
+   * @param encoding {module:model/MessagesIcsTextParameters.EncodingEnum} Message charset. Could be: * **ISO-8859-1** – for plaintext SMS; * **UTF-16BE** – for Unicode SMS. 
    * @param countries {Array.<String>} 
-   * @param charsetLabel {String} Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages 
+   * @param charsetLabel {String} Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages. 
    */
   var exports = function(cost, parts, chars, encoding, countries, charsetLabel) {
     var _this = this;
@@ -95,7 +95,7 @@
   }
 
   /**
-   * Cost to check one number is constant – 0.04 in your account currency.
+   * Cost to check that one number is constant – 0.04 in your account currency.
    * @member {Number} cost
    */
   exports.prototype['cost'] = undefined;
@@ -110,7 +110,7 @@
    */
   exports.prototype['chars'] = undefined;
   /**
-   * Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS 
+   * Message charset. Could be: * **ISO-8859-1** – for plaintext SMS; * **UTF-16BE** – for Unicode SMS. 
    * @member {module:model/MessagesIcsTextParameters.EncodingEnum} encoding
    */
   exports.prototype['encoding'] = undefined;
@@ -119,7 +119,7 @@
    */
   exports.prototype['countries'] = undefined;
   /**
-   * Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages 
+   * Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages. 
    * @member {String} charsetLabel
    */
   exports.prototype['charsetLabel'] = undefined;

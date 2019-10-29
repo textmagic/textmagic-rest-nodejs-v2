@@ -79,7 +79,7 @@ Method | HTTP request | Description
 [**getCustomField**](TextMagicApi.md#getCustomField) | **GET** /api/v2/customfields/{id} | Get the details of a specific custom field
 [**getCustomFields**](TextMagicApi.md#getCustomFields) | **GET** /api/v2/customfields | Get all custom fields
 [**getDedicatedNumber**](TextMagicApi.md#getDedicatedNumber) | **GET** /api/v2/numbers/{id} | Get the details of a specific dedicated number
-[**getFavourites**](TextMagicApi.md#getFavourites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists
+[**getFavorites**](TextMagicApi.md#getFavorites) | **GET** /api/v2/contacts/favorite | Get favorite contacts and lists
 [**getInboundMessage**](TextMagicApi.md#getInboundMessage) | **GET** /api/v2/replies/{id} | Get a single inbound message
 [**getInboundMessagesNotificationSettings**](TextMagicApi.md#getInboundMessagesNotificationSettings) | **GET** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**getInvoices**](TextMagicApi.md#getInvoices) | **GET** /api/v2/invoices | Get all invoices
@@ -324,7 +324,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var verifyId = "\"123e4567-e89b-12d3-a456-426655440000\""; // String | the verifyId that you received in Step 1.
+var verifyId = "\"123e4567-e89b-12d3-a456-426655440000\""; // String | The verifyId that you received in Step 1.
 
 apiInstance.cancelVerification(verifyId).then(function() {
   console.log('API called successfully.');
@@ -338,7 +338,7 @@ apiInstance.cancelVerification(verifyId).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyId** | **String**| the verifyId that you received in Step 1. | 
+ **verifyId** | **String**| The verifyId that you received in Step 1. | 
 
 ### Return type
 
@@ -1477,7 +1477,7 @@ null (empty response body)
 
 Delete a single inbound message
 
-&gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
 ```javascript
@@ -1526,7 +1526,7 @@ null (empty response body)
 
 Delete inbound messages (bulk)
 
-&gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
 ```javascript
@@ -2387,9 +2387,9 @@ var opts = {
   'status': "\"a\"", // String | Fetch only (a)ctive, (c)losed or (d)eleted chats
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'orderBy': "id", // String | Order results by some field. Default is id
-  'voice': 0, // Number | Fetch results with voice calls
-  'flat': 0 // Number | Should additional contact info be included
+  'orderBy': "id", // String | Order results by some field. Default is id.
+  'voice': 0, // Number | Fetch results with voice calls.
+  'flat': 0 // Number | Should additional contact info be included?
 };
 apiInstance.getAllChats(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -2406,9 +2406,9 @@ Name | Type | Description  | Notes
  **status** | **String**| Fetch only (a)ctive, (c)losed or (d)eleted chats | [optional] 
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
- **voice** | **Number**| Fetch results with voice calls | [optional] [default to 0]
- **flat** | **Number**| Should additional contact info be included | [optional] [default to 0]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
+ **voice** | **Number**| Fetch results with voice calls. | [optional] [default to 0]
+ **flat** | **Number**| Should additional contact info be included? | [optional] [default to 0]
 
 ### Return type
 
@@ -2446,7 +2446,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'orderBy': "id", // String | Order results by some field. Default is id
+  'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
 };
 apiInstance.getAllInboundMessages(opts).then(function(data) {
@@ -2463,7 +2463,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -2608,7 +2608,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'status': "x", // String | Fetch schedules with the specific status: a - actual, c - completed, x - all
+  'status': "x", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
   'orderBy': "id", // String | Order results by some field. Default is id
   'direction': "desc" // String | Order direction. Default is desc.
 };
@@ -2626,7 +2626,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **status** | **String**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
+ **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
  **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
@@ -3166,10 +3166,10 @@ var opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find messages by specified search query
-  'start': 56, // Number | Return messages since specified timestamp only
-  'end': 56, // Number | Return messages up to specified timestamp only
+  'start': 56, // Number | Return messages since specified timestamp only.
+  'end': 56, // Number | Return messages up to specified timestamp only.
   'direction': "desc", // String | Order direction. Default is desc.
-  'voice': 0 // Number | Fetch results with voice calls
+  'voice': 0 // Number | Fetch results with voice calls.
 };
 apiInstance.getChatMessages(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3187,10 +3187,10 @@ Name | Type | Description  | Notes
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find messages by specified search query | [optional] 
- **start** | **Number**| Return messages since specified timestamp only | [optional] 
- **end** | **Number**| Return messages up to specified timestamp only | [optional] 
+ **start** | **Number**| Return messages since specified timestamp only. | [optional] 
+ **end** | **Number**| Return messages up to specified timestamp only. | [optional] 
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
- **voice** | **Number**| Fetch results with voice calls | [optional] [default to 0]
+ **voice** | **Number**| Fetch results with voice calls. | [optional] [default to 0]
 
 ### Return type
 
@@ -3913,9 +3913,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getFavourites"></a>
-# **getFavourites**
-> GetFavouritesPaginatedResponse getFavourites(opts)
+<a name="getFavorites"></a>
+# **getFavorites**
+> GetFavoritesPaginatedResponse getFavorites(opts)
 
 Get favorite contacts and lists
 
@@ -3938,7 +3938,7 @@ var opts = {
   'limit': 10, // Number | The number of results per page.
   'query': "\"A\"" // String | Find contacts or lists by specified search query
 };
-apiInstance.getFavourites(opts).then(function(data) {
+apiInstance.getFavorites(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -3956,7 +3956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetFavouritesPaginatedResponse**](GetFavouritesPaginatedResponse.md)
+[**GetFavoritesPaginatedResponse**](GetFavoritesPaginatedResponse.md)
 
 ### Authorization
 
@@ -6189,7 +6189,7 @@ var opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find chats by specified search query
-  'orderBy': "id" // String | Order results by some field. Default is id
+  'orderBy': "id" // String | Order results by some field. Default is id.
 };
 apiInstance.searchChatsByReceipent(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -6206,7 +6206,7 @@ Name | Type | Description  | Notes
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find chats by specified search query | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
 
 ### Return type
 
@@ -6248,7 +6248,7 @@ var opts = {
   'ids': "ids_example", // String | Find contact by ID(s)
   'listId': 56, // Number | Find contact by List ID
   'includeBlocked': 56, // Number | Should blocked contacts to be included
-  'query': "query_example", // String | Find contacts by specified search query
+  'query': "query_example", // String | Find contacts by specified search query.
   'local': 0, // Number | Treat phone number passed in 'query' field as local. Default is 0
   'country': "country_example", // String | 2-letter ISO country code for local phone numbers, used when 'local' is set to true. Default is account country
   'orderBy': "id", // String | Order results by some field. Default is id.
@@ -6272,7 +6272,7 @@ Name | Type | Description  | Notes
  **ids** | **String**| Find contact by ID(s) | [optional] 
  **listId** | **Number**| Find contact by List ID | [optional] 
  **includeBlocked** | **Number**| Should blocked contacts to be included | [optional] 
- **query** | **String**| Find contacts by specified search query | [optional] 
+ **query** | **String**| Find contacts by specified search query. | [optional] 
  **local** | **Number**| Treat phone number passed in &#39;query&#39; field as local. Default is 0 | [optional] [default to 0]
  **country** | **String**| 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country | [optional] 
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
@@ -6316,7 +6316,7 @@ var opts = {
   'limit': 10, // Number | The number of results per page.
   'ids': "ids_example", // String | Find message by ID(s).
   'query': "query_example", // String | Find recipients by specified search query.
-  'orderBy': "id", // String | Order results by some field. Default is id
+  'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc", // String | Order direction. Default is desc.
   'expand': 0 // Number | Expand by adding firstName, lastName and contactId.
 };
@@ -6336,7 +6336,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **ids** | **String**| Find message by ID(s). | [optional] 
  **query** | **String**| Find recipients by specified search query. | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
  **expand** | **Number**| Expand by adding firstName, lastName and contactId. | [optional] [default to 0]
 
@@ -6506,8 +6506,8 @@ var opts = {
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find messages by specified search query
   'ids': "ids_example", // String | Find schedules by ID(s)
-  'status': "x", // String | Fetch schedules with the specific status: a - actual, c - completed, x - all
-  'orderBy': "id", // String | Order results by some field. Default is id
+  'status': "x", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
+  'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
 };
 apiInstance.searchScheduledMessages(opts).then(function(data) {
@@ -6526,8 +6526,8 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find messages by specified search query | [optional] 
  **ids** | **String**| Find schedules by ID(s) | [optional] 
- **status** | **String**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [optional] [default to x]
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
+ **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -6656,7 +6656,7 @@ Name | Type | Description  | Notes
 
 Step 1: Send a verification code 
 
-Sends verification code to specified phone number.
+Sends a verification code to a specified phone number.
 
 ### Example
 ```javascript

@@ -36,7 +36,7 @@
   /**
    * The FavoriteContact model module.
    * @module model/FavoriteContact
-   * @version 2.0.810
+   * @version 2.0.811
    */
 
   /**
@@ -44,7 +44,7 @@
    * @alias module:model/FavoriteContact
    * @class
    * @param entityId {Number} List or Contact ID.
-   * @param entityType {module:model/FavoriteContact.EntityTypeEnum} Entity type which should be marked as **favourite**.
+   * @param entityType {module:model/FavoriteContact.EntityTypeEnum} Entity type which should be marked as **favorite**.
    * @param primaryLabel {String} Contact first name/last name if entityType is **contact**, List name if entity type is **list**.
    * @param secondaryLabel {String} Phone number if entityType is **contact**, List contacts number if entity type is **list**.
    * @param tertiaryLabel {String} Contact country if entityType is **contact** else null.
@@ -100,7 +100,7 @@
    */
   exports.prototype['entityId'] = undefined;
   /**
-   * Entity type which should be marked as **favourite**.
+   * Entity type which should be marked as **favorite**.
    * @member {module:model/FavoriteContact.EntityTypeEnum} entityType
    */
   exports.prototype['entityType'] = undefined;
