@@ -36,21 +36,19 @@
   /**
    * The RequestNewSubaccountTokenInputObject model module.
    * @module model/RequestNewSubaccountTokenInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>RequestNewSubaccountTokenInputObject</code>.
    * @alias module:model/RequestNewSubaccountTokenInputObject
    * @class
-   * @param userId {Number} Sub-account ID.
-   * @param password {String} Your account password.
    */
-  var exports = function(userId, password) {
+  var exports = function() {
     var _this = this;
 
-    _this['userId'] = userId;
-    _this['password'] = password;
+
+
 
   };
 

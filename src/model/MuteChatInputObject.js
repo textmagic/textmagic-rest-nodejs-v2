@@ -36,21 +36,19 @@
   /**
    * The MuteChatInputObject model module.
    * @module model/MuteChatInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>MuteChatInputObject</code>.
    * @alias module:model/MuteChatInputObject
    * @class
-   * @param id {Number} Chat ID.
-   * @param mute {Boolean} Mute notifications sound.
    */
-  var exports = function(id, mute) {
+  var exports = function() {
     var _this = this;
 
-    _this['id'] = id;
-    _this['mute'] = mute;
+
+
 
   };
 

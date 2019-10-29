@@ -36,19 +36,18 @@
   /**
    * The CreateListInputObject model module.
    * @module model/CreateListInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>CreateListInputObject</code>.
    * @alias module:model/CreateListInputObject
    * @class
-   * @param name {String} List name.
    */
-  var exports = function(name) {
+  var exports = function() {
     var _this = this;
 
-    _this['name'] = name;
+
 
 
 

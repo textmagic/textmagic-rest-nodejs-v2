@@ -36,23 +36,20 @@
   /**
    * The SendPhoneVerificationCodeInputObject model module.
    * @module model/SendPhoneVerificationCodeInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>SendPhoneVerificationCodeInputObject</code>.
    * @alias module:model/SendPhoneVerificationCodeInputObject
    * @class
-   * @param phone {String} Use the phone number in international E.164 format. If you need to pass a phone number in the local format, please use it with the **country** parameter to specify the origin country of the phone number. 
-   * @param brand {String} An alphanumeric string with up to 18 characters you can use to personalize the verification text message body, to help users identify your company or application name. For example: “Your TextMagic PIN is …” 
-   * @param codeLength {Number} The length of the verification code. The value can be 4 or 6 characters. 
    */
-  var exports = function(phone, brand, codeLength) {
+  var exports = function() {
     var _this = this;
 
-    _this['phone'] = phone;
-    _this['brand'] = brand;
-    _this['codeLength'] = codeLength;
+
+
+
 
 
 

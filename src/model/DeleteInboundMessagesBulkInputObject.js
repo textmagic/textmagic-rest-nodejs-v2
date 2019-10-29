@@ -36,7 +36,7 @@
   /**
    * The DeleteInboundMessagesBulkInputObject model module.
    * @module model/DeleteInboundMessagesBulkInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**

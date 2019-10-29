@@ -36,19 +36,18 @@
   /**
    * The DeleteContacsFromListObject model module.
    * @module model/DeleteContacsFromListObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>DeleteContacsFromListObject</code>.
    * @alias module:model/DeleteContacsFromListObject
    * @class
-   * @param contacts {String} Comma-separated array of [Contacts](http://docs.textmagictesting.com/#tag/Contacts) IDs. 
    */
-  var exports = function(contacts) {
+  var exports = function() {
     var _this = this;
 
-    _this['contacts'] = contacts;
+
   };
 
   /**

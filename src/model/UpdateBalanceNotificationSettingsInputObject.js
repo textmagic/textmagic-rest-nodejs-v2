@@ -36,20 +36,19 @@
   /**
    * The UpdateBalanceNotificationSettingsInputObject model module.
    * @module model/UpdateBalanceNotificationSettingsInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateBalanceNotificationSettingsInputObject</code>.
    * @alias module:model/UpdateBalanceNotificationSettingsInputObject
    * @class
-   * @param alertBalance {String} If balance is below this value, user receive low balance notification.
    */
-  var exports = function(alertBalance) {
+  var exports = function() {
     var _this = this;
 
 
-    _this['alertBalance'] = alertBalance;
+
 
 
 

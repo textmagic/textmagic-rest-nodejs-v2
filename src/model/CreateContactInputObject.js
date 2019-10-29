@@ -36,25 +36,23 @@
   /**
    * The CreateContactInputObject model module.
    * @module model/CreateContactInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>CreateContactInputObject</code>.
    * @alias module:model/CreateContactInputObject
    * @class
-   * @param phone {String} Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
-   * @param lists {String} Contact [list](http://docs.textmagictesting.com/#tag/Lists) ID. Each contact must be assigned to at least one list.
    */
-  var exports = function(phone, lists) {
+  var exports = function() {
     var _this = this;
 
 
 
-    _this['phone'] = phone;
 
 
-    _this['lists'] = lists;
+
+
 
 
 

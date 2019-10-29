@@ -36,19 +36,18 @@
   /**
    * The CreateCustomFieldInputObject model module.
    * @module model/CreateCustomFieldInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>CreateCustomFieldInputObject</code>.
    * @alias module:model/CreateCustomFieldInputObject
    * @class
-   * @param name {String} Custom field name.
    */
-  var exports = function(name) {
+  var exports = function() {
     var _this = this;
 
-    _this['name'] = name;
+
   };
 
   /**

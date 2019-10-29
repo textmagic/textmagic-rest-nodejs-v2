@@ -36,23 +36,20 @@
   /**
    * The BuyDedicatedNumberInputObject model module.
    * @module model/BuyDedicatedNumberInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>BuyDedicatedNumberInputObject</code>.
    * @alias module:model/BuyDedicatedNumberInputObject
    * @class
-   * @param phone {String} Dedicated phone number.
-   * @param country {String} Country code phone number.
-   * @param userId {Number} Assigned dedicated number. This number will be available for this account only. You cannot transfer numbers between sub-accounts. 
    */
-  var exports = function(phone, country, userId) {
+  var exports = function() {
     var _this = this;
 
-    _this['phone'] = phone;
-    _this['country'] = country;
-    _this['userId'] = userId;
+
+
+
   };
 
   /**

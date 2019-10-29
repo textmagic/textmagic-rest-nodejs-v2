@@ -36,19 +36,18 @@
   /**
    * The AssignContactsToListInputObject model module.
    * @module model/AssignContactsToListInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>AssignContactsToListInputObject</code>.
    * @alias module:model/AssignContactsToListInputObject
    * @class
-   * @param contacts {String} Comma-separated array of [Contacts](http://docs.textmagictesting.com/#tag/Contacts) IDs.
    */
-  var exports = function(contacts) {
+  var exports = function() {
     var _this = this;
 
-    _this['contacts'] = contacts;
+
   };
 
   /**

@@ -36,19 +36,18 @@
   /**
    * The UpdateContactNoteInputObject model module.
    * @module model/UpdateContactNoteInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateContactNoteInputObject</code>.
    * @alias module:model/UpdateContactNoteInputObject
    * @class
-   * @param note {String} Contact Note text.
    */
-  var exports = function(note) {
+  var exports = function() {
     var _this = this;
 
-    _this['note'] = note;
+
   };
 
   /**

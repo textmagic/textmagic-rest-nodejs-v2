@@ -36,23 +36,20 @@
   /**
    * The UpdateInboundMessagesNotificationSettingsInputObject model module.
    * @module model/UpdateInboundMessagesNotificationSettingsInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateInboundMessagesNotificationSettingsInputObject</code>.
    * @alias module:model/UpdateInboundMessagesNotificationSettingsInputObject
    * @class
-   * @param inboundMessageNotification {Boolean} Should user receive notification about new incoming messages.
-   * @param includeSmsHistory {Boolean} Include SMS history into notification Email.
-   * @param sendInHtmlFormat {Boolean} Send Email notification in HTML format.
    */
-  var exports = function(inboundMessageNotification, includeSmsHistory, sendInHtmlFormat) {
+  var exports = function() {
     var _this = this;
 
-    _this['inboundMessageNotification'] = inboundMessageNotification;
-    _this['includeSmsHistory'] = includeSmsHistory;
-    _this['sendInHtmlFormat'] = sendInHtmlFormat;
+
+
+
 
 
 

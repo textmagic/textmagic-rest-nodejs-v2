@@ -36,27 +36,25 @@
   /**
    * The SendMessageInputObject model module.
    * @module model/SendMessageInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>SendMessageInputObject</code>.
    * @alias module:model/SendMessageInputObject
    * @class
-   * @param text {String} Message text. Required if the **template_id** is not set.
-   * @param phones {String} Comma separated array of E.164 phone numbers message will be sent to.
    */
-  var exports = function(text, phones) {
+  var exports = function() {
     var _this = this;
 
-    _this['text'] = text;
 
 
 
 
 
 
-    _this['phones'] = phones;
+
+
 
 
 

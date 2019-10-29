@@ -36,19 +36,18 @@
   /**
    * The UpdateCustomFieldInputObject model module.
    * @module model/UpdateCustomFieldInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateCustomFieldInputObject</code>.
    * @alias module:model/UpdateCustomFieldInputObject
    * @class
-   * @param name {String} Custom field name.
    */
-  var exports = function(name) {
+  var exports = function() {
     var _this = this;
 
-    _this['name'] = name;
+
   };
 
   /**

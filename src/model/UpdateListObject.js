@@ -36,19 +36,18 @@
   /**
    * The UpdateListObject model module.
    * @module model/UpdateListObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateListObject</code>.
    * @alias module:model/UpdateListObject
    * @class
-   * @param name {String} List name.
    */
-  var exports = function(name) {
+  var exports = function() {
     var _this = this;
 
-    _this['name'] = name;
+
 
 
 

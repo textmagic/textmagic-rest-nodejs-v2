@@ -36,21 +36,19 @@
   /**
    * The UpdateSenderSettingInputObject model module.
    * @module model/UpdateSenderSettingInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateSenderSettingInputObject</code>.
    * @alias module:model/UpdateSenderSettingInputObject
    * @class
-   * @param value {String} Available phone number in international E.164 format or senderid.
-   * @param country {String} Country for which the setting will be set.
    */
-  var exports = function(value, country) {
+  var exports = function() {
     var _this = this;
 
-    _this['value'] = value;
-    _this['country'] = country;
+
+
 
   };
 

@@ -36,23 +36,20 @@
   /**
    * The UpdateCallbackSettingsInputObject model module.
    * @module model/UpdateCallbackSettingsInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateCallbackSettingsInputObject</code>.
    * @alias module:model/UpdateCallbackSettingsInputObject
    * @class
-   * @param outUrl {String} This URL is used to push message delivery status updates to your application.
-   * @param inUrl {String} This URL is used to push incoming SMS to your application.
-   * @param format {module:model/UpdateCallbackSettingsInputObject.FormatEnum} Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json
    */
-  var exports = function(outUrl, inUrl, format) {
+  var exports = function() {
     var _this = this;
 
-    _this['outUrl'] = outUrl;
-    _this['inUrl'] = inUrl;
-    _this['format'] = format;
+
+
+
   };
 
   /**

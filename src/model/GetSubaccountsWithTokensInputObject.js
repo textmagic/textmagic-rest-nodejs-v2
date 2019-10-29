@@ -36,21 +36,19 @@
   /**
    * The GetSubaccountsWithTokensInputObject model module.
    * @module model/GetSubaccountsWithTokensInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>GetSubaccountsWithTokensInputObject</code>.
    * @alias module:model/GetSubaccountsWithTokensInputObject
    * @class
-   * @param appName {String} Application name.
-   * @param password {String} Your account password.
    */
-  var exports = function(appName, password) {
+  var exports = function() {
     var _this = this;
 
-    _this['appName'] = appName;
-    _this['password'] = password;
+
+
   };
 
   /**

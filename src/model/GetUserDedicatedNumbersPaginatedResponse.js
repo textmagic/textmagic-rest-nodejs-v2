@@ -36,7 +36,7 @@
   /**
    * The GetUserDedicatedNumbersPaginatedResponse model module.
    * @module model/GetUserDedicatedNumbersPaginatedResponse
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**

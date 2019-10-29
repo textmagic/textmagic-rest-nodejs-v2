@@ -36,21 +36,19 @@
   /**
    * The CheckPhoneVerificationCodeInputObject model module.
    * @module model/CheckPhoneVerificationCodeInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>CheckPhoneVerificationCodeInputObject</code>.
    * @alias module:model/CheckPhoneVerificationCodeInputObject
    * @class
-   * @param code {Number} Verification code received by the user and entered into the form field.
-   * @param verifyId {String} VerifyId from Step 1 to match both requests together.
    */
-  var exports = function(code, verifyId) {
+  var exports = function() {
     var _this = this;
 
-    _this['code'] = code;
-    _this['verifyId'] = verifyId;
+
+
   };
 
   /**

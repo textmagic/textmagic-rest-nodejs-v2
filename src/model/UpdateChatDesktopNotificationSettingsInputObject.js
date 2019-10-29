@@ -36,21 +36,19 @@
   /**
    * The UpdateChatDesktopNotificationSettingsInputObject model module.
    * @module model/UpdateChatDesktopNotificationSettingsInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateChatDesktopNotificationSettingsInputObject</code>.
    * @alias module:model/UpdateChatDesktopNotificationSettingsInputObject
    * @class
-   * @param playSound {Boolean} Enable notification sound?
-   * @param showNotifications {Boolean} Show desktop notifications about new messages.
    */
-  var exports = function(playSound, showNotifications) {
+  var exports = function() {
     var _this = this;
 
-    _this['playSound'] = playSound;
-    _this['showNotifications'] = showNotifications;
+
+
 
 
   };

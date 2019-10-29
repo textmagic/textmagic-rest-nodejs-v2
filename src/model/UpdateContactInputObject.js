@@ -36,25 +36,23 @@
   /**
    * The UpdateContactInputObject model module.
    * @module model/UpdateContactInputObject
-   * @version 2.0.824
+   * @version 2.0.826
    */
 
   /**
    * Constructs a new <code>UpdateContactInputObject</code>.
    * @alias module:model/UpdateContactInputObject
    * @class
-   * @param phone {String} Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
-   * @param lists {String} Comma-separated [list](http://docs.textmagictesting.com/#section/Lists) ID. Each contact must be assigned to at least one list.
    */
-  var exports = function(phone, lists) {
+  var exports = function() {
     var _this = this;
 
 
 
-    _this['phone'] = phone;
 
 
-    _this['lists'] = lists;
+
+
 
 
 
