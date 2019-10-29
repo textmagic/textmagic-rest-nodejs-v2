@@ -36,7 +36,7 @@
   /**
    * The Invoice model module.
    * @module model/Invoice
-   * @version 2.0.811
+   * @version 2.0.812
    */
 
   /**

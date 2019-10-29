@@ -36,7 +36,7 @@
   /**
    * The InviteSubaccountInputObject model module.
    * @module model/InviteSubaccountInputObject
-   * @version 2.0.811
+   * @version 2.0.812
    */
 
   /**
@@ -44,7 +44,7 @@
    * @alias module:model/InviteSubaccountInputObject
    * @class
    * @param email {String} Invitation email will be sent to this email address.
-   * @param role {module:model/InviteSubaccountInputObject.RoleEnum} Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
+   * @param role {module:model/InviteSubaccountInputObject.RoleEnum} Type of account: *   **A** for Administrator sub-account; *   **U** for Regular User. 
    */
   var exports = function(email, role) {
     var _this = this;
@@ -80,7 +80,7 @@
    */
   exports.prototype['email'] = undefined;
   /**
-   * Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
+   * Type of account: *   **A** for Administrator sub-account; *   **U** for Regular User. 
    * @member {module:model/InviteSubaccountInputObject.RoleEnum} role
    */
   exports.prototype['role'] = undefined;

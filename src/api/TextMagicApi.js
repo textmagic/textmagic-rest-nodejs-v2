@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.811
+   * @version 2.0.812
    */
 
   /**
@@ -5708,7 +5708,7 @@
 
     /**
      * Get unread messages number
-     * Get total amount of unread messages in the current user chats.
+     * Get the total amount of unread messages in the current user chats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetUnreadMessagesTotalResponse} and HTTP response
      */
     this.getUnreadMessagesTotalWithHttpInfo = function() {
@@ -5740,7 +5740,7 @@
 
     /**
      * Get unread messages number
-     * Get total amount of unread messages in the current user chats.
+     * Get the total amount of unread messages in the current user chats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetUnreadMessagesTotalResponse}
      */
     this.getUnreadMessagesTotal = function() {
@@ -6452,7 +6452,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find chats by specified search query
+     * @param {String} opts.query Find chats by specified search query.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchChatsPaginatedResponse} and HTTP response
      */
     this.searchChatsWithHttpInfo = function(opts) {
@@ -6492,7 +6492,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find chats by specified search query
+     * @param {String} opts.query Find chats by specified search query.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchChatsPaginatedResponse}
      */
     this.searchChats = function(opts) {
@@ -6509,7 +6509,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.ids Find chats by ID(s)
+     * @param {String} opts.ids Find chats by ID(s).
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchChatsByIdsPaginatedResponse} and HTTP response
      */
     this.searchChatsByIdsWithHttpInfo = function(opts) {
@@ -6549,7 +6549,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.ids Find chats by ID(s)
+     * @param {String} opts.ids Find chats by ID(s).
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchChatsByIdsPaginatedResponse}
      */
     this.searchChatsByIds = function(opts) {
@@ -7152,7 +7152,7 @@
 
     /**
      * Change chat status
-     * Set status of the chat given by ID.
+     * Set the status of the chat given by ID.
      * @param {module:model/SetChatStatusInputObject} setChatStatusInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -7190,7 +7190,7 @@
 
     /**
      * Change chat status
-     * Set status of the chat given by ID.
+     * Set the status of the chat given by ID.
      * @param {module:model/SetChatStatusInputObject} setChatStatusInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */

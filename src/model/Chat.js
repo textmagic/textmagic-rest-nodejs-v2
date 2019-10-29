@@ -36,7 +36,7 @@
   /**
    * The Chat model module.
    * @module model/Chat
-   * @version 2.0.811
+   * @version 2.0.812
    */
 
   /**
@@ -50,7 +50,7 @@
    * @param unsubscribedContactId {Number} If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
    * @param unread {Number} Total unread incoming messages.
    * @param updatedAt {Date} Time when the last incoming message arrived at this chat.
-   * @param status {module:model/Chat.StatusEnum} Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted 
+   * @param status {module:model/Chat.StatusEnum} Chat status:   * **a** - Active;   * **c** - Closed;   * **d** - Deleted. 
    * @param mute {Number} Indicates when the chat is muted.
    * @param lastMessage {String} The last message content of a chat.
    * @param direction {module:model/Chat.DirectionEnum} Last message type: * **ci** - incoming call; * **co** - outgoing call; * **i** - incoming message; * **o** - outgoing message. 
@@ -173,7 +173,7 @@
    */
   exports.prototype['updatedAt'] = undefined;
   /**
-   * Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted 
+   * Chat status:   * **a** - Active;   * **c** - Closed;   * **d** - Deleted. 
    * @member {module:model/Chat.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

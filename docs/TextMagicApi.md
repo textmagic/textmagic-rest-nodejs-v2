@@ -5372,7 +5372,7 @@ Name | Type | Description  | Notes
 
 Get unread messages number
 
-Get total amount of unread messages in the current user chats.
+Get the total amount of unread messages in the current user chats.
 
 ### Example
 ```javascript
@@ -6080,7 +6080,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'query': "query_example" // String | Find chats by specified search query
+  'query': "query_example" // String | Find chats by specified search query.
 };
 apiInstance.searchChats(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -6096,7 +6096,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **query** | **String**| Find chats by specified search query | [optional] 
+ **query** | **String**| Find chats by specified search query. | [optional] 
 
 ### Return type
 
@@ -6134,7 +6134,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'ids': "ids_example" // String | Find chats by ID(s)
+  'ids': "ids_example" // String | Find chats by ID(s).
 };
 apiInstance.searchChatsByIds(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -6150,7 +6150,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **ids** | **String**| Find chats by ID(s) | [optional] 
+ **ids** | **String**| Find chats by ID(s). | [optional] 
 
 ### Return type
 
@@ -6705,7 +6705,7 @@ Name | Type | Description  | Notes
 
 Change chat status
 
-Set status of the chat given by ID.
+Set the status of the chat given by ID.
 
 ### Example
 ```javascript

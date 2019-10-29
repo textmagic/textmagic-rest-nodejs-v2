@@ -36,7 +36,7 @@
   /**
    * The SubaccountWithToken model module.
    * @module model/SubaccountWithToken
-   * @version 2.0.811
+   * @version 2.0.812
    */
 
   /**
@@ -48,14 +48,14 @@
    * @param firstName {String} Account first name.
    * @param lastName {String} Account last name.
    * @param email {String} Account Email address.
-   * @param status {module:model/SubaccountWithToken.StatusEnum} Current account status: * **A** for Active * **T** for Trial. 
+   * @param status {module:model/SubaccountWithToken.StatusEnum} Current account status: * **A** for Active; * **T** for Trial. 
    * @param balance {Number} Account balance (in account currency).
    * @param phone {String} Contact phone number.
    * @param company {String} Account company name.
    * @param currency {module:model/Currency} 
    * @param country {module:model/Country} 
    * @param timezone {module:model/Timezone} 
-   * @param subaccountType {module:model/SubaccountWithToken.SubaccountTypeEnum} Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
+   * @param subaccountType {module:model/SubaccountWithToken.SubaccountTypeEnum} Type of account: *   **A** for Administrator sub-account; *   **U** for Regular User. 
    * @param emailAccepted {Boolean} Does the account have a confirmed Email?.
    * @param phoneAccepted {Boolean} Does the account have a confirmed Phone Number?.
    * @param avatar {module:model/UserImage} 
@@ -175,7 +175,7 @@
    */
   exports.prototype['email'] = undefined;
   /**
-   * Current account status: * **A** for Active * **T** for Trial. 
+   * Current account status: * **A** for Active; * **T** for Trial. 
    * @member {module:model/SubaccountWithToken.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
@@ -207,7 +207,7 @@
    */
   exports.prototype['timezone'] = undefined;
   /**
-   * Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
+   * Type of account: *   **A** for Administrator sub-account; *   **U** for Regular User. 
    * @member {module:model/SubaccountWithToken.SubaccountTypeEnum} subaccountType
    */
   exports.prototype['subaccountType'] = undefined;
