@@ -36,7 +36,7 @@
   /**
    * The User model module.
    * @module model/User
-   * @version 2.0.809
+   * @version 2.0.810
    */
 
   /**
@@ -48,16 +48,16 @@
    * @param firstName {String} Account first name.
    * @param lastName {String} Account last name.
    * @param email {String} User email address.
-   * @param status {module:model/User.StatusEnum} Current account status: * **A** for Active * **T** for Trial. 
+   * @param status {module:model/User.StatusEnum} Current account status: * **A** for Active; * **T** for Trial. 
    * @param balance {Number} Account balance (in account currency).
-   * @param phone {String} User phone number
+   * @param phone {String} User`s phone number.
    * @param company {String} Account company name.
    * @param currency {module:model/Currency} 
    * @param country {module:model/Country} 
    * @param timezone {module:model/Timezone} 
-   * @param subaccountType {module:model/User.SubaccountTypeEnum} Type of account: * **P** for Parent User * **A** for Administrator Sub-Account * **U** for Regular User 
-   * @param emailAccepted {Boolean} Is account has confirmed Email.
-   * @param phoneAccepted {Boolean} Is account has confirmed Phone number.
+   * @param subaccountType {module:model/User.SubaccountTypeEnum} Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User 
+   * @param emailAccepted {Boolean} Does the account have a confirmed email?
+   * @param phoneAccepted {Boolean} Does the account have a confirmed phone number?
    * @param avatar {module:model/UserImage} 
    */
   var exports = function(id, username, firstName, lastName, email, status, balance, phone, company, currency, country, timezone, subaccountType, emailAccepted, phoneAccepted, avatar) {
@@ -154,7 +154,7 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * User's prefered format of time display * *12h* - AM/PM format * *24h* - 24 hour clock format 
+   * User's preferred format of time display: * *12h* – AM/PM format; * *24h* – 24 hour clock format. 
    * @member {module:model/User.DisplayTimeFormatEnum} displayTimeFormat
    */
   exports.prototype['displayTimeFormat'] = undefined;
@@ -179,7 +179,7 @@
    */
   exports.prototype['email'] = undefined;
   /**
-   * Current account status: * **A** for Active * **T** for Trial. 
+   * Current account status: * **A** for Active; * **T** for Trial. 
    * @member {module:model/User.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
@@ -189,7 +189,7 @@
    */
   exports.prototype['balance'] = undefined;
   /**
-   * User phone number
+   * User`s phone number.
    * @member {String} phone
    */
   exports.prototype['phone'] = undefined;
@@ -211,17 +211,17 @@
    */
   exports.prototype['timezone'] = undefined;
   /**
-   * Type of account: * **P** for Parent User * **A** for Administrator Sub-Account * **U** for Regular User 
+   * Type of account: * **P** for Parent User; * **A** for Administrator Sub-Account; * **U** for Regular User 
    * @member {module:model/User.SubaccountTypeEnum} subaccountType
    */
   exports.prototype['subaccountType'] = undefined;
   /**
-   * Is account has confirmed Email.
+   * Does the account have a confirmed email?
    * @member {Boolean} emailAccepted
    */
   exports.prototype['emailAccepted'] = undefined;
   /**
-   * Is account has confirmed Phone number.
+   * Does the account have a confirmed phone number?
    * @member {Boolean} phoneAccepted
    */
   exports.prototype['phoneAccepted'] = undefined;

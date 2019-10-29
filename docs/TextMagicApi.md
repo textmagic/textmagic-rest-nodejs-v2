@@ -89,9 +89,9 @@ Method | HTTP request | Description
 [**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
 [**getMessagePrice**](TextMagicApi.md#getMessagePrice) | **GET** /api/v2/messages/price/normalized | Check message price
-[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session details
-[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session statistics
-[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session messages
+[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session&#x60;s details
+[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session&#x60;s statistics
+[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session&#x60;s messages
 [**getMessagingCounters**](TextMagicApi.md#getMessagingCounters) | **GET** /api/v2/stats/messaging/data | Get sent/received messages counters values
 [**getMessagingStat**](TextMagicApi.md#getMessagingStat) | **GET** /api/v2/stats/messaging | Get messaging statistics
 [**getOutboundMessage**](TextMagicApi.md#getOutboundMessage) | **GET** /api/v2/messages/{id} | Get a single message
@@ -104,7 +104,7 @@ Method | HTTP request | Description
 [**getSubaccount**](TextMagicApi.md#getSubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
 [**getSubaccounts**](TextMagicApi.md#getSubaccounts) | **GET** /api/v2/subaccounts | Get sub-accounts list
 [**getSubaccountsWithTokens**](TextMagicApi.md#getSubaccountsWithTokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
-[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template details
+[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template&#x60;s details
 [**getTimezones**](TextMagicApi.md#getTimezones) | **GET** /api/v2/timezones | Get timezones
 [**getUnreadMessagesTotal**](TextMagicApi.md#getUnreadMessagesTotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
 [**getUnsubscribedContact**](TextMagicApi.md#getUnsubscribedContact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 Close chats (bulk)
 
-Close chats by chat ids or close all chats
+Close chats by chat IDs or close all chats
 
 ### Example
 ```javascript
@@ -978,7 +978,7 @@ null (empty response body)
 
 Delete chat messages by ID(s)
 
-Delete messages from chat by given messages ID(s).
+Delete messages from chat by given message IDs.
 
 ### Example
 ```javascript
@@ -1030,7 +1030,7 @@ null (empty response body)
 
 Delete chats (bulk)
 
-Delete chats by given ID(s) or delete all chats.
+Delete chats by given IDs or delete all chats.
 
 ### Example
 ```javascript
@@ -1823,7 +1823,7 @@ null (empty response body)
 
 Delete sessions (bulk)
 
-Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+Delete message sessions, together with all nested messages, by given ID(s) or delete all message sessions.
 
 ### Example
 ```javascript
@@ -2166,7 +2166,7 @@ null (empty response body)
 
 Delete templates (bulk)
 
-Delete template by given ID(s) or delete all templates.
+Delete templates by given IDs or delete all templates.
 
 ### Example
 ```javascript
@@ -4234,8 +4234,8 @@ var opts = {
   'limit': 10, // Number | The number of results per page.
   'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc", // String | Order direction. Default is desc.
-  'favoriteOnly': 0, // Number | Return only favorite lists
-  'onlyMine': 0 // Number | Return only current user lists
+  'favoriteOnly': 0, // Number | Return only favorited lists.
+  'onlyMine': 0 // Number | Return only current user lists.
 };
 apiInstance.getLists(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -4253,8 +4253,8 @@ Name | Type | Description  | Notes
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
- **favoriteOnly** | **Number**| Return only favorite lists | [optional] [default to 0]
- **onlyMine** | **Number**| Return only current user lists | [optional] [default to 0]
+ **favoriteOnly** | **Number**| Return only favorited lists. | [optional] [default to 0]
+ **onlyMine** | **Number**| Return only current user lists. | [optional] [default to 0]
 
 ### Return type
 
@@ -4494,9 +4494,9 @@ Name | Type | Description  | Notes
 # **getMessageSession**
 > MessageSession getMessageSession(id)
 
-Get a session details
+Get a session&#x60;s details
 
-Get a specific session’s details
+Get a specific session’s details.
 
 ### Example
 ```javascript
@@ -4510,7 +4510,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var id = 1; // Number | a session ID
+var id = 1; // Number | Session ID.
 
 apiInstance.getMessageSession(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -4524,7 +4524,7 @@ apiInstance.getMessageSession(id).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Number**| a session ID | 
+ **id** | **Number**| Session ID. | 
 
 ### Return type
 
@@ -4543,7 +4543,7 @@ Name | Type | Description  | Notes
 # **getMessageSessionStat**
 > GetMessageSessionStatResponse getMessageSessionStat(id, opts)
 
-Get a session statistics
+Get a session&#x60;s statistics
 
 
 
@@ -4562,7 +4562,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var id = 1; // Number | 
 
 var opts = { 
-  'includeDeleted': 0 // Number | Search also in deleted messages
+  'includeDeleted': 0 // Number | Search also in deleted messages.
 };
 apiInstance.getMessageSessionStat(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -4577,7 +4577,7 @@ apiInstance.getMessageSessionStat(id, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **includeDeleted** | **Number**| Search also in deleted messages | [optional] [default to 0]
+ **includeDeleted** | **Number**| Search also in deleted messages. | [optional] [default to 0]
 
 ### Return type
 
@@ -4596,9 +4596,9 @@ Name | Type | Description  | Notes
 # **getMessagesBySessionId**
 > GetMessagesBySessionIdPaginatedResponse getMessagesBySessionId(id, opts)
 
-Get a session messages
+Get a session&#x60;s messages
 
-A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+A useful synonym for the \&quot;messages/search\&quot; command with the provided \&quot;sessionId\&quot; parameter.
 
 ### Example
 ```javascript
@@ -4617,8 +4617,8 @@ var id = 1; // Number |
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'statuses': "statuses_example", // String | Find messages by status
-  'includeDeleted': 0 // Number | Search also in deleted messages
+  'statuses': "statuses_example", // String | Find messages by status.
+  'includeDeleted': 0 // Number | Search also in deleted messages.
 };
 apiInstance.getMessagesBySessionId(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -4635,8 +4635,8 @@ Name | Type | Description  | Notes
  **id** | **Number**|  | 
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **statuses** | **String**| Find messages by status | [optional] 
- **includeDeleted** | **Number**| Search also in deleted messages | [optional] [default to 0]
+ **statuses** | **String**| Find messages by status. | [optional] 
+ **includeDeleted** | **Number**| Search also in deleted messages. | [optional] [default to 0]
 
 ### Return type
 
@@ -5271,7 +5271,7 @@ Name | Type | Description  | Notes
 # **getTemplate**
 > MessageTemplate getTemplate(id)
 
-Get a template details
+Get a template&#x60;s details
 
 Get a single template.
 
@@ -5677,7 +5677,7 @@ null (empty response body)
 
 Mark chats as read (bulk)
 
-Mark several chats as read by chat ids or mark all chats as read
+Mark several chats as read by chat IDs or mark all chats as read
 
 ### Example
 ```javascript
@@ -5726,7 +5726,7 @@ null (empty response body)
 
 Mark chats as unread (bulk)
 
-Mark several chats as UNread by chat ids or mark all chats as UNread
+Mark several chats as UNread by chat IDs or mark all chats as UNread
 
 ### Example
 ```javascript
@@ -5824,7 +5824,7 @@ Name | Type | Description  | Notes
 
 Mute chats (bulk)
 
-Mute several chats by chat ids or mute all chats
+Mute several chats by chat IDs or mute all chats
 
 ### Example
 ```javascript
@@ -5916,7 +5916,7 @@ This endpoint does not need any parameter.
 
 Reopen chats (bulk)
 
-Reopen chats by chat ids or reopen all chats
+Reopen chats by chat IDs or reopen all chats
 
 ### Example
 ```javascript
@@ -6566,9 +6566,9 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'ids': "ids_example", // String | Find template by ID(s)
-  'name': "name_example", // String | Find template by name
-  'content': "content_example" // String | Find template by content
+  'ids': "ids_example", // String | Find template by ID(s).
+  'name': "name_example", // String | Find template by name.
+  'content': "content_example" // String | Find template by content.
 };
 apiInstance.searchTemplates(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -6584,9 +6584,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **ids** | **String**| Find template by ID(s) | [optional] 
- **name** | **String**| Find template by name | [optional] 
- **content** | **String**| Find template by content | [optional] 
+ **ids** | **String**| Find template by ID(s). | [optional] 
+ **name** | **String**| Find template by name. | [optional] 
+ **content** | **String**| Find template by content. | [optional] 
 
 ### Return type
 
@@ -6852,7 +6852,7 @@ null (empty response body)
 
 Unmute chats (bulk)
 
-Unmute several chats by chat ids or unmute all chats
+Unmute several chats by chat IDs or unmute all chats
 
 ### Example
 ```javascript

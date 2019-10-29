@@ -36,7 +36,7 @@
   /**
    * The DeleteChatMessagesBulkInputObject model module.
    * @module model/DeleteChatMessagesBulkInputObject
-   * @version 2.0.809
+   * @version 2.0.810
    */
 
   /**
@@ -81,22 +81,22 @@
   }
 
   /**
-   * Inbound messages ID(s) to delete. Require when \"all\" equal to 0 (false).
+   * Inbound message IDs to delete. Require when \"all\" is equal to 0 (false).
    * @member {String} inbound_ids
    */
   exports.prototype['inbound_ids'] = undefined;
   /**
-   * Sent messages ID(s) to delete. Require when \"all\" equal to 0 (false).
+   * Sent message IDs to delete. Require when \"all\" is equal to 0 (false).
    * @member {String} sent_ids
    */
   exports.prototype['sent_ids'] = undefined;
   /**
-   * Calls ID(s) to delete. Require when \"all\" equal to 0 (false).
+   * Calls IDs to delete. Require when \"all\" is equal to 0 (false).
    * @member {String} calls_ids
    */
   exports.prototype['calls_ids'] = undefined;
   /**
-   * Default is 0 (false). If set to 1 all the entities will be removed.
+   * Default is 0 (false). If set to 1, all entities will be removed.
    * @member {Boolean} all
    */
   exports.prototype['all'] = undefined;

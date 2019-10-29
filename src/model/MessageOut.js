@@ -36,7 +36,7 @@
   /**
    * The MessageOut model module.
    * @module model/MessageOut
-   * @version 2.0.809
+   * @version 2.0.810
    */
 
   /**
@@ -47,7 +47,7 @@
    * @param text {String} 
    * @param status {module:model/MessageOut.StatusEnum} Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. 
    * @param contactId {Number} Recipient contact ID.
-   * @param sessionId {Number} Message Session ID of a Message.
+   * @param sessionId {Number} Message Session ID of a message.
    * @param messageTime {Date} Sending time.
    * @param avatar {String} 
    * @param charset {String} Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS. 
@@ -168,7 +168,7 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * Recipient phone number.
+   * Recipient`s phone number.
    * @member {String} receiver
    */
   exports.prototype['receiver'] = undefined;
@@ -187,7 +187,7 @@
    */
   exports.prototype['contactId'] = undefined;
   /**
-   * Message Session ID of a Message.
+   * Message Session ID of a message.
    * @member {Number} sessionId
    */
   exports.prototype['sessionId'] = undefined;
@@ -231,7 +231,7 @@
    */
   exports.prototype['country'] = undefined;
   /**
-   * Receipent phone number.
+   * Receipent`s phone number.
    * @member {String} phone
    */
   exports.prototype['phone'] = undefined;
@@ -246,7 +246,7 @@
    */
   exports.prototype['partsCount'] = undefined;
   /**
-   * The user email which this message came from. For Email2SMS and Distribution Lists the message will come from an original email address; in other cases, it will come from an account email address.
+   * The user email which this message came from. For Email2SMS and Distribution Lists the messages, it is an original email address - in other cases, it is an account email address.
    * @member {String} fromEmail
    */
   exports.prototype['fromEmail'] = undefined;

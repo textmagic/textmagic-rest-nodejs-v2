@@ -36,14 +36,14 @@
   /**
    * The ListImage model module.
    * @module model/ListImage
-   * @version 2.0.809
+   * @version 2.0.810
    */
 
   /**
    * Constructs a new <code>ListImage</code>.
    * @alias module:model/ListImage
    * @class
-   * @param href {String} URI of a list avatar.
+   * @param href {String} The URI of a list avatar.
    */
   var exports = function(href) {
     var _this = this;
@@ -70,7 +70,7 @@
   }
 
   /**
-   * URI of a list avatar.
+   * The URI of a list avatar.
    * @member {String} href
    */
   exports.prototype['href'] = undefined;

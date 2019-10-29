@@ -36,14 +36,14 @@
   /**
    * The Currency model module.
    * @module model/Currency
-   * @version 2.0.809
+   * @version 2.0.810
    */
 
   /**
    * Constructs a new <code>Currency</code>.
    * @alias module:model/Currency
    * @class
-   * @param id {String} Three-letter ISO currency ID.
+   * @param id {String} The 3-letter ISO currency ID.
    * @param unicodeSymbol {String} Unicode-compatible currency symbol.
    * @param htmlSymbol {String} HTML-compatible currency symbol.
    */
@@ -80,7 +80,7 @@
   }
 
   /**
-   * Three-letter ISO currency ID.
+   * The 3-letter ISO currency ID.
    * @member {String} id
    */
   exports.prototype['id'] = undefined;

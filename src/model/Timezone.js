@@ -36,7 +36,7 @@
   /**
    * The Timezone model module.
    * @module model/Timezone
-   * @version 2.0.809
+   * @version 2.0.810
    */
 
   /**
@@ -45,8 +45,8 @@
    * @class
    * @param id {Number} Internal timezone ID.
    * @param area {String} Timezone area.
-   * @param dst {Number} Is Daylight saving time used in this timezone?
-   * @param offset {Number} Offset from UTC time in seconds. In this example it is 21600/60/60=6 hours.
+   * @param dst {Number} Is daylight saving time used in this timezone?
+   * @param offset {Number} Offset from UTC time in seconds. In this example, it is 21600/60/60=6 hours.
    * @param timezone {String} User-friendly timezone name (with spaces replaced by underscores).
    */
   var exports = function(id, area, dst, offset, timezone) {
@@ -100,12 +100,12 @@
    */
   exports.prototype['area'] = undefined;
   /**
-   * Is Daylight saving time used in this timezone?
+   * Is daylight saving time used in this timezone?
    * @member {Number} dst
    */
   exports.prototype['dst'] = undefined;
   /**
-   * Offset from UTC time in seconds. In this example it is 21600/60/60=6 hours.
+   * Offset from UTC time in seconds. In this example, it is 21600/60/60=6 hours.
    * @member {Number} offset
    */
   exports.prototype['offset'] = undefined;

@@ -36,7 +36,7 @@
   /**
    * The List model module.
    * @module model/List
-   * @version 2.0.809
+   * @version 2.0.810
    */
 
   /**
@@ -46,13 +46,13 @@
    * @param id {Number} List ID.
    * @param name {String} List name.
    * @param description {String} Description of the list.
-   * @param favorited {Boolean} Is the List favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).
+   * @param favorited {Boolean} Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites).
    * @param membersCount {Number} List members count.
    * @param user {module:model/User} 
    * @param service {Boolean} Internal service field.
    * @param shared {Boolean} Is the list **shared** among all sub-accounts?
    * @param avatar {module:model/ListImage} 
-   * @param isDefault {Boolean} Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default.
+   * @param isDefault {Boolean} Indicates that List is used as a default. All new contacts added via web app will be added in this List by default.
    */
   var exports = function(id, name, description, favorited, membersCount, user, service, shared, avatar, isDefault) {
     var _this = this;
@@ -130,7 +130,7 @@
    */
   exports.prototype['description'] = undefined;
   /**
-   * Is the List favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites).
+   * Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites).
    * @member {Boolean} favorited
    */
   exports.prototype['favorited'] = undefined;
@@ -158,7 +158,7 @@
    */
   exports.prototype['avatar'] = undefined;
   /**
-   * Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default.
+   * Indicates that List is used as a default. All new contacts added via web app will be added in this List by default.
    * @member {Boolean} isDefault
    */
   exports.prototype['isDefault'] = undefined;
