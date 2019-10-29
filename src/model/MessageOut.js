@@ -36,7 +36,7 @@
   /**
    * The MessageOut model module.
    * @module model/MessageOut
-   * @version 2.0.808
+   * @version 2.0.809
    */
 
   /**
@@ -251,7 +251,7 @@
    */
   exports.prototype['fromEmail'] = undefined;
   /**
-   * Phone number used to send the SMS.
+   * The Phone number used to send the SMS.
    * @member {String} fromNumber
    */
   exports.prototype['fromNumber'] = undefined;

@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.808
+   * @version 2.0.809
    */
 
   /**
@@ -1962,7 +1962,7 @@
 
     /**
      * Delete messages (bulk)
-     * Delete outbound messages by given ID(s) or delete all outbound messages.
+     * Delete outbound messages by the given ID(s) or delete all outbound messages.
      * @param {module:model/DeleteOutboundMessagesBulkInputObject} deleteOutboundMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -2000,7 +2000,7 @@
 
     /**
      * Delete messages (bulk)
-     * Delete outbound messages by given ID(s) or delete all outbound messages.
+     * Delete outbound messages by the given ID(s) or delete all outbound messages.
      * @param {module:model/DeleteOutboundMessagesBulkInputObject} deleteOutboundMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -2514,7 +2514,7 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAllInboundMessagesPaginatedResponse} and HTTP response
      */
     this.getAllInboundMessagesWithHttpInfo = function(opts) {
@@ -2556,7 +2556,7 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAllInboundMessagesPaginatedResponse}
      */
     this.getAllInboundMessages = function(opts) {
@@ -2686,7 +2686,7 @@
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.status Fetch schedules with the specific status: a - actual, c - completed, x - all (default to x)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAllScheduledMessagesPaginatedResponse} and HTTP response
      */
     this.getAllScheduledMessagesWithHttpInfo = function(opts) {
@@ -2730,7 +2730,7 @@
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.status Fetch schedules with the specific status: a - actual, c - completed, x - all (default to x)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAllScheduledMessagesPaginatedResponse}
      */
     this.getAllScheduledMessages = function(opts) {
@@ -3004,9 +3004,9 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find blocked contacts by specified search query
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {String} opts.query Find blocked contacts by specified search query.
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetBlockedContactsPaginatedResponse} and HTTP response
      */
     this.getBlockedContactsWithHttpInfo = function(opts) {
@@ -3048,9 +3048,9 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find blocked contacts by specified search query
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {String} opts.query Find blocked contacts by specified search query.
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetBlockedContactsPaginatedResponse}
      */
     this.getBlockedContacts = function(opts) {
@@ -3284,7 +3284,7 @@
      * @param {String} opts.query Find messages by specified search query
      * @param {Number} opts.start Return messages since specified timestamp only
      * @param {Number} opts.end Return messages up to specified timestamp only
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @param {Number} opts.voice Fetch results with voice calls (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChatMessagesPaginatedResponse} and HTTP response
      */
@@ -3339,7 +3339,7 @@
      * @param {String} opts.query Find messages by specified search query
      * @param {Number} opts.start Return messages since specified timestamp only
      * @param {Number} opts.end Return messages up to specified timestamp only
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @param {Number} opts.voice Fetch results with voice calls (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChatMessagesPaginatedResponse}
      */
@@ -3685,8 +3685,8 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.shared Should shared contacts to be included (default to 0)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactsPaginatedResponse} and HTTP response
      */
     this.getContactsWithHttpInfo = function(opts) {
@@ -3729,8 +3729,8 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.shared Should shared contacts to be included (default to 0)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactsPaginatedResponse}
      */
     this.getContacts = function(opts) {
@@ -3744,7 +3744,7 @@
     /**
      * Get contacts autocomplete suggestions
      * Get contacts autocomplete suggestions by given search term
-     * @param {String} query Find recipients by specified search query
+     * @param {String} query Find recipients by specified search query.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lists Should lists be returned or not (default to 0)
@@ -3789,7 +3789,7 @@
     /**
      * Get contacts autocomplete suggestions
      * Get contacts autocomplete suggestions by given search term
-     * @param {String} query Find recipients by specified search query
+     * @param {String} query Find recipients by specified search query.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lists Should lists be returned or not (default to 0)
@@ -3811,7 +3811,7 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactsByListIdPaginatedResponse} and HTTP response
      */
     this.getContactsByListIdWithHttpInfo = function(id, opts) {
@@ -3860,7 +3860,7 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactsByListIdPaginatedResponse}
      */
     this.getContactsByListId = function(id, opts) {
@@ -4442,8 +4442,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page The current fetched page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @param {Number} opts.favoriteOnly Return only favorite lists (default to 0)
      * @param {Number} opts.onlyMine Return only current user lists (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetListsPaginatedResponse} and HTTP response
@@ -4488,8 +4488,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page The current fetched page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @param {Number} opts.favoriteOnly Return only favorite lists (default to 0)
      * @param {Number} opts.onlyMine Return only current user lists (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetListsPaginatedResponse}
@@ -4566,7 +4566,7 @@
 
     /**
      * Preview message
-     * Get messages preview (with tags merged) up to 100 messages per session.
+     * Get a messages preview (with tags merged) of up to 100 messages per session.
      * @param {Object} opts Optional parameters
      * @param {String} opts.text Message text. Required if **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
@@ -4582,7 +4582,7 @@
      * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (default to 0)
-     * @param {Number} opts.tts Send Text to Speech message. (default to 0)
+     * @param {Number} opts.tts Send Text-to-Speech message. (default to 0)
      * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagePreviewResponse} and HTTP response
@@ -4634,7 +4634,7 @@
 
     /**
      * Preview message
-     * Get messages preview (with tags merged) up to 100 messages per session.
+     * Get a messages preview (with tags merged) of up to 100 messages per session.
      * @param {Object} opts Optional parameters
      * @param {String} opts.text Message text. Required if **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
@@ -4650,7 +4650,7 @@
      * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (default to 0)
-     * @param {Number} opts.tts Send Text to Speech message. (default to 0)
+     * @param {Number} opts.tts Send Text-to-Speech message. (default to 0)
      * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagePreviewResponse}
@@ -4682,7 +4682,7 @@
      * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (default to 0)
-     * @param {Number} opts.tts Send a Text to Speech message. (default to 0)
+     * @param {Number} opts.tts Send a Text-to-Speech message. (default to 0)
      * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagePriceResponse} and HTTP response
@@ -4752,7 +4752,7 @@
      * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (default to 0)
-     * @param {Number} opts.tts Send a Text to Speech message. (default to 0)
+     * @param {Number} opts.tts Send a Text-to-Speech message. (default to 0)
      * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagePriceResponse}
@@ -5102,13 +5102,13 @@
 
     /**
      * Get history
-     * Get outbound messages history.
+     * Get the outbound messages history.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID.
      * @param {String} opts.query Find message by specified search query
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetOutboundMessagesHistoryPaginatedResponse} and HTTP response
      */
     this.getOutboundMessagesHistoryWithHttpInfo = function(opts) {
@@ -5146,13 +5146,13 @@
 
     /**
      * Get history
-     * Get outbound messages history.
+     * Get the outbound messages history.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID.
      * @param {String} opts.query Find message by specified search query
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetOutboundMessagesHistoryPaginatedResponse}
      */
     this.getOutboundMessagesHistory = function(opts) {
@@ -6633,8 +6633,8 @@
      * @param {String} opts.query Find contacts by specified search query
      * @param {Number} opts.local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (default to 0)
      * @param {String} opts.country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchContactsPaginatedResponse} and HTTP response
      */
     this.searchContactsWithHttpInfo = function(opts) {
@@ -6689,8 +6689,8 @@
      * @param {String} opts.query Find contacts by specified search query
      * @param {Number} opts.local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (default to 0)
      * @param {String} opts.country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchContactsPaginatedResponse}
      */
     this.searchContacts = function(opts) {
@@ -6707,11 +6707,11 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.ids Find message by ID(s)
-     * @param {String} opts.query Find recipients by specified search query
+     * @param {String} opts.ids Find message by ID(s).
+     * @param {String} opts.query Find recipients by specified search query.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
-     * @param {Number} opts.expand Expand by adding firstName, lastName and contactId (default to 0)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
+     * @param {Number} opts.expand Expand by adding firstName, lastName and contactId. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchInboundMessagesPaginatedResponse} and HTTP response
      */
     this.searchInboundMessagesWithHttpInfo = function(opts) {
@@ -6755,11 +6755,11 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.ids Find message by ID(s)
-     * @param {String} opts.query Find recipients by specified search query
+     * @param {String} opts.ids Find message by ID(s).
+     * @param {String} opts.query Find recipients by specified search query.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
-     * @param {Number} opts.expand Expand by adding firstName, lastName and contactId (default to 0)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
+     * @param {Number} opts.expand Expand by adding firstName, lastName and contactId. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchInboundMessagesPaginatedResponse}
      */
     this.searchInboundMessages = function(opts) {
@@ -6781,7 +6781,7 @@
      * @param {Number} opts.onlyMine Return only current user lists (default to 0)
      * @param {Number} opts.onlyDefault Return only default lists (default to 0)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchListsPaginatedResponse} and HTTP response
      */
     this.searchListsWithHttpInfo = function(opts) {
@@ -6831,7 +6831,7 @@
      * @param {Number} opts.onlyMine Return only current user lists (default to 0)
      * @param {Number} opts.onlyDefault Return only default lists (default to 0)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchListsPaginatedResponse}
      */
     this.searchLists = function(opts) {
@@ -6848,12 +6848,12 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
-     * @param {String} opts.ids Find message by ID(s)
-     * @param {Number} opts.sessionId Find messages by session ID
-     * @param {module:model/String} opts.statuses Find messages by status
-     * @param {Number} opts.includeDeleted Search also in deleted messages (default to 0)
-     * @param {String} opts.query Find messages by specified search query
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {String} opts.ids Find message by ID(s).
+     * @param {Number} opts.sessionId Find messages by session ID.
+     * @param {module:model/String} opts.statuses Find messages by status.
+     * @param {Number} opts.includeDeleted Search also in deleted messages. (default to 0)
+     * @param {String} opts.query Find messages by specified search query.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchOutboundMessagesPaginatedResponse} and HTTP response
      */
     this.searchOutboundMessagesWithHttpInfo = function(opts) {
@@ -6898,12 +6898,12 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
-     * @param {String} opts.ids Find message by ID(s)
-     * @param {Number} opts.sessionId Find messages by session ID
-     * @param {module:model/String} opts.statuses Find messages by status
-     * @param {Number} opts.includeDeleted Search also in deleted messages (default to 0)
-     * @param {String} opts.query Find messages by specified search query
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {String} opts.ids Find message by ID(s).
+     * @param {Number} opts.sessionId Find messages by session ID.
+     * @param {module:model/String} opts.statuses Find messages by status.
+     * @param {Number} opts.includeDeleted Search also in deleted messages. (default to 0)
+     * @param {String} opts.query Find messages by specified search query.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchOutboundMessagesPaginatedResponse}
      */
     this.searchOutboundMessages = function(opts) {
@@ -6924,7 +6924,7 @@
      * @param {String} opts.ids Find schedules by ID(s)
      * @param {module:model/String} opts.status Fetch schedules with the specific status: a - actual, c - completed, x - all (default to x)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchScheduledMessagesPaginatedResponse} and HTTP response
      */
     this.searchScheduledMessagesWithHttpInfo = function(opts) {
@@ -6972,7 +6972,7 @@
      * @param {String} opts.ids Find schedules by ID(s)
      * @param {module:model/String} opts.status Fetch schedules with the specific status: a - actual, c - completed, x - all (default to x)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
-     * @param {module:model/String} opts.direction Order direction. Default is desc (default to desc)
+     * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchScheduledMessagesPaginatedResponse}
      */
     this.searchScheduledMessages = function(opts) {

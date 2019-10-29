@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **price** | **Number** | Message price. | [optional] 
 **partsCount** | **Number** | Message parts (multiples of 160 characters) count. | 
 **fromEmail** | **String** | The user email which this message came from. For Email2SMS and Distribution Lists the message will come from an original email address; in other cases, it will come from an account email address. | [optional] 
-**fromNumber** | **String** | Phone number used to send the SMS. | [optional] 
+**fromNumber** | **String** | The Phone number used to send the SMS. | [optional] 
 
 
 <a name="StatusEnum"></a>

@@ -36,14 +36,14 @@
   /**
    * The SendMessageInputObject model module.
    * @module model/SendMessageInputObject
-   * @version 2.0.808
+   * @version 2.0.809
    */
 
   /**
    * Constructs a new <code>SendMessageInputObject</code>.
    * @alias module:model/SendMessageInputObject
    * @class
-   * @param text {String} Message text. Required if **template_id** is not set.
+   * @param text {String} Message text. Required if the **template_id** is not set.
    * @param phones {String} Comma separated array of E.164 phone numbers message will be sent to.
    */
   var exports = function(text, phones) {
@@ -135,12 +135,12 @@
   }
 
   /**
-   * Message text. Required if **template_id** is not set.
+   * Message text. Required if the **template_id** is not set.
    * @member {String} text
    */
   exports.prototype['text'] = undefined;
   /**
-   * Template used instead of message text. Required if **text** is not set.
+   * Template used instead of message text. Required if the **text** is not set.
    * @member {Number} templateId
    */
   exports.prototype['templateId'] = undefined;
@@ -207,7 +207,7 @@
    */
   exports.prototype['createChat'] = false;
   /**
-   * Send a Text to Speech message.
+   * Send a Text-to-Speech message.
    * @member {Boolean} tts
    * @default false
    */

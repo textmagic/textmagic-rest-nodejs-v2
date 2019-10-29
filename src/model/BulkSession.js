@@ -36,7 +36,7 @@
   /**
    * The BulkSession model module.
    * @module model/BulkSession
-   * @version 2.0.808
+   * @version 2.0.809
    */
 
   /**
@@ -44,8 +44,8 @@
    * @alias module:model/BulkSession
    * @class
    * @param id {Number} Bulk Session ID.
-   * @param status {module:model/BulkSession.StatusEnum} * **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended 
-   * @param itemsProcessed {Number} Amount of messages which is already processed.
+   * @param status {module:model/BulkSession.StatusEnum} * **n** – bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended 
+   * @param itemsProcessed {Number} Amount of messages already processed.
    * @param itemsTotal {Number} Total amount of messages to be processed.
    * @param createdAt {Date} Creation date and time of a Bulk Session.
    * @param session {module:model/MessageSession} 
@@ -105,12 +105,12 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * * **n** - bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended 
+   * * **n** – bulk session is just created * **w** - work in progress * **f** - failed * **c** - completed with success * **s** - suspended 
    * @member {module:model/BulkSession.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
   /**
-   * Amount of messages which is already processed.
+   * Amount of messages already processed.
    * @member {Number} itemsProcessed
    */
   exports.prototype['itemsProcessed'] = undefined;

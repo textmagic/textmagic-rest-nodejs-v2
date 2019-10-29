@@ -36,7 +36,7 @@
   /**
    * The MessageSession model module.
    * @module model/MessageSession
-   * @version 2.0.808
+   * @version 2.0.809
    */
 
   /**
@@ -46,11 +46,11 @@
    * @param id {Number} Session ID.
    * @param startTime {String} Session creation time.
    * @param text {String} Session text. If a template was used for the session text (see [Messages: Send](http://docs.textmagictesting.com/#tag/Outbound-Messages) for details), it may contain template tags. 
-   * @param source {String} *   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) *   **X** for [Distribution lists](http://docs.textmagictesting.com/#tag/Distribution-Lists) 
+   * @param source {String} *   **O** – for TextMagic Online *   **A** – for API *   **M** – for TextMagic Messenger *   **E** – for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) *   **X** – for [Distribution Lists](http://docs.textmagictesting.com/#tag/Distribution-Lists) 
    * @param referenceId {String} Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) for details). 
    * @param price {Number} Session cost (in account currency).
    * @param numbersCount {Number} Session recipient count.
-   * @param destination {module:model/MessageSession.DestinationEnum} Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast 
+   * @param destination {module:model/MessageSession.DestinationEnum} Destination type of a Message Session: * **t** - text SMS * **s** - text-to-speech * **v** - voice broadcast 
    */
   var exports = function(id, startTime, text, source, referenceId, price, numbersCount, destination) {
     var _this = this;
@@ -120,7 +120,7 @@
    */
   exports.prototype['text'] = undefined;
   /**
-   * *   **O** for TextMagic Online *   **A** for API *   **M** for TextMagic Messenger *   **E** for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) *   **X** for [Distribution lists](http://docs.textmagictesting.com/#tag/Distribution-Lists) 
+   * *   **O** – for TextMagic Online *   **A** – for API *   **M** – for TextMagic Messenger *   **E** – for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) *   **X** – for [Distribution Lists](http://docs.textmagictesting.com/#tag/Distribution-Lists) 
    * @member {String} source
    */
   exports.prototype['source'] = undefined;
@@ -140,7 +140,7 @@
    */
   exports.prototype['numbersCount'] = undefined;
   /**
-   * Destination type of a Message Session: * **t** - text SMS * **s** - text to speech * **v** - voice broadcast 
+   * Destination type of a Message Session: * **t** - text SMS * **s** - text-to-speech * **v** - voice broadcast 
    * @member {module:model/MessageSession.DestinationEnum} destination
    */
   exports.prototype['destination'] = undefined;
