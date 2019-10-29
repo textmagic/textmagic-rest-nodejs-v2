@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.817
+   * @version 2.0.818
    */
 
   /**
@@ -109,8 +109,8 @@
 
 
     /**
-     * Block contact by phone number
-     * Block contact from inbound and outbound communication by phone number.
+     * Block a contact by phone number
+     * Block a contact from inbound and outbound communication by phone number.
      * @param {module:model/BlockContactInputObject} blockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -147,8 +147,8 @@
     }
 
     /**
-     * Block contact by phone number
-     * Block contact from inbound and outbound communication by phone number.
+     * Block a contact by phone number
+     * Block a contact from inbound and outbound communication by phone number.
      * @param {module:model/BlockContactInputObject} blockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -1044,7 +1044,7 @@
 
     /**
      * Delete a contact
-     * &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
+     * &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1083,7 +1083,7 @@
 
     /**
      * Delete a contact
-     * &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, instead use the Contact assignment command in the Lists section rather than deleting the contact. 
+     * &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -3354,7 +3354,7 @@
     /**
      * Get the details of a specific contact
      * 
-     * @param {Number} id The contact id
+     * @param {Number} id Contact ID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Contact} and HTTP response
      */
     this.getContactWithHttpInfo = function(id) {
@@ -3393,7 +3393,7 @@
     /**
      * Get the details of a specific contact
      * 
-     * @param {Number} id The contact id
+     * @param {Number} id Contact ID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Contact}
      */
     this.getContact = function(id) {
@@ -3458,9 +3458,9 @@
 
 
     /**
-     * Check is that phone number blocked
+     * Check if a phone number is blocked
      * 
-     * @param {String} phone Phone number to check
+     * @param {String} phone Phone number to check.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Contact} and HTTP response
      */
     this.getContactIfBlockedWithHttpInfo = function(phone) {
@@ -3497,9 +3497,9 @@
     }
 
     /**
-     * Check is that phone number blocked
+     * Check if a phone number is blocked
      * 
-     * @param {String} phone Phone number to check
+     * @param {String} phone Phone number to check.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Contact}
      */
     this.getContactIfBlocked = function(phone) {
@@ -5806,7 +5806,7 @@
 
     /**
      * Get all unsubscribed contacts
-     * When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+     * When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use: 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5844,7 +5844,7 @@
 
     /**
      * Get all unsubscribed contacts
-     * When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+     * When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use: 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5918,10 +5918,10 @@
     /**
      * Import contacts
      * Import contacts from the CSV, XLS or XLSX file.
-     * @param {File} file File containing contacts in csv or xls(x) formats
+     * @param {File} file File containing contacts in csv or xls(x) formats.
      * @param {String} column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. 
+     * @param {Number} opts.listId List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. 
      * @param {String} opts.listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -5970,10 +5970,10 @@
     /**
      * Import contacts
      * Import contacts from the CSV, XLS or XLSX file.
-     * @param {File} file File containing contacts in csv or xls(x) formats
+     * @param {File} file File containing contacts in csv or xls(x) formats.
      * @param {String} column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. 
+     * @param {Number} opts.listId List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. 
      * @param {String} opts.listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -7203,8 +7203,8 @@
 
 
     /**
-     * Unblock contact by phone number.
-     * 
+     * Unblock a contact by phone number
+     * Unblock a contact by phone number
      * @param {module:model/UnblockContactInputObject} unblockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7241,8 +7241,8 @@
     }
 
     /**
-     * Unblock contact by phone number.
-     * 
+     * Unblock a contact by phone number
+     * Unblock a contact by phone number
      * @param {module:model/UnblockContactInputObject} unblockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7256,7 +7256,7 @@
 
     /**
      * Unblock contacts (bulk)
-     * Unblock several contacts by blocked contact ids or unblock all contacts
+     * Unblock several contacts by blocked contact IDs or unblock all contacts.
      * @param {module:model/UnblockContactsBulkInputObject} unblockContactsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7294,7 +7294,7 @@
 
     /**
      * Unblock contacts (bulk)
-     * Unblock several contacts by blocked contact ids or unblock all contacts
+     * Unblock several contacts by blocked contact IDs or unblock all contacts.
      * @param {module:model/UnblockContactsBulkInputObject} unblockContactsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */

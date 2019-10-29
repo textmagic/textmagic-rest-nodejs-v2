@@ -36,7 +36,7 @@
   /**
    * The UnsubscribedContact model module.
    * @module model/UnsubscribedContact
-   * @version 2.0.817
+   * @version 2.0.818
    */
 
   /**
@@ -45,7 +45,7 @@
    * @class
    * @param id {Number} Unsubscribed contact ID.
    * @param phone {String} Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
-   * @param unsubscribeTime {Date} Time when contact has been opted-out.
+   * @param unsubscribeTime {Date} Time when contact was opted-out.
    * @param firstName {String} Unsubscribed contact first name.
    * @param lastName {String} Unsubscribed contact last name.
    */
@@ -100,7 +100,7 @@
    */
   exports.prototype['phone'] = undefined;
   /**
-   * Time when contact has been opted-out.
+   * Time when contact was opted-out.
    * @member {Date} unsubscribeTime
    */
   exports.prototype['unsubscribeTime'] = undefined;

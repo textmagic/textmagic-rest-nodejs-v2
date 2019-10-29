@@ -36,7 +36,7 @@
   /**
    * The Contact model module.
    * @module model/Contact
-   * @version 2.0.817
+   * @version 2.0.818
    */
 
   /**
@@ -44,7 +44,7 @@
    * @alias module:model/Contact
    * @class
    * @param id {Number} Contact ID.
-   * @param favorited {Boolean} Is the Contact favorite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavorites).
+   * @param favorited {Boolean} Is the Contact favorite? [Favorite list](http://docs.textmagictesting.com/#operation/getFavorites).
    * @param blocked {Boolean} Is the Contact blocked? [Blocked contacts](http://docs.textmagictesting.com/#operation/getBlockedContacts).
    * @param firstName {String} Contact first name.
    * @param lastName {String} Contact last name.
@@ -145,7 +145,7 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * Is the Contact favorite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavorites).
+   * Is the Contact favorite? [Favorite list](http://docs.textmagictesting.com/#operation/getFavorites).
    * @member {Boolean} favorited
    */
   exports.prototype['favorited'] = undefined;
