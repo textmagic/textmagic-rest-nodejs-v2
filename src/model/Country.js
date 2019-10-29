@@ -36,14 +36,14 @@
   /**
    * The Country model module.
    * @module model/Country
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
    * Constructs a new <code>Country</code>.
    * @alias module:model/Country
    * @class
-   * @param id {String} Two-letter ISO country ID.
+   * @param id {String} The 2-letter ISO country ID.
    * @param name {String} Full country name.
    */
   var exports = function(id, name) {
@@ -75,7 +75,7 @@
   }
 
   /**
-   * Two-letter ISO country ID.
+   * The 2-letter ISO country ID.
    * @member {String} id
    */
   exports.prototype['id'] = undefined;

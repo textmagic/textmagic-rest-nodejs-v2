@@ -36,7 +36,7 @@
   /**
    * The SendMessageInputObject model module.
    * @module model/SendMessageInputObject
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
@@ -201,25 +201,25 @@
    */
   exports.prototype['rrule'] = undefined;
   /**
-   * Should sending method try to create new Chat(if not exist) with specified recipients.
+   * Should sending method try to create new Chat (if not exist) with specified recipients?
    * @member {Boolean} createChat
    * @default false
    */
   exports.prototype['createChat'] = false;
   /**
-   * Send Text to Speech message.
+   * Send a Text to Speech message.
    * @member {Boolean} tts
    * @default false
    */
   exports.prototype['tts'] = false;
   /**
-   * Treat phone numbers passed in \\'phones\\' field as local.
+   * Treat phone numbers passed in the \\'phones\\' field as local.
    * @member {Boolean} local
    * @default false
    */
   exports.prototype['local'] = false;
   /**
-   * 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is account country.
+   * The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
    * @member {String} localCountry
    */
   exports.prototype['localCountry'] = undefined;

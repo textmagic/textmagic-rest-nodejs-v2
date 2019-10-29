@@ -12,17 +12,17 @@ Name | Type | Description | Notes
 **sessionId** | **Number** | Message Session ID of a Message. | 
 **messageTime** | **Date** | Sending time. | 
 **avatar** | **String** |  | 
-**deleted** | **Boolean** | Indicates that message has been deleted. | [optional] 
-**charset** | **String** | Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS  | 
-**charsetLabel** | **String** | Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages  | 
-**firstName** | **String** | Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID).  | 
+**deleted** | **Boolean** | Indicates that the message has been deleted. | [optional] 
+**charset** | **String** | Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS.  | 
+**charsetLabel** | **String** | Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages.  | 
+**firstName** | **String** | Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID).  | 
 **lastName** | **String** | Contact last name. | 
-**country** | **String** | Two-letter ISO country code of the recipient phone number.  | 
+**country** | **String** | The 2-letter ISO country code of the recipient&#39;s phone number.  | 
 **phone** | **String** | Receipent phone number. | [optional] 
 **price** | **Number** | Message price. | [optional] 
 **partsCount** | **Number** | Message parts (multiples of 160 characters) count. | 
-**fromEmail** | **String** | User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address. | [optional] 
-**fromNumber** | **String** | Phone number which is used to send SMS. | [optional] 
+**fromEmail** | **String** | The user email which this message came from. For Email2SMS and Distribution Lists the message will come from an original email address; in other cases, it will come from an account email address. | [optional] 
+**fromNumber** | **String** | Phone number used to send the SMS. | [optional] 
 
 
 <a name="StatusEnum"></a>

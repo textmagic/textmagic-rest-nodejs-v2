@@ -36,14 +36,14 @@
   /**
    * The GetMessagePriceResponse model module.
    * @module model/GetMessagePriceResponse
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
    * Constructs a new <code>GetMessagePriceResponse</code>.
    * @alias module:model/GetMessagePriceResponse
    * @class
-   * @param total {Number} Total price of the mesasge.
+   * @param total {Number} Total price of the message.
    * @param parts {Number} Message parts (multiples of 160 characters) count.
    * @param countries {Array.<module:model/GetMessagePriceResponseCountriesItem>} 
    */
@@ -80,7 +80,7 @@
   }
 
   /**
-   * Total price of the mesasge.
+   * Total price of the message.
    * @member {Number} total
    */
   exports.prototype['total'] = undefined;

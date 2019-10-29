@@ -36,14 +36,14 @@
   /**
    * The UpdateSurveyCountryItem model module.
    * @module model/UpdateSurveyCountryItem
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
    * Constructs a new <code>UpdateSurveyCountryItem</code>.
    * @alias module:model/UpdateSurveyCountryItem
    * @class
-   * @param country {String} Two-letter ISO country code
+   * @param country {String} The 2-letter ISO country code
    * @param userInboundId {Number} User inbound phone ID
    */
   var exports = function(country, userInboundId) {
@@ -75,7 +75,7 @@
   }
 
   /**
-   * Two-letter ISO country code
+   * The 2-letter ISO country code
    * @member {String} country
    */
   exports.prototype['country'] = undefined;

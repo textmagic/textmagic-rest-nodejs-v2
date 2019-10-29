@@ -36,7 +36,7 @@
   /**
    * The UpdateChatDesktopNotificationSettingsInputObject model module.
    * @module model/UpdateChatDesktopNotificationSettingsInputObject
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**

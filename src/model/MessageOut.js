@@ -36,7 +36,7 @@
   /**
    * The MessageOut model module.
    * @module model/MessageOut
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
@@ -50,11 +50,11 @@
    * @param sessionId {Number} Message Session ID of a Message.
    * @param messageTime {Date} Sending time.
    * @param avatar {String} 
-   * @param charset {String} Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
-   * @param charsetLabel {String} Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages 
-   * @param firstName {String} Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID). 
+   * @param charset {String} Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS. 
+   * @param charsetLabel {String} Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages. 
+   * @param firstName {String} Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). 
    * @param lastName {String} Contact last name.
-   * @param country {String} Two-letter ISO country code of the recipient phone number. 
+   * @param country {String} The 2-letter ISO country code of the recipient's phone number. 
    * @param partsCount {Number} Message parts (multiples of 160 characters) count.
    */
   var exports = function(id, text, status, contactId, sessionId, messageTime, avatar, charset, charsetLabel, firstName, lastName, country, partsCount) {
@@ -201,22 +201,22 @@
    */
   exports.prototype['avatar'] = undefined;
   /**
-   * Indicates that message has been deleted.
+   * Indicates that the message has been deleted.
    * @member {Boolean} deleted
    */
   exports.prototype['deleted'] = undefined;
   /**
-   * Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
+   * Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS. 
    * @member {String} charset
    */
   exports.prototype['charset'] = undefined;
   /**
-   * Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages 
+   * Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages. 
    * @member {String} charsetLabel
    */
   exports.prototype['charsetLabel'] = undefined;
   /**
-   * Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID). 
+   * Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). 
    * @member {String} firstName
    */
   exports.prototype['firstName'] = undefined;
@@ -226,7 +226,7 @@
    */
   exports.prototype['lastName'] = undefined;
   /**
-   * Two-letter ISO country code of the recipient phone number. 
+   * The 2-letter ISO country code of the recipient's phone number. 
    * @member {String} country
    */
   exports.prototype['country'] = undefined;
@@ -246,12 +246,12 @@
    */
   exports.prototype['partsCount'] = undefined;
   /**
-   * User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address.
+   * The user email which this message came from. For Email2SMS and Distribution Lists the message will come from an original email address; in other cases, it will come from an account email address.
    * @member {String} fromEmail
    */
   exports.prototype['fromEmail'] = undefined;
   /**
-   * Phone number which is used to send SMS.
+   * Phone number used to send the SMS.
    * @member {String} fromNumber
    */
   exports.prototype['fromNumber'] = undefined;

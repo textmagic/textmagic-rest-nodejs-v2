@@ -36,7 +36,7 @@
   /**
    * The SendMessageResponse model module.
    * @module model/SendMessageResponse
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
@@ -44,8 +44,8 @@
    * @alias module:model/SendMessageResponse
    * @class
    * @param id {Number} Message ID.
-   * @param href {String} URI of message session.
-   * @param type {module:model/SendMessageResponse.TypeEnum} Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). 
+   * @param href {String} URI of the message session.
+   * @param type {module:model/SendMessageResponse.TypeEnum} Message response type: * **message** – when the message is sent to a single recipient. * **session** – when the message is sent is to multiple recipients. * **schedule** - when the message is scheduled for sending. * **bulk** - when the message is sent to multiple recipients and the number of recipients requires asynchronous processing See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). 
    * @param sessionId {Number} Message session ID.
    * @param bulkId {Number} Bulk Session ID. See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).
    * @param messageId {Number} Message ID.
@@ -110,12 +110,12 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * URI of message session.
+   * URI of the message session.
    * @member {String} href
    */
   exports.prototype['href'] = undefined;
   /**
-   * Message response type: * **message** when message sent to a single recipient * **session** when message sent to multiple recipients * **schedule** when message has been scheduled for sending * **bulk** when message sent to multiple recipient and the number of recipients requires asynchronous processiong See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). 
+   * Message response type: * **message** – when the message is sent to a single recipient. * **session** – when the message is sent is to multiple recipients. * **schedule** - when the message is scheduled for sending. * **bulk** - when the message is sent to multiple recipients and the number of recipients requires asynchronous processing See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). 
    * @member {module:model/SendMessageResponse.TypeEnum} type
    */
   exports.prototype['type'] = undefined;

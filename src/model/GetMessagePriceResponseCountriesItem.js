@@ -36,20 +36,20 @@
   /**
    * The GetMessagePriceResponseCountriesItem model module.
    * @module model/GetMessagePriceResponseCountriesItem
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
    * Constructs a new <code>GetMessagePriceResponseCountriesItem</code>.
    * @alias module:model/GetMessagePriceResponseCountriesItem
    * @class
-   * @param country {String} Two-letter ISO country code
-   * @param countryName {String} Country name
-   * @param allowDedicated {Boolean} Is allow to use dedicated number
-   * @param count {Number} Parts count to send
-   * @param max {Number} Maximum parts to send
-   * @param sum {String} Total price to send
-   * @param landline {Number} Is this landline number?
+   * @param country {String} The 2-letter ISO country code.
+   * @param countryName {String} Country name.
+   * @param allowDedicated {Boolean} Is allowed to use a dedicated number?
+   * @param count {Number} Parts count to send.
+   * @param max {Number} Maximum parts to send.
+   * @param sum {String} Total price to send.
+   * @param landline {Number} Is this a landline number?
    */
   var exports = function(country, countryName, allowDedicated, count, max, sum, landline) {
     var _this = this;
@@ -100,37 +100,37 @@
   }
 
   /**
-   * Two-letter ISO country code
+   * The 2-letter ISO country code.
    * @member {String} country
    */
   exports.prototype['country'] = undefined;
   /**
-   * Country name
+   * Country name.
    * @member {String} countryName
    */
   exports.prototype['countryName'] = undefined;
   /**
-   * Is allow to use dedicated number
+   * Is allowed to use a dedicated number?
    * @member {Boolean} allowDedicated
    */
   exports.prototype['allowDedicated'] = undefined;
   /**
-   * Parts count to send
+   * Parts count to send.
    * @member {Number} count
    */
   exports.prototype['count'] = undefined;
   /**
-   * Maximum parts to send
+   * Maximum parts to send.
    * @member {Number} max
    */
   exports.prototype['max'] = undefined;
   /**
-   * Total price to send
+   * Total price to send.
    * @member {String} sum
    */
   exports.prototype['sum'] = undefined;
   /**
-   * Is this landline number?
+   * Is this a landline number?
    * @member {Number} landline
    */
   exports.prototype['landline'] = undefined;

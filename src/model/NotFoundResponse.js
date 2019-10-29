@@ -36,7 +36,7 @@
   /**
    * The NotFoundResponse model module.
    * @module model/NotFoundResponse
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
@@ -79,7 +79,7 @@
    */
   exports.prototype['code'] = undefined;
   /**
-   * Brief error message. You could display this message to your user or save it in a log.
+   * A Brief error message. You could display this message to your user or save it in a log.
    * @member {String} message
    */
   exports.prototype['message'] = undefined;

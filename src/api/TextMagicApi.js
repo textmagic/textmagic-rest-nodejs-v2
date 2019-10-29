@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
@@ -2627,7 +2627,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAllOutboundMessagesPaginatedResponse} and HTTP response
      */
     this.getAllOutboundMessagesWithHttpInfo = function(opts) {
@@ -2667,7 +2667,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAllOutboundMessagesPaginatedResponse}
      */
     this.getAllOutboundMessages = function(opts) {
@@ -2861,7 +2861,7 @@
      * Get available sender settings
      * Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.country Two-letter ISO country ID. If not specified, it returns all the available sender settings.
+     * @param {String} opts.country The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAvailableSenderSettingOptionsResponse} and HTTP response
      */
     this.getAvailableSenderSettingOptionsWithHttpInfo = function(opts) {
@@ -2897,7 +2897,7 @@
      * Get available sender settings
      * Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.country Two-letter ISO country ID. If not specified, it returns all the available sender settings.
+     * @param {String} opts.country The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAvailableSenderSettingOptionsResponse}
      */
     this.getAvailableSenderSettingOptions = function(opts) {
@@ -4570,21 +4570,21 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.text Message text. Required if **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
-     * @param {Number} opts.sendingTime DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now.
-     * @param {String} opts.sendingDateTime Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone.
-     * @param {String} opts.sendingTimezone ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone.
-     * @param {String} opts.contacts Comma separated array of contact resources id message will be sent to.
-     * @param {String} opts.lists Comma separated array of list resources id message will be sent to.
-     * @param {String} opts.phones Comma separated array of E.164 phone numbers message will be sent to.
+     * @param {Number} opts.sendingTime DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
+     * @param {String} opts.sendingDateTime Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+     * @param {String} opts.sendingTimezone The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+     * @param {String} opts.contacts Comma-separated array of contact resources id message will be sent to.
+     * @param {String} opts.lists Comma-separated array of list resources id message will be sent to.
+     * @param {String} opts.phones Comma-separated array of E.164 phone numbers message will be sent to.
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
-     * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending 1 to 6 message parts). (default to 6)
+     * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending of 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
-     * @param {String} opts.rule iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
-     * @param {Number} opts.createChat Should sending method try to create new Chat(if not exist) with specified recipients. (default to 0)
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+     * @param {Number} opts.createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (default to 0)
      * @param {Number} opts.tts Send Text to Speech message. (default to 0)
-     * @param {Number} opts.local Treat phone numbers passed in \\&#39;phones\\&#39; field as local. (default to 0)
-     * @param {String} opts.localCountry 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country.
+     * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
+     * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagePreviewResponse} and HTTP response
      */
     this.getMessagePreviewWithHttpInfo = function(opts) {
@@ -4638,21 +4638,21 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.text Message text. Required if **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
-     * @param {Number} opts.sendingTime DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now.
-     * @param {String} opts.sendingDateTime Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone.
-     * @param {String} opts.sendingTimezone ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone.
-     * @param {String} opts.contacts Comma separated array of contact resources id message will be sent to.
-     * @param {String} opts.lists Comma separated array of list resources id message will be sent to.
-     * @param {String} opts.phones Comma separated array of E.164 phone numbers message will be sent to.
+     * @param {Number} opts.sendingTime DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
+     * @param {String} opts.sendingDateTime Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+     * @param {String} opts.sendingTimezone The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+     * @param {String} opts.contacts Comma-separated array of contact resources id message will be sent to.
+     * @param {String} opts.lists Comma-separated array of list resources id message will be sent to.
+     * @param {String} opts.phones Comma-separated array of E.164 phone numbers message will be sent to.
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
-     * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending 1 to 6 message parts). (default to 6)
+     * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending of 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
-     * @param {String} opts.rule iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
-     * @param {Number} opts.createChat Should sending method try to create new Chat(if not exist) with specified recipients. (default to 0)
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+     * @param {Number} opts.createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (default to 0)
      * @param {Number} opts.tts Send Text to Speech message. (default to 0)
-     * @param {Number} opts.local Treat phone numbers passed in \\&#39;phones\\&#39; field as local. (default to 0)
-     * @param {String} opts.localCountry 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country.
+     * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
+     * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagePreviewResponse}
      */
     this.getMessagePreview = function(opts) {
@@ -4667,24 +4667,24 @@
      * Check message price
      * Check pricing for a new outbound message.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.includeBlocked Should we show pricing for the blocked contacts. (default to 0)
-     * @param {String} opts.text Message text. Required if **template_id** is not set.
-     * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
-     * @param {Number} opts.sendingTime DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now.
-     * @param {String} opts.sendingDateTime Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone.
-     * @param {String} opts.sendingTimezone ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone.
-     * @param {String} opts.contacts Comma separated array of contact resources id message will be sent to.
-     * @param {String} opts.lists Comma separated array of list resources id message will be sent to.
-     * @param {String} opts.phones Comma separated array of E.164 phone numbers message will be sent to.
+     * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
+     * @param {String} opts.text Message text. Required if the **template_id** is not set.
+     * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
+     * @param {Number} opts.sendingTime DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
+     * @param {String} opts.sendingDateTime Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+     * @param {String} opts.sendingTimezone The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+     * @param {String} opts.contacts Comma-separated array of contact resources id message will be sent to.
+     * @param {String} opts.lists Comma-separated array of list resources id message will be sent to.
+     * @param {String} opts.phones Comma-separated array of E.164 phone numbers message will be sent to.
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
      * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
-     * @param {String} opts.rule iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
-     * @param {Number} opts.createChat Should sending method try to create new Chat(if not exist) with specified recipients. (default to 0)
-     * @param {Number} opts.tts Send Text to Speech message. (default to 0)
-     * @param {Number} opts.local Treat phone numbers passed in \\&#39;phones\\&#39; field as local. (default to 0)
-     * @param {String} opts.localCountry 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country.
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+     * @param {Number} opts.createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (default to 0)
+     * @param {Number} opts.tts Send a Text to Speech message. (default to 0)
+     * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
+     * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagePriceResponse} and HTTP response
      */
     this.getMessagePriceWithHttpInfo = function(opts) {
@@ -4737,24 +4737,24 @@
      * Check message price
      * Check pricing for a new outbound message.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.includeBlocked Should we show pricing for the blocked contacts. (default to 0)
-     * @param {String} opts.text Message text. Required if **template_id** is not set.
-     * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
-     * @param {Number} opts.sendingTime DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time in unix timestamp format. Default is now.
-     * @param {String} opts.sendingDateTime Sending time in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to sendingTimezone.
-     * @param {String} opts.sendingTimezone ID or ISO-name of timezone used for sending when sendingDateTime parameter is set. E.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent at May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is account timezone.
-     * @param {String} opts.contacts Comma separated array of contact resources id message will be sent to.
-     * @param {String} opts.lists Comma separated array of list resources id message will be sent to.
-     * @param {String} opts.phones Comma separated array of E.164 phone numbers message will be sent to.
+     * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
+     * @param {String} opts.text Message text. Required if the **template_id** is not set.
+     * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
+     * @param {Number} opts.sendingTime DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
+     * @param {String} opts.sendingDateTime Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+     * @param {String} opts.sendingTimezone The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+     * @param {String} opts.contacts Comma-separated array of contact resources id message will be sent to.
+     * @param {String} opts.lists Comma-separated array of list resources id message will be sent to.
+     * @param {String} opts.phones Comma-separated array of E.164 phone numbers message will be sent to.
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
      * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
-     * @param {String} opts.rule iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
-     * @param {Number} opts.createChat Should sending method try to create new Chat(if not exist) with specified recipients. (default to 0)
-     * @param {Number} opts.tts Send Text to Speech message. (default to 0)
-     * @param {Number} opts.local Treat phone numbers passed in \\&#39;phones\\&#39; field as local. (default to 0)
-     * @param {String} opts.localCountry 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is account country.
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+     * @param {Number} opts.createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (default to 0)
+     * @param {Number} opts.tts Send a Text to Speech message. (default to 0)
+     * @param {Number} opts.local Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. (default to 0)
+     * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagePriceResponse}
      */
     this.getMessagePrice = function(opts) {
@@ -7048,7 +7048,7 @@
 
     /**
      * Send message
-     * The main entrypoint to send messages. See examples above for the reference.
+     * This is the main entrypoint to send messages. See the examples above for the reference.
      * @param {module:model/SendMessageInputObject} sendMessageInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendMessageResponse} and HTTP response
      */
@@ -7086,7 +7086,7 @@
 
     /**
      * Send message
-     * The main entrypoint to send messages. See examples above for the reference.
+     * This is the main entrypoint to send messages. See the examples above for the reference.
      * @param {module:model/SendMessageInputObject} sendMessageInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendMessageResponse}
      */

@@ -36,7 +36,7 @@
   /**
    * The SurveySenderCountries model module.
    * @module model/SurveySenderCountries
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
@@ -46,7 +46,7 @@
    * @param id {Number} 
    * @param countryName {String} 
    * @param fromNumber {String} 
-   * @param allowDedicated {Boolean} 
+   * @param allowDedicated {Boolean} Is allowed to use a dedicated number?
    */
   var exports = function(id, countryName, fromNumber, allowDedicated) {
     var _this = this;
@@ -97,6 +97,7 @@
    */
   exports.prototype['fromNumber'] = undefined;
   /**
+   * Is allowed to use a dedicated number?
    * @member {Boolean} allowDedicated
    */
   exports.prototype['allowDedicated'] = undefined;

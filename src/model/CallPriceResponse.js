@@ -36,7 +36,7 @@
   /**
    * The CallPriceResponse model module.
    * @module model/CallPriceResponse
-   * @version 2.0.807
+   * @version 2.0.808
    */
 
   /**
@@ -46,7 +46,7 @@
    * @param outbound {Number} Price for outbound message
    * @param inbound {Number} Price for inbound message
    * @param forward {Number} Price for forward
-   * @param country {String} 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+   * @param country {String} The 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
    */
   var exports = function(outbound, inbound, forward, country) {
     var _this = this;
@@ -100,7 +100,7 @@
    */
   exports.prototype['forward'] = undefined;
   /**
-   * 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+   * The 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
    * @member {String} country
    */
   exports.prototype['country'] = undefined;
