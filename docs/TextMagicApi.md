@@ -86,7 +86,7 @@ Method | HTTP request | Description
 [**getList**](TextMagicApi.md#getList) | **GET** /api/v2/lists/{id} | Get the details of a specific list
 [**getListContactsIds**](TextMagicApi.md#getListContactsIds) | **GET** /api/v2/lists/{id}/contacts/ids | Get all contacts IDs in a list
 [**getLists**](TextMagicApi.md#getLists) | **GET** /api/v2/lists | Get all lists
-[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
+[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact&#39;s lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
 [**getMessagePrice**](TextMagicApi.md#getMessagePrice) | **GET** /api/v2/messages/price/normalized | Check message price
 [**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session&#x60;s details
@@ -4273,9 +4273,9 @@ Name | Type | Description  | Notes
 # **getListsOfContact**
 > GetListsOfContactPaginatedResponse getListsOfContact(id, opts)
 
-Get contact&#39;s lists
+Get a contact&#39;s lists
 
-Get all the lists in which the contact is included
+Get all the lists in which a contact is included.
 
 ### Example
 ```javascript
@@ -6376,11 +6376,11 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'ids': "\"1,2,3,4\"", // String | Find lists by ID(s)
-  'query': "\"A\"", // String | Find lists by specified search query
-  'onlyMine': 0, // Number | Return only current user lists
-  'onlyDefault': 0, // Number | Return only default lists
-  'orderBy': "id", // String | Order results by some field. Default is id
+  'ids': "\"1,2,3,4\"", // String | Find lists by IDs.
+  'query': "\"A\"", // String | Find lists by specified search query.
+  'onlyMine': 0, // Number | Return only current user lists.
+  'onlyDefault': 0, // Number | Return only default lists.
+  'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
 };
 apiInstance.searchLists(opts).then(function(data) {
@@ -6397,11 +6397,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **ids** | **String**| Find lists by ID(s) | [optional] 
- **query** | **String**| Find lists by specified search query | [optional] 
- **onlyMine** | **Number**| Return only current user lists | [optional] [default to 0]
- **onlyDefault** | **Number**| Return only default lists | [optional] [default to 0]
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
+ **ids** | **String**| Find lists by IDs. | [optional] 
+ **query** | **String**| Find lists by specified search query. | [optional] 
+ **onlyMine** | **Number**| Return only current user lists. | [optional] [default to 0]
+ **onlyDefault** | **Number**| Return only default lists. | [optional] [default to 0]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type

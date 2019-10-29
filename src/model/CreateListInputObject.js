@@ -36,7 +36,7 @@
   /**
    * The CreateListInputObject model module.
    * @module model/CreateListInputObject
-   * @version 2.0.812
+   * @version 2.0.813
    */
 
   /**
@@ -87,19 +87,19 @@
    */
   exports.prototype['name'] = undefined;
   /**
-   * Should new list be **shared** among all the sub-accounts?
+   * Should the new list be **shared** among all the sub-accounts?
    * @member {Boolean} shared
    * @default false
    */
   exports.prototype['shared'] = false;
   /**
-   * Is list favorited. Default is false.
+   * Is the list favorited? Default is false.
    * @member {Boolean} favorited
    * @default false
    */
   exports.prototype['favorited'] = false;
   /**
-   * Is list default for new contacts (web only).
+   * Is the list default for new contacts (web only)?
    * @member {Boolean} isDefault
    * @default false
    */

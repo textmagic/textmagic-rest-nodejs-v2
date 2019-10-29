@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.812
+   * @version 2.0.813
    */
 
   /**
@@ -4503,8 +4503,8 @@
 
 
     /**
-     * Get contact&#39;s lists
-     * Get all the lists in which the contact is included
+     * Get a contact&#39;s lists
+     * Get all the lists in which a contact is included.
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -4548,8 +4548,8 @@
     }
 
     /**
-     * Get contact&#39;s lists
-     * Get all the lists in which the contact is included
+     * Get a contact&#39;s lists
+     * Get all the lists in which a contact is included.
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -6776,11 +6776,11 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.ids Find lists by ID(s)
-     * @param {String} opts.query Find lists by specified search query
-     * @param {Number} opts.onlyMine Return only current user lists (default to 0)
-     * @param {Number} opts.onlyDefault Return only default lists (default to 0)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {String} opts.ids Find lists by IDs.
+     * @param {String} opts.query Find lists by specified search query.
+     * @param {Number} opts.onlyMine Return only current user lists. (default to 0)
+     * @param {Number} opts.onlyDefault Return only default lists. (default to 0)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchListsPaginatedResponse} and HTTP response
      */
@@ -6826,11 +6826,11 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.ids Find lists by ID(s)
-     * @param {String} opts.query Find lists by specified search query
-     * @param {Number} opts.onlyMine Return only current user lists (default to 0)
-     * @param {Number} opts.onlyDefault Return only default lists (default to 0)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {String} opts.ids Find lists by IDs.
+     * @param {String} opts.query Find lists by specified search query.
+     * @param {Number} opts.onlyMine Return only current user lists. (default to 0)
+     * @param {Number} opts.onlyDefault Return only default lists. (default to 0)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchListsPaginatedResponse}
      */
