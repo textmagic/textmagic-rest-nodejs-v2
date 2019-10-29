@@ -36,19 +36,19 @@
   /**
    * The DoCarrierLookupResponse model module.
    * @module model/DoCarrierLookupResponse
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
    * Constructs a new <code>DoCarrierLookupResponse</code>.
    * @alias module:model/DoCarrierLookupResponse
    * @class
-   * @param cost {Number} Cost to check that one number is constant – 0.04 in your account currency.
+   * @param cost {Number} The cost to check that one number is constant – 0.04 in your account currency.
    * @param local {String} Phone number in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).
    * @param type {module:model/DoCarrierLookupResponse.TypeEnum} Phone number type.
    * @param carrier {String} Carrier name.
    * @param number164 {String} Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
-   * @param valid {Boolean} The field shows if entered phone number is valid or not.
+   * @param valid {Boolean} This field shows whether the entered phone number is valid or not.
    */
   var exports = function(cost, local, type, carrier, number164, valid) {
     var _this = this;
@@ -99,7 +99,7 @@
   }
 
   /**
-   * Cost to check that one number is constant – 0.04 in your account currency.
+   * The cost to check that one number is constant – 0.04 in your account currency.
    * @member {Number} cost
    */
   exports.prototype['cost'] = undefined;
@@ -129,7 +129,7 @@
    */
   exports.prototype['number164'] = undefined;
   /**
-   * The field shows if entered phone number is valid or not.
+   * This field shows whether the entered phone number is valid or not.
    * @member {Boolean} valid
    */
   exports.prototype['valid'] = undefined;

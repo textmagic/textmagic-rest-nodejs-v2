@@ -36,7 +36,7 @@
   /**
    * The MuteChatsBulkInputObject model module.
    * @module model/MuteChatsBulkInputObject
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
@@ -87,7 +87,7 @@
    */
   exports.prototype['all'] = undefined;
   /**
-   * Mute for N hours
+   * Mute for N hours.
    * @member {Number} for
    */
   exports.prototype['for'] = undefined;

@@ -36,12 +36,12 @@
   /**
    * The BadRequestResponseErrors model module.
    * @module model/BadRequestResponseErrors
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
    * Constructs a new <code>BadRequestResponseErrors</code>.
-   * If it was a **POST** or **PUT** request (and the **message** returned is &#x60;Validation Failed&#x60;), this field may contain **errors **that describe the errors grouped by the input parameter name. 
+   * If it was a **POST** or **PUT** request (and the **message** returned is &#x60;Validation Failed&#x60;), this field may contain **errors** that describe the errors grouped by the input parameter name. 
    * @alias module:model/BadRequestResponseErrors
    * @class
    */

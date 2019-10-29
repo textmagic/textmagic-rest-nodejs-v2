@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
@@ -1427,7 +1427,7 @@
 
 
     /**
-     * Cancel dedicated number subscription
+     * Cancel a dedicated number subscription
      * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1466,7 +1466,7 @@
     }
 
     /**
-     * Cancel dedicated number subscription
+     * Cancel a dedicated number subscription
      * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -2277,10 +2277,10 @@
 
     /**
      * Carrier Lookup
-     * This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
+     * This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
      * @param {String} phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
+     * @param {String} opts.country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DoCarrierLookupResponse} and HTTP response
      */
     this.doCarrierLookupWithHttpInfo = function(phone, opts) {
@@ -2320,10 +2320,10 @@
 
     /**
      * Carrier Lookup
-     * This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
+     * This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
      * @param {String} phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.country This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
+     * @param {String} opts.country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DoCarrierLookupResponse}
      */
     this.doCarrierLookup = function(phone, opts) {
@@ -2336,7 +2336,7 @@
 
     /**
      * Email Lookup
-     * To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
+     * To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
      * @param {String} email Email address.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DoEmailLookupResponse} and HTTP response
      */
@@ -2375,7 +2375,7 @@
 
     /**
      * Email Lookup
-     * To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
+     * To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
      * @param {String} email Email address.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DoEmailLookupResponse}
      */
@@ -2798,9 +2798,9 @@
     /**
      * Find dedicated numbers available for purchase
      * 
-     * @param {String} country Two-letter dedicated number country ISO code.
+     * @param {String} country The 2-letter dedicated number country ISO code.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
+     * @param {Number} opts.prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
      * @param {Number} opts.tollfree Should we show only tollfree numbers (tollfree available only for US). (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAvailableDedicatedNumbersResponse} and HTTP response
      */
@@ -2843,9 +2843,9 @@
     /**
      * Find dedicated numbers available for purchase
      * 
-     * @param {String} country Two-letter dedicated number country ISO code.
+     * @param {String} country The 2-letter dedicated number country ISO code.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.prefix Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
+     * @param {Number} opts.prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
      * @param {Number} opts.tollfree Should we show only tollfree numbers (tollfree available only for US). (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAvailableDedicatedNumbersResponse}
      */
@@ -2859,7 +2859,7 @@
 
     /**
      * Get available sender settings
-     * Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+     * Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
      * @param {Object} opts Optional parameters
      * @param {String} opts.country The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAvailableSenderSettingOptionsResponse} and HTTP response
@@ -2895,7 +2895,7 @@
 
     /**
      * Get available sender settings
-     * Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+     * Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
      * @param {Object} opts Optional parameters
      * @param {String} opts.country The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAvailableSenderSettingOptionsResponse}
@@ -3617,7 +3617,7 @@
 
 
     /**
-     * Fetch notes assigned to the given contact.
+     * Fetch notes assigned to a given contact
      * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
@@ -3662,7 +3662,7 @@
     }
 
     /**
-     * Fetch notes assigned to the given contact.
+     * Fetch notes assigned to a given contact
      * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
@@ -5327,7 +5327,7 @@
      * Get current sender settings
      * 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.country Return sender settings enabled for sending to specified country. Two upper case characters
+     * @param {String} opts.country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSenderSettingsResponse} and HTTP response
      */
     this.getSenderSettingsWithHttpInfo = function(opts) {
@@ -5363,7 +5363,7 @@
      * Get current sender settings
      * 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.country Return sender settings enabled for sending to specified country. Two upper case characters
+     * @param {String} opts.country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSenderSettingsResponse}
      */
     this.getSenderSettings = function(opts) {
@@ -5864,7 +5864,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.surveyId Fetch only that numbers which are ready for the survey
+     * @param {Number} opts.surveyId Fetch only those numbers that are ready for the survey.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetUserDedicatedNumbersPaginatedResponse} and HTTP response
      */
     this.getUserDedicatedNumbersWithHttpInfo = function(opts) {
@@ -5904,7 +5904,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.surveyId Fetch only that numbers which are ready for the survey
+     * @param {Number} opts.surveyId Fetch only those numbers that are ready for the survey.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetUserDedicatedNumbersPaginatedResponse}
      */
     this.getUserDedicatedNumbers = function(opts) {
@@ -5919,7 +5919,7 @@
      * Import contacts
      * Import contacts from the CSV, XLS or XLSX file.
      * @param {File} file File containing contacts in csv or xls(x) formats
-     * @param {String} column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
+     * @param {String} column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. 
      * @param {String} opts.listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. 
@@ -5971,7 +5971,7 @@
      * Import contacts
      * Import contacts from the CSV, XLS or XLSX file.
      * @param {File} file File containing contacts in csv or xls(x) formats
-     * @param {String} column Import file column mapping. String must contain substrings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where value before &#x60;:&#x60; is a number of column in file, value after &#x60;:&#x60; is a field of newly created contact or ID of custom field. Numbers of columns begins from zero. Allowed built-in contact fields: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
+     * @param {String} column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.listId List ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified. 
      * @param {String} opts.listName List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified. 
@@ -6195,7 +6195,7 @@
 
     /**
      * Mute chats (bulk)
-     * Mute several chats by chat IDs or mute all chats
+     * Mute several chats by chat ids or mute all chats.
      * @param {module:model/MuteChatsBulkInputObject} muteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -6233,7 +6233,7 @@
 
     /**
      * Mute chats (bulk)
-     * Mute several chats by chat IDs or mute all chats
+     * Mute several chats by chat ids or mute all chats.
      * @param {module:model/MuteChatsBulkInputObject} muteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -6396,7 +6396,7 @@
 
     /**
      * Apply for a new Sender ID
-     * &gt; Sender IDs are shared between all of your sub-accounts.
+     * &gt; Sender IDs are shared among all of your sub-accounts.
      * @param {module:model/RequestSenderIdInputObject} requestSenderIdInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -6434,7 +6434,7 @@
 
     /**
      * Apply for a new Sender ID
-     * &gt; Sender IDs are shared between all of your sub-accounts.
+     * &gt; Sender IDs are shared among all of your sub-accounts.
      * @param {module:model/RequestSenderIdInputObject} requestSenderIdInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -7308,7 +7308,7 @@
 
     /**
      * Unmute chats (bulk)
-     * Unmute several chats by chat IDs or unmute all chats
+     * Unmute several chats by chat ids or unmute all chats.
      * @param {module:model/UnmuteChatsBulkInputObject} unmuteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7346,7 +7346,7 @@
 
     /**
      * Unmute chats (bulk)
-     * Unmute several chats by chat IDs or unmute all chats
+     * Unmute several chats by chat ids or unmute all chats.
      * @param {module:model/UnmuteChatsBulkInputObject} unmuteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -8136,7 +8136,7 @@
     /**
      * Upload an avatar
      * 
-     * @param {File} image Contact avatar. Should be PNG or JPG file not more than 10 MB
+     * @param {File} image Contact avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -8182,7 +8182,7 @@
     /**
      * Upload an avatar
      * 
-     * @param {File} image Contact avatar. Should be PNG or JPG file not more than 10 MB
+     * @param {File} image Contact avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */

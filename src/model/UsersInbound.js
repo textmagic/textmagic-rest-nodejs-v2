@@ -36,7 +36,7 @@
   /**
    * The UsersInbound model module.
    * @module model/UsersInbound
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
@@ -47,7 +47,7 @@
    * @param user {module:model/User} 
    * @param purchasedAt {Date} Time when the dedicated number was purchased.
    * @param expireAt {Date} Dedicated number subscription expiration time.
-   * @param status {module:model/UsersInbound.StatusEnum} Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. 
+   * @param status {module:model/UsersInbound.StatusEnum} Number status: *   **U** for Unused. No messages have been sent from (or received to) this number; *   **A** for Active. 
    * @param country {module:model/Country} 
    */
   var exports = function(id, user, purchasedAt, expireAt, status, country) {
@@ -132,7 +132,7 @@
    */
   exports.prototype['expireAt'] = undefined;
   /**
-   * Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. 
+   * Number status: *   **U** for Unused. No messages have been sent from (or received to) this number; *   **A** for Active. 
    * @member {module:model/UsersInbound.StatusEnum} status
    */
   exports.prototype['status'] = undefined;

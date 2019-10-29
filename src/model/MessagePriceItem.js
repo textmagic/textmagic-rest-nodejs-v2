@@ -36,7 +36,7 @@
   /**
    * The MessagePriceItem model module.
    * @module model/MessagePriceItem
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
@@ -45,7 +45,7 @@
    * @class
    * @param name {String} Country name.
    * @param price {String} Price to send message to desired country.
-   * @param country {String} The 2-letter ISO country code of the recipient phone number.
+   * @param country {String} The 2-letter ISO country code of the recipient's phone number.
    */
   var exports = function(name, price, country) {
     var _this = this;
@@ -90,7 +90,7 @@
    */
   exports.prototype['price'] = undefined;
   /**
-   * The 2-letter ISO country code of the recipient phone number.
+   * The 2-letter ISO country code of the recipient's phone number.
    * @member {String} country
    */
   exports.prototype['country'] = undefined;

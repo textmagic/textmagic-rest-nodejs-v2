@@ -36,7 +36,7 @@
   /**
    * The SurveyRecipient model module.
    * @module model/SurveyRecipient
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**

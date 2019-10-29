@@ -36,15 +36,15 @@
   /**
    * The GetContactImportSessionProgressResponse model module.
    * @module model/GetContactImportSessionProgressResponse
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
    * Constructs a new <code>GetContactImportSessionProgressResponse</code>.
    * @alias module:model/GetContactImportSessionProgressResponse
    * @class
-   * @param status {Number} Session status: * **1** if session has been initialized but not yet started * **3** if session is being processed * **4** if session has errors * **5** if session completed successfully 
-   * @param processed {Number} How many contacts have been imported.
+   * @param status {Number} Session status: * **1** - if session has been initialized but not yet started; * **3** - if session is being processed; * **4** - if session has errors; * **5** - if session completed successfully. 
+   * @param processed {Number} How many contacts have been imported?
    */
   var exports = function(status, processed) {
     var _this = this;
@@ -75,12 +75,12 @@
   }
 
   /**
-   * Session status: * **1** if session has been initialized but not yet started * **3** if session is being processed * **4** if session has errors * **5** if session completed successfully 
+   * Session status: * **1** - if session has been initialized but not yet started; * **3** - if session is being processed; * **4** - if session has errors; * **5** - if session completed successfully. 
    * @member {Number} status
    */
   exports.prototype['status'] = undefined;
   /**
-   * How many contacts have been imported.
+   * How many contacts have been imported?
    * @member {Number} processed
    */
   exports.prototype['processed'] = undefined;

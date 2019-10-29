@@ -36,7 +36,7 @@
   /**
    * The DoEmailLookupResponse model module.
    * @module model/DoEmailLookupResponse
-   * @version 2.0.814
+   * @version 2.0.815
    */
 
   /**
@@ -49,15 +49,15 @@
    * @param reason {String} The reason why the checked email is invalid/undeliverable.
    * @param risk {module:model/DoEmailLookupResponse.RiskEnum} The risk score of the email is`high`, `medium`, `low` or `null`.
    * @param addressType {module:model/DoEmailLookupResponse.AddressTypeEnum} The email address type (domain) is `free` or `corporate`.
-   * @param isDisposableAddress {Boolean} This is be `true` if the domain is in the list of disposable email addresses, otherwise returns as `false`.
-   * @param suggestion {String} Null if nothing is suggested, however, if there is a potential typo in the email address, the closest suggestion is provided.
-   * @param emailRole {String} Checks the mailbox part of the email whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
+   * @param isDisposableAddress {Boolean} This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`.
+   * @param suggestion {String} Null if nothing is suggested; however, if there is a potential typo in the email address, the closest suggestion is provided.
+   * @param emailRole {String} Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
    * @param localPart {String} The local part of the email address.
    * @param domainPart {String} The domain part of the email address.
    * @param exchange {String} Email exchange server domain name (MX record value).
    * @param preference {Number} MX record preference.
-   * @param isInWhiteList {Boolean} `true` if the email address exists in TextMagic whitelist. 
-   * @param isInBlackList {Boolean} `true` if the email address exists in TextMagic blacklist. 
+   * @param isInWhiteList {Boolean} `true` if the email address exists in the TextMagic whitelist. 
+   * @param isInBlackList {Boolean} `true` if the email address exists in the TextMagic blacklist. 
    * @param hasMx {Boolean} `true` if the email address domain has an MX record. 
    * @param hasAa {Boolean} `true` if the email address domain has an A record (IPv4). 
    * @param hasAaaa {Boolean} `true` if the email address domain has an AAAA record (IPv6). 
@@ -185,17 +185,17 @@
    */
   exports.prototype['addressType'] = undefined;
   /**
-   * This is be `true` if the domain is in the list of disposable email addresses, otherwise returns as `false`.
+   * This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`.
    * @member {Boolean} isDisposableAddress
    */
   exports.prototype['isDisposableAddress'] = undefined;
   /**
-   * Null if nothing is suggested, however, if there is a potential typo in the email address, the closest suggestion is provided.
+   * Null if nothing is suggested; however, if there is a potential typo in the email address, the closest suggestion is provided.
    * @member {String} suggestion
    */
   exports.prototype['suggestion'] = undefined;
   /**
-   * Checks the mailbox part of the email whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
+   * Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
    * @member {String} emailRole
    */
   exports.prototype['emailRole'] = undefined;
@@ -220,12 +220,12 @@
    */
   exports.prototype['preference'] = undefined;
   /**
-   * `true` if the email address exists in TextMagic whitelist. 
+   * `true` if the email address exists in the TextMagic whitelist. 
    * @member {Boolean} isInWhiteList
    */
   exports.prototype['isInWhiteList'] = undefined;
   /**
-   * `true` if the email address exists in TextMagic blacklist. 
+   * `true` if the email address exists in the TextMagic blacklist. 
    * @member {Boolean} isInBlackList
    */
   exports.prototype['isInBlackList'] = undefined;
