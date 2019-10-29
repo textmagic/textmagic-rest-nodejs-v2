@@ -36,7 +36,7 @@
   /**
    * The UpdateCallbackSettingsInputObject model module.
    * @module model/UpdateCallbackSettingsInputObject
-   * @version 2.0.813
+   * @version 2.0.814
    */
 
   /**

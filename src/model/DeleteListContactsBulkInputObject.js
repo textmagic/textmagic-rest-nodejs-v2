@@ -36,7 +36,7 @@
   /**
    * The DeleteListContactsBulkInputObject model module.
    * @module model/DeleteListContactsBulkInputObject
-   * @version 2.0.813
+   * @version 2.0.814
    */
 
   /**
@@ -78,7 +78,7 @@
    */
   exports.prototype['ids'] = undefined;
   /**
-   * Default is 0 (false). If set to 1, all the entities will be removed.
+   * Default is 0 (false). If set to 1, all entities will be removed.
    * @member {Number} all
    */
   exports.prototype['all'] = undefined;

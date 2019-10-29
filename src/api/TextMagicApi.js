@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.813
+   * @version 2.0.814
    */
 
   /**
@@ -1586,7 +1586,7 @@
 
     /**
      * Delete a list
-     * This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
+     * This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1625,7 +1625,7 @@
 
     /**
      * Delete a list
-     * This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
+     * This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1638,8 +1638,8 @@
 
 
     /**
-     * Delete an avatar for the list
-     * 
+     * Delete an avatar for a list
+     * Delete an avatar for a list
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1677,8 +1677,8 @@
     }
 
     /**
-     * Delete an avatar for the list
-     * 
+     * Delete an avatar for a list
+     * Delete an avatar for a list
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1691,8 +1691,8 @@
 
 
     /**
-     * Delete contacts from list (bulk)
-     * 
+     * Delete contacts from a list (bulk)
+     * Delete contacts from a list (bulk)
      * @param {module:model/DeleteListContactsBulkInputObject} deleteListContactsBulkInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1736,8 +1736,8 @@
     }
 
     /**
-     * Delete contacts from list (bulk)
-     * 
+     * Delete contacts from a list (bulk)
+     * Delete contacts from a list (bulk)
      * @param {module:model/DeleteListContactsBulkInputObject} deleteListContactsBulkInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -3805,12 +3805,12 @@
 
     /**
      * Get all contacts in a list
-     * A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
-     * @param {Number} id Given group Id.
+     * A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
+     * @param {Number} id Given group ID.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactsByListIdPaginatedResponse} and HTTP response
      */
@@ -3854,12 +3854,12 @@
 
     /**
      * Get all contacts in a list
-     * A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
-     * @param {Number} id Given group Id.
+     * A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
+     * @param {Number} id Given group ID.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactsByListIdPaginatedResponse}
      */
@@ -4384,7 +4384,7 @@
 
 
     /**
-     * Get all contacts IDs in a list
+     * Get all contact IDs in a list
      * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetListContactsIdsResponse} and HTTP response
@@ -4423,7 +4423,7 @@
     }
 
     /**
-     * Get all contacts IDs in a list
+     * Get all contact IDs in a list
      * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetListContactsIdsResponse}
@@ -8195,9 +8195,9 @@
 
 
     /**
-     * Add an avatar for the list
-     * 
-     * @param {File} image List avatar. Should be PNG or JPG file not more than 10 MB
+     * Add an avatar for a list
+     * Add an avatar for a list
+     * @param {File} image List avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -8241,9 +8241,9 @@
     }
 
     /**
-     * Add an avatar for the list
-     * 
-     * @param {File} image List avatar. Should be PNG or JPG file not more than 10 MB
+     * Add an avatar for a list
+     * Add an avatar for a list
+     * @param {File} image List avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */

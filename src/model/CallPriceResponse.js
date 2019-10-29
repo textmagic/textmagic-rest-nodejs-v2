@@ -36,7 +36,7 @@
   /**
    * The CallPriceResponse model module.
    * @module model/CallPriceResponse
-   * @version 2.0.813
+   * @version 2.0.814
    */
 
   /**

@@ -36,14 +36,14 @@
   /**
    * The ClearAndAssignContactsToListInputObject model module.
    * @module model/ClearAndAssignContactsToListInputObject
-   * @version 2.0.813
+   * @version 2.0.814
    */
 
   /**
    * Constructs a new <code>ClearAndAssignContactsToListInputObject</code>.
    * @alias module:model/ClearAndAssignContactsToListInputObject
    * @class
-   * @param contacts {String} Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+   * @param contacts {String} Contact ID(s), separated by a comma or \"all\" to add all contacts belonging to the current user.
    */
   var exports = function(contacts) {
     var _this = this;
@@ -70,7 +70,7 @@
   }
 
   /**
-   * Contact ID(s), separated by comma or 'all' to add all contacts belonging to the current user
+   * Contact ID(s), separated by a comma or \"all\" to add all contacts belonging to the current user.
    * @member {String} contacts
    */
   exports.prototype['contacts'] = undefined;
