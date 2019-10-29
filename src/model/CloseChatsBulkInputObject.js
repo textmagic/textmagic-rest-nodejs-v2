@@ -36,7 +36,7 @@
   /**
    * The CloseChatsBulkInputObject model module.
    * @module model/CloseChatsBulkInputObject
-   * @version 2.0.818
+   * @version 2.0.824
    */
 
   /**
@@ -73,12 +73,12 @@
   }
 
   /**
-   * Entity ID(s), separated by comma
+   * Entity ID(s), separated by comma.
    * @member {String} ids
    */
   exports.prototype['ids'] = undefined;
   /**
-   * Entity ID(s), separated by comma
+   * Entity ID(s), separated by comma.
    * @member {Boolean} all
    */
   exports.prototype['all'] = undefined;

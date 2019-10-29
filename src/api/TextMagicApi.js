@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.818
+   * @version 2.0.824
    */
 
   /**
@@ -2445,7 +2445,7 @@
      * Get all chats
      * 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.status Fetch only (a)ctive, (c)losed or (d)eleted chats
+     * @param {module:model/String} opts.status Fetch only (a)ctive, (c)losed or (d)eleted chats.
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
@@ -2491,7 +2491,7 @@
      * Get all chats
      * 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.status Fetch only (a)ctive, (c)losed or (d)eleted chats
+     * @param {module:model/String} opts.status Fetch only (a)ctive, (c)losed or (d)eleted chats.
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
@@ -2627,7 +2627,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAllOutboundMessagesPaginatedResponse} and HTTP response
      */
     this.getAllOutboundMessagesWithHttpInfo = function(opts) {
@@ -2667,7 +2667,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAllOutboundMessagesPaginatedResponse}
      */
     this.getAllOutboundMessages = function(opts) {
@@ -2685,7 +2685,7 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.status Fetch schedules with a specific status: a - actual, c - completed, x - all. (default to x)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAllScheduledMessagesPaginatedResponse} and HTTP response
      */
@@ -2729,7 +2729,7 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {module:model/String} opts.status Fetch schedules with a specific status: a - actual, c - completed, x - all. (default to x)
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAllScheduledMessagesPaginatedResponse}
      */
@@ -3217,8 +3217,8 @@
      * 
      * @param {String} phone 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.upsert Create a new chat if not found (default to 0)
-     * @param {Number} opts.reopen Reopen chat if found or do not change status (default to 0)
+     * @param {Number} opts.upsert Create a new chat if not found. (default to 0)
+     * @param {Number} opts.reopen Reopen chat if found or do not change status. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Chat} and HTTP response
      */
     this.getChatByPhoneWithHttpInfo = function(phone, opts) {
@@ -3262,8 +3262,8 @@
      * 
      * @param {String} phone 
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.upsert Create a new chat if not found (default to 0)
-     * @param {Number} opts.reopen Reopen chat if found or do not change status (default to 0)
+     * @param {Number} opts.upsert Create a new chat if not found. (default to 0)
+     * @param {Number} opts.reopen Reopen chat if found or do not change status. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Chat}
      */
     this.getChatByPhone = function(phone, opts) {
@@ -3281,7 +3281,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find messages by specified search query
+     * @param {String} opts.query Find messages by specified search query.
      * @param {Number} opts.start Return messages since specified timestamp only.
      * @param {Number} opts.end Return messages up to specified timestamp only.
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
@@ -3336,7 +3336,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find messages by specified search query
+     * @param {String} opts.query Find messages by specified search query.
      * @param {Number} opts.start Return messages since specified timestamp only.
      * @param {Number} opts.end Return messages up to specified timestamp only.
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
@@ -5106,8 +5106,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID.
-     * @param {String} opts.query Find message by specified search query
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {String} opts.query Find message by specified search query.
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetOutboundMessagesHistoryPaginatedResponse} and HTTP response
      */
@@ -5150,8 +5150,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID.
-     * @param {String} opts.query Find message by specified search query
-     * @param {module:model/String} opts.orderBy Order results by some field. Default is id (default to id)
+     * @param {String} opts.query Find message by specified search query.
+     * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetOutboundMessagesHistoryPaginatedResponse}
      */
@@ -6566,7 +6566,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find chats by specified search query
+     * @param {String} opts.query Find chats by specified search query.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchChatsByReceipentPaginatedResponse} and HTTP response
      */
@@ -6608,7 +6608,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find chats by specified search query
+     * @param {String} opts.query Find chats by specified search query.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchChatsByReceipentPaginatedResponse}
      */
@@ -6848,7 +6848,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified.
      * @param {String} opts.ids Find message by ID(s).
      * @param {Number} opts.sessionId Find messages by session ID.
      * @param {module:model/String} opts.statuses Find messages by status.
@@ -6898,7 +6898,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
+     * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified.
      * @param {String} opts.ids Find message by ID(s).
      * @param {Number} opts.sessionId Find messages by session ID.
      * @param {module:model/String} opts.statuses Find messages by status.
@@ -6920,8 +6920,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find messages by specified search query
-     * @param {String} opts.ids Find schedules by ID(s)
+     * @param {String} opts.query Find messages by specified search query.
+     * @param {String} opts.ids Find schedules by ID(s).
      * @param {module:model/String} opts.status Fetch schedules with a specific status: a - actual, c - completed, x - all. (default to x)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
@@ -6968,8 +6968,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {String} opts.query Find messages by specified search query
-     * @param {String} opts.ids Find schedules by ID(s)
+     * @param {String} opts.query Find messages by specified search query.
+     * @param {String} opts.ids Find schedules by ID(s).
      * @param {module:model/String} opts.status Fetch schedules with a specific status: a - actual, c - completed, x - all. (default to x)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
@@ -8258,7 +8258,7 @@
     /**
      * Upload message attachment
      * Upload a new file to insert it as a link.
-     * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats
+     * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadMessageAttachmentResponse} and HTTP response
      */
     this.uploadMessageAttachmentWithHttpInfo = function(file) {
@@ -8297,7 +8297,7 @@
     /**
      * Upload message attachment
      * Upload a new file to insert it as a link.
-     * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats
+     * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadMessageAttachmentResponse}
      */
     this.uploadMessageAttachment = function(file) {

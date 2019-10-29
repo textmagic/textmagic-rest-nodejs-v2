@@ -2384,7 +2384,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
-  'status': "\"a\"", // String | Fetch only (a)ctive, (c)losed or (d)eleted chats
+  'status': "\"a\"", // String | Fetch only (a)ctive, (c)losed or (d)eleted chats.
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'orderBy': "id", // String | Order results by some field. Default is id.
@@ -2403,7 +2403,7 @@ apiInstance.getAllChats(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | **String**| Fetch only (a)ctive, (c)losed or (d)eleted chats | [optional] 
+ **status** | **String**| Fetch only (a)ctive, (c)losed or (d)eleted chats. | [optional] 
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
@@ -2554,7 +2554,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'lastId': 56 // Number | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified
+  'lastId': 56 // Number | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
 };
 apiInstance.getAllOutboundMessages(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -2570,7 +2570,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional] 
+ **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional] 
 
 ### Return type
 
@@ -2609,7 +2609,7 @@ var opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'status': "x", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
-  'orderBy': "id", // String | Order results by some field. Default is id
+  'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
 };
 apiInstance.getAllScheduledMessages(opts).then(function(data) {
@@ -2627,7 +2627,7 @@ Name | Type | Description  | Notes
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -3108,8 +3108,8 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var phone = "\"447860021130\""; // String | 
 
 var opts = { 
-  'upsert': 0, // Number | Create a new chat if not found
-  'reopen': 0 // Number | Reopen chat if found or do not change status
+  'upsert': 0, // Number | Create a new chat if not found.
+  'reopen': 0 // Number | Reopen chat if found or do not change status.
 };
 apiInstance.getChatByPhone(phone, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3124,8 +3124,8 @@ apiInstance.getChatByPhone(phone, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone** | **String**|  | 
- **upsert** | **Number**| Create a new chat if not found | [optional] [default to 0]
- **reopen** | **Number**| Reopen chat if found or do not change status | [optional] [default to 0]
+ **upsert** | **Number**| Create a new chat if not found. | [optional] [default to 0]
+ **reopen** | **Number**| Reopen chat if found or do not change status. | [optional] [default to 0]
 
 ### Return type
 
@@ -3165,7 +3165,7 @@ var id = 1; // Number |
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'query': "query_example", // String | Find messages by specified search query
+  'query': "query_example", // String | Find messages by specified search query.
   'start': 56, // Number | Return messages since specified timestamp only.
   'end': 56, // Number | Return messages up to specified timestamp only.
   'direction': "desc", // String | Order direction. Default is desc.
@@ -3186,7 +3186,7 @@ Name | Type | Description  | Notes
  **id** | **Number**|  | 
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **query** | **String**| Find messages by specified search query | [optional] 
+ **query** | **String**| Find messages by specified search query. | [optional] 
  **start** | **Number**| Return messages since specified timestamp only. | [optional] 
  **end** | **Number**| Return messages up to specified timestamp only. | [optional] 
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
@@ -4820,8 +4820,8 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'limit': 10, // Number | The number of results per page.
   'lastId': 56, // Number | Filter results by ID, selecting all values lesser than the specified ID.
-  'query': "query_example", // String | Find message by specified search query
-  'orderBy': "id", // String | Order results by some field. Default is id
+  'query': "query_example", // String | Find message by specified search query.
+  'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
 };
 apiInstance.getOutboundMessagesHistory(opts).then(function(data) {
@@ -4838,8 +4838,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. | [optional] 
- **query** | **String**| Find message by specified search query | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id | [optional] [default to id]
+ **query** | **String**| Find message by specified search query. | [optional] 
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
 ### Return type
@@ -6188,7 +6188,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'query': "query_example", // String | Find chats by specified search query
+  'query': "query_example", // String | Find chats by specified search query.
   'orderBy': "id" // String | Order results by some field. Default is id.
 };
 apiInstance.searchChatsByReceipent(opts).then(function(data) {
@@ -6205,7 +6205,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **query** | **String**| Find chats by specified search query | [optional] 
+ **query** | **String**| Find chats by specified search query. | [optional] 
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
 
 ### Return type
@@ -6440,7 +6440,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'lastId': 56, // Number | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified
+  'lastId': 56, // Number | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
   'ids': "ids_example", // String | Find message by ID(s).
   'sessionId': 56, // Number | Find messages by session ID.
   'statuses': "\"q\"", // String | Find messages by status.
@@ -6461,7 +6461,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | [optional] 
+ **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional] 
  **ids** | **String**| Find message by ID(s). | [optional] 
  **sessionId** | **Number**| Find messages by session ID. | [optional] 
  **statuses** | **String**| Find messages by status. | [optional] 
@@ -6504,8 +6504,8 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'query': "query_example", // String | Find messages by specified search query
-  'ids': "ids_example", // String | Find schedules by ID(s)
+  'query': "query_example", // String | Find messages by specified search query.
+  'ids': "ids_example", // String | Find schedules by ID(s).
   'status': "x", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
   'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
@@ -6524,8 +6524,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **query** | **String**| Find messages by specified search query | [optional] 
- **ids** | **String**| Find schedules by ID(s) | [optional] 
+ **query** | **String**| Find messages by specified search query. | [optional] 
+ **ids** | **String**| Find schedules by ID(s). | [optional] 
  **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
@@ -7724,7 +7724,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var file = "/path/to/file.txt"; // File | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats
+var file = "/path/to/file.txt"; // File | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
 
 apiInstance.uploadMessageAttachment(file).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -7738,7 +7738,7 @@ apiInstance.uploadMessageAttachment(file).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats | 
+ **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. | 
 
 ### Return type
 

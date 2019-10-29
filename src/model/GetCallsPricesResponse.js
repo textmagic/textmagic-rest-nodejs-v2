@@ -36,17 +36,17 @@
   /**
    * The GetCallsPricesResponse model module.
    * @module model/GetCallsPricesResponse
-   * @version 2.0.818
+   * @version 2.0.824
    */
 
   /**
    * Constructs a new <code>GetCallsPricesResponse</code>.
    * @alias module:model/GetCallsPricesResponse
    * @class
-   * @param outbound {Number} Price for outbound message
-   * @param inbound {Number} Price for inbound message
-   * @param forward {Number} Price for forward
-   * @param country {String} 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+   * @param outbound {Number} Price for outbound message.
+   * @param inbound {Number} Price for inbound message.
+   * @param forward {Number} Price for forward.
+   * @param country {String} 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country.
    */
   var exports = function(outbound, inbound, forward, country) {
     var _this = this;
@@ -85,22 +85,22 @@
   }
 
   /**
-   * Price for outbound message
+   * Price for outbound message.
    * @member {Number} outbound
    */
   exports.prototype['outbound'] = undefined;
   /**
-   * Price for inbound message
+   * Price for inbound message.
    * @member {Number} inbound
    */
   exports.prototype['inbound'] = undefined;
   /**
-   * Price for forward
+   * Price for forward.
    * @member {Number} forward
    */
   exports.prototype['forward'] = undefined;
   /**
-   * 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
+   * 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country.
    * @member {String} country
    */
   exports.prototype['country'] = undefined;

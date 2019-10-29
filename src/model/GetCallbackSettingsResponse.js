@@ -36,7 +36,7 @@
   /**
    * The GetCallbackSettingsResponse model module.
    * @module model/GetCallbackSettingsResponse
-   * @version 2.0.818
+   * @version 2.0.824
    */
 
   /**
@@ -45,7 +45,7 @@
    * @class
    * @param outUrl {String} This URL is used to push message delivery status updates to your application.
    * @param inUrl {String} This URL is used to push incoming SMS to your application.
-   * @param format {module:model/GetCallbackSettingsResponse.FormatEnum} Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json
+   * @param format {module:model/GetCallbackSettingsResponse.FormatEnum} Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json.
    */
   var exports = function(outUrl, inUrl, format) {
     var _this = this;
@@ -90,7 +90,7 @@
    */
   exports.prototype['inUrl'] = undefined;
   /**
-   * Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json
+   * Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json.
    * @member {module:model/GetCallbackSettingsResponse.FormatEnum} format
    */
   exports.prototype['format'] = undefined;

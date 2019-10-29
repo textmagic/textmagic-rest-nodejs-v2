@@ -36,7 +36,7 @@
   /**
    * The SenderSettingsItem model module.
    * @module model/SenderSettingsItem
-   * @version 2.0.818
+   * @version 2.0.824
    */
 
   /**
@@ -44,7 +44,7 @@
    * @alias module:model/SenderSettingsItem
    * @class
    * @param country {String} The 2-letter ISO country code of the recipient's phone number. 
-   * @param phone {String} Phone enabled for sending to a specified country
+   * @param phone {String} Phone enabled for sending to a specified country.
    */
   var exports = function(country, phone) {
     var _this = this;
@@ -80,7 +80,7 @@
    */
   exports.prototype['country'] = undefined;
   /**
-   * Phone enabled for sending to a specified country
+   * Phone enabled for sending to a specified country.
    * @member {String} phone
    */
   exports.prototype['phone'] = undefined;

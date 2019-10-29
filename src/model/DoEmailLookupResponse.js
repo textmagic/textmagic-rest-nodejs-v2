@@ -36,7 +36,7 @@
   /**
    * The DoEmailLookupResponse model module.
    * @module model/DoEmailLookupResponse
-   * @version 2.0.818
+   * @version 2.0.824
    */
 
   /**
@@ -45,13 +45,13 @@
    * @class
    * @param address {String} The email address passed to the call.
    * @param status {module:model/DoEmailLookupResponse.StatusEnum} The email is `valid` or `invalid`.
-   * @param deliverability {String} The delivery status of the email address is`deliverable`, `undeliverable`  or `unknown`.
+   * @param deliverability {String} The delivery status of the email address is`deliverable`, `undeliverable`. or `unknown`.
    * @param reason {String} The reason why the checked email is invalid/undeliverable.
    * @param risk {module:model/DoEmailLookupResponse.RiskEnum} The risk score of the email is`high`, `medium`, `low` or `null`.
    * @param addressType {module:model/DoEmailLookupResponse.AddressTypeEnum} The email address type (domain) is `free` or `corporate`.
    * @param isDisposableAddress {Boolean} This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`.
    * @param suggestion {String} Null if nothing is suggested; however, if there is a potential typo in the email address, the closest suggestion is provided.
-   * @param emailRole {String} Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
+   * @param emailRole {String} Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’).
    * @param localPart {String} The local part of the email address.
    * @param domainPart {String} The domain part of the email address.
    * @param exchange {String} Email exchange server domain name (MX record value).
@@ -165,7 +165,7 @@
    */
   exports.prototype['status'] = undefined;
   /**
-   * The delivery status of the email address is`deliverable`, `undeliverable`  or `unknown`.
+   * The delivery status of the email address is`deliverable`, `undeliverable`. or `unknown`.
    * @member {String} deliverability
    */
   exports.prototype['deliverability'] = undefined;
@@ -195,7 +195,7 @@
    */
   exports.prototype['suggestion'] = undefined;
   /**
-   * Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’)
+   * Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’).
    * @member {String} emailRole
    */
   exports.prototype['emailRole'] = undefined;
