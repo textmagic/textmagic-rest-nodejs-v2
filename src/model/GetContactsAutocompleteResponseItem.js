@@ -36,22 +36,22 @@
   /**
    * The GetContactsAutocompleteResponseItem model module.
    * @module model/GetContactsAutocompleteResponseItem
-   * @version 2.0.815
+   * @version 2.0.816
    */
 
   /**
    * Constructs a new <code>GetContactsAutocompleteResponseItem</code>.
    * @alias module:model/GetContactsAutocompleteResponseItem
    * @class
-   * @param entityId {Number} Id of entity. 0 if object is a Reply
-   * @param entityType {module:model/GetContactsAutocompleteResponseItem.EntityTypeEnum} Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message 
-   * @param value {String} Id of contact/list if entityType is contact/list OR phone number if entityType is reply.
+   * @param entityId {Number} Id of entity. 0 if object is a reply.
+   * @param entityType {module:model/GetContactsAutocompleteResponseItem.EntityTypeEnum} Entry type: * **contact** if it is related to a contact; * **list** if it is related to a contact list; * **reply** if it is related to an incoming message. 
+   * @param value {String} ID of the contact/list if entityType is contact/list OR phone number if entityType is reply.
    * @param label {String} Name of the contact/list if entityType is contact/list OR phone number if entityType is reply.
-   * @param sharedBy {String} If contact or list was shared by another sub-account then name if this user will be shown.
+   * @param sharedBy {String} If contact or list was shared by another sub-account, the name of this user will be shown.
    * @param isShared {Boolean} If contact or list was shared by another sub-account then `true` will be set.
    * @param avatar {String} Contact avatar URI.
    * @param favorited {Boolean} If contact has been marked as favorite.
-   * @param userId {Number} Owner id of the contact/list (if it was shared).
+   * @param userId {Number} Owner ID of the contact/list (if it was shared).
    * @param countryName {String} 
    * @param qposition {Number} 
    * @param rposition {Number} 
@@ -125,17 +125,17 @@
   }
 
   /**
-   * Id of entity. 0 if object is a Reply
+   * Id of entity. 0 if object is a reply.
    * @member {Number} entityId
    */
   exports.prototype['entityId'] = undefined;
   /**
-   * Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message 
+   * Entry type: * **contact** if it is related to a contact; * **list** if it is related to a contact list; * **reply** if it is related to an incoming message. 
    * @member {module:model/GetContactsAutocompleteResponseItem.EntityTypeEnum} entityType
    */
   exports.prototype['entityType'] = undefined;
   /**
-   * Id of contact/list if entityType is contact/list OR phone number if entityType is reply.
+   * ID of the contact/list if entityType is contact/list OR phone number if entityType is reply.
    * @member {String} value
    */
   exports.prototype['value'] = undefined;
@@ -145,7 +145,7 @@
    */
   exports.prototype['label'] = undefined;
   /**
-   * If contact or list was shared by another sub-account then name if this user will be shown.
+   * If contact or list was shared by another sub-account, the name of this user will be shown.
    * @member {String} sharedBy
    */
   exports.prototype['sharedBy'] = undefined;
@@ -165,7 +165,7 @@
    */
   exports.prototype['favorited'] = undefined;
   /**
-   * Owner id of the contact/list (if it was shared).
+   * Owner ID of the contact/list (if it was shared).
    * @member {Number} userId
    */
   exports.prototype['userId'] = undefined;

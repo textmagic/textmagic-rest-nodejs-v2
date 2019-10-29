@@ -1,6 +1,6 @@
 {
   "name": "textmagic-client",
-  "version": "2.0.815",
+  "version": "2.0.816",
   "description": "",
   "license": "Unlicense",
   "main": "src/index.js",

@@ -36,7 +36,7 @@
   /**
    * The PushToken model module.
    * @module model/PushToken
-   * @version 2.0.815
+   * @version 2.0.816
    */
 
   /**

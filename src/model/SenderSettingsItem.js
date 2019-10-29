@@ -36,7 +36,7 @@
   /**
    * The SenderSettingsItem model module.
    * @module model/SenderSettingsItem
-   * @version 2.0.815
+   * @version 2.0.816
    */
 
   /**

@@ -3528,7 +3528,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'shared': 0, // Number | Should shared contacts to be included
+  'shared': 0, // Number | Should shared contacts be included?
   'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
 };
@@ -3546,7 +3546,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **shared** | **Number**| Should shared contacts to be included | [optional] [default to 0]
+ **shared** | **Number**| Should shared contacts be included? | [optional] [default to 0]
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
@@ -3569,7 +3569,7 @@ Name | Type | Description  | Notes
 
 Get contacts autocomplete suggestions
 
-Get contacts autocomplete suggestions by given search term
+Get contacts autocomplete suggestions by given search terms.
 
 ### Example
 ```javascript
@@ -3587,7 +3587,7 @@ var query = "\"A\""; // String | Find recipients by specified search query.
 
 var opts = { 
   'limit': 10, // Number | The number of results per page.
-  'lists': 0 // Number | Should lists be returned or not
+  'lists': 0 // Number | Should lists be returned or not?
 };
 apiInstance.getContactsAutocomplete(query, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3603,7 +3603,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Find recipients by specified search query. | 
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **lists** | **Number**| Should lists be returned or not | [optional] [default to 0]
+ **lists** | **Number**| Should lists be returned or not? | [optional] [default to 0]
 
 ### Return type
 
@@ -6244,13 +6244,13 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'shared': 0, // Number | Should shared contacts to be included
-  'ids': "ids_example", // String | Find contact by ID(s)
-  'listId': 56, // Number | Find contact by List ID
-  'includeBlocked': 56, // Number | Should blocked contacts to be included
+  'shared': 0, // Number | Should shared contacts be included?
+  'ids': "ids_example", // String | Find contacts by IDs.
+  'listId': 56, // Number | Find contacts by List ID.
+  'includeBlocked': 56, // Number | Should blocked contacts be included?
   'query': "query_example", // String | Find contacts by specified search query.
-  'local': 0, // Number | Treat phone number passed in 'query' field as local. Default is 0
-  'country': "country_example", // String | 2-letter ISO country code for local phone numbers, used when 'local' is set to true. Default is account country
+  'local': 0, // Number | Treat phone number passed in the \"query\" field as local. Default is 0.
+  'country': "country_example", // String | The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country.
   'orderBy': "id", // String | Order results by some field. Default is id.
   'direction': "desc" // String | Order direction. Default is desc.
 };
@@ -6268,13 +6268,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **shared** | **Number**| Should shared contacts to be included | [optional] [default to 0]
- **ids** | **String**| Find contact by ID(s) | [optional] 
- **listId** | **Number**| Find contact by List ID | [optional] 
- **includeBlocked** | **Number**| Should blocked contacts to be included | [optional] 
+ **shared** | **Number**| Should shared contacts be included? | [optional] [default to 0]
+ **ids** | **String**| Find contacts by IDs. | [optional] 
+ **listId** | **Number**| Find contacts by List ID. | [optional] 
+ **includeBlocked** | **Number**| Should blocked contacts be included? | [optional] 
  **query** | **String**| Find contacts by specified search query. | [optional] 
- **local** | **Number**| Treat phone number passed in &#39;query&#39; field as local. Default is 0 | [optional] [default to 0]
- **country** | **String**| 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country | [optional] 
+ **local** | **Number**| Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. | [optional] [default to 0]
+ **country** | **String**| The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. | [optional] 
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 

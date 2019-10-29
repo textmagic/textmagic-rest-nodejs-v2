@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.815
+   * @version 2.0.816
    */
 
   /**
@@ -3684,7 +3684,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.shared Should shared contacts to be included (default to 0)
+     * @param {Number} opts.shared Should shared contacts be included? (default to 0)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactsPaginatedResponse} and HTTP response
@@ -3728,7 +3728,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.shared Should shared contacts to be included (default to 0)
+     * @param {Number} opts.shared Should shared contacts be included? (default to 0)
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactsPaginatedResponse}
@@ -3743,11 +3743,11 @@
 
     /**
      * Get contacts autocomplete suggestions
-     * Get contacts autocomplete suggestions by given search term
+     * Get contacts autocomplete suggestions by given search terms.
      * @param {String} query Find recipients by specified search query.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lists Should lists be returned or not (default to 0)
+     * @param {Number} opts.lists Should lists be returned or not? (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactsAutocompleteResponse} and HTTP response
      */
     this.getContactsAutocompleteWithHttpInfo = function(query, opts) {
@@ -3788,11 +3788,11 @@
 
     /**
      * Get contacts autocomplete suggestions
-     * Get contacts autocomplete suggestions by given search term
+     * Get contacts autocomplete suggestions by given search terms.
      * @param {String} query Find recipients by specified search query.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.lists Should lists be returned or not (default to 0)
+     * @param {Number} opts.lists Should lists be returned or not? (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactsAutocompleteResponse}
      */
     this.getContactsAutocomplete = function(query, opts) {
@@ -6626,13 +6626,13 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.shared Should shared contacts to be included (default to 0)
-     * @param {String} opts.ids Find contact by ID(s)
-     * @param {Number} opts.listId Find contact by List ID
-     * @param {Number} opts.includeBlocked Should blocked contacts to be included
+     * @param {Number} opts.shared Should shared contacts be included? (default to 0)
+     * @param {String} opts.ids Find contacts by IDs.
+     * @param {Number} opts.listId Find contacts by List ID.
+     * @param {Number} opts.includeBlocked Should blocked contacts be included?
      * @param {String} opts.query Find contacts by specified search query.
-     * @param {Number} opts.local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (default to 0)
-     * @param {String} opts.country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country
+     * @param {Number} opts.local Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. (default to 0)
+     * @param {String} opts.country The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchContactsPaginatedResponse} and HTTP response
@@ -6682,13 +6682,13 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
-     * @param {Number} opts.shared Should shared contacts to be included (default to 0)
-     * @param {String} opts.ids Find contact by ID(s)
-     * @param {Number} opts.listId Find contact by List ID
-     * @param {Number} opts.includeBlocked Should blocked contacts to be included
+     * @param {Number} opts.shared Should shared contacts be included? (default to 0)
+     * @param {String} opts.ids Find contacts by IDs.
+     * @param {Number} opts.listId Find contacts by List ID.
+     * @param {Number} opts.includeBlocked Should blocked contacts be included?
      * @param {String} opts.query Find contacts by specified search query.
-     * @param {Number} opts.local Treat phone number passed in &#39;query&#39; field as local. Default is 0 (default to 0)
-     * @param {String} opts.country 2-letter ISO country code for local phone numbers, used when &#39;local&#39; is set to true. Default is account country
+     * @param {Number} opts.local Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. (default to 0)
+     * @param {String} opts.country The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchContactsPaginatedResponse}

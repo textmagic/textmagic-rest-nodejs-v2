@@ -36,7 +36,7 @@
   /**
    * The SendPhoneVerificationCodeInputObject model module.
    * @module model/SendPhoneVerificationCodeInputObject
-   * @version 2.0.815
+   * @version 2.0.816
    */
 
   /**
