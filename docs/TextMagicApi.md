@@ -4408,7 +4408,7 @@ Name | Type | Description  | Notes
 
 <a name="getMessagePriceTest"></a>
 # **getMessagePriceTest**
-> GetMessagePriceResponse getMessagePriceTest(t, id, includeBlocked, test, opts)
+> GetMessagePriceResponse getMessagePriceTest(t, test, id, includeBlocked, opts)
 
 Check message price
 
@@ -4428,15 +4428,15 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 
 var t = 56; // Number | 
 
+var test = 0; // Number | Should we show the pricing for blocked contacts?
+
 var id = 56; // Number | 
 
 var includeBlocked = 0; // Number | Should we show the pricing for blocked contacts?
 
-var test = 0; // Number | Should we show the pricing for blocked contacts?
-
 var opts = { 
-  'text': "\"Test message test\"", // String | Message text. Required if the **template_id** is not set.
   'templateId': 1, // Number | Template used instead of message text. Required if the **text** is not set.
+  'text': "\"Test message test\"", // String | Message text. Required if the **template_id** is not set.
   'sendingTime': 1565606455, // Number | DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
   'sendingDateTime': "\"2020-05-27 13:02:33\"", // String | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
   'sendingTimezone': "\"America/Buenos_Aires\"", // String | The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
@@ -4453,7 +4453,7 @@ var opts = {
   'local': 0, // Number | Treat phone numbers passed in the \\'phones\\' field as local.
   'localCountry': "\"US\"" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 };
-apiInstance.getMessagePriceTest(t, id, includeBlocked, test, opts).then(function(data) {
+apiInstance.getMessagePriceTest(t, test, id, includeBlocked, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -4466,11 +4466,11 @@ apiInstance.getMessagePriceTest(t, id, includeBlocked, test, opts).then(function
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **t** | **Number**|  | 
+ **test** | **Number**| Should we show the pricing for blocked contacts? | [default to 0]
  **id** | **Number**|  | 
  **includeBlocked** | **Number**| Should we show the pricing for blocked contacts? | [default to 0]
- **test** | **Number**| Should we show the pricing for blocked contacts? | [default to 0]
- **text** | **String**| Message text. Required if the **template_id** is not set. | [optional] 
  **templateId** | **Number**| Template used instead of message text. Required if the **text** is not set. | [optional] 
+ **text** | **String**| Message text. Required if the **template_id** is not set. | [optional] 
  **sendingTime** | **Number**| DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now. | [optional] 
  **sendingDateTime** | **String**| Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone. | [optional] 
  **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
