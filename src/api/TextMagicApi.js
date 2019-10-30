@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.826
+   * @version 2.0.834
    */
 
   /**
@@ -4666,8 +4666,11 @@
     /**
      * Check message price
      * Check pricing for a new outbound message.
+     * @param {Number} t 
+     * @param {Number} id 
+     * @param {Number} includeBlocked Should we show the pricing for blocked contacts?
+     * @param {Number} test Should we show the pricing for blocked contacts?
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
      * @param {String} opts.text Message text. Required if the **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
      * @param {Number} opts.sendingTime DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
@@ -4687,15 +4690,38 @@
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagePriceResponse} and HTTP response
      */
-    this.getMessagePriceWithHttpInfo = function(opts) {
+    this.getMessagePriceTestWithHttpInfo = function(t, id, includeBlocked, test, opts) {
       opts = opts || {};
       var postBody = null;
 
+      // verify the required parameter 't' is set
+      if (t === undefined || t === null) {
+        throw new Error("Missing the required parameter 't' when calling getMessagePriceTest");
+      }
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getMessagePriceTest");
+      }
+
+      // verify the required parameter 'includeBlocked' is set
+      if (includeBlocked === undefined || includeBlocked === null) {
+        throw new Error("Missing the required parameter 'includeBlocked' when calling getMessagePriceTest");
+      }
+
+      // verify the required parameter 'test' is set
+      if (test === undefined || test === null) {
+        throw new Error("Missing the required parameter 'test' when calling getMessagePriceTest");
+      }
+
 
       var pathParams = {
+        't': t,
+        'id': id
       };
       var queryParams = {
-        'includeBlocked': opts['includeBlocked'],
+        'includeBlocked': includeBlocked,
+        'test': test,
         'text': opts['text'],
         'templateId': opts['templateId'],
         'sendingTime': opts['sendingTime'],
@@ -4727,7 +4753,7 @@
       var returnType = GetMessagePriceResponse;
 
       return this.apiClient.callApi(
-        '/api/v2/messages/price/normalized', 'GET',
+        '/api/v2/messages/price/normalized/{id}/{t}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -4736,8 +4762,11 @@
     /**
      * Check message price
      * Check pricing for a new outbound message.
+     * @param {Number} t 
+     * @param {Number} id 
+     * @param {Number} includeBlocked Should we show the pricing for blocked contacts?
+     * @param {Number} test Should we show the pricing for blocked contacts?
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
      * @param {String} opts.text Message text. Required if the **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
      * @param {Number} opts.sendingTime DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
@@ -4757,8 +4786,8 @@
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagePriceResponse}
      */
-    this.getMessagePrice = function(opts) {
-      return this.getMessagePriceWithHttpInfo(opts)
+    this.getMessagePriceTest = function(t, id, includeBlocked, test, opts) {
+      return this.getMessagePriceTestWithHttpInfo(t, id, includeBlocked, test, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

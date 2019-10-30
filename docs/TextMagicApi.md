@@ -88,7 +88,7 @@ Method | HTTP request | Description
 [**getLists**](TextMagicApi.md#getLists) | **GET** /api/v2/lists | Get all lists
 [**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact&#39;s lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
-[**getMessagePrice**](TextMagicApi.md#getMessagePrice) | **GET** /api/v2/messages/price/normalized | Check message price
+[**getMessagePriceTest**](TextMagicApi.md#getMessagePriceTest) | **GET** /api/v2/messages/price/normalized/{id}/{t} | Check message price
 [**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session&#x60;s details
 [**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session&#x60;s statistics
 [**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session&#x60;s messages
@@ -4406,9 +4406,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getMessagePrice"></a>
-# **getMessagePrice**
-> GetMessagePriceResponse getMessagePrice(opts)
+<a name="getMessagePriceTest"></a>
+# **getMessagePriceTest**
+> GetMessagePriceResponse getMessagePriceTest(t, id, includeBlocked, test, opts)
 
 Check message price
 
@@ -4426,8 +4426,15 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
+var t = 56; // Number | 
+
+var id = 56; // Number | 
+
+var includeBlocked = 0; // Number | Should we show the pricing for blocked contacts?
+
+var test = 0; // Number | Should we show the pricing for blocked contacts?
+
 var opts = { 
-  'includeBlocked': 0, // Number | Should we show the pricing for blocked contacts?
   'text': "\"Test message test\"", // String | Message text. Required if the **template_id** is not set.
   'templateId': 1, // Number | Template used instead of message text. Required if the **text** is not set.
   'sendingTime': 1565606455, // Number | DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
@@ -4446,7 +4453,7 @@ var opts = {
   'local': 0, // Number | Treat phone numbers passed in the \\'phones\\' field as local.
   'localCountry': "\"US\"" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 };
-apiInstance.getMessagePrice(opts).then(function(data) {
+apiInstance.getMessagePriceTest(t, id, includeBlocked, test, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -4458,7 +4465,10 @@ apiInstance.getMessagePrice(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **includeBlocked** | **Number**| Should we show the pricing for blocked contacts? | [optional] [default to 0]
+ **t** | **Number**|  | 
+ **id** | **Number**|  | 
+ **includeBlocked** | **Number**| Should we show the pricing for blocked contacts? | [default to 0]
+ **test** | **Number**| Should we show the pricing for blocked contacts? | [default to 0]
  **text** | **String**| Message text. Required if the **template_id** is not set. | [optional] 
  **templateId** | **Number**| Template used instead of message text. Required if the **text** is not set. | [optional] 
  **sendingTime** | **Number**| DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now. | [optional] 
