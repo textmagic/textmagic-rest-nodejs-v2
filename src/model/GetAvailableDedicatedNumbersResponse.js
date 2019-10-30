@@ -36,7 +36,7 @@
   /**
    * The GetAvailableDedicatedNumbersResponse model module.
    * @module model/GetAvailableDedicatedNumbersResponse
-   * @version 2.0.835
+   * @version 2.0.837
    */
 
   /**

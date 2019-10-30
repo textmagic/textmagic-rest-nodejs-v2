@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.835
+   * @version 2.0.837
    */
 
   /**
@@ -4666,13 +4666,10 @@
     /**
      * Check message price
      * Check pricing for a new outbound message.
-     * @param {Number} t 
-     * @param {Number} test Should we show the pricing for blocked contacts?
-     * @param {Number} id 
-     * @param {Number} includeBlocked Should we show the pricing for blocked contacts?
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
+     * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
      * @param {String} opts.text Message text. Required if the **template_id** is not set.
+     * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
      * @param {Number} opts.sendingTime DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
      * @param {String} opts.sendingDateTime Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
      * @param {String} opts.sendingTimezone The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
@@ -4690,40 +4687,17 @@
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagePriceResponse} and HTTP response
      */
-    this.getMessagePriceTestWithHttpInfo = function(t, test, id, includeBlocked, opts) {
+    this.getMessagePriceWithHttpInfo = function(opts) {
       opts = opts || {};
       var postBody = null;
 
-      // verify the required parameter 't' is set
-      if (t === undefined || t === null) {
-        throw new Error("Missing the required parameter 't' when calling getMessagePriceTest");
-      }
-
-      // verify the required parameter 'test' is set
-      if (test === undefined || test === null) {
-        throw new Error("Missing the required parameter 'test' when calling getMessagePriceTest");
-      }
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getMessagePriceTest");
-      }
-
-      // verify the required parameter 'includeBlocked' is set
-      if (includeBlocked === undefined || includeBlocked === null) {
-        throw new Error("Missing the required parameter 'includeBlocked' when calling getMessagePriceTest");
-      }
-
 
       var pathParams = {
-        't': t,
-        'id': id
       };
       var queryParams = {
-        'test': test,
-        'templateId': opts['templateId'],
-        'includeBlocked': includeBlocked,
+        'includeBlocked': opts['includeBlocked'],
         'text': opts['text'],
+        'templateId': opts['templateId'],
         'sendingTime': opts['sendingTime'],
         'sendingDateTime': opts['sendingDateTime'],
         'sendingTimezone': opts['sendingTimezone'],
@@ -4753,7 +4727,7 @@
       var returnType = GetMessagePriceResponse;
 
       return this.apiClient.callApi(
-        '/api/v2/messages/price/normalized/{id}/{t}', 'GET',
+        '/api/v2/messages/price/normalized', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -4762,13 +4736,10 @@
     /**
      * Check message price
      * Check pricing for a new outbound message.
-     * @param {Number} t 
-     * @param {Number} test Should we show the pricing for blocked contacts?
-     * @param {Number} id 
-     * @param {Number} includeBlocked Should we show the pricing for blocked contacts?
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
+     * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
      * @param {String} opts.text Message text. Required if the **template_id** is not set.
+     * @param {Number} opts.templateId Template used instead of message text. Required if the **text** is not set.
      * @param {Number} opts.sendingTime DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
      * @param {String} opts.sendingDateTime Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
      * @param {String} opts.sendingTimezone The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
@@ -4786,8 +4757,8 @@
      * @param {String} opts.localCountry The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagePriceResponse}
      */
-    this.getMessagePriceTest = function(t, test, id, includeBlocked, opts) {
-      return this.getMessagePriceTestWithHttpInfo(t, test, id, includeBlocked, opts)
+    this.getMessagePrice = function(opts) {
+      return this.getMessagePriceWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

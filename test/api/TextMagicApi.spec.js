@@ -890,10 +890,10 @@
         done();
       });
     });
-    describe('getMessagePriceTest', function() {
-      it('should call getMessagePriceTest successfully', function(done) {
-        //uncomment below and update the code to test getMessagePriceTest
-        //instance.getMessagePriceTest(function(error) {
+    describe('getMessagePrice', function() {
+      it('should call getMessagePrice successfully', function(done) {
+        //uncomment below and update the code to test getMessagePrice
+        //instance.getMessagePrice(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

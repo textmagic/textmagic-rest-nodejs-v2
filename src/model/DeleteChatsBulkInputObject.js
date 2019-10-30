@@ -36,7 +36,7 @@
   /**
    * The DeleteChatsBulkInputObject model module.
    * @module model/DeleteChatsBulkInputObject
-   * @version 2.0.835
+   * @version 2.0.837
    */
 
   /**
