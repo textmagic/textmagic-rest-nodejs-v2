@@ -36,7 +36,7 @@
   /**
    * The Conversation model module.
    * @module model/Conversation
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -49,10 +49,10 @@
    * @param messageTime {Date} Time when  the message arrived at TextMagic.
    * @param text {String} Message text.
    * @param receiver {String} Receiver's phone number.
-   * @param status {String} Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.
+   * @param status {String} Message status (for chats outbound only). See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details.
    * @param firstName {String} Contact first name.
    * @param lastName {String} Contact last name.
-   * @param sessionId {Number} Session ID of a message. See [message sessions](http://docs.textmagictesting.com/#tag/Outbound-Message-Sessions) for details.
+   * @param sessionId {Number} Session ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details.
    */
   var exports = function(id, direction, sender, messageTime, text, receiver, status, firstName, lastName, sessionId) {
     var _this = this;
@@ -144,7 +144,7 @@
    */
   exports.prototype['receiver'] = undefined;
   /**
-   * Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.
+   * Message status (for chats outbound only). See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details.
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
@@ -159,7 +159,7 @@
    */
   exports.prototype['lastName'] = undefined;
   /**
-   * Session ID of a message. See [message sessions](http://docs.textmagictesting.com/#tag/Outbound-Message-Sessions) for details.
+   * Session ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details.
    * @member {Number} sessionId
    */
   exports.prototype['sessionId'] = undefined;

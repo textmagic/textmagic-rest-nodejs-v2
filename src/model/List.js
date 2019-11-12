@@ -36,7 +36,7 @@
   /**
    * The List model module.
    * @module model/List
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -46,7 +46,7 @@
    * @param id {Number} List ID.
    * @param name {String} List name.
    * @param description {String} Description of the list.
-   * @param favorited {Boolean} Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites).
+   * @param favorited {Boolean} Is the List favorited? See [Favorites list](https://docs.textmagic.com/#operation/getFavourites).
    * @param membersCount {Number} List members count.
    * @param user {module:model/User} 
    * @param service {Boolean} Internal service field.
@@ -130,7 +130,7 @@
    */
   exports.prototype['description'] = undefined;
   /**
-   * Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites).
+   * Is the List favorited? See [Favorites list](https://docs.textmagic.com/#operation/getFavourites).
    * @member {Boolean} favorited
    */
   exports.prototype['favorited'] = undefined;

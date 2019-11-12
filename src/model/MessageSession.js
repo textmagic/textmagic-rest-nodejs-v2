@@ -36,7 +36,7 @@
   /**
    * The MessageSession model module.
    * @module model/MessageSession
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -45,9 +45,9 @@
    * @class
    * @param id {Number} Session ID.
    * @param startTime {String} Session creation time.
-   * @param text {String} Session text. If a template was used for the session text (see [Messages: Send](http://docs.textmagictesting.com/#tag/Outbound-Messages) for details), it may contain template tags. 
-   * @param source {String} *   **O** – for TextMagic Online; *   **A** – for API; *   **M** – for TextMagic Messenger; *   **E** – for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS); *   **X** – for [Distribution Lists](http://docs.textmagictesting.com/#tag/Distribution-Lists). 
-   * @param referenceId {String} Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) for details). 
+   * @param text {String} Session text. If a template was used for the session text (see [Messages: Send](https://docs.textmagic.com/#tag/Outbound-Messages) for details), it may contain template tags. 
+   * @param source {String} *   **O** – for TextMagic Online; *   **A** – for API; *   **M** – for TextMagic Messenger; *   **E** – for [Email to SMS](https://docs.textmagic.com/#tag/Send-Email-to-SMS); *   **X** – for [Distribution Lists](https://docs.textmagic.com/#tag/Distribution-Lists). 
+   * @param referenceId {String} Custom reference ID (see [Messages: Send](https://docs.textmagic.com/#tag/Send-Email-to-SMS) for details). 
    * @param price {Number} Session cost (in account currency).
    * @param numbersCount {Number} Session recipient count.
    * @param destination {module:model/MessageSession.DestinationEnum} Destination type of a Message Session: * **t** – text SMS; * **s** – text-to-speech; * **v** – voice broadcast. 
@@ -115,17 +115,17 @@
    */
   exports.prototype['startTime'] = undefined;
   /**
-   * Session text. If a template was used for the session text (see [Messages: Send](http://docs.textmagictesting.com/#tag/Outbound-Messages) for details), it may contain template tags. 
+   * Session text. If a template was used for the session text (see [Messages: Send](https://docs.textmagic.com/#tag/Outbound-Messages) for details), it may contain template tags. 
    * @member {String} text
    */
   exports.prototype['text'] = undefined;
   /**
-   * *   **O** – for TextMagic Online; *   **A** – for API; *   **M** – for TextMagic Messenger; *   **E** – for [Email to SMS](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS); *   **X** – for [Distribution Lists](http://docs.textmagictesting.com/#tag/Distribution-Lists). 
+   * *   **O** – for TextMagic Online; *   **A** – for API; *   **M** – for TextMagic Messenger; *   **E** – for [Email to SMS](https://docs.textmagic.com/#tag/Send-Email-to-SMS); *   **X** – for [Distribution Lists](https://docs.textmagic.com/#tag/Distribution-Lists). 
    * @member {String} source
    */
   exports.prototype['source'] = undefined;
   /**
-   * Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/#tag/Send-Email-to-SMS) for details). 
+   * Custom reference ID (see [Messages: Send](https://docs.textmagic.com/#tag/Send-Email-to-SMS) for details). 
    * @member {String} referenceId
    */
   exports.prototype['referenceId'] = undefined;

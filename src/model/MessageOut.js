@@ -36,7 +36,7 @@
   /**
    * The MessageOut model module.
    * @module model/MessageOut
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -45,14 +45,14 @@
    * @class
    * @param id {Number} Message ID.
    * @param text {String} 
-   * @param status {module:model/MessageOut.StatusEnum} Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. 
+   * @param status {module:model/MessageOut.StatusEnum} Delivery status of the message. See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details. 
    * @param contactId {Number} Recipient contact ID.
    * @param sessionId {Number} Message Session ID of a message.
    * @param messageTime {Date} Sending time.
    * @param avatar {String} 
    * @param charset {String} Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS. 
    * @param charsetLabel {String} Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages. 
-   * @param firstName {String} Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). 
+   * @param firstName {String} Contact first name. Could be substituted from your [Contacts](https://docs.textmagic.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). 
    * @param lastName {String} Contact last name.
    * @param country {String} The 2-letter ISO country code of the recipient's phone number. 
    * @param partsCount {Number} Message parts (multiples of 160 characters) count.
@@ -177,7 +177,7 @@
    */
   exports.prototype['text'] = undefined;
   /**
-   * Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. 
+   * Delivery status of the message. See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details. 
    * @member {module:model/MessageOut.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
@@ -216,7 +216,7 @@
    */
   exports.prototype['charsetLabel'] = undefined;
   /**
-   * Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). 
+   * Contact first name. Could be substituted from your [Contacts](https://docs.textmagic.com/#tag/Contacts) (even if you submitted the phone number instead of the contact ID). 
    * @member {String} firstName
    */
   exports.prototype['firstName'] = undefined;

@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -50,7 +50,7 @@
 
     /**
      * Assign contacts to a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/assignContactsToList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
+     * &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
      * @param {module:model/AssignContactsToListInputObject} assignContactsToListInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -95,7 +95,7 @@
 
     /**
      * Assign contacts to a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/assignContactsToList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
+     * &gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
      * @param {module:model/AssignContactsToListInputObject} assignContactsToListInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -110,7 +110,7 @@
 
     /**
      * Block a contact by phone number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/blockContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Block a contact from inbound and outbound communication by phone number.
+     * Block a contact from inbound and outbound communication by phone number.
      * @param {module:model/BlockContactInputObject} blockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -148,7 +148,7 @@
 
     /**
      * Block a contact by phone number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/blockContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Block a contact from inbound and outbound communication by phone number.
+     * Block a contact from inbound and outbound communication by phone number.
      * @param {module:model/BlockContactInputObject} blockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -162,7 +162,7 @@
 
     /**
      * Buy a dedicated number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/buyDedicatedNumber\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
+     * To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
      * @param {module:model/BuyDedicatedNumberInputObject} buyDedicatedNumberInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -200,7 +200,7 @@
 
     /**
      * Buy a dedicated number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/buyDedicatedNumber\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
+     * To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
      * @param {module:model/BuyDedicatedNumberInputObject} buyDedicatedNumberInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -214,7 +214,7 @@
 
     /**
      * Cancel verification process
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Two-factor%20authentication/cancelVerification\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;You can cancel the verification not earlier than 30 seconds after the initial request.
+     * You can cancel the verification not earlier than 30 seconds after the initial request.
      * @param {String} verifyId The verifyId that you received in Step 1.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -253,7 +253,7 @@
 
     /**
      * Cancel verification process
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Two-factor%20authentication/cancelVerification\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;You can cancel the verification not earlier than 30 seconds after the initial request.
+     * You can cancel the verification not earlier than 30 seconds after the initial request.
      * @param {String} verifyId The verifyId that you received in Step 1.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -267,7 +267,7 @@
 
     /**
      * Step 2: Check the verification code 
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Two-factor%20authentication/checkPhoneVerificationCodeTFA\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Check received code from user with the code which was actually sent.
+     * Check received code from user with the code which was actually sent.
      * @param {module:model/CheckPhoneVerificationCodeInputObject} checkPhoneVerificationCodeInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -305,7 +305,7 @@
 
     /**
      * Step 2: Check the verification code 
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Two-factor%20authentication/checkPhoneVerificationCodeTFA\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Check received code from user with the code which was actually sent.
+     * Check received code from user with the code which was actually sent.
      * @param {module:model/CheckPhoneVerificationCodeInputObject} checkPhoneVerificationCodeInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -319,7 +319,7 @@
 
     /**
      * Reset list members to the specified contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/clearAndAssignContactsToList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/ClearAndAssignContactsToListInputObject} clearAndAssignContactsToListInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -364,7 +364,7 @@
 
     /**
      * Reset list members to the specified contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/clearAndAssignContactsToList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/ClearAndAssignContactsToListInputObject} clearAndAssignContactsToListInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -379,7 +379,7 @@
 
     /**
      * Close chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/closeChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Close chats by chat IDs or close all chats
+     * Close chats by chat IDs or close all chats
      * @param {module:model/CloseChatsBulkInputObject} closeChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -417,7 +417,7 @@
 
     /**
      * Close chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/closeChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Close chats by chat IDs or close all chats
+     * Close chats by chat IDs or close all chats
      * @param {module:model/CloseChatsBulkInputObject} closeChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -431,7 +431,7 @@
 
     /**
      * Close read chats
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/closeReadChats\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Close all chats that have no unread messages.
+     * Close all chats that have no unread messages.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.closeReadChatsWithHttpInfo = function() {
@@ -463,7 +463,7 @@
 
     /**
      * Close read chats
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/closeReadChats\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Close all chats that have no unread messages.
+     * Close all chats that have no unread messages.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.closeReadChats = function() {
@@ -476,7 +476,7 @@
 
     /**
      * Close sub-account
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/closeSubaccount\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -515,7 +515,7 @@
 
     /**
      * Close sub-account
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/closeSubaccount\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -529,7 +529,7 @@
 
     /**
      * Add a new contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/createContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateContactInputObject} createContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -567,7 +567,7 @@
 
     /**
      * Add a new contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/createContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateContactInputObject} createContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -581,7 +581,7 @@
 
     /**
      * Create a new contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/createContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateContactNoteInputObject} createContactNoteInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -626,7 +626,7 @@
 
     /**
      * Create a new contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/createContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateContactNoteInputObject} createContactNoteInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -641,7 +641,7 @@
 
     /**
      * Add a new custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/createCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateCustomFieldInputObject} createCustomFieldInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -679,7 +679,7 @@
 
     /**
      * Add a new custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/createCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateCustomFieldInputObject} createCustomFieldInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -693,7 +693,7 @@
 
     /**
      * Create a new list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/createList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateListInputObject} createListInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -731,7 +731,7 @@
 
     /**
      * Create a new list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/createList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/CreateListInputObject} createListInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -745,7 +745,7 @@
 
     /**
      * Create a template
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/createTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
+     * There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
      * @param {module:model/CreateTemplateInputObject} createTemplateInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -783,7 +783,7 @@
 
     /**
      * Create a template
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/createTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
+     * There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
      * @param {module:model/CreateTemplateInputObject} createTemplateInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -797,7 +797,7 @@
 
     /**
      * Delete contacts (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteAllContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteAllContactsWithHttpInfo = function() {
@@ -829,7 +829,7 @@
 
     /**
      * Delete contacts (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteAllContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteAllContacts = function() {
@@ -842,7 +842,7 @@
 
     /**
      * Delete all messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/deleteAllOutboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete all messages.
+     * Delete all messages.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteAllOutboundMessagesWithHttpInfo = function() {
@@ -874,7 +874,7 @@
 
     /**
      * Delete all messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/deleteAllOutboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete all messages.
+     * Delete all messages.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteAllOutboundMessages = function() {
@@ -887,7 +887,7 @@
 
     /**
      * Delete an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/deleteAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.deleteAvatarWithHttpInfo = function() {
@@ -919,7 +919,7 @@
 
     /**
      * Delete an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/deleteAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     this.deleteAvatar = function() {
@@ -932,7 +932,7 @@
 
     /**
      * Delete chat messages by ID(s)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/deleteChatMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete messages from chat by given message IDs.
+     * Delete messages from chat by given message IDs.
      * @param {module:model/DeleteChatMessagesBulkInputObject} deleteChatMessagesBulkInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -977,7 +977,7 @@
 
     /**
      * Delete chat messages by ID(s)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/deleteChatMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete messages from chat by given message IDs.
+     * Delete messages from chat by given message IDs.
      * @param {module:model/DeleteChatMessagesBulkInputObject} deleteChatMessagesBulkInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -992,7 +992,7 @@
 
     /**
      * Delete chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/deleteChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete chats by given IDs or delete all chats.
+     * Delete chats by given IDs or delete all chats.
      * @param {module:model/DeleteChatsBulkInputObject} deleteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1030,7 +1030,7 @@
 
     /**
      * Delete chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/deleteChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete chats by given IDs or delete all chats.
+     * Delete chats by given IDs or delete all chats.
      * @param {module:model/DeleteChatsBulkInputObject} deleteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1044,7 +1044,7 @@
 
     /**
      * Delete a contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
+     * &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1083,7 +1083,7 @@
 
     /**
      * Delete a contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
+     * &gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1097,7 +1097,7 @@
 
     /**
      * Delete an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteContactAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1136,7 +1136,7 @@
 
     /**
      * Delete an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteContactAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1150,7 +1150,7 @@
 
     /**
      * Delete a contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/deleteContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1189,7 +1189,7 @@
 
     /**
      * Delete a contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/deleteContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1203,7 +1203,7 @@
 
     /**
      * Delete contact notes (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/deleteContactNotesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {module:model/DeleteContactNotesBulkInputObject} deleteContactNotesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1248,7 +1248,7 @@
 
     /**
      * Delete contact notes (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/deleteContactNotesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {module:model/DeleteContactNotesBulkInputObject} deleteContactNotesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1263,7 +1263,7 @@
 
     /**
      * Delete contacts by IDs (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteContactsByIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/DeleteContactsByIdsInputObject} deleteContactsByIdsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1301,7 +1301,7 @@
 
     /**
      * Delete contacts by IDs (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/deleteContactsByIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/DeleteContactsByIdsInputObject} deleteContactsByIdsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1315,7 +1315,7 @@
 
     /**
      * Unassign contacts from a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteContactsFromList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
+     * &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
      * @param {module:model/DeleteContacsFromListObject} deleteContacsFromListObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1360,7 +1360,7 @@
 
     /**
      * Unassign contacts from a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteContactsFromList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
+     * &gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
      * @param {module:model/DeleteContacsFromListObject} deleteContacsFromListObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1375,7 +1375,7 @@
 
     /**
      * Delete a custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/deleteCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
+     * &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1414,7 +1414,7 @@
 
     /**
      * Delete a custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/deleteCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
+     * &gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1428,7 +1428,7 @@
 
     /**
      * Cancel a dedicated number subscription
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/deleteDedicatedNumber\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1467,7 +1467,7 @@
 
     /**
      * Cancel a dedicated number subscription
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/deleteDedicatedNumber\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1481,7 +1481,7 @@
 
     /**
      * Delete a single inbound message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/deleteInboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+     * &gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
      * @param {Number} id The unique numeric ID for the inbound message.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1520,7 +1520,7 @@
 
     /**
      * Delete a single inbound message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/deleteInboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+     * &gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
      * @param {Number} id The unique numeric ID for the inbound message.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1534,7 +1534,7 @@
 
     /**
      * Delete inbound messages (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/deleteInboundMessagesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+     * &gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
      * @param {module:model/DeleteInboundMessagesBulkInputObject} deleteInboundMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1572,7 +1572,7 @@
 
     /**
      * Delete inbound messages (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/deleteInboundMessagesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+     * &gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
      * @param {module:model/DeleteInboundMessagesBulkInputObject} deleteInboundMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1586,7 +1586,7 @@
 
     /**
      * Delete a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
+     * This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1625,7 +1625,7 @@
 
     /**
      * Delete a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
+     * This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1639,7 +1639,7 @@
 
     /**
      * Delete an avatar for a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteListAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete an avatar for a list
+     * Delete an avatar for a list
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1678,7 +1678,7 @@
 
     /**
      * Delete an avatar for a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteListAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete an avatar for a list
+     * Delete an avatar for a list
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1692,7 +1692,7 @@
 
     /**
      * Delete contacts from a list (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteListContactsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete contacts from a list (bulk)
+     * Delete contacts from a list (bulk)
      * @param {module:model/DeleteListContactsBulkInputObject} deleteListContactsBulkInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1737,7 +1737,7 @@
 
     /**
      * Delete contacts from a list (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteListContactsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete contacts from a list (bulk)
+     * Delete contacts from a list (bulk)
      * @param {module:model/DeleteListContactsBulkInputObject} deleteListContactsBulkInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1752,7 +1752,7 @@
 
     /**
      * Delete lists (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteListsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/DeleteListsBulkInputObject} deleteListsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1790,7 +1790,7 @@
 
     /**
      * Delete lists (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/deleteListsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/DeleteListsBulkInputObject} deleteListsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1804,7 +1804,7 @@
 
     /**
      * Delete a session
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/deleteMessageSession\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
+     * Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1843,7 +1843,7 @@
 
     /**
      * Delete a session
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/deleteMessageSession\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
+     * Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1857,7 +1857,7 @@
 
     /**
      * Delete sessions (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/deleteMessageSessionsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete message sessions, together with all nested messages, by given ID(s) or delete all message sessions.
+     * Delete message sessions, together with all nested messages, by given ID(s) or delete all message sessions.
      * @param {module:model/DeleteMessageSessionsBulkInputObject} deleteMessageSessionsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1895,7 +1895,7 @@
 
     /**
      * Delete sessions (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/deleteMessageSessionsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete message sessions, together with all nested messages, by given ID(s) or delete all message sessions.
+     * Delete message sessions, together with all nested messages, by given ID(s) or delete all message sessions.
      * @param {module:model/DeleteMessageSessionsBulkInputObject} deleteMessageSessionsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1909,7 +1909,7 @@
 
     /**
      * Delete message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/deleteOutboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete a single message.
+     * Delete a single message.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1948,7 +1948,7 @@
 
     /**
      * Delete message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/deleteOutboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete a single message.
+     * Delete a single message.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1962,7 +1962,7 @@
 
     /**
      * Delete messages (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/deleteOutboundMessagesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete outbound messages by the given ID(s) or delete all outbound messages.
+     * Delete outbound messages by the given ID(s) or delete all outbound messages.
      * @param {module:model/DeleteOutboundMessagesBulkInputObject} deleteOutboundMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -2000,7 +2000,7 @@
 
     /**
      * Delete messages (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/deleteOutboundMessagesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete outbound messages by the given ID(s) or delete all outbound messages.
+     * Delete outbound messages by the given ID(s) or delete all outbound messages.
      * @param {module:model/DeleteOutboundMessagesBulkInputObject} deleteOutboundMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -2014,7 +2014,7 @@
 
     /**
      * Delete a single scheduled message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/deleteScheduledMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -2053,7 +2053,7 @@
 
     /**
      * Delete a single scheduled message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/deleteScheduledMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -2067,7 +2067,7 @@
 
     /**
      * Delete scheduled messages (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/deleteScheduledMessagesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/DeleteScheduledMessagesBulkInputObject} deleteScheduledMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -2105,7 +2105,7 @@
 
     /**
      * Delete scheduled messages (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/deleteScheduledMessagesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/DeleteScheduledMessagesBulkInputObject} deleteScheduledMessagesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -2119,7 +2119,7 @@
 
     /**
      * Delete a Sender ID
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/deleteSenderId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -2158,7 +2158,7 @@
 
     /**
      * Delete a Sender ID
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/deleteSenderId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -2172,7 +2172,7 @@
 
     /**
      * Delete a template
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/deleteTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -2211,7 +2211,7 @@
 
     /**
      * Delete a template
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/deleteTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -2225,7 +2225,7 @@
 
     /**
      * Delete templates (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/deleteTemplatesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete templates by given IDs or delete all templates.
+     * Delete templates by given IDs or delete all templates.
      * @param {module:model/DeleteTemplatesBulkInputObject} deleteTemplatesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -2263,7 +2263,7 @@
 
     /**
      * Delete templates (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/deleteTemplatesBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Delete templates by given IDs or delete all templates.
+     * Delete templates by given IDs or delete all templates.
      * @param {module:model/DeleteTemplatesBulkInputObject} deleteTemplatesBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -2277,7 +2277,7 @@
 
     /**
      * Carrier Lookup
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lookup/doCarrierLookup\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
+     * This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
      * @param {String} phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
      * @param {Object} opts Optional parameters
      * @param {String} opts.country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
@@ -2320,7 +2320,7 @@
 
     /**
      * Carrier Lookup
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lookup/doCarrierLookup\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
+     * This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
      * @param {String} phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
      * @param {Object} opts Optional parameters
      * @param {String} opts.country This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
@@ -2336,7 +2336,7 @@
 
     /**
      * Email Lookup
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lookup/doEmailLookup\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
+     * To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
      * @param {String} email Email address.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DoEmailLookupResponse} and HTTP response
      */
@@ -2375,7 +2375,7 @@
 
     /**
      * Email Lookup
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lookup/doEmailLookup\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
+     * To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
      * @param {String} email Email address.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DoEmailLookupResponse}
      */
@@ -2389,7 +2389,7 @@
 
     /**
      * Get all bulk sessions
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getAllBulkSessions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2427,7 +2427,7 @@
 
     /**
      * Get all bulk sessions
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getAllBulkSessions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2443,7 +2443,7 @@
 
     /**
      * Get all chats
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getAllChats\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Fetch only (a)ctive, (c)losed or (d)eleted chats.
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -2489,7 +2489,7 @@
 
     /**
      * Get all chats
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getAllChats\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status Fetch only (a)ctive, (c)losed or (d)eleted chats.
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -2509,7 +2509,7 @@
 
     /**
      * Get all inbound messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/getAllInboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2551,7 +2551,7 @@
 
     /**
      * Get all inbound messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/getAllInboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2569,7 +2569,7 @@
 
     /**
      * Get all sessions
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getAllMessageSessions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
+     * Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2607,7 +2607,7 @@
 
     /**
      * Get all sessions
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getAllMessageSessions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
+     * Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2623,7 +2623,7 @@
 
     /**
      * Get all messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getAllOutboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all user oubound messages.
+     * Get all user oubound messages.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2663,7 +2663,7 @@
 
     /**
      * Get all messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getAllOutboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all user oubound messages.
+     * Get all user oubound messages.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2680,7 +2680,7 @@
 
     /**
      * Get all scheduled messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/getAllScheduledMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2724,7 +2724,7 @@
 
     /**
      * Get all scheduled messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/getAllScheduledMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -2743,7 +2743,7 @@
 
     /**
      * Get all templates
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/getAllTemplates\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page.
      * @param {Number} opts.limit The number of results per page.
@@ -2781,7 +2781,7 @@
 
     /**
      * Get all templates
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/getAllTemplates\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page.
      * @param {Number} opts.limit The number of results per page.
@@ -2797,7 +2797,7 @@
 
     /**
      * Find dedicated numbers available for purchase
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getAvailableDedicatedNumbers\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} country The 2-letter dedicated number country ISO code.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
@@ -2842,7 +2842,7 @@
 
     /**
      * Find dedicated numbers available for purchase
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getAvailableDedicatedNumbers\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} country The 2-letter dedicated number country ISO code.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.prefix Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
@@ -2859,7 +2859,7 @@
 
     /**
      * Get available sender settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Overview/getAvailableSenderSettingOptions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
+     * Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
      * @param {Object} opts Optional parameters
      * @param {String} opts.country The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetAvailableSenderSettingOptionsResponse} and HTTP response
@@ -2895,7 +2895,7 @@
 
     /**
      * Get available sender settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Overview/getAvailableSenderSettingOptions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
+     * Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
      * @param {Object} opts Optional parameters
      * @param {String} opts.country The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetAvailableSenderSettingOptionsResponse}
@@ -2910,7 +2910,7 @@
 
     /**
      * Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getBalanceNotificationOptions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetBalanceNotificationOptionsResponse} and HTTP response
      */
     this.getBalanceNotificationOptionsWithHttpInfo = function() {
@@ -2942,7 +2942,7 @@
 
     /**
      * Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getBalanceNotificationOptions\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetBalanceNotificationOptionsResponse}
      */
     this.getBalanceNotificationOptions = function() {
@@ -2955,7 +2955,7 @@
 
     /**
      * Get balance notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getBalanceNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetBalanceNotificationSettingsResponse} and HTTP response
      */
     this.getBalanceNotificationSettingsWithHttpInfo = function() {
@@ -2987,7 +2987,7 @@
 
     /**
      * Get balance notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getBalanceNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetBalanceNotificationSettingsResponse}
      */
     this.getBalanceNotificationSettings = function() {
@@ -3000,7 +3000,7 @@
 
     /**
      * Get blocked contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getBlockedContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -3044,7 +3044,7 @@
 
     /**
      * Get blocked contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getBlockedContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -3063,7 +3063,7 @@
 
     /**
      * Get bulk session status
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getBulkSession\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BulkSession} and HTTP response
      */
@@ -3102,7 +3102,7 @@
 
     /**
      * Get bulk session status
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getBulkSession\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BulkSession}
      */
@@ -3116,7 +3116,7 @@
 
     /**
      * Fetch callback URL settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getCallbackSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetCallbackSettingsResponse} and HTTP response
      */
     this.getCallbackSettingsWithHttpInfo = function() {
@@ -3148,7 +3148,7 @@
 
     /**
      * Fetch callback URL settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getCallbackSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetCallbackSettingsResponse}
      */
     this.getCallbackSettings = function() {
@@ -3161,7 +3161,7 @@
 
     /**
      * Get a single chat
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getChat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Chat} and HTTP response
      */
@@ -3200,7 +3200,7 @@
 
     /**
      * Get a single chat
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getChat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Chat}
      */
@@ -3214,7 +3214,7 @@
 
     /**
      * Find chats by phone
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getChatByPhone\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.upsert Create a new chat if not found. (default to 0)
@@ -3259,7 +3259,7 @@
 
     /**
      * Find chats by phone
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getChatByPhone\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} phone 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.upsert Create a new chat if not found. (default to 0)
@@ -3276,7 +3276,7 @@
 
     /**
      * Get chat messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getChatMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -3331,7 +3331,7 @@
 
     /**
      * Get chat messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getChatMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -3353,7 +3353,7 @@
 
     /**
      * Get the details of a specific contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id Contact ID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Contact} and HTTP response
      */
@@ -3392,7 +3392,7 @@
 
     /**
      * Get the details of a specific contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id Contact ID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Contact}
      */
@@ -3406,7 +3406,7 @@
 
     /**
      * Get the details of a specific contact by phone number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactByPhone\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} phone 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Contact} and HTTP response
      */
@@ -3445,7 +3445,7 @@
 
     /**
      * Get the details of a specific contact by phone number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactByPhone\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} phone 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Contact}
      */
@@ -3459,7 +3459,7 @@
 
     /**
      * Check if a phone number is blocked
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactIfBlocked\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} phone Phone number to check.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Contact} and HTTP response
      */
@@ -3498,7 +3498,7 @@
 
     /**
      * Check if a phone number is blocked
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactIfBlocked\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {String} phone Phone number to check.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Contact}
      */
@@ -3512,7 +3512,7 @@
 
     /**
      * Check import progress
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactImportSessionProgress\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get contact import session progress.
+     * Get contact import session progress.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetContactImportSessionProgressResponse} and HTTP response
      */
@@ -3551,7 +3551,7 @@
 
     /**
      * Check import progress
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactImportSessionProgress\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get contact import session progress.
+     * Get contact import session progress.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetContactImportSessionProgressResponse}
      */
@@ -3565,7 +3565,7 @@
 
     /**
      * Get a contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/getContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ContactNote} and HTTP response
      */
@@ -3604,7 +3604,7 @@
 
     /**
      * Get a contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/getContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ContactNote}
      */
@@ -3618,7 +3618,7 @@
 
     /**
      * Fetch notes assigned to a given contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/getContactNotes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -3663,7 +3663,7 @@
 
     /**
      * Fetch notes assigned to a given contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/getContactNotes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -3680,7 +3680,7 @@
 
     /**
      * Get all contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -3724,7 +3724,7 @@
 
     /**
      * Get all contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -3743,7 +3743,7 @@
 
     /**
      * Get contacts autocomplete suggestions
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactsAutocomplete\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get contacts autocomplete suggestions by given search terms.
+     * Get contacts autocomplete suggestions by given search terms.
      * @param {String} query Find recipients by specified search query.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -3788,7 +3788,7 @@
 
     /**
      * Get contacts autocomplete suggestions
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getContactsAutocomplete\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get contacts autocomplete suggestions by given search terms.
+     * Get contacts autocomplete suggestions by given search terms.
      * @param {String} query Find recipients by specified search query.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -3805,7 +3805,7 @@
 
     /**
      * Get all contacts in a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getContactsByListId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
+     * A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
      * @param {Number} id Given group ID.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -3854,7 +3854,7 @@
 
     /**
      * Get all contacts in a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getContactsByListId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
+     * A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
      * @param {Number} id Given group ID.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -3873,7 +3873,7 @@
 
     /**
      * Get countries
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Timezones%20and%20Countries/getCountries\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetCountriesResponse} and HTTP response
      */
     this.getCountriesWithHttpInfo = function() {
@@ -3905,7 +3905,7 @@
 
     /**
      * Get countries
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Timezones%20and%20Countries/getCountries\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetCountriesResponse}
      */
     this.getCountries = function() {
@@ -3918,7 +3918,7 @@
 
     /**
      * Get current account information
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/getCurrentUser\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
     this.getCurrentUserWithHttpInfo = function() {
@@ -3950,7 +3950,7 @@
 
     /**
      * Get current account information
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/getCurrentUser\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
     this.getCurrentUser = function() {
@@ -3963,7 +3963,7 @@
 
     /**
      * Get the details of a specific custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/getCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserCustomField} and HTTP response
      */
@@ -4002,7 +4002,7 @@
 
     /**
      * Get the details of a specific custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/getCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserCustomField}
      */
@@ -4016,7 +4016,7 @@
 
     /**
      * Get all custom fields
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/getCustomFields\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4054,7 +4054,7 @@
 
     /**
      * Get all custom fields
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/getCustomFields\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4070,7 +4070,7 @@
 
     /**
      * Get the details of a specific dedicated number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getDedicatedNumber\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UsersInbound} and HTTP response
      */
@@ -4109,7 +4109,7 @@
 
     /**
      * Get the details of a specific dedicated number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getDedicatedNumber\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UsersInbound}
      */
@@ -4123,7 +4123,7 @@
 
     /**
      * Get favorite contacts and lists
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getFavorites\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4163,7 +4163,7 @@
 
     /**
      * Get favorite contacts and lists
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getFavorites\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4180,7 +4180,7 @@
 
     /**
      * Get a single inbound message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/getInboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id The unique numeric ID for the inbound message.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MessageIn} and HTTP response
      */
@@ -4219,7 +4219,7 @@
 
     /**
      * Get a single inbound message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/getInboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id The unique numeric ID for the inbound message.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MessageIn}
      */
@@ -4233,7 +4233,7 @@
 
     /**
      * Get inbound messages notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getInboundMessagesNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetInboundMessagesNotificationSettingsResponse} and HTTP response
      */
     this.getInboundMessagesNotificationSettingsWithHttpInfo = function() {
@@ -4265,7 +4265,7 @@
 
     /**
      * Get inbound messages notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getInboundMessagesNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetInboundMessagesNotificationSettingsResponse}
      */
     this.getInboundMessagesNotificationSettings = function() {
@@ -4278,7 +4278,7 @@
 
     /**
      * Get all invoices
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Invoices/getInvoices\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;With the TextMagic API, you can check the invoices and transactions for your account.
+     * With the TextMagic API, you can check the invoices and transactions for your account.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4316,7 +4316,7 @@
 
     /**
      * Get all invoices
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Invoices/getInvoices\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;With the TextMagic API, you can check the invoices and transactions for your account.
+     * With the TextMagic API, you can check the invoices and transactions for your account.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4332,7 +4332,7 @@
 
     /**
      * Get the details of a specific list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array} and HTTP response
      */
@@ -4371,7 +4371,7 @@
 
     /**
      * Get the details of a specific list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array}
      */
@@ -4385,7 +4385,7 @@
 
     /**
      * Get all contact IDs in a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getListContactsIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetListContactsIdsResponse} and HTTP response
      */
@@ -4424,7 +4424,7 @@
 
     /**
      * Get all contact IDs in a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getListContactsIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetListContactsIdsResponse}
      */
@@ -4438,7 +4438,7 @@
 
     /**
      * Get all lists
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getLists\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page The current fetched page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4484,7 +4484,7 @@
 
     /**
      * Get all lists
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getLists\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page The current fetched page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -4504,7 +4504,7 @@
 
     /**
      * Get a contact&#39;s lists
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getListsOfContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all the lists in which a contact is included.
+     * Get all the lists in which a contact is included.
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -4549,7 +4549,7 @@
 
     /**
      * Get a contact&#39;s lists
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/getListsOfContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all the lists in which a contact is included.
+     * Get all the lists in which a contact is included.
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -4566,7 +4566,7 @@
 
     /**
      * Preview message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getMessagePreview\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a messages preview (with tags merged) of up to 100 messages per session.
+     * Get a messages preview (with tags merged) of up to 100 messages per session.
      * @param {Object} opts Optional parameters
      * @param {String} opts.text Message text. Required if **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
@@ -4579,7 +4579,7 @@
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
      * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending of 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (default to 0)
      * @param {Number} opts.tts Send Text-to-Speech message. (default to 0)
@@ -4634,7 +4634,7 @@
 
     /**
      * Preview message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getMessagePreview\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a messages preview (with tags merged) of up to 100 messages per session.
+     * Get a messages preview (with tags merged) of up to 100 messages per session.
      * @param {Object} opts Optional parameters
      * @param {String} opts.text Message text. Required if **template_id** is not set.
      * @param {Number} opts.templateId Template used instead of message text. Required if **text** is not set.
@@ -4647,7 +4647,7 @@
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
      * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending of 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat(if not exist) with specified recipients? (default to 0)
      * @param {Number} opts.tts Send Text-to-Speech message. (default to 0)
@@ -4665,7 +4665,7 @@
 
     /**
      * Check message price
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getMessagePrice\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Check pricing for a new outbound message.
+     * Check pricing for a new outbound message.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
      * @param {String} opts.text Message text. Required if the **template_id** is not set.
@@ -4679,7 +4679,7 @@
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
      * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (default to 0)
      * @param {Number} opts.tts Send a Text-to-Speech message. (default to 0)
@@ -4735,7 +4735,7 @@
 
     /**
      * Check message price
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getMessagePrice\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Check pricing for a new outbound message.
+     * Check pricing for a new outbound message.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.includeBlocked Should we show the pricing for blocked contacts? (default to 0)
      * @param {String} opts.text Message text. Required if the **template_id** is not set.
@@ -4749,7 +4749,7 @@
      * @param {Number} opts.cutExtra Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead. (default to 0)
      * @param {Number} opts.partsCount Maximum message parts count (TextMagic allows sending 1 to 6 message parts). (default to 6)
      * @param {Number} opts.referenceId Custom message reference id which can be used in your application infrastructure.
-     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+     * @param {String} opts.from One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
      * @param {String} opts.rule An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
      * @param {Number} opts.createChat Should the sending method try to create new Chat (if not exist) with specified recipients? (default to 0)
      * @param {Number} opts.tts Send a Text-to-Speech message. (default to 0)
@@ -4767,7 +4767,7 @@
 
     /**
      * Get a session&#x60;s details
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getMessageSession\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a specific session’s details.
+     * Get a specific session’s details.
      * @param {Number} id Session ID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MessageSession} and HTTP response
      */
@@ -4806,7 +4806,7 @@
 
     /**
      * Get a session&#x60;s details
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getMessageSession\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a specific session’s details.
+     * Get a specific session’s details.
      * @param {Number} id Session ID.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MessageSession}
      */
@@ -4820,7 +4820,7 @@
 
     /**
      * Get a session&#x60;s statistics
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getMessageSessionStat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.includeDeleted Search also in deleted messages. (default to 0)
@@ -4863,7 +4863,7 @@
 
     /**
      * Get a session&#x60;s statistics
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getMessageSessionStat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.includeDeleted Search also in deleted messages. (default to 0)
@@ -4879,7 +4879,7 @@
 
     /**
      * Get a session&#x60;s messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getMessagesBySessionId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;A useful synonym for the \&quot;messages/search\&quot; command with the provided \&quot;sessionId\&quot; parameter.
+     * A useful synonym for the \&quot;messages/search\&quot; command with the provided \&quot;sessionId\&quot; parameter.
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -4928,7 +4928,7 @@
 
     /**
      * Get a session&#x60;s messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sessions/getMessagesBySessionId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;A useful synonym for the \&quot;messages/search\&quot; command with the provided \&quot;sessionId\&quot; parameter.
+     * A useful synonym for the \&quot;messages/search\&quot; command with the provided \&quot;sessionId\&quot; parameter.
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -4947,7 +4947,7 @@
 
     /**
      * Get sent/received messages counters values
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Statistics/getMessagingCounters\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get total contacts, sent messages and received messages counters values.
+     * Get total contacts, sent messages and received messages counters values.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetMessagingCountersResponse} and HTTP response
      */
     this.getMessagingCountersWithHttpInfo = function() {
@@ -4979,7 +4979,7 @@
 
     /**
      * Get sent/received messages counters values
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Statistics/getMessagingCounters\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get total contacts, sent messages and received messages counters values.
+     * Get total contacts, sent messages and received messages counters values.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetMessagingCountersResponse}
      */
     this.getMessagingCounters = function() {
@@ -4992,7 +4992,7 @@
 
     /**
      * Get messaging statistics
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Statistics/getMessagingStat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year.  (default to off)
      * @param {Number} opts.start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
@@ -5032,7 +5032,7 @@
 
     /**
      * Get messaging statistics
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Statistics/getMessagingStat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.by *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year.  (default to off)
      * @param {Number} opts.start Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
@@ -5049,7 +5049,7 @@
 
     /**
      * Get a single message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getOutboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a single outgoing message.
+     * Get a single outgoing message.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MessageOut} and HTTP response
      */
@@ -5088,7 +5088,7 @@
 
     /**
      * Get a single message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getOutboundMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a single outgoing message.
+     * Get a single outgoing message.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MessageOut}
      */
@@ -5102,7 +5102,7 @@
 
     /**
      * Get history
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getOutboundMessagesHistory\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get the outbound messages history.
+     * Get the outbound messages history.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID.
@@ -5146,7 +5146,7 @@
 
     /**
      * Get history
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/getOutboundMessagesHistory\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get the outbound messages history.
+     * Get the outbound messages history.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {Number} opts.lastId Filter results by ID, selecting all values lesser than the specified ID.
@@ -5165,7 +5165,7 @@
 
     /**
      * Get a single scheduled message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/getScheduledMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MessagesIcs} and HTTP response
      */
@@ -5204,7 +5204,7 @@
 
     /**
      * Get a single scheduled message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/getScheduledMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MessagesIcs}
      */
@@ -5218,7 +5218,7 @@
 
     /**
      * Get the details of a specific Sender ID
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/getSenderId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SenderId} and HTTP response
      */
@@ -5257,7 +5257,7 @@
 
     /**
      * Get the details of a specific Sender ID
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/getSenderId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SenderId}
      */
@@ -5271,7 +5271,7 @@
 
     /**
      * Get all your approved Sender IDs
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/getSenderIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5309,7 +5309,7 @@
 
     /**
      * Get all your approved Sender IDs
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/getSenderIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5325,7 +5325,7 @@
 
     /**
      * Get current sender settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Overview/getSenderSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {String} opts.country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetSenderSettingsResponse} and HTTP response
@@ -5361,7 +5361,7 @@
 
     /**
      * Get current sender settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Overview/getSenderSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {String} opts.country Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetSenderSettingsResponse}
@@ -5376,7 +5376,7 @@
 
     /**
      * Get spending statistics
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Statistics/getSpendingStat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5418,7 +5418,7 @@
 
     /**
      * Get spending statistics
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Statistics/getSpendingStat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5436,7 +5436,7 @@
 
     /**
      * Get sub-account information
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/getSubaccount\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
@@ -5475,7 +5475,7 @@
 
     /**
      * Get sub-account information
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/getSubaccount\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
@@ -5489,7 +5489,7 @@
 
     /**
      * Get a sub-accounts list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/getSubaccounts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5527,7 +5527,7 @@
 
     /**
      * Get a sub-accounts list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/getSubaccounts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5543,7 +5543,7 @@
 
     /**
      * Get all sub-accounts with their REST API tokens associated with a specified app name
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/getSubaccountsWithTokens\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
+     * Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
      * @param {module:model/GetSubaccountsWithTokensInputObject} getSubaccountsWithTokensInputObject 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -5587,7 +5587,7 @@
 
     /**
      * Get all sub-accounts with their REST API tokens associated with a specified app name
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/getSubaccountsWithTokens\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
+     * Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
      * @param {module:model/GetSubaccountsWithTokensInputObject} getSubaccountsWithTokensInputObject 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
@@ -5604,7 +5604,7 @@
 
     /**
      * Get a template&#x60;s details
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/getTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a single template.
+     * Get a single template.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MessageTemplate} and HTTP response
      */
@@ -5643,7 +5643,7 @@
 
     /**
      * Get a template&#x60;s details
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/getTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get a single template.
+     * Get a single template.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MessageTemplate}
      */
@@ -5657,7 +5657,7 @@
 
     /**
      * Get timezones
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Timezones%20and%20Countries/getTimezones\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Return all available timezone IDs
+     * Return all available timezone IDs
      * @param {Object} opts Optional parameters
      * @param {Number} opts.full Return full info about timezones in array (0 or 1). Default is 0. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetTimezonesResponse} and HTTP response
@@ -5693,7 +5693,7 @@
 
     /**
      * Get timezones
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Timezones%20and%20Countries/getTimezones\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Return all available timezone IDs
+     * Return all available timezone IDs
      * @param {Object} opts Optional parameters
      * @param {Number} opts.full Return full info about timezones in array (0 or 1). Default is 0. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetTimezonesResponse}
@@ -5708,7 +5708,7 @@
 
     /**
      * Get unread messages number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getUnreadMessagesTotal\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get the total amount of unread messages in the current user chats.
+     * Get the total amount of unread messages in the current user chats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetUnreadMessagesTotalResponse} and HTTP response
      */
     this.getUnreadMessagesTotalWithHttpInfo = function() {
@@ -5740,7 +5740,7 @@
 
     /**
      * Get unread messages number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/getUnreadMessagesTotal\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Get the total amount of unread messages in the current user chats.
+     * Get the total amount of unread messages in the current user chats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetUnreadMessagesTotalResponse}
      */
     this.getUnreadMessagesTotal = function() {
@@ -5753,7 +5753,7 @@
 
     /**
      * Get the details of a specific unsubscribed contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getUnsubscribedContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UnsubscribedContact} and HTTP response
      */
@@ -5792,7 +5792,7 @@
 
     /**
      * Get the details of a specific unsubscribed contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getUnsubscribedContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UnsubscribedContact}
      */
@@ -5806,7 +5806,7 @@
 
     /**
      * Get all unsubscribed contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getUnsubscribers\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use: 
+     * When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use: 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5844,7 +5844,7 @@
 
     /**
      * Get all unsubscribed contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/getUnsubscribers\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use: 
+     * When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use: 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5860,7 +5860,7 @@
 
     /**
      * Get all your dedicated numbers
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getUserDedicatedNumbers\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5900,7 +5900,7 @@
 
     /**
      * Get all your dedicated numbers
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/getUserDedicatedNumbers\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -5917,7 +5917,7 @@
 
     /**
      * Import contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/importContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Import contacts from the CSV, XLS or XLSX file.
+     * Import contacts from the CSV, XLS or XLSX file.
      * @param {File} file File containing contacts in csv or xls(x) formats.
      * @param {String} column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
      * @param {Object} opts Optional parameters
@@ -5969,7 +5969,7 @@
 
     /**
      * Import contacts
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/importContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Import contacts from the CSV, XLS or XLSX file.
+     * Import contacts from the CSV, XLS or XLSX file.
      * @param {File} file File containing contacts in csv or xls(x) formats.
      * @param {String} column Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required. 
      * @param {Object} opts Optional parameters
@@ -5987,7 +5987,7 @@
 
     /**
      * Invite a new sub-account
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/inviteSubaccount\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/InviteSubaccountInputObject} inviteSubaccountInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -6025,7 +6025,7 @@
 
     /**
      * Invite a new sub-account
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/inviteSubaccount\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/InviteSubaccountInputObject} inviteSubaccountInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -6039,7 +6039,7 @@
 
     /**
      * Mark chats as read (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/markChatsReadBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Mark several chats as read by chat IDs or mark all chats as read
+     * Mark several chats as read by chat IDs or mark all chats as read
      * @param {module:model/MarkChatsReadBulkInputObject} markChatsReadBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -6077,7 +6077,7 @@
 
     /**
      * Mark chats as read (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/markChatsReadBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Mark several chats as read by chat IDs or mark all chats as read
+     * Mark several chats as read by chat IDs or mark all chats as read
      * @param {module:model/MarkChatsReadBulkInputObject} markChatsReadBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -6091,7 +6091,7 @@
 
     /**
      * Mark chats as unread (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/markChatsUnreadBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Mark several chats as UNread by chat IDs or mark all chats as UNread
+     * Mark several chats as UNread by chat IDs or mark all chats as UNread
      * @param {module:model/MarkChatsUnreadBulkInputObject} markChatsUnreadBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -6129,7 +6129,7 @@
 
     /**
      * Mark chats as unread (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/markChatsUnreadBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Mark several chats as UNread by chat IDs or mark all chats as UNread
+     * Mark several chats as UNread by chat IDs or mark all chats as UNread
      * @param {module:model/MarkChatsUnreadBulkInputObject} markChatsUnreadBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -6143,7 +6143,7 @@
 
     /**
      * Mute chat sounds
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/muteChat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/MuteChatInputObject} muteChatInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -6181,7 +6181,7 @@
 
     /**
      * Mute chat sounds
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/muteChat\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/MuteChatInputObject} muteChatInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -6195,7 +6195,7 @@
 
     /**
      * Mute chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/muteChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Mute several chats by chat ids or mute all chats.
+     * Mute several chats by chat ids or mute all chats.
      * @param {module:model/MuteChatsBulkInputObject} muteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -6233,7 +6233,7 @@
 
     /**
      * Mute chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/muteChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Mute several chats by chat ids or mute all chats.
+     * Mute several chats by chat ids or mute all chats.
      * @param {module:model/MuteChatsBulkInputObject} muteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -6247,7 +6247,7 @@
 
     /**
      * Ping
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Timezones%20and%20Countries/ping\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Make a simple ping request.
+     * Make a simple ping request.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PingResponse} and HTTP response
      */
     this.pingWithHttpInfo = function() {
@@ -6279,7 +6279,7 @@
 
     /**
      * Ping
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Timezones%20and%20Countries/ping\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Make a simple ping request.
+     * Make a simple ping request.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PingResponse}
      */
     this.ping = function() {
@@ -6292,7 +6292,7 @@
 
     /**
      * Reopen chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/reopenChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Reopen chats by chat IDs or reopen all chats
+     * Reopen chats by chat IDs or reopen all chats
      * @param {module:model/ReopenChatsBulkInputObject} reopenChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -6330,7 +6330,7 @@
 
     /**
      * Reopen chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/reopenChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Reopen chats by chat IDs or reopen all chats
+     * Reopen chats by chat IDs or reopen all chats
      * @param {module:model/ReopenChatsBulkInputObject} reopenChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -6344,7 +6344,7 @@
 
     /**
      * Request a new REST API token for sub-account
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/requestNewSubaccountToken\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Returning user object, key and app name.
+     * Returning user object, key and app name.
      * @param {module:model/RequestNewSubaccountTokenInputObject} requestNewSubaccountTokenInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
@@ -6382,7 +6382,7 @@
 
     /**
      * Request a new REST API token for sub-account
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sub-Accounts/requestNewSubaccountToken\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Returning user object, key and app name.
+     * Returning user object, key and app name.
      * @param {module:model/RequestNewSubaccountTokenInputObject} requestNewSubaccountTokenInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
@@ -6396,7 +6396,7 @@
 
     /**
      * Apply for a new Sender ID
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/requestSenderId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Sender IDs are shared among all of your sub-accounts.
+     * &gt; Sender IDs are shared among all of your sub-accounts.
      * @param {module:model/RequestSenderIdInputObject} requestSenderIdInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -6434,7 +6434,7 @@
 
     /**
      * Apply for a new Sender ID
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Sender%20IDs/requestSenderId\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Sender IDs are shared among all of your sub-accounts.
+     * &gt; Sender IDs are shared among all of your sub-accounts.
      * @param {module:model/RequestSenderIdInputObject} requestSenderIdInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -6448,7 +6448,7 @@
 
     /**
      * Find chats by message text
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/searchChats\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6488,7 +6488,7 @@
 
     /**
      * Find chats by message text
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/searchChats\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6505,7 +6505,7 @@
 
     /**
      * Find chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/searchChatsByIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6545,7 +6545,7 @@
 
     /**
      * Find chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/searchChatsByIds\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6562,7 +6562,7 @@
 
     /**
      * Find chats by recipient
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/searchChatsByReceipent\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find chats by recipient (contact, list name or phone number).
+     * Find chats by recipient (contact, list name or phone number).
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6604,7 +6604,7 @@
 
     /**
      * Find chats by recipient
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/searchChatsByReceipent\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find chats by recipient (contact, list name or phone number).
+     * Find chats by recipient (contact, list name or phone number).
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6622,7 +6622,7 @@
 
     /**
      * Find contacts by given criteria
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/searchContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6678,7 +6678,7 @@
 
     /**
      * Find contacts by given criteria
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/searchContacts\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6703,7 +6703,7 @@
 
     /**
      * Find inbound messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/searchInboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find inbound messages by given parameters.
+     * Find inbound messages by given parameters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6751,7 +6751,7 @@
 
     /**
      * Find inbound messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Receive%0A/searchInboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find inbound messages by given parameters.
+     * Find inbound messages by given parameters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6772,7 +6772,7 @@
 
     /**
      * Find lists by given criteria
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/searchLists\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6822,7 +6822,7 @@
 
     /**
      * Find lists by given criteria
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/searchLists\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6844,7 +6844,7 @@
 
     /**
      * Find messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/searchOutboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find outbound messages by given parameters.
+     * Find outbound messages by given parameters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6894,7 +6894,7 @@
 
     /**
      * Find messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/searchOutboundMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find outbound messages by given parameters.
+     * Find outbound messages by given parameters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6916,7 +6916,7 @@
 
     /**
      * Find scheduled messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/searchScheduledMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6964,7 +6964,7 @@
 
     /**
      * Find scheduled messages
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Schedule%0A/searchScheduledMessages\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -6985,7 +6985,7 @@
 
     /**
      * Find templates by criteria
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/searchTemplates\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find user templates by given parameters.
+     * Find user templates by given parameters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -7029,7 +7029,7 @@
 
     /**
      * Find templates by criteria
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/searchTemplates\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Find user templates by given parameters.
+     * Find user templates by given parameters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
@@ -7048,7 +7048,7 @@
 
     /**
      * Send message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/sendMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;This is the main entrypoint to send messages. See the examples above for the reference.
+     * This is the main entrypoint to send messages. See the examples above for the reference.
      * @param {module:model/SendMessageInputObject} sendMessageInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendMessageResponse} and HTTP response
      */
@@ -7086,7 +7086,7 @@
 
     /**
      * Send message
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/sendMessage\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;This is the main entrypoint to send messages. See the examples above for the reference.
+     * This is the main entrypoint to send messages. See the examples above for the reference.
      * @param {module:model/SendMessageInputObject} sendMessageInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendMessageResponse}
      */
@@ -7100,7 +7100,7 @@
 
     /**
      * Step 1: Send a verification code 
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Two-factor%20authentication/sendPhoneVerificationCodeTFA\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Sends a verification code to a specified phone number.
+     * Sends a verification code to a specified phone number.
      * @param {module:model/SendPhoneVerificationCodeInputObject} sendPhoneVerificationCodeInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SendPhoneVerificationCodeResponse} and HTTP response
      */
@@ -7138,7 +7138,7 @@
 
     /**
      * Step 1: Send a verification code 
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Two-factor%20authentication/sendPhoneVerificationCodeTFA\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Sends a verification code to a specified phone number.
+     * Sends a verification code to a specified phone number.
      * @param {module:model/SendPhoneVerificationCodeInputObject} sendPhoneVerificationCodeInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SendPhoneVerificationCodeResponse}
      */
@@ -7152,7 +7152,7 @@
 
     /**
      * Change chat status
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/setChatStatus\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Set the status of the chat given by ID.
+     * Set the status of the chat given by ID.
      * @param {module:model/SetChatStatusInputObject} setChatStatusInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -7190,7 +7190,7 @@
 
     /**
      * Change chat status
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/setChatStatus\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Set the status of the chat given by ID.
+     * Set the status of the chat given by ID.
      * @param {module:model/SetChatStatusInputObject} setChatStatusInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -7204,7 +7204,7 @@
 
     /**
      * Unblock a contact by phone number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/unblockContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Unblock a contact by phone number
+     * Unblock a contact by phone number
      * @param {module:model/UnblockContactInputObject} unblockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7242,7 +7242,7 @@
 
     /**
      * Unblock a contact by phone number
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/unblockContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Unblock a contact by phone number
+     * Unblock a contact by phone number
      * @param {module:model/UnblockContactInputObject} unblockContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7256,7 +7256,7 @@
 
     /**
      * Unblock contacts (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/unblockContactsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Unblock several contacts by blocked contact IDs or unblock all contacts.
+     * Unblock several contacts by blocked contact IDs or unblock all contacts.
      * @param {module:model/UnblockContactsBulkInputObject} unblockContactsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7294,7 +7294,7 @@
 
     /**
      * Unblock contacts (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/unblockContactsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Unblock several contacts by blocked contact IDs or unblock all contacts.
+     * Unblock several contacts by blocked contact IDs or unblock all contacts.
      * @param {module:model/UnblockContactsBulkInputObject} unblockContactsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7308,7 +7308,7 @@
 
     /**
      * Unmute chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/unmuteChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Unmute several chats by chat ids or unmute all chats.
+     * Unmute several chats by chat ids or unmute all chats.
      * @param {module:model/UnmuteChatsBulkInputObject} unmuteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7346,7 +7346,7 @@
 
     /**
      * Unmute chats (bulk)
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Chats/unmuteChatsBulk\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Unmute several chats by chat ids or unmute all chats.
+     * Unmute several chats by chat ids or unmute all chats.
      * @param {module:model/UnmuteChatsBulkInputObject} unmuteChatsBulkInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7360,7 +7360,7 @@
 
     /**
      * Manually unsubscribe a contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/unsubscribeContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
+     * &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
      * @param {module:model/UnsubscribeContactInputObject} unsubscribeContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
      */
@@ -7398,7 +7398,7 @@
 
     /**
      * Manually unsubscribe a contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/unsubscribeContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;&gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
+     * &gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
      * @param {module:model/UnsubscribeContactInputObject} unsubscribeContactInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
      */
@@ -7412,7 +7412,7 @@
 
     /**
      * Update balance notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateBalanceNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateBalanceNotificationSettingsInputObject} updateBalanceNotificationSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7450,7 +7450,7 @@
 
     /**
      * Update balance notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateBalanceNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateBalanceNotificationSettingsInputObject} updateBalanceNotificationSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7464,7 +7464,7 @@
 
     /**
      * Update callback URL settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateCallbackSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCallbackSettingsInputObject} updateCallbackSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7502,7 +7502,7 @@
 
     /**
      * Update callback URL settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateCallbackSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCallbackSettingsInputObject} updateCallbackSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7516,7 +7516,7 @@
 
     /**
      * Update chat desktop notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateChatDesktopNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateChatDesktopNotificationSettingsInputObject} updateChatDesktopNotificationSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7554,7 +7554,7 @@
 
     /**
      * Update chat desktop notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateChatDesktopNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateChatDesktopNotificationSettingsInputObject} updateChatDesktopNotificationSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7568,7 +7568,7 @@
 
     /**
      * Edit a contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/updateContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateContactInputObject} updateContactInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -7613,7 +7613,7 @@
 
     /**
      * Edit a contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/updateContact\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateContactInputObject} updateContactInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -7628,7 +7628,7 @@
 
     /**
      * Update a contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/updateContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateContactNoteInputObject} updateContactNoteInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -7673,7 +7673,7 @@
 
     /**
      * Update a contact note
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contact%20Notes/updateContactNote\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateContactNoteInputObject} updateContactNoteInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -7688,7 +7688,7 @@
 
     /**
      * Edit current account info
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/updateCurrentUser\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCurrentUserInputObject} updateCurrentUserInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdateCurrentUserResponse} and HTTP response
      */
@@ -7726,7 +7726,7 @@
 
     /**
      * Edit current account info
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/updateCurrentUser\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCurrentUserInputObject} updateCurrentUserInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdateCurrentUserResponse}
      */
@@ -7740,7 +7740,7 @@
 
     /**
      * Edit a custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/updateCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCustomFieldInputObject} updateCustomFieldInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -7785,7 +7785,7 @@
 
     /**
      * Edit a custom field
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/updateCustomField\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCustomFieldInputObject} updateCustomFieldInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -7800,7 +7800,7 @@
 
     /**
      * Edit the custom field value of a specified contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/updateCustomFieldValue\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCustomFieldValueInputObject} updateCustomFieldValueInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -7845,7 +7845,7 @@
 
     /**
      * Edit the custom field value of a specified contact
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Custom%20Fields/updateCustomFieldValue\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateCustomFieldValueInputObject} updateCustomFieldValueInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -7860,7 +7860,7 @@
 
     /**
      * Update inbound messages notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateInboundMessagesNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateInboundMessagesNotificationSettingsInputObject} updateInboundMessagesNotificationSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -7898,7 +7898,7 @@
 
     /**
      * Update inbound messages notification settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/undefined/updateInboundMessagesNotificationSettings\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateInboundMessagesNotificationSettingsInputObject} updateInboundMessagesNotificationSettingsInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -7912,7 +7912,7 @@
 
     /**
      * Edit a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/updateList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateListObject} opts.updateListObject 
@@ -7954,7 +7954,7 @@
 
     /**
      * Edit a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/updateList\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {Number} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateListObject} opts.updateListObject 
@@ -7970,7 +7970,7 @@
 
     /**
      * Change sender settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Overview/updateSenderSetting\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateSenderSettingInputObject} updateSenderSettingInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -8008,7 +8008,7 @@
 
     /**
      * Change sender settings
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Overview/updateSenderSetting\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateSenderSettingInputObject} updateSenderSettingInputObject 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -8022,7 +8022,7 @@
 
     /**
      * Update a template
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/updateTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateTemplateInputObject} updateTemplateInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -8067,7 +8067,7 @@
 
     /**
      * Update a template
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Templates/updateTemplate\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {module:model/UpdateTemplateInputObject} updateTemplateInputObject 
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -8082,7 +8082,7 @@
 
     /**
      * Upload an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/uploadAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {File} image User avatar. Should be a PNG or JPG file not more than 10 MB.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -8121,7 +8121,7 @@
 
     /**
      * Upload an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Account/uploadAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {File} image User avatar. Should be a PNG or JPG file not more than 10 MB.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -8135,7 +8135,7 @@
 
     /**
      * Upload an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/uploadContactAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {File} image Contact avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -8181,7 +8181,7 @@
 
     /**
      * Upload an avatar
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Contacts/uploadContactAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;
+     * 
      * @param {File} image Contact avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -8196,7 +8196,7 @@
 
     /**
      * Add an avatar for a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/uploadListAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Add an avatar for a list
+     * Add an avatar for a list
      * @param {File} image List avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ResourceLinkResponse} and HTTP response
@@ -8242,7 +8242,7 @@
 
     /**
      * Add an avatar for a list
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Lists/uploadListAvatar\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Add an avatar for a list
+     * Add an avatar for a list
      * @param {File} image List avatar. Should be a PNG or JPG file not more than 10 MB.
      * @param {Number} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ResourceLinkResponse}
@@ -8257,7 +8257,7 @@
 
     /**
      * Upload message attachment
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/uploadMessageAttachment\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Upload a new file to insert it as a link.
+     * Upload a new file to insert it as a link.
      * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadMessageAttachmentResponse} and HTTP response
      */
@@ -8296,7 +8296,7 @@
 
     /**
      * Upload message attachment
-     * &lt;a class&#x3D;\&quot;try-sandbox-link\&quot; href&#x3D;\&quot;http://sandbox.textmagictesting.com/#/Messages%3A%20Send%0A/uploadMessageAttachment\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Try in sandbox&lt;/a&gt;&lt;br&gt;Upload a new file to insert it as a link.
+     * Upload a new file to insert it as a link.
      * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadMessageAttachmentResponse}
      */

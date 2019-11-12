@@ -36,7 +36,7 @@
   /**
    * The Chat model module.
    * @module model/Chat
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -47,7 +47,7 @@
    * @param originalId {Number} 
    * @param phone {String} Chat partner's phone number.
    * @param contact {module:model/Contact} 
-   * @param unsubscribedContactId {Number} If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
+   * @param unsubscribedContactId {Number} If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](https://docs.textmagic.com/#operation/getUnsubscribers).
    * @param unread {Number} Total unread incoming messages.
    * @param updatedAt {Date} Time when the last incoming message arrived at this chat.
    * @param status {module:model/Chat.StatusEnum} Chat status:   * **a** - Active;   * **c** - Closed;   * **d** - Deleted. 
@@ -158,7 +158,7 @@
    */
   exports.prototype['contact'] = undefined;
   /**
-   * If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](http://docs.textmagictesting.com/#operation/getUnsubscribers).
+   * If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](https://docs.textmagic.com/#operation/getUnsubscribers).
    * @member {Number} unsubscribedContactId
    */
   exports.prototype['unsubscribedContactId'] = undefined;

@@ -36,7 +36,7 @@
   /**
    * The AssignContactsToListInputObject model module.
    * @module model/AssignContactsToListInputObject
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -69,7 +69,7 @@
   }
 
   /**
-   * Comma-separated array of [Contacts](http://docs.textmagictesting.com/#tag/Contacts) IDs.
+   * Comma-separated array of [Contacts](https://docs.textmagic.com/#tag/Contacts) IDs.
    * @member {String} contacts
    */
   exports.prototype['contacts'] = undefined;

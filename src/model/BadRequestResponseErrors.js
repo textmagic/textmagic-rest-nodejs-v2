@@ -36,7 +36,7 @@
   /**
    * The BadRequestResponseErrors model module.
    * @module model/BadRequestResponseErrors
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -74,7 +74,7 @@
   }
 
   /**
-   * Array of messages with errors related to the entire request. For example, you did not specify either the **text** or the **templateId** when [sending the message](http://docs.textmagictesting.com/#tag/Outbound-Messages). 
+   * Array of messages with errors related to the entire request. For example, you did not specify either the **text** or the **templateId** when [sending the message](https://docs.textmagic.com/#tag/Outbound-Messages). 
    * @member {Array.<String>} common
    */
   exports.prototype['common'] = undefined;

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Number** | List ID. | 
 **name** | **String** | List name. | 
 **description** | **String** | Description of the list. | 
-**favorited** | **Boolean** | Is the List favorited? See [Favorites list](http://docs.textmagictesting.com/#operation/getFavourites). | 
+**favorited** | **Boolean** | Is the List favorited? See [Favorites list](https://docs.textmagic.com/#operation/getFavourites). | 
 **membersCount** | **Number** | List members count. | 
 **user** | [**User**](User.md) |  | 
 **service** | **Boolean** | Internal service field. | 

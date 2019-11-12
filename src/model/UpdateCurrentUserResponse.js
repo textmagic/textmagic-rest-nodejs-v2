@@ -36,7 +36,7 @@
   /**
    * The UpdateCurrentUserResponse model module.
    * @module model/UpdateCurrentUserResponse
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -122,7 +122,7 @@
    */
   exports.prototype['company'] = undefined;
   /**
-   * Internal timezone ID. See [Get timezones](http://docs.textmagictesting.com/#operation/getTimezones).
+   * Internal timezone ID. See [Get timezones](https://docs.textmagic.com/#operation/getTimezones).
    * @member {Number} timezone
    */
   exports.prototype['timezone'] = undefined;

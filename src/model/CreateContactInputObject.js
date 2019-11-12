@@ -36,7 +36,7 @@
   /**
    * The CreateContactInputObject model module.
    * @module model/CreateContactInputObject
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -138,7 +138,7 @@
    */
   exports.prototype['companyName'] = undefined;
   /**
-   * Contact [list](http://docs.textmagictesting.com/#tag/Lists) ID. Each contact must be assigned to at least one list.
+   * Contact [list](https://docs.textmagic.com/#tag/Lists) ID. Each contact must be assigned to at least one list.
    * @member {String} lists
    */
   exports.prototype['lists'] = undefined;

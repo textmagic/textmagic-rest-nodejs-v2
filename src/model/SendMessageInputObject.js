@@ -36,7 +36,7 @@
   /**
    * The SendMessageInputObject model module.
    * @module model/SendMessageInputObject
-   * @version 2.0.929
+   * @version 2.0.951
    */
 
   /**
@@ -189,7 +189,7 @@
    */
   exports.prototype['referenceId'] = undefined;
   /**
-   * One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
+   * One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
    * @member {String} from
    */
   exports.prototype['from'] = undefined;
