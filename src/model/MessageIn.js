@@ -36,7 +36,7 @@
   /**
    * The MessageIn model module.
    * @module model/MessageIn
-   * @version 2.0.951
+   * @version 2.0.968
    */
 
   /**
@@ -62,6 +62,7 @@
 
 
     _this['avatar'] = avatar;
+
   };
 
   /**
@@ -101,6 +102,9 @@
       }
       if (data.hasOwnProperty('avatar')) {
         obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
+      }
+      if (data.hasOwnProperty('email')) {
+        obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
     }
     return obj;
@@ -150,6 +154,11 @@
    * @member {String} avatar
    */
   exports.prototype['avatar'] = undefined;
+  /**
+   * Sender email.
+   * @member {String} email
+   */
+  exports.prototype['email'] = undefined;
 
 
 
