@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **sender** | **String** | Sender phone number. | 
 **messageTime** | **Date** | Time when  the message arrived at TextMagic. | 
 **text** | **String** | Message text. | 
-**receiver** | **String** | Receiver&#39;s phone number. | 
+**receiver** | **String** | Receiver's phone number. | 
 **status** | **String** | Message status (for chats outbound only). See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details. | 
 **firstName** | **String** | Contact first name. | 
 **lastName** | **String** | Contact last name. | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Enum: DirectionEnum
 
 
-* `in` (value: `"in"`)
+* `_in` (value: `"in"`)
 
 * `out` (value: `"out"`)
 

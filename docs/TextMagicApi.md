@@ -86,12 +86,12 @@ Method | HTTP request | Description
 [**getList**](TextMagicApi.md#getList) | **GET** /api/v2/lists/{id} | Get the details of a specific list
 [**getListContactsIds**](TextMagicApi.md#getListContactsIds) | **GET** /api/v2/lists/{id}/contacts/ids | Get all contact IDs in a list
 [**getLists**](TextMagicApi.md#getLists) | **GET** /api/v2/lists | Get all lists
-[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact&#39;s lists
+[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact's lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
 [**getMessagePrice**](TextMagicApi.md#getMessagePrice) | **GET** /api/v2/messages/price/normalized | Check message price
-[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session&#x60;s details
-[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session&#x60;s statistics
-[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session&#x60;s messages
+[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session`s details
+[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session`s statistics
+[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session`s messages
 [**getMessagingCounters**](TextMagicApi.md#getMessagingCounters) | **GET** /api/v2/stats/messaging/data | Get sent/received messages counters values
 [**getMessagingStat**](TextMagicApi.md#getMessagingStat) | **GET** /api/v2/stats/messaging | Get messaging statistics
 [**getOutboundMessage**](TextMagicApi.md#getOutboundMessage) | **GET** /api/v2/messages/{id} | Get a single message
@@ -104,7 +104,7 @@ Method | HTTP request | Description
 [**getSubaccount**](TextMagicApi.md#getSubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
 [**getSubaccounts**](TextMagicApi.md#getSubaccounts) | **GET** /api/v2/subaccounts | Get a sub-accounts list
 [**getSubaccountsWithTokens**](TextMagicApi.md#getSubaccountsWithTokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with a specified app name
-[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template&#x60;s details
+[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template`s details
 [**getTimezones**](TextMagicApi.md#getTimezones) | **GET** /api/v2/timezones | Get timezones
 [**getUnreadMessagesTotal**](TextMagicApi.md#getUnreadMessagesTotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
 [**getUnsubscribedContact**](TextMagicApi.md#getUnsubscribedContact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
@@ -160,7 +160,7 @@ Method | HTTP request | Description
 
 Assign contacts to a list
 
-&gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
+> Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
 
 ### Example
 ```javascript
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 Buy a dedicated number
 
-To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
+To buy a dedicated number, you first need to find an available number matching your criteria using the `/api/v2/numbers/available` command described above.
 
 ### Example
 ```javascript
@@ -324,7 +324,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var verifyId = "\"123e4567-e89b-12d3-a456-426655440000\""; // String | The verifyId that you received in Step 1.
+var verifyId = "123e4567-e89b-12d3-a456-426655440000"; // String | The verifyId that you received in Step 1.
 
 apiInstance.cancelVerification(verifyId).then(function() {
   console.log('API called successfully.');
@@ -1079,7 +1079,7 @@ null (empty response body)
 
 Delete a contact
 
-&gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
+> This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
 
 ### Example
 ```javascript
@@ -1327,7 +1327,7 @@ null (empty response body)
 
 Unassign contacts from a list
 
-&gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
+> When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
 
 ### Example
 ```javascript
@@ -1379,7 +1379,7 @@ null (empty response body)
 
 Delete a custom field
 
-&gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
+> When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
 
 ### Example
 ```javascript
@@ -1477,7 +1477,7 @@ null (empty response body)
 
 Delete a single inbound message
 
-&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+> Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
 ```javascript
@@ -1526,7 +1526,7 @@ null (empty response body)
 
 Delete inbound messages (bulk)
 
-&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+> Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
 ```javascript
@@ -1774,7 +1774,7 @@ null (empty response body)
 
 Delete a session
 
-Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
+Delete a message session, together with all nested messages. > You will not be refunded for any deleted sent sessions. 
 
 ### Example
 ```javascript
@@ -2215,7 +2215,7 @@ null (empty response body)
 
 Carrier Lookup
 
-This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
+This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  > Numbers must be checked one by one. You cannot check multiple numbers in one request.   
 
 ### Example
 ```javascript
@@ -2229,10 +2229,10 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var phone = "\"447860021130\""; // String | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
+var phone = "447860021130"; // String | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
 
 var opts = { 
-  'country': "\"GB\"" // String | This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
+  'country': "GB" // String | This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
 };
 apiInstance.doCarrierLookup(phone, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -2268,7 +2268,7 @@ Name | Type | Description  | Notes
 
 Email Lookup
 
-To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
+To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  > Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
 
 ### Example
 ```javascript
@@ -2282,7 +2282,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var email = "\"john@sample.com\""; // String | Email address.
+var email = "john@sample.com"; // String | Email address.
 
 apiInstance.doEmailLookup(email).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -2384,7 +2384,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
-  'status': "\"a\"", // String | Fetch only (a)ctive, (c)losed or (d)eleted chats.
+  'status': "a", // String | Fetch only (a)ctive, (c)losed or (d)eleted chats.
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'orderBy': "id", // String | Order results by some field. Default is id.
@@ -2485,7 +2485,7 @@ Name | Type | Description  | Notes
 
 Get all sessions
 
-Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
+Get all message sending sessions. > This list contains all of your sessions, including those which were sent but not via API 
 
 ### Example
 ```javascript
@@ -2570,7 +2570,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional] 
+ **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified. | [optional] 
 
 ### Return type
 
@@ -2715,7 +2715,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var country = "\"GB\""; // String | The 2-letter dedicated number country ISO code.
+var country = "GB"; // String | The 2-letter dedicated number country ISO code.
 
 var opts = { 
   'prefix': 447155, // Number | Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
@@ -2756,7 +2756,7 @@ Name | Type | Description  | Notes
 
 Get available sender settings
 
-Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
+Get all available sender setting options which can be used in the \"from\" parameter of the POST messages method.
 
 ### Example
 ```javascript
@@ -2771,7 +2771,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
-  'country': "\"US\"" // String | The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
+  'country': "US" // String | The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
 };
 apiInstance.getAvailableSenderSettingOptions(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3105,7 +3105,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var phone = "\"447860021130\""; // String | 
+var phone = "447860021130"; // String | 
 
 var opts = { 
   'upsert': 0, // Number | Create a new chat if not found.
@@ -3274,7 +3274,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var phone = "\"447860021130\""; // String | 
+var phone = "447860021130"; // String | 
 
 apiInstance.getContactByPhone(phone).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3323,7 +3323,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var phone = "\"447860021130\""; // String | Phone number to check.
+var phone = "447860021130"; // String | Phone number to check.
 
 apiInstance.getContactIfBlocked(phone).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3583,7 +3583,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var query = "\"A\""; // String | Find recipients by specified search query.
+var query = "A"; // String | Find recipients by specified search query.
 
 var opts = { 
   'limit': 10, // Number | The number of results per page.
@@ -3624,7 +3624,7 @@ Name | Type | Description  | Notes
 
 Get all contacts in a list
 
-A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
+A useful synonym for the \"contacts/search\" command with the provided \"listId\" parameter.
 
 ### Example
 ```javascript
@@ -3936,7 +3936,7 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'query': "\"A\"" // String | Find contacts or lists by specified search query.
+  'query': "A" // String | Find contacts or lists by specified search query.
 };
 apiInstance.getFavorites(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -4113,7 +4113,7 @@ Name | Type | Description  | Notes
 
 <a name="getList"></a>
 # **getList**
-> Array getList(id)
+> List getList(id)
 
 Get the details of a specific list
 
@@ -4149,7 +4149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Array**
+[**List**](List.md)
 
 ### Authorization
 
@@ -4273,7 +4273,7 @@ Name | Type | Description  | Notes
 # **getListsOfContact**
 > GetListsOfContactPaginatedResponse getListsOfContact(id, opts)
 
-Get a contact&#39;s lists
+Get a contact's lists
 
 Get all the lists in which a contact is included.
 
@@ -4345,23 +4345,23 @@ BasicAuth.password = 'YOUR PASSWORD';
 var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
-  'text': "\"Test message test\"", // String | Message text. Required if **template_id** is not set.
+  'text': "Test message test", // String | Message text. Required if **template_id** is not set.
   'templateId': 1, // Number | Template used instead of message text. Required if **text** is not set.
   'sendingTime': 1565606455, // Number | DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
-  'sendingDateTime': "\"2020-05-27 13:02:33\"", // String | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
-  'sendingTimezone': "\"America/Buenos_Aires\"", // String | The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
-  'contacts': "\"1,2,3,4\"", // String | Comma-separated array of contact resources id message will be sent to.
-  'lists': "\"1,2,3,4\"", // String | Comma-separated array of list resources id message will be sent to.
-  'phones': "\"447860021130,447860021131\"", // String | Comma-separated array of E.164 phone numbers message will be sent to.
+  'sendingDateTime': "2020-05-27 13:02:33", // String | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+  'sendingTimezone': "America/Buenos_Aires", // String | The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+  'contacts': "1,2,3,4", // String | Comma-separated array of contact resources id message will be sent to.
+  'lists': "1,2,3,4", // String | Comma-separated array of list resources id message will be sent to.
+  'phones': "447860021130,447860021131", // String | Comma-separated array of E.164 phone numbers message will be sent to.
   'cutExtra': 0, // Number | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead.
   'partsCount': 6, // Number | Maximum message parts count (TextMagic allows sending of 1 to 6 message parts).
   'referenceId': 1, // Number | Custom message reference id which can be used in your application infrastructure.
-  'from': "\"Test Sender ID\"", // String | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
-  'rule': "\"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1\"", // String | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+  'from': "Test Sender ID", // String | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
+  'rule': "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1", // String | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
   'createChat': 0, // Number | Should the sending method try to create new Chat(if not exist) with specified recipients?
   'tts': 0, // Number | Send Text-to-Speech message.
   'local': 0, // Number | Treat phone numbers passed in the \\'phones\\' field as local.
-  'localCountry': "\"US\"" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
+  'localCountry': "US" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 };
 apiInstance.getMessagePreview(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -4379,7 +4379,7 @@ Name | Type | Description  | Notes
  **templateId** | **Number**| Template used instead of message text. Required if **text** is not set. | [optional] 
  **sendingTime** | **Number**| DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time is in unix timestamp format. Default is now. | [optional] 
  **sendingDateTime** | **String**| Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone. | [optional] 
- **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
+ **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
  **contacts** | **String**| Comma-separated array of contact resources id message will be sent to. | [optional] 
  **lists** | **String**| Comma-separated array of list resources id message will be sent to. | [optional] 
  **phones** | **String**| Comma-separated array of E.164 phone numbers message will be sent to. | [optional] 
@@ -4390,8 +4390,8 @@ Name | Type | Description  | Notes
  **rule** | **String**| An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. | [optional] 
  **createChat** | **Number**| Should the sending method try to create new Chat(if not exist) with specified recipients? | [optional] [default to 0]
  **tts** | **Number**| Send Text-to-Speech message. | [optional] [default to 0]
- **local** | **Number**| Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. | [optional] [default to 0]
- **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. | [optional] 
+ **local** | **Number**| Treat phone numbers passed in the \\'phones\\' field as local. | [optional] [default to 0]
+ **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country. | [optional] 
 
 ### Return type
 
@@ -4428,23 +4428,23 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
   'includeBlocked': 0, // Number | Should we show the pricing for blocked contacts?
-  'text': "\"Test message test\"", // String | Message text. Required if the **template_id** is not set.
+  'text': "Test message test", // String | Message text. Required if the **template_id** is not set.
   'templateId': 1, // Number | Template used instead of message text. Required if the **text** is not set.
   'sendingTime': 1565606455, // Number | DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
-  'sendingDateTime': "\"2020-05-27 13:02:33\"", // String | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
-  'sendingTimezone': "\"America/Buenos_Aires\"", // String | The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
-  'contacts': "\"1,2,3,4\"", // String | Comma-separated array of contact resources id message will be sent to.
-  'lists': "\"1,2,3,4\"", // String | Comma-separated array of list resources id message will be sent to.
-  'phones': "\"447860021130,447860021131\"", // String | Comma-separated array of E.164 phone numbers message will be sent to.
+  'sendingDateTime': "2020-05-27 13:02:33", // String | Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone.
+  'sendingTimezone': "America/Buenos_Aires", // String | The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone.
+  'contacts': "1,2,3,4", // String | Comma-separated array of contact resources id message will be sent to.
+  'lists': "1,2,3,4", // String | Comma-separated array of list resources id message will be sent to.
+  'phones': "447860021130,447860021131", // String | Comma-separated array of E.164 phone numbers message will be sent to.
   'cutExtra': 0, // Number | Should sending method cut extra characters which not fit supplied partsCount or return 400 Bad request response instead.
   'partsCount': 6, // Number | Maximum message parts count (TextMagic allows sending 1 to 6 message parts).
   'referenceId': 1, // Number | Custom message reference id which can be used in your application infrastructure.
-  'from': "\"Test Sender ID\"", // String | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
-  'rule': "\"FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1\"", // String | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
+  'from': "Test Sender ID", // String | One of the allowed Sender ID (phone number or alphanumeric sender ID). If the specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](https://docs.textmagic.com/#tag/Sender-IDs).
+  'rule': "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1;COUNT=1", // String | An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
   'createChat': 0, // Number | Should the sending method try to create new Chat (if not exist) with specified recipients?
   'tts': 0, // Number | Send a Text-to-Speech message.
   'local': 0, // Number | Treat phone numbers passed in the \\'phones\\' field as local.
-  'localCountry': "\"US\"" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
+  'localCountry': "US" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 };
 apiInstance.getMessagePrice(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -4463,7 +4463,7 @@ Name | Type | Description  | Notes
  **templateId** | **Number**| Template used instead of message text. Required if the **text** is not set. | [optional] 
  **sendingTime** | **Number**| DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now. | [optional] 
  **sendingDateTime** | **String**| Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone. | [optional] 
- **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
+ **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
  **contacts** | **String**| Comma-separated array of contact resources id message will be sent to. | [optional] 
  **lists** | **String**| Comma-separated array of list resources id message will be sent to. | [optional] 
  **phones** | **String**| Comma-separated array of E.164 phone numbers message will be sent to. | [optional] 
@@ -4474,8 +4474,8 @@ Name | Type | Description  | Notes
  **rule** | **String**| An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. | [optional] 
  **createChat** | **Number**| Should the sending method try to create new Chat (if not exist) with specified recipients? | [optional] [default to 0]
  **tts** | **Number**| Send a Text-to-Speech message. | [optional] [default to 0]
- **local** | **Number**| Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. | [optional] [default to 0]
- **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. | [optional] 
+ **local** | **Number**| Treat phone numbers passed in the \\'phones\\' field as local. | [optional] [default to 0]
+ **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country. | [optional] 
 
 ### Return type
 
@@ -4494,7 +4494,7 @@ Name | Type | Description  | Notes
 # **getMessageSession**
 > MessageSession getMessageSession(id)
 
-Get a session&#x60;s details
+Get a session`s details
 
 Get a specific session’s details.
 
@@ -4543,7 +4543,7 @@ Name | Type | Description  | Notes
 # **getMessageSessionStat**
 > GetMessageSessionStatResponse getMessageSessionStat(id, opts)
 
-Get a session&#x60;s statistics
+Get a session`s statistics
 
 
 
@@ -4596,9 +4596,9 @@ Name | Type | Description  | Notes
 # **getMessagesBySessionId**
 > GetMessagesBySessionIdPaginatedResponse getMessagesBySessionId(id, opts)
 
-Get a session&#x60;s messages
+Get a session`s messages
 
-A useful synonym for the \&quot;messages/search\&quot; command with the provided \&quot;sessionId\&quot; parameter.
+A useful synonym for the \"messages/search\" command with the provided \"sessionId\" parameter.
 
 ### Example
 ```javascript
@@ -5026,7 +5026,7 @@ BasicAuth.password = 'YOUR PASSWORD';
 var apiInstance = new TextmagicClient.TextMagicApi();
 
 var opts = { 
-  'country': "\"US\"" // String | Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
+  'country': "US" // String | Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
 };
 apiInstance.getSenderSettings(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -5078,8 +5078,8 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'start': "\"2018-11-11 11:11\"", // String | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
-  'end': "\"2019-11-11 11:11\"" // String | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
+  'start': "2018-11-11 11:11", // String | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
+  'end': "2019-11-11 11:11" // String | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 };
 apiInstance.getSpendingStat(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -5271,7 +5271,7 @@ Name | Type | Description  | Notes
 # **getTemplate**
 > MessageTemplate getTemplate(id)
 
-Get a template&#x60;s details
+Get a template`s details
 
 Get a single template.
 
@@ -5586,11 +5586,11 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 
 var file = "/path/to/file.txt"; // File | File containing contacts in csv or xls(x) formats.
 
-var column = "\"0:firstName;1:lastName;3:phone;4:email\""; // String | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required. 
+var column = "0:firstName;1:lastName;3:phone;4:email"; // String | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required. 
 
 var opts = { 
   'listId': 443, // Number | List that ID contacts will be imported to. Ignored if `listName` is specified. 
-  'listName': "\"A new list\"" // String | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified. 
+  'listName': "A new list" // String | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified. 
 };
 apiInstance.importContacts(file, column, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -5605,9 +5605,9 @@ apiInstance.importContacts(file, column, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file** | **File**| File containing contacts in csv or xls(x) formats. | 
- **column** | **String**| Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  | 
- **listId** | **Number**| List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  | [optional] 
- **listName** | **String**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  | [optional] 
+ **column** | **String**| Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.  | 
+ **listId** | **Number**| List that ID contacts will be imported to. Ignored if `listName` is specified.  | [optional] 
+ **listName** | **String**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.  | [optional] 
 
 ### Return type
 
@@ -6014,7 +6014,7 @@ Name | Type | Description  | Notes
 
 Apply for a new Sender ID
 
-&gt; Sender IDs are shared among all of your sub-accounts.
+> Sender IDs are shared among all of your sub-accounts.
 
 ### Example
 ```javascript
@@ -6273,8 +6273,8 @@ Name | Type | Description  | Notes
  **listId** | **Number**| Find contacts by List ID. | [optional] 
  **includeBlocked** | **Number**| Should blocked contacts be included? | [optional] 
  **query** | **String**| Find contacts by specified search query. | [optional] 
- **local** | **Number**| Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. | [optional] [default to 0]
- **country** | **String**| The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. | [optional] 
+ **local** | **Number**| Treat phone number passed in the \"query\" field as local. Default is 0. | [optional] [default to 0]
+ **country** | **String**| The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country. | [optional] 
  **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
 
@@ -6376,8 +6376,8 @@ var apiInstance = new TextmagicClient.TextMagicApi();
 var opts = { 
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'ids': "\"1,2,3,4\"", // String | Find lists by IDs.
-  'query': "\"A\"", // String | Find lists by specified search query.
+  'ids': "1,2,3,4", // String | Find lists by IDs.
+  'query': "A", // String | Find lists by specified search query.
   'onlyMine': 0, // Number | Return only current user lists.
   'onlyDefault': 0, // Number | Return only default lists.
   'orderBy': "id", // String | Order results by some field. Default is id.
@@ -6443,7 +6443,7 @@ var opts = {
   'lastId': 56, // Number | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
   'ids': "ids_example", // String | Find message by ID(s).
   'sessionId': 56, // Number | Find messages by session ID.
-  'statuses': "\"q\"", // String | Find messages by status.
+  'statuses': "q", // String | Find messages by status.
   'includeDeleted': 0, // Number | Search also in deleted messages.
   'query': "query_example" // String | Find messages by specified search query.
 };
@@ -6461,7 +6461,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional] 
+ **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified. | [optional] 
  **ids** | **String**| Find message by ID(s). | [optional] 
  **sessionId** | **Number**| Find messages by session ID. | [optional] 
  **statuses** | **String**| Find messages by status. | [optional] 
@@ -6901,7 +6901,7 @@ null (empty response body)
 
 Manually unsubscribe a contact
 
-&gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
+> Please note, if you unsubscribe a contact, this action cannot be reversed. 
 
 ### Example
 ```javascript
@@ -7738,7 +7738,7 @@ apiInstance.uploadMessageAttachment(file).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. | 
+ **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats. | 
 
 ### Return type
 

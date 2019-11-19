@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 ## Enum: EncodingEnum
 
 
-* `ISO-8859-1` (value: `"ISO-8859-1"`)
+* `iSO88591` (value: `"ISO-8859-1"`)
 
-* `UTF-16BE` (value: `"UTF-16BE"`)
+* `uTF16BE` (value: `"UTF-16BE"`)
 
 
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **messagesSentDelivered** | **Number** | Delivered messages count. As messages are retried for up to 48 hours, this value could change. | 
 **messagesSentAccepted** | **Number** | Messages accepted for delivery (in queue) but not yet delivered. | 
 **messagesSentBuffered** | **Number** | Messages buffered by endpoint cell phone operators. | 
-**messagesSentFailed** | **Number** | Messages that have failed for whatever reason, e.g. the destination phone was switched off for 48 hours or the recipient&#39;s phone account is out of service. | 
+**messagesSentFailed** | **Number** | Messages that have failed for whatever reason, e.g. the destination phone was switched off for 48 hours or the recipient's phone account is out of service. | 
 **messagesSentRejected** | **Number** | Messages that were rejected: invalid Sender ID used (e.g. you cannot use the Sender ID or your own mobile number when sending to the United States and Canada.)  | 
 **messagesSentParts** | **Number** | Total sent messages **parts** count. Note that this is not equal to the sent messages count, because one message could consist of 1 to 6 parts and users are charged per part, not per message. | 
 
