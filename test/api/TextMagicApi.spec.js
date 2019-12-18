@@ -125,11 +125,11 @@
         it('should call checkPhoneVerificationCodeTFA successfully', function(done) {
           // TODO: uncomment, update parameter values for checkPhoneVerificationCodeTFA call
           /*
-          var checkPhoneVerificationCodeInputObject = new TextmagicClient.CheckPhoneVerificationCodeInputObject();
-          checkPhoneVerificationCodeInputObject.code = 1234;
-          checkPhoneVerificationCodeInputObject.verifyId = "123e4567-e89b-12d3-a456-426655440000";
+          var checkPhoneVerificationCodeTFAInputObject = new TextmagicClient.CheckPhoneVerificationCodeTFAInputObject();
+          checkPhoneVerificationCodeTFAInputObject.code = 1234;
+          checkPhoneVerificationCodeTFAInputObject.verifyId = "123e4567-e89b-12d3-a456-426655440000";
 
-          instance.checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeInputObject).then(function(data) {
+          instance.checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeTFAInputObject).then(function(data) {
 
             done();
           }, function(error) {
@@ -8526,15 +8526,15 @@
         it('should call sendPhoneVerificationCodeTFA successfully', function(done) {
           // TODO: uncomment, update parameter values for sendPhoneVerificationCodeTFA call and complete the assertions
           /*
-          var sendPhoneVerificationCodeInputObject = new TextmagicClient.SendPhoneVerificationCodeInputObject();
-          sendPhoneVerificationCodeInputObject.phone = "447860021130";
-          sendPhoneVerificationCodeInputObject.brand = "TextMagic";
-          sendPhoneVerificationCodeInputObject.codeLength = 4;
-          sendPhoneVerificationCodeInputObject.language = "en-gb";
-          sendPhoneVerificationCodeInputObject.senderId = "TextMagic";
-          sendPhoneVerificationCodeInputObject.country = "US";
+          var sendPhoneVerificationCodeTFAInputObject = new TextmagicClient.SendPhoneVerificationCodeTFAInputObject();
+          sendPhoneVerificationCodeTFAInputObject.phone = "447860021130";
+          sendPhoneVerificationCodeTFAInputObject.brand = "TextMagic";
+          sendPhoneVerificationCodeTFAInputObject.codeLength = 4;
+          sendPhoneVerificationCodeTFAInputObject.language = "en-gb";
+          sendPhoneVerificationCodeTFAInputObject.senderId = "TextMagic";
+          sendPhoneVerificationCodeTFAInputObject.country = "US";
 
-          instance.sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeInputObject).then(function(data) {
+          instance.sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeTFAInputObject).then(function(data) {
             // TODO: update response assertions
             expect(data).to.be.a(TextmagicClient.SendPhoneVerificationCodeResponse);
             expect(data.verifyId).to.be.a('string');

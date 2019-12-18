@@ -355,7 +355,7 @@ null (empty response body)
 
 <a name="checkPhoneVerificationCodeTFA"></a>
 # **checkPhoneVerificationCodeTFA**
-> checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeInputObject)
+> checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeTFAInputObject)
 
 Step 2: Check the verification code 
 
@@ -373,9 +373,9 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var checkPhoneVerificationCodeInputObject = new TextmagicClient.CheckPhoneVerificationCodeInputObject(); // CheckPhoneVerificationCodeInputObject | 
+var checkPhoneVerificationCodeTFAInputObject = new TextmagicClient.CheckPhoneVerificationCodeTFAInputObject(); // CheckPhoneVerificationCodeTFAInputObject | 
 
-apiInstance.checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeInputObject).then(function() {
+apiInstance.checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeTFAInputObject).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -387,7 +387,7 @@ apiInstance.checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeInputObject)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
+ **checkPhoneVerificationCodeTFAInputObject** | [**CheckPhoneVerificationCodeTFAInputObject**](CheckPhoneVerificationCodeTFAInputObject.md)|  | 
 
 ### Return type
 
@@ -6652,7 +6652,7 @@ Name | Type | Description  | Notes
 
 <a name="sendPhoneVerificationCodeTFA"></a>
 # **sendPhoneVerificationCodeTFA**
-> SendPhoneVerificationCodeResponse sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeInputObject)
+> SendPhoneVerificationCodeResponse sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeTFAInputObject)
 
 Step 1: Send a verification code 
 
@@ -6670,9 +6670,9 @@ BasicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new TextmagicClient.TextMagicApi();
 
-var sendPhoneVerificationCodeInputObject = new TextmagicClient.SendPhoneVerificationCodeInputObject(); // SendPhoneVerificationCodeInputObject | 
+var sendPhoneVerificationCodeTFAInputObject = new TextmagicClient.SendPhoneVerificationCodeTFAInputObject(); // SendPhoneVerificationCodeTFAInputObject | 
 
-apiInstance.sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeInputObject).then(function(data) {
+apiInstance.sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeTFAInputObject).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -6684,7 +6684,7 @@ apiInstance.sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeInputObject).t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendPhoneVerificationCodeInputObject** | [**SendPhoneVerificationCodeInputObject**](SendPhoneVerificationCodeInputObject.md)|  | 
+ **sendPhoneVerificationCodeTFAInputObject** | [**SendPhoneVerificationCodeTFAInputObject**](SendPhoneVerificationCodeTFAInputObject.md)|  | 
 
 ### Return type
 

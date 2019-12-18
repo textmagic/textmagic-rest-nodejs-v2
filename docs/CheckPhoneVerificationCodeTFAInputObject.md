@@ -1,4 +1,4 @@
-# TextmagicClient.CheckPhoneVerificationCodeInputObject
+# TextmagicClient.CheckPhoneVerificationCodeTFAInputObject
 
 ## Properties
 Name | Type | Description | Notes

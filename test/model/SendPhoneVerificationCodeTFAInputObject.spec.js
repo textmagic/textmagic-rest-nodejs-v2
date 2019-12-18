@@ -30,14 +30,14 @@
   var instance;
 
   describe('(package)', function() {
-    describe('SendPhoneVerificationCodeInputObject', function() {
+    describe('SendPhoneVerificationCodeTFAInputObject', function() {
       beforeEach(function() {
-        instance = new TextmagicClient.SendPhoneVerificationCodeInputObject();
+        instance = new TextmagicClient.SendPhoneVerificationCodeTFAInputObject();
       });
 
-      it('should create an instance of SendPhoneVerificationCodeInputObject', function() {
-        // TODO: update the code to test SendPhoneVerificationCodeInputObject
-        expect(instance).to.be.a(TextmagicClient.SendPhoneVerificationCodeInputObject);
+      it('should create an instance of SendPhoneVerificationCodeTFAInputObject', function() {
+        // TODO: update the code to test SendPhoneVerificationCodeTFAInputObject
+        expect(instance).to.be.a(TextmagicClient.SendPhoneVerificationCodeTFAInputObject);
       });
 
       it('should have the property phone (base name: "phone")', function() {

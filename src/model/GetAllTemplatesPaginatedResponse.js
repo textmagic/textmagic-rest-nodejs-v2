@@ -33,7 +33,7 @@
   /**
    * The GetAllTemplatesPaginatedResponse model module.
    * @module model/GetAllTemplatesPaginatedResponse
-   * @version 2.0.1029
+   * @version 2.0.1067
    */
 
   /**

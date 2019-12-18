@@ -33,7 +33,7 @@
   /**
    * The GetChatMessagesPaginatedResponse model module.
    * @module model/GetChatMessagesPaginatedResponse
-   * @version 2.0.1029
+   * @version 2.0.1067
    */
 
   /**

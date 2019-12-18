@@ -25,31 +25,31 @@
     if (!root.TextmagicClient) {
       root.TextmagicClient = {};
     }
-    root.TextmagicClient.CheckPhoneVerificationCodeInputObject = factory(root.TextmagicClient.ApiClient);
+    root.TextmagicClient.CheckPhoneVerificationCodeTFAInputObject = factory(root.TextmagicClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The CheckPhoneVerificationCodeInputObject model module.
-   * @module model/CheckPhoneVerificationCodeInputObject
-   * @version 2.0.1029
+   * The CheckPhoneVerificationCodeTFAInputObject model module.
+   * @module model/CheckPhoneVerificationCodeTFAInputObject
+   * @version 2.0.1067
    */
 
   /**
-   * Constructs a new <code>CheckPhoneVerificationCodeInputObject</code>.
-   * @alias module:model/CheckPhoneVerificationCodeInputObject
+   * Constructs a new <code>CheckPhoneVerificationCodeTFAInputObject</code>.
+   * @alias module:model/CheckPhoneVerificationCodeTFAInputObject
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>CheckPhoneVerificationCodeInputObject</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>CheckPhoneVerificationCodeTFAInputObject</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CheckPhoneVerificationCodeInputObject} obj Optional instance to populate.
-   * @return {module:model/CheckPhoneVerificationCodeInputObject} The populated <code>CheckPhoneVerificationCodeInputObject</code> instance.
+   * @param {module:model/CheckPhoneVerificationCodeTFAInputObject} obj Optional instance to populate.
+   * @return {module:model/CheckPhoneVerificationCodeTFAInputObject} The populated <code>CheckPhoneVerificationCodeTFAInputObject</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
