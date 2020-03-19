@@ -33,7 +33,7 @@
   /**
    * The Contact model module.
    * @module model/Contact
-   * @version 2.0.1067
+   * @version 2.0.1307
    */
 
   /**

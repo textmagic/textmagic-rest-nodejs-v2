@@ -33,7 +33,7 @@
   /**
    * The SendPhoneVerificationCodeResponse model module.
    * @module model/SendPhoneVerificationCodeResponse
-   * @version 2.0.1067
+   * @version 2.0.1307
    */
 
   /**

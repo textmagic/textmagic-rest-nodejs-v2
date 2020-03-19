@@ -10,7 +10,7 @@ TextMagic’s application programming interface (API) provides the communication
 ## Installation
 
 ```shell
-npm install textmagic-client@2.0.1067 --save
+npm install textmagic-client@2.0.1307 --save
 ```
 
 ## Usage Example
@@ -24,8 +24,9 @@ const fs = require('fs');
 const client = textmagicClient.ApiClient.instance;
 const auth = client.authentications['BasicAuth'];
 
+// put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys page.
 auth.username = 'YOUR_USERNAME';
-auth.password = 'YOUR_PASSWORD';
+auth.password = 'YOUR_API_KEY';
 
 const api = new textmagicClient.TextMagicApi();
 

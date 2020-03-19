@@ -33,17 +33,19 @@
   /**
    * The PingResponse model module.
    * @module model/PingResponse
-   * @version 2.0.1067
+   * @version 2.0.1307
    */
 
   /**
    * Constructs a new <code>PingResponse</code>.
    * @alias module:model/PingResponse
    * @class
+   * @param userId {Number} Current user Id.
    * @param ping {String} Pong.
    * @param utcDateTime {String} Current date and time.
    */
-  var exports = function(ping, utcDateTime) {
+  var exports = function(userId, ping, utcDateTime) {
+    this.userId = userId;
     this.ping = ping;
     this.utcDateTime = utcDateTime;
   };
@@ -58,6 +60,8 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('userId'))
+        obj.userId = ApiClient.convertToType(data['userId'], 'Number');
       if (data.hasOwnProperty('ping'))
         obj.ping = ApiClient.convertToType(data['ping'], 'String');
       if (data.hasOwnProperty('utcDateTime'))
@@ -65,6 +69,12 @@
     }
     return obj;
   }
+
+  /**
+   * Current user Id.
+   * @member {Number} userId
+   */
+  exports.prototype.userId = undefined;
 
   /**
    * Pong.

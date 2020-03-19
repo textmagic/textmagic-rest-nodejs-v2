@@ -40,6 +40,12 @@
         expect(instance).to.be.a(TextmagicClient.PingResponse);
       });
 
+      it('should have the property userId (base name: "userId")', function() {
+        // TODO: update the code to test the property userId
+        expect(instance).to.have.property('userId');
+        // expect(instance.userId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property ping (base name: "ping")', function() {
         // TODO: update the code to test the property ping
         expect(instance).to.have.property('ping');

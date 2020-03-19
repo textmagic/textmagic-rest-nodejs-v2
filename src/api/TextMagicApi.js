@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.1067
+   * @version 2.0.1307
    */
 
   /**
@@ -6632,6 +6632,7 @@
      * @param {Number} opts.includeBlocked Should blocked contacts be included?
      * @param {String} opts.query Find contacts by specified search query.
      * @param {Number} opts.local Treat phone number passed in the \"query\" field as local. Default is 0. (default to 0)
+     * @param {Number} opts.exactMatch Return only exactly matching contacts. Default is 0. (default to 0)
      * @param {String} opts.country The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
@@ -6653,6 +6654,7 @@
         'includeBlocked': opts['includeBlocked'],
         'query': opts['query'],
         'local': opts['local'],
+        'exactMatch': opts['exactMatch'],
         'country': opts['country'],
         'orderBy': opts['orderBy'],
         'direction': opts['direction'],
@@ -6688,6 +6690,7 @@
      * @param {Number} opts.includeBlocked Should blocked contacts be included?
      * @param {String} opts.query Find contacts by specified search query.
      * @param {Number} opts.local Treat phone number passed in the \"query\" field as local. Default is 0. (default to 0)
+     * @param {Number} opts.exactMatch Return only exactly matching contacts. Default is 0. (default to 0)
      * @param {String} opts.country The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country.
      * @param {module:model/String} opts.orderBy Order results by some field. Default is id. (default to id)
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)

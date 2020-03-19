@@ -33,7 +33,7 @@
   /**
    * The MessagingStatItem model module.
    * @module model/MessagingStatItem
-   * @version 2.0.1067
+   * @version 2.0.1307
    */
 
   /**

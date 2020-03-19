@@ -6656,6 +6656,8 @@
           instance.ping().then(function(data) {
             // TODO: update response assertions
             expect(data).to.be.a(TextmagicClient.PingResponse);
+            expect(data.userId).to.be.a('number');
+            expect(data.userId).to.be(123);
             expect(data.ping).to.be.a('string');
             expect(data.ping).to.be("pong");
             expect(data.utcDateTime).to.be.a('string');
@@ -7747,6 +7749,7 @@
           opts.includeBlocked = 56;
           opts.query = "query_example";
           opts.local = 0;
+          opts.exactMatch = 0;
           opts.country = "country_example";
           opts.orderBy = "id";
           opts.direction = "desc";
