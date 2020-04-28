@@ -33,7 +33,7 @@
   /**
    * The SearchScheduledMessagesPaginatedResponse model module.
    * @module model/SearchScheduledMessagesPaginatedResponse
-   * @version 2.0.1421
+   * @version 2.0.1423
    */
 
   /**

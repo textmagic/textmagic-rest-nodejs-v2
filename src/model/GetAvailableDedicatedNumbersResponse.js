@@ -33,7 +33,7 @@
   /**
    * The GetAvailableDedicatedNumbersResponse model module.
    * @module model/GetAvailableDedicatedNumbersResponse
-   * @version 2.0.1421
+   * @version 2.0.1423
    */
 
   /**
