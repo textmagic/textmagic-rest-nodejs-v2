@@ -1323,6 +1323,8 @@
                   expect(data.country.id).to.be("US");
                   expect(data.country.name).to.be.a('string');
                   expect(data.country.name).to.be("India");
+                expect(data.pinned).to.be.a('boolean');
+                expect(data.pinned).to.be(true);
               }
             }
 
@@ -2513,6 +2515,8 @@
               expect(data.country.id).to.be("US");
               expect(data.country.name).to.be.a('string');
               expect(data.country.name).to.be("India");
+            expect(data.pinned).to.be.a('boolean');
+            expect(data.pinned).to.be(true);
 
             done();
           }, function(error) {
@@ -2813,6 +2817,8 @@
               expect(data.country.id).to.be("US");
               expect(data.country.name).to.be.a('string');
               expect(data.country.name).to.be("India");
+            expect(data.pinned).to.be.a('boolean');
+            expect(data.pinned).to.be(true);
 
             done();
           }, function(error) {
@@ -7093,6 +7099,8 @@
                   expect(data.country.id).to.be("US");
                   expect(data.country.name).to.be.a('string');
                   expect(data.country.name).to.be("India");
+                expect(data.pinned).to.be.a('boolean');
+                expect(data.pinned).to.be(true);
               }
             }
 
@@ -7408,6 +7416,8 @@
                   expect(data.country.id).to.be("US");
                   expect(data.country.name).to.be.a('string');
                   expect(data.country.name).to.be("India");
+                expect(data.pinned).to.be.a('boolean');
+                expect(data.pinned).to.be(true);
               }
             }
 
@@ -7724,6 +7734,8 @@
                   expect(data.country.id).to.be("US");
                   expect(data.country.name).to.be.a('string');
                   expect(data.country.name).to.be("India");
+                expect(data.pinned).to.be.a('boolean');
+                expect(data.pinned).to.be(true);
               }
             }
 
@@ -8531,6 +8543,7 @@
           /*
           var sendPhoneVerificationCodeTFAInputObject = new TextmagicClient.SendPhoneVerificationCodeTFAInputObject();
           sendPhoneVerificationCodeTFAInputObject.phone = "447860021130";
+          sendPhoneVerificationCodeTFAInputObject.workflowId = "6";
           sendPhoneVerificationCodeTFAInputObject.brand = "TextMagic";
           sendPhoneVerificationCodeTFAInputObject.codeLength = 4;
           sendPhoneVerificationCodeTFAInputObject.language = "en-gb";

@@ -33,7 +33,7 @@
   /**
    * The GetStateResponse model module.
    * @module model/GetStateResponse
-   * @version 2.0.1307
+   * @version 2.0.1421
    */
 
   /**
@@ -64,6 +64,8 @@
    * @param chatMarkedAsRead {Number} 
    * @param chatMuted {Number} 
    * @param chatUnmuted {Number} 
+   * @param chatPinned {Number} 
+   * @param chatUnpinned {Number} 
    * @param chatDeleted {Number} 
    * @param chatClosed {Number} 
    * @param chatReopened {Number} 
@@ -80,7 +82,7 @@
    * @param listCacheClear {Number} 
    * @param customFieldsCacheClear {Number} 
    */
-  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatDeleted, chatClosed, chatReopened, chatCacheClear, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear) {
+  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear) {
     this.systemCacheClear = systemCacheClear;
     this.systemExit = systemExit;
     this.systemAlert = systemAlert;
@@ -105,6 +107,8 @@
     this.chatMarkedAsRead = chatMarkedAsRead;
     this.chatMuted = chatMuted;
     this.chatUnmuted = chatUnmuted;
+    this.chatPinned = chatPinned;
+    this.chatUnpinned = chatUnpinned;
     this.chatDeleted = chatDeleted;
     this.chatClosed = chatClosed;
     this.chatReopened = chatReopened;
@@ -180,6 +184,10 @@
         obj.chatMuted = ApiClient.convertToType(data['chatMuted'], 'Number');
       if (data.hasOwnProperty('chatUnmuted'))
         obj.chatUnmuted = ApiClient.convertToType(data['chatUnmuted'], 'Number');
+      if (data.hasOwnProperty('chatPinned'))
+        obj.chatPinned = ApiClient.convertToType(data['chatPinned'], 'Number');
+      if (data.hasOwnProperty('chatUnpinned'))
+        obj.chatUnpinned = ApiClient.convertToType(data['chatUnpinned'], 'Number');
       if (data.hasOwnProperty('chatDeleted'))
         obj.chatDeleted = ApiClient.convertToType(data['chatDeleted'], 'Number');
       if (data.hasOwnProperty('chatClosed'))
@@ -333,6 +341,16 @@
    * @member {Number} chatUnmuted
    */
   exports.prototype.chatUnmuted = undefined;
+
+  /**
+   * @member {Number} chatPinned
+   */
+  exports.prototype.chatPinned = undefined;
+
+  /**
+   * @member {Number} chatUnpinned
+   */
+  exports.prototype.chatUnpinned = undefined;
 
   /**
    * @member {Number} chatDeleted

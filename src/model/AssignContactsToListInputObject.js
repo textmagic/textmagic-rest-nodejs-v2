@@ -33,7 +33,7 @@
   /**
    * The AssignContactsToListInputObject model module.
    * @module model/AssignContactsToListInputObject
-   * @version 2.0.1307
+   * @version 2.0.1421
    */
 
   /**

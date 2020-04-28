@@ -130,6 +130,12 @@
         // expect(instance.country).to.be(expectedValueLiteral);
       });
 
+      it('should have the property pinned (base name: "pinned")', function() {
+        // TODO: update the code to test the property pinned
+        expect(instance).to.have.property('pinned');
+        // expect(instance.pinned).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

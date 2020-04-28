@@ -46,6 +46,12 @@
         // expect(instance.phone).to.be(expectedValueLiteral);
       });
 
+      it('should have the property workflowId (base name: "workflowId")', function() {
+        // TODO: update the code to test the property workflowId
+        expect(instance).to.have.property('workflowId');
+        // expect(instance.workflowId).to.be(expectedValueLiteral);
+      });
+
       it('should have the property brand (base name: "brand")', function() {
         // TODO: update the code to test the property brand
         expect(instance).to.have.property('brand');

@@ -33,7 +33,7 @@
   /**
    * The ClearAndAssignContactsToListInputObject model module.
    * @module model/ClearAndAssignContactsToListInputObject
-   * @version 2.0.1307
+   * @version 2.0.1421
    */
 
   /**

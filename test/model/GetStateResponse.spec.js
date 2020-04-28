@@ -184,6 +184,18 @@
         // expect(instance.chatUnmuted).to.be(expectedValueLiteral);
       });
 
+      it('should have the property chatPinned (base name: "chatPinned")', function() {
+        // TODO: update the code to test the property chatPinned
+        expect(instance).to.have.property('chatPinned');
+        // expect(instance.chatPinned).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatUnpinned (base name: "chatUnpinned")', function() {
+        // TODO: update the code to test the property chatUnpinned
+        expect(instance).to.have.property('chatUnpinned');
+        // expect(instance.chatUnpinned).to.be(expectedValueLiteral);
+      });
+
       it('should have the property chatDeleted (base name: "chatDeleted")', function() {
         // TODO: update the code to test the property chatDeleted
         expect(instance).to.have.property('chatDeleted');

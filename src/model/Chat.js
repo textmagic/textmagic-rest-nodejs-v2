@@ -33,7 +33,7 @@
   /**
    * The Chat model module.
    * @module model/Chat
-   * @version 2.0.1307
+   * @version 2.0.1421
    */
 
   /**
@@ -55,8 +55,9 @@
    * @param mutedUntil {Date} Date and time until the chat will be muted.
    * @param timeLeftMute {Number} Time left untill the chat will be unmuted (seconds).
    * @param country {module:model/Country} 
+   * @param pinned {Boolean} Indicates when the chat is pinned.
    */
-  var exports = function(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, from, mutedUntil, timeLeftMute, country) {
+  var exports = function(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, from, mutedUntil, timeLeftMute, country, pinned) {
     this.id = id;
     this.originalId = originalId;
     this.phone = phone;
@@ -72,6 +73,7 @@
     this.mutedUntil = mutedUntil;
     this.timeLeftMute = timeLeftMute;
     this.country = country;
+    this.pinned = pinned;
   };
 
   /**
@@ -114,6 +116,8 @@
         obj.timeLeftMute = ApiClient.convertToType(data['timeLeftMute'], 'Number');
       if (data.hasOwnProperty('country'))
         obj.country = Country.constructFromObject(data['country']);
+      if (data.hasOwnProperty('pinned'))
+        obj.pinned = ApiClient.convertToType(data['pinned'], 'Boolean');
     }
     return obj;
   }
@@ -204,6 +208,12 @@
    * @member {module:model/Country} country
    */
   exports.prototype.country = undefined;
+
+  /**
+   * Indicates when the chat is pinned.
+   * @member {Boolean} pinned
+   */
+  exports.prototype.pinned = undefined;
 
 
   /**
