@@ -142,6 +142,18 @@
         // expect(instance.localCountry).to.be(expectedValueLiteral);
       });
 
+      it('should have the property destination (base name: "destination")', function() {
+        // TODO: update the code to test the property destination
+        expect(instance).to.have.property('destination');
+        // expect(instance.destination).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property resources (base name: "resources")', function() {
+        // TODO: update the code to test the property resources
+        expect(instance).to.have.property('resources');
+        // expect(instance.resources).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

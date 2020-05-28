@@ -8507,6 +8507,8 @@
           sendMessageInputObject.tts = false;
           sendMessageInputObject.local = false;
           sendMessageInputObject.localCountry = "US";
+          sendMessageInputObject.destination = "mms";
+          sendMessageInputObject.resources = "tmauKcSmwflB77kLQ15904023426649.jpg";
 
           instance.sendMessage(sendMessageInputObject).then(function(data) {
             // TODO: update response assertions
@@ -9071,6 +9073,37 @@
             expect(data.name).to.be("test.pdf");
             expect(data.size).to.be.a('number');
             expect(data.size).to.be(1094);
+            expect(data.resource).to.be.a('string');
+            expect(data.resource).to.be("tmfGSR8ShMSDMy8Aa15904809817838.jpg");
+
+            done();
+          }, function(error) {
+            done(error);
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('uploadMessageMMSAttachment', function() {
+        it('should call uploadMessageMMSAttachment successfully', function(done) {
+          // TODO: uncomment, update parameter values for uploadMessageMMSAttachment call and complete the assertions
+          /*
+          var file = "/path/to/file.txt";
+
+          instance.uploadMessageMMSAttachment(file).then(function(data) {
+            // TODO: update response assertions
+            expect(data).to.be.a(TextmagicClient.UploadMessageAttachmentResponse);
+            expect(data.chars).to.be.a('number');
+            expect(data.chars).to.be(10);
+            expect(data.href).to.be.a('string');
+            expect(data.href).to.be("click/Zwcj9");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("test.pdf");
+            expect(data.size).to.be.a('number');
+            expect(data.size).to.be(1094);
+            expect(data.resource).to.be.a('string');
+            expect(data.resource).to.be("tmfGSR8ShMSDMy8Aa15904809817838.jpg");
 
             done();
           }, function(error) {

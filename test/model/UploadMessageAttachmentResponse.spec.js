@@ -64,6 +64,12 @@
         // expect(instance.size).to.be(expectedValueLiteral);
       });
 
+      it('should have the property resource (base name: "resource")', function() {
+        // TODO: update the code to test the property resource
+        expect(instance).to.have.property('resource');
+        // expect(instance.resource).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

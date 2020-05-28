@@ -10,7 +10,7 @@ TextMagic’s application programming interface (API) provides the communication
 ## Installation
 
 ```shell
-npm install textmagic-client@2.0.1423 --save
+npm install textmagic-client@2.0.1484 --save
 ```
 
 ## Usage Example

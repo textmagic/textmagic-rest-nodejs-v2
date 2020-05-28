@@ -33,7 +33,7 @@
   /**
    * The UploadMessageAttachmentResponse model module.
    * @module model/UploadMessageAttachmentResponse
-   * @version 2.0.1423
+   * @version 2.0.1484
    */
 
   /**
@@ -44,12 +44,14 @@
    * @param href {String} This is a relative link to your file. To construct a full link, just add “[https://my.textmagic.com/”](https://my.textmagic.com/%E2%80%9D) to the beginning (like this: [https://my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9)). For most modern devices, you can omit the “https://” part and write just [my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9), which will save you 8 characters. 
    * @param name {String} File name of the uploaded file. 
    * @param size {Number} Attachment size in bytes.
+   * @param resource {String} Internal file name
    */
-  var exports = function(chars, href, name, size) {
+  var exports = function(chars, href, name, size, resource) {
     this.chars = chars;
     this.href = href;
     this.name = name;
     this.size = size;
+    this.resource = resource;
   };
 
   /**
@@ -70,6 +72,8 @@
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('size'))
         obj.size = ApiClient.convertToType(data['size'], 'Number');
+      if (data.hasOwnProperty('resource'))
+        obj.resource = ApiClient.convertToType(data['resource'], 'String');
     }
     return obj;
   }
@@ -97,6 +101,12 @@
    * @member {Number} size
    */
   exports.prototype.size = undefined;
+
+  /**
+   * Internal file name
+   * @member {String} resource
+   */
+  exports.prototype.resource = undefined;
 
   return exports;
 

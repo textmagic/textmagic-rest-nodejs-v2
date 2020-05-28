@@ -33,7 +33,7 @@
   /**
    * The ContactImage model module.
    * @module model/ContactImage
-   * @version 2.0.1423
+   * @version 2.0.1484
    */
 
   /**

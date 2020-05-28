@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.1423
+   * @version 2.0.1484
    */
 
   /**
@@ -8305,6 +8305,59 @@
      */
     this.uploadMessageAttachment = function(file) {
       return this.uploadMessageAttachmentWithHttpInfo(file)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Upload message mms attachment
+     * Upload a new file to mms.
+     * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UploadMessageAttachmentResponse} and HTTP response
+     */
+    this.uploadMessageMMSAttachmentWithHttpInfo = function(file) {
+      var postBody = null;
+
+      // verify the required parameter 'file' is set
+      if (file === undefined || file === null) {
+        throw new Error("Missing the required parameter 'file' when calling uploadMessageMMSAttachment");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'file': file
+      };
+
+      var authNames = ['BasicAuth'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = UploadMessageAttachmentResponse;
+
+      return this.apiClient.callApi(
+        '/api/v2/messages/mms/attachment', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Upload message mms attachment
+     * Upload a new file to mms.
+     * @param {File} file Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UploadMessageAttachmentResponse}
+     */
+    this.uploadMessageMMSAttachment = function(file) {
+      return this.uploadMessageMMSAttachmentWithHttpInfo(file)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

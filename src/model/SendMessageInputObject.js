@@ -33,7 +33,7 @@
   /**
    * The SendMessageInputObject model module.
    * @module model/SendMessageInputObject
-   * @version 2.0.1423
+   * @version 2.0.1484
    */
 
   /**
@@ -88,6 +88,10 @@
         obj.local = ApiClient.convertToType(data['local'], 'Boolean');
       if (data.hasOwnProperty('localCountry'))
         obj.localCountry = ApiClient.convertToType(data['localCountry'], 'String');
+      if (data.hasOwnProperty('destination'))
+        obj.destination = ApiClient.convertToType(data['destination'], 'String');
+      if (data.hasOwnProperty('resources'))
+        obj.resources = ApiClient.convertToType(data['resources'], 'String');
     }
     return obj;
   }
@@ -197,6 +201,19 @@
    * @member {String} localCountry
    */
   exports.prototype.localCountry = undefined;
+
+  /**
+   * Messsage destination type allowed [mms, tts].
+   * @member {String} destination
+   * @default 'false'
+   */
+  exports.prototype.destination = 'false';
+
+  /**
+   * File name from mms attachment response (named as resource)
+   * @member {String} resources
+   */
+  exports.prototype.resources = undefined;
 
   return exports;
 
