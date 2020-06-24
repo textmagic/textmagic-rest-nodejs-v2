@@ -33,7 +33,7 @@
   /**
    * The SendMessageInputObject model module.
    * @module model/SendMessageInputObject
-   * @version 2.0.1484
+   * @version 2.0.1534
    */
 
   /**
@@ -205,9 +205,8 @@
   /**
    * Messsage destination type allowed [mms, tts].
    * @member {String} destination
-   * @default 'false'
    */
-  exports.prototype.destination = 'false';
+  exports.prototype.destination = undefined;
 
   /**
    * File name from mms attachment response (named as resource)

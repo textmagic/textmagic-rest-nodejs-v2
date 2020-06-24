@@ -33,7 +33,7 @@
   /**
    * The NotFoundResponse model module.
    * @module model/NotFoundResponse
-   * @version 2.0.1484
+   * @version 2.0.1534
    */
 
   /**

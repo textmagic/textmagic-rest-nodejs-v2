@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **tts** | **Boolean** | Send a Text-to-Speech message. | [optional] [default to false]
 **local** | **Boolean** | Treat phone numbers passed in the \\'phones\\' field as local. | [optional] [default to false]
 **localCountry** | **String** | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country. | [optional] 
-**destination** | **String** | Messsage destination type allowed [mms, tts]. | [optional] [default to 'false']
+**destination** | **String** | Messsage destination type allowed [mms, tts]. | [optional] 
 **resources** | **String** | File name from mms attachment response (named as resource) | [optional] 
 
 

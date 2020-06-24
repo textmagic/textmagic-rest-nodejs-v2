@@ -33,7 +33,7 @@
   /**
    * The GetFavoritesPaginatedResponse model module.
    * @module model/GetFavoritesPaginatedResponse
-   * @version 2.0.1484
+   * @version 2.0.1534
    */
 
   /**

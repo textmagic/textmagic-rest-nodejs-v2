@@ -33,7 +33,7 @@
   /**
    * The SearchListsPaginatedResponse model module.
    * @module model/SearchListsPaginatedResponse
-   * @version 2.0.1484
+   * @version 2.0.1534
    */
 
   /**
