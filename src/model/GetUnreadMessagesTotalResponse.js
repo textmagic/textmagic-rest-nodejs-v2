@@ -33,7 +33,7 @@
   /**
    * The GetUnreadMessagesTotalResponse model module.
    * @module model/GetUnreadMessagesTotalResponse
-   * @version 2.0.1534
+   * @version 2.0.1588
    */
 
   /**

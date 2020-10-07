@@ -3167,8 +3167,8 @@ var opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find messages by specified search query.
-  'start': 56, // Number | Return messages since specified timestamp only.
-  'end': 56, // Number | Return messages up to specified timestamp only.
+  'start': "start_example", // String | Return messages since specified timestamp only. Required when `end` parameter specified.
+  'end': "end_example", // String | Return messages up to specified timestamp only. Required when `start` parameter specified.
   'direction': "desc", // String | Order direction. Default is desc.
   'voice': 0 // Number | Fetch results with voice calls.
 };
@@ -3188,8 +3188,8 @@ Name | Type | Description  | Notes
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find messages by specified search query. | [optional] 
- **start** | **Number**| Return messages since specified timestamp only. | [optional] 
- **end** | **Number**| Return messages up to specified timestamp only. | [optional] 
+ **start** | **String**| Return messages since specified timestamp only. Required when `end` parameter specified. | [optional] 
+ **end** | **String**| Return messages up to specified timestamp only. Required when `start` parameter specified. | [optional] 
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
  **voice** | **Number**| Fetch results with voice calls. | [optional] [default to 0]
 

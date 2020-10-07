@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.1534
+   * @version 2.0.1588
    */
 
   /**
@@ -3282,8 +3282,8 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {String} opts.query Find messages by specified search query.
-     * @param {Number} opts.start Return messages since specified timestamp only.
-     * @param {Number} opts.end Return messages up to specified timestamp only.
+     * @param {String} opts.start Return messages since specified timestamp only. Required when `end` parameter specified.
+     * @param {String} opts.end Return messages up to specified timestamp only. Required when `start` parameter specified.
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @param {Number} opts.voice Fetch results with voice calls. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetChatMessagesPaginatedResponse} and HTTP response
@@ -3337,8 +3337,8 @@
      * @param {Number} opts.page Fetch specified results page. (default to 1)
      * @param {Number} opts.limit The number of results per page. (default to 10)
      * @param {String} opts.query Find messages by specified search query.
-     * @param {Number} opts.start Return messages since specified timestamp only.
-     * @param {Number} opts.end Return messages up to specified timestamp only.
+     * @param {String} opts.start Return messages since specified timestamp only. Required when `end` parameter specified.
+     * @param {String} opts.end Return messages up to specified timestamp only. Required when `start` parameter specified.
      * @param {module:model/String} opts.direction Order direction. Default is desc. (default to desc)
      * @param {Number} opts.voice Fetch results with voice calls. (default to 0)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetChatMessagesPaginatedResponse}

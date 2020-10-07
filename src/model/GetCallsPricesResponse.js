@@ -33,7 +33,7 @@
   /**
    * The GetCallsPricesResponse model module.
    * @module model/GetCallsPricesResponse
-   * @version 2.0.1534
+   * @version 2.0.1588
    */
 
   /**

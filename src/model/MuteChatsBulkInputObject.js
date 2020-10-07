@@ -33,7 +33,7 @@
   /**
    * The MuteChatsBulkInputObject model module.
    * @module model/MuteChatsBulkInputObject
-   * @version 2.0.1534
+   * @version 2.0.1588
    */
 
   /**

@@ -2838,8 +2838,8 @@
           opts.page = 1;
           opts.limit = 10;
           opts.query = "query_example";
-          opts.start = 56;
-          opts.end = 56;
+          opts.start = "start_example";
+          opts.end = "end_example";
           opts.direction = "desc";
           opts.voice = 0;
 

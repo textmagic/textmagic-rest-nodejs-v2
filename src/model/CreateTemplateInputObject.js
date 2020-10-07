@@ -33,7 +33,7 @@
   /**
    * The CreateTemplateInputObject model module.
    * @module model/CreateTemplateInputObject
-   * @version 2.0.1534
+   * @version 2.0.1588
    */
 
   /**
