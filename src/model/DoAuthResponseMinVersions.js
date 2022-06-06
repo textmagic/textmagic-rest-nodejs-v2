@@ -33,16 +33,16 @@
   /**
    * The DoAuthResponseMinVersions model module.
    * @module model/DoAuthResponseMinVersions
-   * @version 2.0.1588
+   * @version 2.0.3361
    */
 
   /**
    * Constructs a new <code>DoAuthResponseMinVersions</code>.
    * @alias module:model/DoAuthResponseMinVersions
    * @class
-   * @param ios {Number} 
-   * @param android {Number} 
-   * @param desktop {Number} 
+   * @param ios {String} 
+   * @param android {String} 
+   * @param desktop {String} 
    */
   var exports = function(ios, android, desktop) {
     this.ios = ios;
@@ -61,27 +61,27 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('ios'))
-        obj.ios = ApiClient.convertToType(data['ios'], 'Number');
+        obj.ios = ApiClient.convertToType(data['ios'], 'String');
       if (data.hasOwnProperty('android'))
-        obj.android = ApiClient.convertToType(data['android'], 'Number');
+        obj.android = ApiClient.convertToType(data['android'], 'String');
       if (data.hasOwnProperty('desktop'))
-        obj.desktop = ApiClient.convertToType(data['desktop'], 'Number');
+        obj.desktop = ApiClient.convertToType(data['desktop'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {Number} ios
+   * @member {String} ios
    */
   exports.prototype.ios = undefined;
 
   /**
-   * @member {Number} android
+   * @member {String} android
    */
   exports.prototype.android = undefined;
 
   /**
-   * @member {Number} desktop
+   * @member {String} desktop
    */
   exports.prototype.desktop = undefined;
 

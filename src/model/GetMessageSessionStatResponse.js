@@ -33,7 +33,7 @@
   /**
    * The GetMessageSessionStatResponse model module.
    * @module model/GetMessageSessionStatResponse
-   * @version 2.0.1588
+   * @version 2.0.3361
    */
 
   /**
