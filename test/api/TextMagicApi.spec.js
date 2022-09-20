@@ -522,7 +522,7 @@
           /*
           var deleteContactsByIdsInputObject = new TextmagicClient.DeleteContactsByIdsInputObject();
           deleteContactsByIdsInputObject.ids = "1,2,3";
-          deleteContactsByIdsInputObject.all = false;
+          deleteContactsByIdsInputObject.all = 0;
 
           instance.deleteContactsByIds(deleteContactsByIdsInputObject).then(function(data) {
 
@@ -1851,8 +1851,8 @@
             expect(data).to.be.a(TextmagicClient.GetBalanceNotificationSettingsResponse);
             expect(data.lowBalanceNotification).to.be.a('boolean');
             expect(data.lowBalanceNotification).to.be(true);
-            expect(data.alertBalance).to.be.a('string');
-            expect(data.alertBalance).to.be("50");
+            expect(data.alertBalance).to.be.a('number');
+            expect(data.alertBalance).to.be(50.0);
             expect(data.alertPhone).to.be.a('string');
             expect(data.alertPhone).to.be("447860021130");
             expect(data.alertEmail1).to.be.a('string');

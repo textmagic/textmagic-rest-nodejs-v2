@@ -33,7 +33,7 @@
   /**
    * The DeleteContactsByIdsInputObject model module.
    * @module model/DeleteContactsByIdsInputObject
-   * @version 2.0.3361
+   * @version 2.0.4420
    */
 
   /**
@@ -57,7 +57,7 @@
       if (data.hasOwnProperty('ids'))
         obj.ids = ApiClient.convertToType(data['ids'], 'String');
       if (data.hasOwnProperty('all'))
-        obj.all = ApiClient.convertToType(data['all'], 'Boolean');
+        obj.all = ApiClient.convertToType(data['all'], 'Number');
     }
     return obj;
   }
@@ -69,8 +69,8 @@
   exports.prototype.ids = undefined;
 
   /**
-   * Entity ID(s), separated by comma.
-   * @member {Boolean} all
+   * Optional. Default is 0 (false). If set to 1 all the entities will be removed.
+   * @member {Number} all
    */
   exports.prototype.all = undefined;
 

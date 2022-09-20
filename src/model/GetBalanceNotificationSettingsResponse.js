@@ -33,7 +33,7 @@
   /**
    * The GetBalanceNotificationSettingsResponse model module.
    * @module model/GetBalanceNotificationSettingsResponse
-   * @version 2.0.3361
+   * @version 2.0.4420
    */
 
   /**
@@ -41,7 +41,7 @@
    * @alias module:model/GetBalanceNotificationSettingsResponse
    * @class
    * @param lowBalanceNotification {Boolean} Should user receive low balance notification.
-   * @param alertBalance {String} If balance is below this value, user receive low balance notification.
+   * @param alertBalance {Number} If balance is below this value, user receive low balance notification.
    * @param alertPhone {String} Low balance notification phone number.
    * @param alertEmail1 {String} Low balance notification email 1.
    * @param alertEmail2 {String} Low balance notification email 2.
@@ -69,7 +69,7 @@
       if (data.hasOwnProperty('lowBalanceNotification'))
         obj.lowBalanceNotification = ApiClient.convertToType(data['lowBalanceNotification'], 'Boolean');
       if (data.hasOwnProperty('alertBalance'))
-        obj.alertBalance = ApiClient.convertToType(data['alertBalance'], 'String');
+        obj.alertBalance = ApiClient.convertToType(data['alertBalance'], 'Number');
       if (data.hasOwnProperty('alertPhone'))
         obj.alertPhone = ApiClient.convertToType(data['alertPhone'], 'String');
       if (data.hasOwnProperty('alertEmail1'))
@@ -90,7 +90,7 @@
 
   /**
    * If balance is below this value, user receive low balance notification.
-   * @member {String} alertBalance
+   * @member {Number} alertBalance
    */
   exports.prototype.alertBalance = undefined;
 
