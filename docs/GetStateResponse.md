@@ -7,6 +7,9 @@ Name | Type | Description | Notes
 **systemExit** | **Number** |  | 
 **systemAlert** | **Number** |  | 
 **systemAccountStateChanged** | **Number** |  | 
+**systemAccountAdditionalFields** | **Number** |  | 
+**systemAccountPermissionsChanged** | **Number** |  | 
+**userBalanceChanged** | **Number** |  | 
 **messageDeleted** | **Number** |  | 
 **messageIncoming** | **Number** |  | 
 **messageIncomingDeleted** | **Number** |  | 
@@ -20,6 +23,7 @@ Name | Type | Description | Notes
 **messageScheduleAdded** | **Number** |  | 
 **messageScheduleStateChanged** | **Number** |  | 
 **messageScheduleDeleted** | **Number** |  | 
+**messageScheduleNotSentStateChanged** | **Number** |  | 
 **messageScheduleCacheClear** | **Number** |  | 
 **messageTemplateCacheClear** | **Number** |  | 
 **callFinished** | **Number** |  | 
@@ -33,6 +37,8 @@ Name | Type | Description | Notes
 **chatClosed** | **Number** |  | 
 **chatReopened** | **Number** |  | 
 **chatCacheClear** | **Number** |  | 
+**chatRead** | **Number** |  | 
+**chatUnread** | **Number** |  | 
 **contactAdded** | **Number** |  | 
 **contactDeleted** | **Number** |  | 
 **contactStateChanged** | **Number** |  | 
@@ -44,5 +50,13 @@ Name | Type | Description | Notes
 **contactCacheClear** | **Number** |  | 
 **listCacheClear** | **Number** |  | 
 **customFieldsCacheClear** | **Number** |  | 
+**progressCarrierBulkLookup** | **Number** |  | 
+**progressEmailBulkLookup** | **Number** |  | 
+**progressSubAccountBulkImport** | **Number** |  | 
+**progressContactBulkImport** | **Number** |  | 
+**forceRefreshWebApp** | **Number** |  | 
+**chatSenderSettingsChanged** | **Number** |  | 
+**countrySenderSettingsChanged** | **Number** |  | 
+**chatSuggestedReplyChunk** | **Number** |  | 
 
 

@@ -33,7 +33,7 @@
   /**
    * The GetStateResponse model module.
    * @module model/GetStateResponse
-   * @version 2.0.4420
+   * @version 2.0.17425
    */
 
   /**
@@ -44,6 +44,9 @@
    * @param systemExit {Number} 
    * @param systemAlert {Number} 
    * @param systemAccountStateChanged {Number} 
+   * @param systemAccountAdditionalFields {Number} 
+   * @param systemAccountPermissionsChanged {Number} 
+   * @param userBalanceChanged {Number} 
    * @param messageDeleted {Number} 
    * @param messageIncoming {Number} 
    * @param messageIncomingDeleted {Number} 
@@ -57,6 +60,7 @@
    * @param messageScheduleAdded {Number} 
    * @param messageScheduleStateChanged {Number} 
    * @param messageScheduleDeleted {Number} 
+   * @param messageScheduleNotSentStateChanged {Number} 
    * @param messageScheduleCacheClear {Number} 
    * @param messageTemplateCacheClear {Number} 
    * @param callFinished {Number} 
@@ -70,6 +74,8 @@
    * @param chatClosed {Number} 
    * @param chatReopened {Number} 
    * @param chatCacheClear {Number} 
+   * @param chatRead {Number} 
+   * @param chatUnread {Number} 
    * @param contactAdded {Number} 
    * @param contactDeleted {Number} 
    * @param contactStateChanged {Number} 
@@ -81,12 +87,23 @@
    * @param contactCacheClear {Number} 
    * @param listCacheClear {Number} 
    * @param customFieldsCacheClear {Number} 
+   * @param progressCarrierBulkLookup {Number} 
+   * @param progressEmailBulkLookup {Number} 
+   * @param progressSubAccountBulkImport {Number} 
+   * @param progressContactBulkImport {Number} 
+   * @param forceRefreshWebApp {Number} 
+   * @param chatSenderSettingsChanged {Number} 
+   * @param countrySenderSettingsChanged {Number} 
+   * @param chatSuggestedReplyChunk {Number} 
    */
-  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear) {
+  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountAdditionalFields, systemAccountPermissionsChanged, userBalanceChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, chatRead, chatUnread, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressEmailBulkLookup, progressSubAccountBulkImport, progressContactBulkImport, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSuggestedReplyChunk) {
     this.systemCacheClear = systemCacheClear;
     this.systemExit = systemExit;
     this.systemAlert = systemAlert;
     this.systemAccountStateChanged = systemAccountStateChanged;
+    this.systemAccountAdditionalFields = systemAccountAdditionalFields;
+    this.systemAccountPermissionsChanged = systemAccountPermissionsChanged;
+    this.userBalanceChanged = userBalanceChanged;
     this.messageDeleted = messageDeleted;
     this.messageIncoming = messageIncoming;
     this.messageIncomingDeleted = messageIncomingDeleted;
@@ -100,6 +117,7 @@
     this.messageScheduleAdded = messageScheduleAdded;
     this.messageScheduleStateChanged = messageScheduleStateChanged;
     this.messageScheduleDeleted = messageScheduleDeleted;
+    this.messageScheduleNotSentStateChanged = messageScheduleNotSentStateChanged;
     this.messageScheduleCacheClear = messageScheduleCacheClear;
     this.messageTemplateCacheClear = messageTemplateCacheClear;
     this.callFinished = callFinished;
@@ -113,6 +131,8 @@
     this.chatClosed = chatClosed;
     this.chatReopened = chatReopened;
     this.chatCacheClear = chatCacheClear;
+    this.chatRead = chatRead;
+    this.chatUnread = chatUnread;
     this.contactAdded = contactAdded;
     this.contactDeleted = contactDeleted;
     this.contactStateChanged = contactStateChanged;
@@ -124,6 +144,14 @@
     this.contactCacheClear = contactCacheClear;
     this.listCacheClear = listCacheClear;
     this.customFieldsCacheClear = customFieldsCacheClear;
+    this.progressCarrierBulkLookup = progressCarrierBulkLookup;
+    this.progressEmailBulkLookup = progressEmailBulkLookup;
+    this.progressSubAccountBulkImport = progressSubAccountBulkImport;
+    this.progressContactBulkImport = progressContactBulkImport;
+    this.forceRefreshWebApp = forceRefreshWebApp;
+    this.chatSenderSettingsChanged = chatSenderSettingsChanged;
+    this.countrySenderSettingsChanged = countrySenderSettingsChanged;
+    this.chatSuggestedReplyChunk = chatSuggestedReplyChunk;
   };
 
   /**
@@ -144,6 +172,12 @@
         obj.systemAlert = ApiClient.convertToType(data['systemAlert'], 'Number');
       if (data.hasOwnProperty('systemAccountStateChanged'))
         obj.systemAccountStateChanged = ApiClient.convertToType(data['systemAccountStateChanged'], 'Number');
+      if (data.hasOwnProperty('systemAccountAdditionalFields'))
+        obj.systemAccountAdditionalFields = ApiClient.convertToType(data['systemAccountAdditionalFields'], 'Number');
+      if (data.hasOwnProperty('systemAccountPermissionsChanged'))
+        obj.systemAccountPermissionsChanged = ApiClient.convertToType(data['systemAccountPermissionsChanged'], 'Number');
+      if (data.hasOwnProperty('userBalanceChanged'))
+        obj.userBalanceChanged = ApiClient.convertToType(data['userBalanceChanged'], 'Number');
       if (data.hasOwnProperty('messageDeleted'))
         obj.messageDeleted = ApiClient.convertToType(data['messageDeleted'], 'Number');
       if (data.hasOwnProperty('messageIncoming'))
@@ -170,6 +204,8 @@
         obj.messageScheduleStateChanged = ApiClient.convertToType(data['messageScheduleStateChanged'], 'Number');
       if (data.hasOwnProperty('messageScheduleDeleted'))
         obj.messageScheduleDeleted = ApiClient.convertToType(data['messageScheduleDeleted'], 'Number');
+      if (data.hasOwnProperty('messageScheduleNotSentStateChanged'))
+        obj.messageScheduleNotSentStateChanged = ApiClient.convertToType(data['messageScheduleNotSentStateChanged'], 'Number');
       if (data.hasOwnProperty('messageScheduleCacheClear'))
         obj.messageScheduleCacheClear = ApiClient.convertToType(data['messageScheduleCacheClear'], 'Number');
       if (data.hasOwnProperty('messageTemplateCacheClear'))
@@ -196,6 +232,10 @@
         obj.chatReopened = ApiClient.convertToType(data['chatReopened'], 'Number');
       if (data.hasOwnProperty('chatCacheClear'))
         obj.chatCacheClear = ApiClient.convertToType(data['chatCacheClear'], 'Number');
+      if (data.hasOwnProperty('chatRead'))
+        obj.chatRead = ApiClient.convertToType(data['chatRead'], 'Number');
+      if (data.hasOwnProperty('chatUnread'))
+        obj.chatUnread = ApiClient.convertToType(data['chatUnread'], 'Number');
       if (data.hasOwnProperty('contactAdded'))
         obj.contactAdded = ApiClient.convertToType(data['contactAdded'], 'Number');
       if (data.hasOwnProperty('contactDeleted'))
@@ -218,6 +258,22 @@
         obj.listCacheClear = ApiClient.convertToType(data['listCacheClear'], 'Number');
       if (data.hasOwnProperty('customFieldsCacheClear'))
         obj.customFieldsCacheClear = ApiClient.convertToType(data['customFieldsCacheClear'], 'Number');
+      if (data.hasOwnProperty('progressCarrierBulkLookup'))
+        obj.progressCarrierBulkLookup = ApiClient.convertToType(data['progressCarrierBulkLookup'], 'Number');
+      if (data.hasOwnProperty('progressEmailBulkLookup'))
+        obj.progressEmailBulkLookup = ApiClient.convertToType(data['progressEmailBulkLookup'], 'Number');
+      if (data.hasOwnProperty('progressSubAccountBulkImport'))
+        obj.progressSubAccountBulkImport = ApiClient.convertToType(data['progressSubAccountBulkImport'], 'Number');
+      if (data.hasOwnProperty('progressContactBulkImport'))
+        obj.progressContactBulkImport = ApiClient.convertToType(data['progressContactBulkImport'], 'Number');
+      if (data.hasOwnProperty('forceRefreshWebApp'))
+        obj.forceRefreshWebApp = ApiClient.convertToType(data['forceRefreshWebApp'], 'Number');
+      if (data.hasOwnProperty('chatSenderSettingsChanged'))
+        obj.chatSenderSettingsChanged = ApiClient.convertToType(data['chatSenderSettingsChanged'], 'Number');
+      if (data.hasOwnProperty('countrySenderSettingsChanged'))
+        obj.countrySenderSettingsChanged = ApiClient.convertToType(data['countrySenderSettingsChanged'], 'Number');
+      if (data.hasOwnProperty('chatSuggestedReplyChunk'))
+        obj.chatSuggestedReplyChunk = ApiClient.convertToType(data['chatSuggestedReplyChunk'], 'Number');
     }
     return obj;
   }
@@ -241,6 +297,21 @@
    * @member {Number} systemAccountStateChanged
    */
   exports.prototype.systemAccountStateChanged = undefined;
+
+  /**
+   * @member {Number} systemAccountAdditionalFields
+   */
+  exports.prototype.systemAccountAdditionalFields = undefined;
+
+  /**
+   * @member {Number} systemAccountPermissionsChanged
+   */
+  exports.prototype.systemAccountPermissionsChanged = undefined;
+
+  /**
+   * @member {Number} userBalanceChanged
+   */
+  exports.prototype.userBalanceChanged = undefined;
 
   /**
    * @member {Number} messageDeleted
@@ -308,6 +379,11 @@
   exports.prototype.messageScheduleDeleted = undefined;
 
   /**
+   * @member {Number} messageScheduleNotSentStateChanged
+   */
+  exports.prototype.messageScheduleNotSentStateChanged = undefined;
+
+  /**
    * @member {Number} messageScheduleCacheClear
    */
   exports.prototype.messageScheduleCacheClear = undefined;
@@ -373,6 +449,16 @@
   exports.prototype.chatCacheClear = undefined;
 
   /**
+   * @member {Number} chatRead
+   */
+  exports.prototype.chatRead = undefined;
+
+  /**
+   * @member {Number} chatUnread
+   */
+  exports.prototype.chatUnread = undefined;
+
+  /**
    * @member {Number} contactAdded
    */
   exports.prototype.contactAdded = undefined;
@@ -426,6 +512,46 @@
    * @member {Number} customFieldsCacheClear
    */
   exports.prototype.customFieldsCacheClear = undefined;
+
+  /**
+   * @member {Number} progressCarrierBulkLookup
+   */
+  exports.prototype.progressCarrierBulkLookup = undefined;
+
+  /**
+   * @member {Number} progressEmailBulkLookup
+   */
+  exports.prototype.progressEmailBulkLookup = undefined;
+
+  /**
+   * @member {Number} progressSubAccountBulkImport
+   */
+  exports.prototype.progressSubAccountBulkImport = undefined;
+
+  /**
+   * @member {Number} progressContactBulkImport
+   */
+  exports.prototype.progressContactBulkImport = undefined;
+
+  /**
+   * @member {Number} forceRefreshWebApp
+   */
+  exports.prototype.forceRefreshWebApp = undefined;
+
+  /**
+   * @member {Number} chatSenderSettingsChanged
+   */
+  exports.prototype.chatSenderSettingsChanged = undefined;
+
+  /**
+   * @member {Number} countrySenderSettingsChanged
+   */
+  exports.prototype.countrySenderSettingsChanged = undefined;
+
+  /**
+   * @member {Number} chatSuggestedReplyChunk
+   */
+  exports.prototype.chatSuggestedReplyChunk = undefined;
 
   return exports;
 

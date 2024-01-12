@@ -64,6 +64,24 @@
         // expect(instance.systemAccountStateChanged).to.be(expectedValueLiteral);
       });
 
+      it('should have the property systemAccountAdditionalFields (base name: "systemAccountAdditionalFields")', function() {
+        // TODO: update the code to test the property systemAccountAdditionalFields
+        expect(instance).to.have.property('systemAccountAdditionalFields');
+        // expect(instance.systemAccountAdditionalFields).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property systemAccountPermissionsChanged (base name: "systemAccountPermissionsChanged")', function() {
+        // TODO: update the code to test the property systemAccountPermissionsChanged
+        expect(instance).to.have.property('systemAccountPermissionsChanged');
+        // expect(instance.systemAccountPermissionsChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property userBalanceChanged (base name: "userBalanceChanged")', function() {
+        // TODO: update the code to test the property userBalanceChanged
+        expect(instance).to.have.property('userBalanceChanged');
+        // expect(instance.userBalanceChanged).to.be(expectedValueLiteral);
+      });
+
       it('should have the property messageDeleted (base name: "messageDeleted")', function() {
         // TODO: update the code to test the property messageDeleted
         expect(instance).to.have.property('messageDeleted');
@@ -140,6 +158,12 @@
         // TODO: update the code to test the property messageScheduleDeleted
         expect(instance).to.have.property('messageScheduleDeleted');
         // expect(instance.messageScheduleDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property messageScheduleNotSentStateChanged (base name: "messageScheduleNotSentStateChanged")', function() {
+        // TODO: update the code to test the property messageScheduleNotSentStateChanged
+        expect(instance).to.have.property('messageScheduleNotSentStateChanged');
+        // expect(instance.messageScheduleNotSentStateChanged).to.be(expectedValueLiteral);
       });
 
       it('should have the property messageScheduleCacheClear (base name: "messageScheduleCacheClear")', function() {
@@ -220,6 +244,18 @@
         // expect(instance.chatCacheClear).to.be(expectedValueLiteral);
       });
 
+      it('should have the property chatRead (base name: "chatRead")', function() {
+        // TODO: update the code to test the property chatRead
+        expect(instance).to.have.property('chatRead');
+        // expect(instance.chatRead).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatUnread (base name: "chatUnread")', function() {
+        // TODO: update the code to test the property chatUnread
+        expect(instance).to.have.property('chatUnread');
+        // expect(instance.chatUnread).to.be(expectedValueLiteral);
+      });
+
       it('should have the property contactAdded (base name: "contactAdded")', function() {
         // TODO: update the code to test the property contactAdded
         expect(instance).to.have.property('contactAdded');
@@ -284,6 +320,54 @@
         // TODO: update the code to test the property customFieldsCacheClear
         expect(instance).to.have.property('customFieldsCacheClear');
         // expect(instance.customFieldsCacheClear).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property progressCarrierBulkLookup (base name: "progressCarrierBulkLookup")', function() {
+        // TODO: update the code to test the property progressCarrierBulkLookup
+        expect(instance).to.have.property('progressCarrierBulkLookup');
+        // expect(instance.progressCarrierBulkLookup).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property progressEmailBulkLookup (base name: "progressEmailBulkLookup")', function() {
+        // TODO: update the code to test the property progressEmailBulkLookup
+        expect(instance).to.have.property('progressEmailBulkLookup');
+        // expect(instance.progressEmailBulkLookup).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property progressSubAccountBulkImport (base name: "progressSubAccountBulkImport")', function() {
+        // TODO: update the code to test the property progressSubAccountBulkImport
+        expect(instance).to.have.property('progressSubAccountBulkImport');
+        // expect(instance.progressSubAccountBulkImport).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property progressContactBulkImport (base name: "progressContactBulkImport")', function() {
+        // TODO: update the code to test the property progressContactBulkImport
+        expect(instance).to.have.property('progressContactBulkImport');
+        // expect(instance.progressContactBulkImport).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property forceRefreshWebApp (base name: "forceRefreshWebApp")', function() {
+        // TODO: update the code to test the property forceRefreshWebApp
+        expect(instance).to.have.property('forceRefreshWebApp');
+        // expect(instance.forceRefreshWebApp).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatSenderSettingsChanged (base name: "chatSenderSettingsChanged")', function() {
+        // TODO: update the code to test the property chatSenderSettingsChanged
+        expect(instance).to.have.property('chatSenderSettingsChanged');
+        // expect(instance.chatSenderSettingsChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property countrySenderSettingsChanged (base name: "countrySenderSettingsChanged")', function() {
+        // TODO: update the code to test the property countrySenderSettingsChanged
+        expect(instance).to.have.property('countrySenderSettingsChanged');
+        // expect(instance.countrySenderSettingsChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatSuggestedReplyChunk (base name: "chatSuggestedReplyChunk")', function() {
+        // TODO: update the code to test the property chatSuggestedReplyChunk
+        expect(instance).to.have.property('chatSuggestedReplyChunk');
+        // expect(instance.chatSuggestedReplyChunk).to.be(expectedValueLiteral);
       });
 
     });

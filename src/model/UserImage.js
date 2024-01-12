@@ -33,7 +33,7 @@
   /**
    * The UserImage model module.
    * @module model/UserImage
-   * @version 2.0.4420
+   * @version 2.0.17425
    */
 
   /**

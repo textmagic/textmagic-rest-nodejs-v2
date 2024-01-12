@@ -64,6 +64,18 @@
         // expect(instance.senderIds).to.be(expectedValueLiteral);
       });
 
+      it('should have the property userCarrierTwilio (base name: "userCarrierTwilio")', function() {
+        // TODO: update the code to test the property userCarrierTwilio
+        expect(instance).to.have.property('userCarrierTwilio');
+        // expect(instance.userCarrierTwilio).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property userCarrierVonage (base name: "userCarrierVonage")', function() {
+        // TODO: update the code to test the property userCarrierVonage
+        expect(instance).to.have.property('userCarrierVonage');
+        // expect(instance.userCarrierVonage).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

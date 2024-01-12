@@ -33,7 +33,7 @@
   /**
    * The GetSubaccountsWithTokensResponse model module.
    * @module model/GetSubaccountsWithTokensResponse
-   * @version 2.0.4420
+   * @version 2.0.17425
    */
 
   /**

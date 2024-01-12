@@ -33,7 +33,7 @@
   /**
    * The Chat model module.
    * @module model/Chat
-   * @version 2.0.4420
+   * @version 2.0.17425
    */
 
   /**
@@ -51,13 +51,14 @@
    * @param mute {Number} Indicates when the chat is muted.
    * @param lastMessage {String} The last message content of a chat.
    * @param direction {module:model/Chat.DirectionEnum} Last message type: * **ci** - incoming call; * **co** - outgoing call; * **i** - incoming message; * **o** - outgoing message. 
+   * @param replyOptionsType {String} Used for chats prices.
    * @param from {String} If filled, the value will be used as a sender number for all outgoing messages of a chat.
    * @param mutedUntil {Date} Date and time until the chat will be muted.
    * @param timeLeftMute {Number} Time left untill the chat will be unmuted (seconds).
    * @param country {module:model/Country} 
    * @param pinned {Boolean} Indicates when the chat is pinned.
    */
-  var exports = function(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, from, mutedUntil, timeLeftMute, country, pinned) {
+  var exports = function(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned) {
     this.id = id;
     this.originalId = originalId;
     this.phone = phone;
@@ -69,6 +70,7 @@
     this.mute = mute;
     this.lastMessage = lastMessage;
     this.direction = direction;
+    this.replyOptionsType = replyOptionsType;
     this.from = from;
     this.mutedUntil = mutedUntil;
     this.timeLeftMute = timeLeftMute;
@@ -108,6 +110,8 @@
         obj.lastMessage = ApiClient.convertToType(data['lastMessage'], 'String');
       if (data.hasOwnProperty('direction'))
         obj.direction = ApiClient.convertToType(data['direction'], 'String');
+      if (data.hasOwnProperty('replyOptionsType'))
+        obj.replyOptionsType = ApiClient.convertToType(data['replyOptionsType'], 'String');
       if (data.hasOwnProperty('from'))
         obj.from = ApiClient.convertToType(data['from'], 'String');
       if (data.hasOwnProperty('mutedUntil'))
@@ -185,6 +189,12 @@
    * @member {module:model/Chat.DirectionEnum} direction
    */
   exports.prototype.direction = undefined;
+
+  /**
+   * Used for chats prices.
+   * @member {String} replyOptionsType
+   */
+  exports.prototype.replyOptionsType = undefined;
 
   /**
    * If filled, the value will be used as a sender number for all outgoing messages of a chat.

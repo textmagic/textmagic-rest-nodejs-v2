@@ -1312,6 +1312,8 @@
                 expect(data.lastMessage).to.be("Hello world!");
                 expect(data.direction).to.be.a('string');
                 expect(data.direction).to.be("ci");
+                expect(data.replyOptionsType).to.be.a('string');
+                expect(data.replyOptionsType).to.be("user_carrier_twilio");
                 expect(data.from).to.be.a('string');
                 expect(data.from).to.be("447860021130");
                 expect(data.mutedUntil).to.be.a(Date);
@@ -1783,6 +1785,26 @@
             }
             {
               let dataCtr = data.senderIds;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.userCarrierTwilio;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.userCarrierVonage;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
@@ -2504,6 +2526,8 @@
             expect(data.lastMessage).to.be("Hello world!");
             expect(data.direction).to.be.a('string');
             expect(data.direction).to.be("ci");
+            expect(data.replyOptionsType).to.be.a('string');
+            expect(data.replyOptionsType).to.be("user_carrier_twilio");
             expect(data.from).to.be.a('string');
             expect(data.from).to.be("447860021130");
             expect(data.mutedUntil).to.be.a(Date);
@@ -2806,6 +2830,8 @@
             expect(data.lastMessage).to.be("Hello world!");
             expect(data.direction).to.be.a('string');
             expect(data.direction).to.be("ci");
+            expect(data.replyOptionsType).to.be.a('string');
+            expect(data.replyOptionsType).to.be("user_carrier_twilio");
             expect(data.from).to.be.a('string');
             expect(data.from).to.be("447860021130");
             expect(data.mutedUntil).to.be.a(Date);
@@ -7088,6 +7114,8 @@
                 expect(data.lastMessage).to.be("Hello world!");
                 expect(data.direction).to.be.a('string');
                 expect(data.direction).to.be("ci");
+                expect(data.replyOptionsType).to.be.a('string');
+                expect(data.replyOptionsType).to.be("user_carrier_twilio");
                 expect(data.from).to.be.a('string');
                 expect(data.from).to.be("447860021130");
                 expect(data.mutedUntil).to.be.a(Date);
@@ -7405,6 +7433,8 @@
                 expect(data.lastMessage).to.be("Hello world!");
                 expect(data.direction).to.be.a('string');
                 expect(data.direction).to.be("ci");
+                expect(data.replyOptionsType).to.be.a('string');
+                expect(data.replyOptionsType).to.be("user_carrier_twilio");
                 expect(data.from).to.be.a('string');
                 expect(data.from).to.be("447860021130");
                 expect(data.mutedUntil).to.be.a(Date);
@@ -7723,6 +7753,8 @@
                 expect(data.lastMessage).to.be("Hello world!");
                 expect(data.direction).to.be.a('string');
                 expect(data.direction).to.be("ci");
+                expect(data.replyOptionsType).to.be.a('string');
+                expect(data.replyOptionsType).to.be("user_carrier_twilio");
                 expect(data.from).to.be.a('string');
                 expect(data.from).to.be("447860021130");
                 expect(data.mutedUntil).to.be.a(Date);

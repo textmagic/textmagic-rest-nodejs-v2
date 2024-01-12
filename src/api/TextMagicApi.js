@@ -33,7 +33,7 @@
   /**
    * TextMagic service.
    * @module api/TextMagicApi
-   * @version 2.0.4420
+   * @version 2.0.17425
    */
 
   /**

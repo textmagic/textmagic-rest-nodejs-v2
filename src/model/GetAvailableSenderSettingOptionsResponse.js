@@ -33,7 +33,7 @@
   /**
    * The GetAvailableSenderSettingOptionsResponse model module.
    * @module model/GetAvailableSenderSettingOptionsResponse
-   * @version 2.0.4420
+   * @version 2.0.17425
    */
 
   /**
@@ -44,12 +44,16 @@
    * @param user {Array.<String>} Array of verified account phone numbers (currently only one).
    * @param shared {Array.<String>} Array of shared number strings.
    * @param senderIds {Array.<String>} Array of alphanumeric sender IDs.
+   * @param userCarrierTwilio {Array.<String>} Array of alphanumeric sender IDs.
+   * @param userCarrierVonage {Array.<String>} Array of alphanumeric sender IDs.
    */
-  var exports = function(dedicated, user, shared, senderIds) {
+  var exports = function(dedicated, user, shared, senderIds, userCarrierTwilio, userCarrierVonage) {
     this.dedicated = dedicated;
     this.user = user;
     this.shared = shared;
     this.senderIds = senderIds;
+    this.userCarrierTwilio = userCarrierTwilio;
+    this.userCarrierVonage = userCarrierVonage;
   };
 
   /**
@@ -70,6 +74,10 @@
         obj.shared = ApiClient.convertToType(data['shared'], ['String']);
       if (data.hasOwnProperty('senderIds'))
         obj.senderIds = ApiClient.convertToType(data['senderIds'], ['String']);
+      if (data.hasOwnProperty('userCarrierTwilio'))
+        obj.userCarrierTwilio = ApiClient.convertToType(data['userCarrierTwilio'], ['String']);
+      if (data.hasOwnProperty('userCarrierVonage'))
+        obj.userCarrierVonage = ApiClient.convertToType(data['userCarrierVonage'], ['String']);
     }
     return obj;
   }
@@ -97,6 +105,18 @@
    * @member {Array.<String>} senderIds
    */
   exports.prototype.senderIds = undefined;
+
+  /**
+   * Array of alphanumeric sender IDs.
+   * @member {Array.<String>} userCarrierTwilio
+   */
+  exports.prototype.userCarrierTwilio = undefined;
+
+  /**
+   * Array of alphanumeric sender IDs.
+   * @member {Array.<String>} userCarrierVonage
+   */
+  exports.prototype.userCarrierVonage = undefined;
 
   return exports;
 

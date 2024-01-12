@@ -106,6 +106,12 @@
         // expect(instance.direction).to.be(expectedValueLiteral);
       });
 
+      it('should have the property replyOptionsType (base name: "replyOptionsType")', function() {
+        // TODO: update the code to test the property replyOptionsType
+        expect(instance).to.have.property('replyOptionsType');
+        // expect(instance.replyOptionsType).to.be(expectedValueLiteral);
+      });
+
       it('should have the property from (base name: "from")', function() {
         // TODO: update the code to test the property from
         expect(instance).to.have.property('from');

@@ -33,7 +33,7 @@
   /**
    * The UpdateCurrentUserResponse model module.
    * @module model/UpdateCurrentUserResponse
-   * @version 2.0.4420
+   * @version 2.0.17425
    */
 
   /**
