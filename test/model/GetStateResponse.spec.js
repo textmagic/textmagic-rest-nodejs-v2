@@ -364,6 +364,18 @@
         // expect(instance.countrySenderSettingsChanged).to.be(expectedValueLiteral);
       });
 
+      it('should have the property chatSummaryChunk (base name: "chatSummaryChunk")', function() {
+        // TODO: update the code to test the property chatSummaryChunk
+        expect(instance).to.have.property('chatSummaryChunk');
+        // expect(instance.chatSummaryChunk).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatWaysToReplyChunk (base name: "chatWaysToReplyChunk")', function() {
+        // TODO: update the code to test the property chatWaysToReplyChunk
+        expect(instance).to.have.property('chatWaysToReplyChunk');
+        // expect(instance.chatWaysToReplyChunk).to.be(expectedValueLiteral);
+      });
+
       it('should have the property chatSuggestedReplyChunk (base name: "chatSuggestedReplyChunk")', function() {
         // TODO: update the code to test the property chatSuggestedReplyChunk
         expect(instance).to.have.property('chatSuggestedReplyChunk');

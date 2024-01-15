@@ -33,7 +33,7 @@
   /**
    * The UpdateBalanceNotificationSettingsInputObject model module.
    * @module model/UpdateBalanceNotificationSettingsInputObject
-   * @version 2.0.17425
+   * @version 2.0.17551
    */
 
   /**

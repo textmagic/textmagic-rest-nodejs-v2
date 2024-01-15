@@ -33,7 +33,7 @@
   /**
    * The GetMessagePriceResponseCountriesItem model module.
    * @module model/GetMessagePriceResponseCountriesItem
-   * @version 2.0.17425
+   * @version 2.0.17551
    */
 
   /**

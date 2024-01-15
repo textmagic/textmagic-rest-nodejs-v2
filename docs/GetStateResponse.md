@@ -57,6 +57,8 @@ Name | Type | Description | Notes
 **forceRefreshWebApp** | **Number** |  | 
 **chatSenderSettingsChanged** | **Number** |  | 
 **countrySenderSettingsChanged** | **Number** |  | 
+**chatSummaryChunk** | **Number** |  | 
+**chatWaysToReplyChunk** | **Number** |  | 
 **chatSuggestedReplyChunk** | **Number** |  | 
 
 

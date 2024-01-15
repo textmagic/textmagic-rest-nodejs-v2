@@ -33,7 +33,7 @@
   /**
    * The DeleteListsBulkInputObject model module.
    * @module model/DeleteListsBulkInputObject
-   * @version 2.0.17425
+   * @version 2.0.17551
    */
 
   /**

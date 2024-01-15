@@ -33,7 +33,7 @@
   /**
    * The BadRequestResponseErrors model module.
    * @module model/BadRequestResponseErrors
-   * @version 2.0.17425
+   * @version 2.0.17551
    */
 
   /**

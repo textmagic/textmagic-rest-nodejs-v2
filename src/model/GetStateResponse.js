@@ -33,7 +33,7 @@
   /**
    * The GetStateResponse model module.
    * @module model/GetStateResponse
-   * @version 2.0.17425
+   * @version 2.0.17551
    */
 
   /**
@@ -94,9 +94,11 @@
    * @param forceRefreshWebApp {Number} 
    * @param chatSenderSettingsChanged {Number} 
    * @param countrySenderSettingsChanged {Number} 
+   * @param chatSummaryChunk {Number} 
+   * @param chatWaysToReplyChunk {Number} 
    * @param chatSuggestedReplyChunk {Number} 
    */
-  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountAdditionalFields, systemAccountPermissionsChanged, userBalanceChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, chatRead, chatUnread, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressEmailBulkLookup, progressSubAccountBulkImport, progressContactBulkImport, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSuggestedReplyChunk) {
+  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountAdditionalFields, systemAccountPermissionsChanged, userBalanceChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, chatRead, chatUnread, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressEmailBulkLookup, progressSubAccountBulkImport, progressContactBulkImport, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSummaryChunk, chatWaysToReplyChunk, chatSuggestedReplyChunk) {
     this.systemCacheClear = systemCacheClear;
     this.systemExit = systemExit;
     this.systemAlert = systemAlert;
@@ -151,6 +153,8 @@
     this.forceRefreshWebApp = forceRefreshWebApp;
     this.chatSenderSettingsChanged = chatSenderSettingsChanged;
     this.countrySenderSettingsChanged = countrySenderSettingsChanged;
+    this.chatSummaryChunk = chatSummaryChunk;
+    this.chatWaysToReplyChunk = chatWaysToReplyChunk;
     this.chatSuggestedReplyChunk = chatSuggestedReplyChunk;
   };
 
@@ -272,6 +276,10 @@
         obj.chatSenderSettingsChanged = ApiClient.convertToType(data['chatSenderSettingsChanged'], 'Number');
       if (data.hasOwnProperty('countrySenderSettingsChanged'))
         obj.countrySenderSettingsChanged = ApiClient.convertToType(data['countrySenderSettingsChanged'], 'Number');
+      if (data.hasOwnProperty('chatSummaryChunk'))
+        obj.chatSummaryChunk = ApiClient.convertToType(data['chatSummaryChunk'], 'Number');
+      if (data.hasOwnProperty('chatWaysToReplyChunk'))
+        obj.chatWaysToReplyChunk = ApiClient.convertToType(data['chatWaysToReplyChunk'], 'Number');
       if (data.hasOwnProperty('chatSuggestedReplyChunk'))
         obj.chatSuggestedReplyChunk = ApiClient.convertToType(data['chatSuggestedReplyChunk'], 'Number');
     }
@@ -547,6 +555,16 @@
    * @member {Number} countrySenderSettingsChanged
    */
   exports.prototype.countrySenderSettingsChanged = undefined;
+
+  /**
+   * @member {Number} chatSummaryChunk
+   */
+  exports.prototype.chatSummaryChunk = undefined;
+
+  /**
+   * @member {Number} chatWaysToReplyChunk
+   */
+  exports.prototype.chatWaysToReplyChunk = undefined;
 
   /**
    * @member {Number} chatSuggestedReplyChunk
