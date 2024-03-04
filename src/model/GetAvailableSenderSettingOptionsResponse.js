@@ -33,7 +33,7 @@
   /**
    * The GetAvailableSenderSettingOptionsResponse model module.
    * @module model/GetAvailableSenderSettingOptionsResponse
-   * @version 2.0.17551
+   * @version 2.0.20604
    */
 
   /**

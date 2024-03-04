@@ -33,7 +33,7 @@
   /**
    * The UpdateContactInputObject model module.
    * @module model/UpdateContactInputObject
-   * @version 2.0.17551
+   * @version 2.0.20604
    */
 
   /**

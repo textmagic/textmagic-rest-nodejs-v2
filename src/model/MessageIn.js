@@ -33,7 +33,7 @@
   /**
    * The MessageIn model module.
    * @module model/MessageIn
-   * @version 2.0.17551
+   * @version 2.0.20604
    */
 
   /**
@@ -86,6 +86,10 @@
         obj.avatar = ApiClient.convertToType(data['avatar'], 'String');
       if (data.hasOwnProperty('email'))
         obj.email = ApiClient.convertToType(data['email'], 'String');
+      if (data.hasOwnProperty('contactUserId'))
+        obj.contactUserId = ApiClient.convertToType(data['contactUserId'], 'Number');
+      if (data.hasOwnProperty('userId'))
+        obj.userId = ApiClient.convertToType(data['userId'], 'Number');
     }
     return obj;
   }
@@ -148,6 +152,16 @@
    * @member {String} email
    */
   exports.prototype.email = undefined;
+
+  /**
+   * @member {Number} contactUserId
+   */
+  exports.prototype.contactUserId = undefined;
+
+  /**
+   * @member {Number} userId
+   */
+  exports.prototype.userId = undefined;
 
   return exports;
 

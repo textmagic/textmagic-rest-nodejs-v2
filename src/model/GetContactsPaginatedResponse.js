@@ -33,7 +33,7 @@
   /**
    * The GetContactsPaginatedResponse model module.
    * @module model/GetContactsPaginatedResponse
-   * @version 2.0.17551
+   * @version 2.0.20604
    */
 
   /**

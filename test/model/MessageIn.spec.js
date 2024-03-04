@@ -100,6 +100,18 @@
         // expect(instance.email).to.be(expectedValueLiteral);
       });
 
+      it('should have the property contactUserId (base name: "contactUserId")', function() {
+        // TODO: update the code to test the property contactUserId
+        expect(instance).to.have.property('contactUserId');
+        // expect(instance.contactUserId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property userId (base name: "userId")', function() {
+        // TODO: update the code to test the property userId
+        expect(instance).to.have.property('userId');
+        // expect(instance.userId).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

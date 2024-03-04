@@ -33,7 +33,7 @@
   /**
    * The SearchChatsPaginatedResponse model module.
    * @module model/SearchChatsPaginatedResponse
-   * @version 2.0.17551
+   * @version 2.0.20604
    */
 
   /**

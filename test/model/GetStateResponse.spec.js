@@ -64,6 +64,12 @@
         // expect(instance.systemAccountStateChanged).to.be(expectedValueLiteral);
       });
 
+      it('should have the property systemAccountClosed (base name: "systemAccountClosed")', function() {
+        // TODO: update the code to test the property systemAccountClosed
+        expect(instance).to.have.property('systemAccountClosed');
+        // expect(instance.systemAccountClosed).to.be(expectedValueLiteral);
+      });
+
       it('should have the property systemAccountAdditionalFields (base name: "systemAccountAdditionalFields")', function() {
         // TODO: update the code to test the property systemAccountAdditionalFields
         expect(instance).to.have.property('systemAccountAdditionalFields');

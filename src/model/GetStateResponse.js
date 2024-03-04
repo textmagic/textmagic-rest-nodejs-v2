@@ -33,7 +33,7 @@
   /**
    * The GetStateResponse model module.
    * @module model/GetStateResponse
-   * @version 2.0.17551
+   * @version 2.0.20604
    */
 
   /**
@@ -44,6 +44,7 @@
    * @param systemExit {Number} 
    * @param systemAlert {Number} 
    * @param systemAccountStateChanged {Number} 
+   * @param systemAccountClosed {Number} 
    * @param systemAccountAdditionalFields {Number} 
    * @param systemAccountPermissionsChanged {Number} 
    * @param userBalanceChanged {Number} 
@@ -98,11 +99,12 @@
    * @param chatWaysToReplyChunk {Number} 
    * @param chatSuggestedReplyChunk {Number} 
    */
-  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountAdditionalFields, systemAccountPermissionsChanged, userBalanceChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, chatRead, chatUnread, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressEmailBulkLookup, progressSubAccountBulkImport, progressContactBulkImport, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSummaryChunk, chatWaysToReplyChunk, chatSuggestedReplyChunk) {
+  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountClosed, systemAccountAdditionalFields, systemAccountPermissionsChanged, userBalanceChanged, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, chatRead, chatUnread, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressEmailBulkLookup, progressSubAccountBulkImport, progressContactBulkImport, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSummaryChunk, chatWaysToReplyChunk, chatSuggestedReplyChunk) {
     this.systemCacheClear = systemCacheClear;
     this.systemExit = systemExit;
     this.systemAlert = systemAlert;
     this.systemAccountStateChanged = systemAccountStateChanged;
+    this.systemAccountClosed = systemAccountClosed;
     this.systemAccountAdditionalFields = systemAccountAdditionalFields;
     this.systemAccountPermissionsChanged = systemAccountPermissionsChanged;
     this.userBalanceChanged = userBalanceChanged;
@@ -176,6 +178,8 @@
         obj.systemAlert = ApiClient.convertToType(data['systemAlert'], 'Number');
       if (data.hasOwnProperty('systemAccountStateChanged'))
         obj.systemAccountStateChanged = ApiClient.convertToType(data['systemAccountStateChanged'], 'Number');
+      if (data.hasOwnProperty('systemAccountClosed'))
+        obj.systemAccountClosed = ApiClient.convertToType(data['systemAccountClosed'], 'Number');
       if (data.hasOwnProperty('systemAccountAdditionalFields'))
         obj.systemAccountAdditionalFields = ApiClient.convertToType(data['systemAccountAdditionalFields'], 'Number');
       if (data.hasOwnProperty('systemAccountPermissionsChanged'))
@@ -305,6 +309,11 @@
    * @member {Number} systemAccountStateChanged
    */
   exports.prototype.systemAccountStateChanged = undefined;
+
+  /**
+   * @member {Number} systemAccountClosed
+   */
+  exports.prototype.systemAccountClosed = undefined;
 
   /**
    * @member {Number} systemAccountAdditionalFields

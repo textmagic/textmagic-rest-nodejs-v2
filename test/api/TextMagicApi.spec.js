@@ -1385,6 +1385,10 @@
                 expect(data.avatar).to.be("avatars/dummy_avatar.png");
                 expect(data.email).to.be.a('string');
                 expect(data.email).to.be("charles@example.com");
+                expect(data.contactUserId).to.be.a('number');
+                expect(data.contactUserId).to.be(0);
+                expect(data.userId).to.be.a('number');
+                expect(data.userId).to.be(0);
               }
             }
 
@@ -4823,6 +4827,10 @@
             expect(data.avatar).to.be("avatars/dummy_avatar.png");
             expect(data.email).to.be.a('string');
             expect(data.email).to.be("charles@example.com");
+            expect(data.contactUserId).to.be.a('number');
+            expect(data.contactUserId).to.be(0);
+            expect(data.userId).to.be.a('number');
+            expect(data.userId).to.be(0);
 
             done();
           }, function(error) {
@@ -8121,6 +8129,10 @@
                 expect(data.avatar).to.be("avatars/dummy_avatar.png");
                 expect(data.email).to.be.a('string');
                 expect(data.email).to.be("charles@example.com");
+                expect(data.contactUserId).to.be.a('number');
+                expect(data.contactUserId).to.be(0);
+                expect(data.userId).to.be.a('number');
+                expect(data.userId).to.be(0);
               }
             }
 
