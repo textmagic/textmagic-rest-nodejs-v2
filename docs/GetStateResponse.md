@@ -10,7 +10,9 @@ Name | Type | Description | Notes
 **systemAccountClosed** | **Number** |  | 
 **systemAccountAdditionalFields** | **Number** |  | 
 **systemAccountPermissionsChanged** | **Number** |  | 
+**userProfileChanged** | **Number** |  | 
 **userBalanceChanged** | **Number** |  | 
+**userImpersonationEnd** | **Number** |  | 
 **messageDeleted** | **Number** |  | 
 **messageIncoming** | **Number** |  | 
 **messageIncomingDeleted** | **Number** |  | 
@@ -61,5 +63,7 @@ Name | Type | Description | Notes
 **chatSummaryChunk** | **Number** |  | 
 **chatWaysToReplyChunk** | **Number** |  | 
 **chatSuggestedReplyChunk** | **Number** |  | 
+**userSubscriptionChanged** | **Number** |  | 
+**userSubscriptionDeleted** | **Number** |  | 
 
 
