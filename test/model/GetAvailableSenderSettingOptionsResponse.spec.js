@@ -76,6 +76,24 @@
         // expect(instance.userCarrierVonage).to.be(expectedValueLiteral);
       });
 
+      it('should have the property userCarrierSinch (base name: "userCarrierSinch")', function() {
+        // TODO: update the code to test the property userCarrierSinch
+        expect(instance).to.have.property('userCarrierSinch');
+        // expect(instance.userCarrierSinch).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property uCarrierBandwidth (base name: "uCarrierBandwidth")', function() {
+        // TODO: update the code to test the property uCarrierBandwidth
+        expect(instance).to.have.property('uCarrierBandwidth');
+        // expect(instance.uCarrierBandwidth).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ucTwilioSenderId (base name: "ucTwilioSenderId")', function() {
+        // TODO: update the code to test the property ucTwilioSenderId
+        expect(instance).to.have.property('ucTwilioSenderId');
+        // expect(instance.ucTwilioSenderId).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

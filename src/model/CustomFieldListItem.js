@@ -33,7 +33,7 @@
   /**
    * The CustomFieldListItem model module.
    * @module model/CustomFieldListItem
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -41,11 +41,17 @@
    * @alias module:model/CustomFieldListItem
    * @class
    * @param id {Number} Custom Field ID.
+   * @param userCustomFieldId {Number} Old property custom Field ID.
+   * @param name {String} Custom Field name.
    * @param value {String} Custom Field value.
+   * @param createdAt {Date} Custom field creation time.
    */
-  var exports = function(id, value) {
+  var exports = function(id, userCustomFieldId, name, value, createdAt) {
     this.id = id;
+    this.userCustomFieldId = userCustomFieldId;
+    this.name = name;
     this.value = value;
+    this.createdAt = createdAt;
   };
 
   /**
@@ -60,8 +66,14 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'Number');
+      if (data.hasOwnProperty('userCustomFieldId'))
+        obj.userCustomFieldId = ApiClient.convertToType(data['userCustomFieldId'], 'Number');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'String');
+      if (data.hasOwnProperty('createdAt'))
+        obj.createdAt = ApiClient.convertToType(data['createdAt'], 'Date');
     }
     return obj;
   }
@@ -73,10 +85,28 @@
   exports.prototype.id = undefined;
 
   /**
+   * Old property custom Field ID.
+   * @member {Number} userCustomFieldId
+   */
+  exports.prototype.userCustomFieldId = undefined;
+
+  /**
+   * Custom Field name.
+   * @member {String} name
+   */
+  exports.prototype.name = undefined;
+
+  /**
    * Custom Field value.
    * @member {String} value
    */
   exports.prototype.value = undefined;
+
+  /**
+   * Custom field creation time.
+   * @member {Date} createdAt
+   */
+  exports.prototype.createdAt = undefined;
 
   return exports;
 

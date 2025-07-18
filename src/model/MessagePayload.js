@@ -25,54 +25,58 @@
     if (!root.TextmagicClient) {
       root.TextmagicClient = {};
     }
-    root.TextmagicClient.CheckPhoneVerificationCodeTFAInputObject = factory(root.TextmagicClient.ApiClient);
+    root.TextmagicClient.MessagePayload = factory(root.TextmagicClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The CheckPhoneVerificationCodeTFAInputObject model module.
-   * @module model/CheckPhoneVerificationCodeTFAInputObject
-   * @version 2.0.23575
+   * The MessagePayload model module.
+   * @module model/MessagePayload
+   * @version 2.0.43640
    */
 
   /**
-   * Constructs a new <code>CheckPhoneVerificationCodeTFAInputObject</code>.
-   * @alias module:model/CheckPhoneVerificationCodeTFAInputObject
+   * Constructs a new <code>MessagePayload</code>.
+   * @alias module:model/MessagePayload
    * @class
+   * @param type {String} Payload type.
+   * @param mediaPreview {String} Media preview link.
    */
-  var exports = function() {
+  var exports = function(type, mediaPreview) {
+    this.type = type;
+    this.mediaPreview = mediaPreview;
   };
 
   /**
-   * Constructs a <code>CheckPhoneVerificationCodeTFAInputObject</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>MessagePayload</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CheckPhoneVerificationCodeTFAInputObject} obj Optional instance to populate.
-   * @return {module:model/CheckPhoneVerificationCodeTFAInputObject} The populated <code>CheckPhoneVerificationCodeTFAInputObject</code> instance.
+   * @param {module:model/MessagePayload} obj Optional instance to populate.
+   * @return {module:model/MessagePayload} The populated <code>MessagePayload</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('code'))
-        obj.code = ApiClient.convertToType(data['code'], 'Number');
-      if (data.hasOwnProperty('verifyId'))
-        obj.verifyId = ApiClient.convertToType(data['verifyId'], 'String');
+      if (data.hasOwnProperty('type'))
+        obj.type = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('mediaPreview'))
+        obj.mediaPreview = ApiClient.convertToType(data['mediaPreview'], 'String');
     }
     return obj;
   }
 
   /**
-   * Verification code received by the user and entered into the form field.
-   * @member {Number} code
+   * Payload type.
+   * @member {String} type
    */
-  exports.prototype.code = undefined;
+  exports.prototype.type = undefined;
 
   /**
-   * VerifyId from Step 1 to match both requests together.
-   * @member {String} verifyId
+   * Media preview link.
+   * @member {String} mediaPreview
    */
-  exports.prototype.verifyId = undefined;
+  exports.prototype.mediaPreview = undefined;
 
   return exports;
 

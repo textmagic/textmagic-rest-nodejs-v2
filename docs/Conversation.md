@@ -14,6 +14,15 @@ Name | Type | Description | Notes
 **lastName** | **String** | Contact last name. | 
 **sessionId** | **Number** | Session ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details. | 
 **initiatorId** | **Number** | Initiator ID of a message. See [message sessions](https://docs.textmagic.com/#tag/Outbound-Message-Sessions) for details. | [optional] 
+**messageFileId** | **Number** | Message file id. | [optional] 
+**type** | **String** | Message type. | [optional] 
+**chatType** | **String** | Chat type. | [optional] 
+**chatId** | **Number** | Chat id. | [optional] 
+**isEdited** | **Boolean** |  | [optional] 
+**errorCode** | **String** | Error code. | [optional] 
+**files** | **[File]** |  | [optional] 
+**payload** | [**MessagePayload**](MessagePayload.md) |  | [optional] 
+**avatar** | **String** |  | [optional] 
 
 
 <a name="DirectionEnum"></a>
@@ -27,6 +36,48 @@ Name | Type | Description | Notes
 * `o` (value: `"o"`)
 
 * `i` (value: `"i"`)
+
+
+
+
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
+
+
+* `text` (value: `"text"`)
+
+* `image` (value: `"image"`)
+
+* `audio` (value: `"audio"`)
+
+* `voice` (value: `"voice"`)
+
+* `document` (value: `"document"`)
+
+* `video` (value: `"video"`)
+
+* `log` (value: `"log"`)
+
+* `initial` (value: `"initial"`)
+
+* `note` (value: `"note"`)
+
+
+
+
+<a name="ChatTypeEnum"></a>
+## Enum: ChatTypeEnum
+
+
+* `sms` (value: `"sms"`)
+
+* `facebookMessenger` (value: `"facebook_messenger"`)
+
+* `instagram` (value: `"instagram"`)
+
+* `whatsappBusiness` (value: `"whatsapp_business"`)
+
+* `liveChat` (value: `"live_chat"`)
 
 
 

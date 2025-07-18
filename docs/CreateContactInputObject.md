@@ -15,5 +15,7 @@ Name | Type | Description | Notes
 **customFieldValues** | [**[CustomFieldListItem]**](CustomFieldListItem.md) |  | [optional] 
 **local** | **Number** | Treat phone numbers passed in the request body as local. | [optional] 
 **country** | **String** | The 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is the account country. | [optional] 
+**tags** | **String** | Contact [list](https://docs.textmagic.com/#tag/Tag) ID. Each contact must be assigned to at least one list. | [optional] 
+**owner** | **Number** | Contact Owner ID | [optional] 
 
 

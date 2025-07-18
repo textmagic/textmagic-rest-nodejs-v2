@@ -46,10 +46,28 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
+      it('should have the property userCustomFieldId (base name: "userCustomFieldId")', function() {
+        // TODO: update the code to test the property userCustomFieldId
+        expect(instance).to.have.property('userCustomFieldId');
+        // expect(instance.userCustomFieldId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
       it('should have the property value (base name: "value")', function() {
         // TODO: update the code to test the property value
         expect(instance).to.have.property('value');
         // expect(instance.value).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property createdAt (base name: "createdAt")', function() {
+        // TODO: update the code to test the property createdAt
+        expect(instance).to.have.property('createdAt');
+        // expect(instance.createdAt).to.be(expectedValueLiteral);
       });
 
     });

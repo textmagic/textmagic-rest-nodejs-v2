@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **price** | **Number** | Session cost (in account currency). | 
 **numbersCount** | **Number** | Session recipient count. | 
 **destination** | **String** | Destination type of a Message Session: * **t** – text SMS; * **s** – text-to-speech; * **v** – voice broadcast.  | 
+**initiatorId** | **Number** | Initiator ID. | 
+**title** | **String** |  | 
 
 
 <a name="DestinationEnum"></a>

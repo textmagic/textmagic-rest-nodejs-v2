@@ -20,6 +20,10 @@ Name | Type | Description | Notes
 **timeLeftMute** | **Number** | Time left untill the chat will be unmuted (seconds). | 
 **country** | [**Country**](Country.md) |  | 
 **pinned** | **Boolean** | Indicates when the chat is pinned. | 
+**type** | **String** | Chat type. | 
+**smsPrice** | **Number** |  | 
+**mmsPrice** | **Number** |  | 
+**tags** | [**[Tag]**](Tag.md) |  | [optional] 
 
 
 <a name="StatusEnum"></a>

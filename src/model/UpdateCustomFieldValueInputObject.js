@@ -33,7 +33,7 @@
   /**
    * The UpdateCustomFieldValueInputObject model module.
    * @module model/UpdateCustomFieldValueInputObject
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -69,7 +69,7 @@
   exports.prototype.contactId = undefined;
 
   /**
-   * Custom field value. Note that this value is not parsed in any way; it is stored and used in tags exactly as you send it.
+   * Custom field value. Note that this value is not parsed in any way; it is stored and used in dynamic fields exactly as you send it.
    * @member {String} value
    */
   exports.prototype.value = undefined;

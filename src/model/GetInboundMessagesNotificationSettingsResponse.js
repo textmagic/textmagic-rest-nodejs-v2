@@ -33,7 +33,7 @@
   /**
    * The GetInboundMessagesNotificationSettingsResponse model module.
    * @module model/GetInboundMessagesNotificationSettingsResponse
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**

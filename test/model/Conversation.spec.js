@@ -106,6 +106,60 @@
         // expect(instance.initiatorId).to.be(expectedValueLiteral);
       });
 
+      it('should have the property messageFileId (base name: "messageFileId")', function() {
+        // TODO: update the code to test the property messageFileId
+        expect(instance).to.have.property('messageFileId');
+        // expect(instance.messageFileId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property type (base name: "type")', function() {
+        // TODO: update the code to test the property type
+        expect(instance).to.have.property('type');
+        // expect(instance.type).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatType (base name: "chatType")', function() {
+        // TODO: update the code to test the property chatType
+        expect(instance).to.have.property('chatType');
+        // expect(instance.chatType).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatId (base name: "chatId")', function() {
+        // TODO: update the code to test the property chatId
+        expect(instance).to.have.property('chatId');
+        // expect(instance.chatId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property isEdited (base name: "isEdited")', function() {
+        // TODO: update the code to test the property isEdited
+        expect(instance).to.have.property('isEdited');
+        // expect(instance.isEdited).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property errorCode (base name: "errorCode")', function() {
+        // TODO: update the code to test the property errorCode
+        expect(instance).to.have.property('errorCode');
+        // expect(instance.errorCode).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property files (base name: "files")', function() {
+        // TODO: update the code to test the property files
+        expect(instance).to.have.property('files');
+        // expect(instance.files).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property payload (base name: "payload")', function() {
+        // TODO: update the code to test the property payload
+        expect(instance).to.have.property('payload');
+        // expect(instance.payload).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property avatar (base name: "avatar")', function() {
+        // TODO: update the code to test the property avatar
+        expect(instance).to.have.property('avatar');
+        // expect(instance.avatar).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

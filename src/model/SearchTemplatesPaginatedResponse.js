@@ -33,7 +33,7 @@
   /**
    * The SearchTemplatesPaginatedResponse model module.
    * @module model/SearchTemplatesPaginatedResponse
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**

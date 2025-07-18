@@ -33,7 +33,7 @@
   /**
    * The GetAvailableSenderSettingOptionsResponse model module.
    * @module model/GetAvailableSenderSettingOptionsResponse
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -46,14 +46,16 @@
    * @param senderIds {Array.<String>} Array of alphanumeric sender IDs.
    * @param userCarrierTwilio {Array.<String>} Array of alphanumeric sender IDs.
    * @param userCarrierVonage {Array.<String>} Array of alphanumeric sender IDs.
+   * @param userCarrierSinch {Array.<String>} Array of alphanumeric sender IDs.
    */
-  var exports = function(dedicated, user, shared, senderIds, userCarrierTwilio, userCarrierVonage) {
+  var exports = function(dedicated, user, shared, senderIds, userCarrierTwilio, userCarrierVonage, userCarrierSinch) {
     this.dedicated = dedicated;
     this.user = user;
     this.shared = shared;
     this.senderIds = senderIds;
     this.userCarrierTwilio = userCarrierTwilio;
     this.userCarrierVonage = userCarrierVonage;
+    this.userCarrierSinch = userCarrierSinch;
   };
 
   /**
@@ -78,6 +80,12 @@
         obj.userCarrierTwilio = ApiClient.convertToType(data['userCarrierTwilio'], ['String']);
       if (data.hasOwnProperty('userCarrierVonage'))
         obj.userCarrierVonage = ApiClient.convertToType(data['userCarrierVonage'], ['String']);
+      if (data.hasOwnProperty('userCarrierSinch'))
+        obj.userCarrierSinch = ApiClient.convertToType(data['userCarrierSinch'], ['String']);
+      if (data.hasOwnProperty('uCarrierBandwidth'))
+        obj.uCarrierBandwidth = ApiClient.convertToType(data['uCarrierBandwidth'], ['String']);
+      if (data.hasOwnProperty('ucTwilioSenderId'))
+        obj.ucTwilioSenderId = ApiClient.convertToType(data['ucTwilioSenderId'], ['String']);
     }
     return obj;
   }
@@ -117,6 +125,24 @@
    * @member {Array.<String>} userCarrierVonage
    */
   exports.prototype.userCarrierVonage = undefined;
+
+  /**
+   * Array of alphanumeric sender IDs.
+   * @member {Array.<String>} userCarrierSinch
+   */
+  exports.prototype.userCarrierSinch = undefined;
+
+  /**
+   * Array of alphanumeric sender IDs.
+   * @member {Array.<String>} uCarrierBandwidth
+   */
+  exports.prototype.uCarrierBandwidth = undefined;
+
+  /**
+   * Array of alphanumeric sender IDs.
+   * @member {Array.<String>} ucTwilioSenderId
+   */
+  exports.prototype.ucTwilioSenderId = undefined;
 
   return exports;
 

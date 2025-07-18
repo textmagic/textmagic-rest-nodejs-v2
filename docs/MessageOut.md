@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **receiver** | **String** | Recipient`s phone number. | [optional] 
 **text** | **String** |  | 
 **status** | **String** | Delivery status of the message. See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details.  | 
+**rejectReason** | **String** | Rejection reason. | [optional] 
 **contactId** | **Number** | Recipient contact ID. | 
 **sessionId** | **Number** | Message Session ID of a message. | 
 **messageTime** | **Date** | Sending time. | 
@@ -23,6 +24,8 @@ Name | Type | Description | Notes
 **partsCount** | **Number** | Message parts (multiples of 160 characters) count. | 
 **fromEmail** | **String** | The user email which this message came from. For Email2SMS and Distribution Lists the messages, it is an original email address - in other cases, it is an account email address. | [optional] 
 **fromNumber** | **String** | The Phone number used to send the SMS. | [optional] 
+**senderSource** | [**MessageOutSenderSource**](MessageOutSenderSource.md) |  | [optional] 
+**session** | [**MessageOutSession**](MessageOutSession.md) |  | [optional] 
 
 
 <a name="StatusEnum"></a>
@@ -54,6 +57,63 @@ Name | Type | Description | Notes
 * `p` (value: `"p"`)
 
 * `h` (value: `"h"`)
+
+
+
+
+<a name="RejectReasonEnum"></a>
+## Enum: RejectReasonEnum
+
+
+* `a` (value: `"a"`)
+
+* `f` (value: `"f"`)
+
+* `l` (value: `"l"`)
+
+* `c` (value: `"c"`)
+
+* `u` (value: `"u"`)
+
+* `b` (value: `"b"`)
+
+* `s` (value: `"s"`)
+
+* `m` (value: `"m"`)
+
+* `n` (value: `"n"`)
+
+* `i` (value: `"i"`)
+
+* `_if` (value: `"if"`)
+
+* `d` (value: `"d"`)
+
+* `t` (value: `"t"`)
+
+* `e` (value: `"e"`)
+
+* `h` (value: `"h"`)
+
+* `k` (value: `"k"`)
+
+* `r` (value: `"r"`)
+
+* `g` (value: `"g"`)
+
+* `j` (value: `"j"`)
+
+* `w` (value: `"w"`)
+
+* `v` (value: `"v"`)
+
+* `q` (value: `"q"`)
+
+* `x` (value: `"x"`)
+
+* `o` (value: `"o"`)
+
+* `p` (value: `"p"`)
 
 
 

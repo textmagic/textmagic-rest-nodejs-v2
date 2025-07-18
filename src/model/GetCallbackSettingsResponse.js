@@ -33,7 +33,7 @@
   /**
    * The GetCallbackSettingsResponse model module.
    * @module model/GetCallbackSettingsResponse
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/MessageOutSenderSource', 'model/MessageOutSession'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./MessageOutSenderSource'), require('./MessageOutSession'));
   } else {
     // Browser globals (root is window)
     if (!root.TextmagicClient) {
       root.TextmagicClient = {};
     }
-    root.TextmagicClient.MessageOut = factory(root.TextmagicClient.ApiClient);
+    root.TextmagicClient.MessageOut = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.MessageOutSenderSource, root.TextmagicClient.MessageOutSession);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, MessageOutSenderSource, MessageOutSession) {
   'use strict';
 
   /**
    * The MessageOut model module.
    * @module model/MessageOut
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -90,6 +90,8 @@
         obj.text = ApiClient.convertToType(data['text'], 'String');
       if (data.hasOwnProperty('status'))
         obj.status = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('rejectReason'))
+        obj.rejectReason = ApiClient.convertToType(data['rejectReason'], 'String');
       if (data.hasOwnProperty('contactId'))
         obj.contactId = ApiClient.convertToType(data['contactId'], 'Number');
       if (data.hasOwnProperty('sessionId'))
@@ -120,6 +122,10 @@
         obj.fromEmail = ApiClient.convertToType(data['fromEmail'], 'String');
       if (data.hasOwnProperty('fromNumber'))
         obj.fromNumber = ApiClient.convertToType(data['fromNumber'], 'String');
+      if (data.hasOwnProperty('senderSource'))
+        obj.senderSource = MessageOutSenderSource.constructFromObject(data['senderSource']);
+      if (data.hasOwnProperty('session'))
+        obj.session = MessageOutSession.constructFromObject(data['session']);
     }
     return obj;
   }
@@ -152,6 +158,12 @@
    * @member {module:model/MessageOut.StatusEnum} status
    */
   exports.prototype.status = undefined;
+
+  /**
+   * Rejection reason.
+   * @member {module:model/MessageOut.RejectReasonEnum} rejectReason
+   */
+  exports.prototype.rejectReason = undefined;
 
   /**
    * Recipient contact ID.
@@ -242,6 +254,16 @@
    */
   exports.prototype.fromNumber = undefined;
 
+  /**
+   * @member {module:model/MessageOutSenderSource} senderSource
+   */
+  exports.prototype.senderSource = undefined;
+
+  /**
+   * @member {module:model/MessageOutSession} session
+   */
+  exports.prototype.session = undefined;
+
 
   /**
    * Allowed values for the <code>status</code> property.
@@ -326,6 +348,164 @@
      * @const
      */
     h: "h"
+  };
+
+
+  /**
+   * Allowed values for the <code>rejectReason</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.RejectReasonEnum = {
+    /**
+     * value: "a"
+     * @const
+     */
+    a: "a",
+
+    /**
+     * value: "f"
+     * @const
+     */
+    f: "f",
+
+    /**
+     * value: "l"
+     * @const
+     */
+    l: "l",
+
+    /**
+     * value: "c"
+     * @const
+     */
+    c: "c",
+
+    /**
+     * value: "u"
+     * @const
+     */
+    u: "u",
+
+    /**
+     * value: "b"
+     * @const
+     */
+    b: "b",
+
+    /**
+     * value: "s"
+     * @const
+     */
+    s: "s",
+
+    /**
+     * value: "m"
+     * @const
+     */
+    m: "m",
+
+    /**
+     * value: "n"
+     * @const
+     */
+    n: "n",
+
+    /**
+     * value: "i"
+     * @const
+     */
+    i: "i",
+
+    /**
+     * value: "if"
+     * @const
+     */
+    _if: "if",
+
+    /**
+     * value: "d"
+     * @const
+     */
+    d: "d",
+
+    /**
+     * value: "t"
+     * @const
+     */
+    t: "t",
+
+    /**
+     * value: "e"
+     * @const
+     */
+    e: "e",
+
+    /**
+     * value: "h"
+     * @const
+     */
+    h: "h",
+
+    /**
+     * value: "k"
+     * @const
+     */
+    k: "k",
+
+    /**
+     * value: "r"
+     * @const
+     */
+    r: "r",
+
+    /**
+     * value: "g"
+     * @const
+     */
+    g: "g",
+
+    /**
+     * value: "j"
+     * @const
+     */
+    j: "j",
+
+    /**
+     * value: "w"
+     * @const
+     */
+    w: "w",
+
+    /**
+     * value: "v"
+     * @const
+     */
+    v: "v",
+
+    /**
+     * value: "q"
+     * @const
+     */
+    q: "q",
+
+    /**
+     * value: "x"
+     * @const
+     */
+    x: "x",
+
+    /**
+     * value: "o"
+     * @const
+     */
+    o: "o",
+
+    /**
+     * value: "p"
+     * @const
+     */
+    p: "p"
   };
 
   return exports;

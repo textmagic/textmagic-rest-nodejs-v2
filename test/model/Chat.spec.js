@@ -142,6 +142,30 @@
         // expect(instance.pinned).to.be(expectedValueLiteral);
       });
 
+      it('should have the property type (base name: "type")', function() {
+        // TODO: update the code to test the property type
+        expect(instance).to.have.property('type');
+        // expect(instance.type).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property smsPrice (base name: "smsPrice")', function() {
+        // TODO: update the code to test the property smsPrice
+        expect(instance).to.have.property('smsPrice');
+        // expect(instance.smsPrice).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property mmsPrice (base name: "mmsPrice")', function() {
+        // TODO: update the code to test the property mmsPrice
+        expect(instance).to.have.property('mmsPrice');
+        // expect(instance.mmsPrice).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property tags (base name: "tags")', function() {
+        // TODO: update the code to test the property tags
+        expect(instance).to.have.property('tags');
+        // expect(instance.tags).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

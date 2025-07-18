@@ -70,6 +70,12 @@
         // expect(instance.status).to.be(expectedValueLiteral);
       });
 
+      it('should have the property rejectReason (base name: "rejectReason")', function() {
+        // TODO: update the code to test the property rejectReason
+        expect(instance).to.have.property('rejectReason');
+        // expect(instance.rejectReason).to.be(expectedValueLiteral);
+      });
+
       it('should have the property contactId (base name: "contactId")', function() {
         // TODO: update the code to test the property contactId
         expect(instance).to.have.property('contactId');
@@ -158,6 +164,18 @@
         // TODO: update the code to test the property fromNumber
         expect(instance).to.have.property('fromNumber');
         // expect(instance.fromNumber).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property senderSource (base name: "senderSource")', function() {
+        // TODO: update the code to test the property senderSource
+        expect(instance).to.have.property('senderSource');
+        // expect(instance.senderSource).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property session (base name: "session")', function() {
+        // TODO: update the code to test the property session
+        expect(instance).to.have.property('session');
+        // expect(instance.session).to.be(expectedValueLiteral);
       });
 
     });

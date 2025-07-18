@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **String** | The email address passed to the call. | 
-**status** | **String** | The email is `valid` or `invalid`. | 
-**deliverability** | **String** | The delivery status of the email address is`deliverable`, `undeliverable`. or `unknown`. | 
+**status** | **String** | The email is `valid` or `invalid`. | 
+**deliverability** | **String** | The delivery status of the email address is`deliverable`, `undeliverable`. or `unknown`. | 
 **reason** | **String** | The reason why the checked email is invalid/undeliverable. | 
-**risk** | **String** | The risk score of the email is`high`, `medium`, `low` or `null`. | 
-**addressType** | **String** | The email address type (domain) is `free` or `corporate`. | 
-**isDisposableAddress** | **Boolean** | This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`. | 
+**risk** | **String** | The risk score of the email is`high`, `medium`, `low` or `null`. | 
+**addressType** | **String** | The email address type (domain) is `free` or `corporate`. | 
+**isDisposableAddress** | **Boolean** | This is `true` if the domain is in the list of disposable email addresses; otherwise, it returns as `false`. | 
 **suggestion** | **String** | Null if nothing is suggested; however, if there is a potential typo in the email address, the closest suggestion is provided. | 
 **emailRole** | **String** | Checks the mailbox part of the email to see whether it matches a specific role type (‘admin’, ‘sales’, ‘webmaster’). | 
 **localPart** | **String** | The local part of the email address. | 

@@ -33,7 +33,7 @@
   /**
    * The MessagesIcsParametersRecipients model module.
    * @module model/MessagesIcsParametersRecipients
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -43,11 +43,13 @@
    * @param contacts {Array.<Number>} 
    * @param groups {Array.<Number>} 
    * @param numbers {Array.<String>} 
+   * @param filteredViews {Array.<Number>} 
    */
-  var exports = function(contacts, groups, numbers) {
+  var exports = function(contacts, groups, numbers, filteredViews) {
     this.contacts = contacts;
     this.groups = groups;
     this.numbers = numbers;
+    this.filteredViews = filteredViews;
   };
 
   /**
@@ -66,6 +68,8 @@
         obj.groups = ApiClient.convertToType(data['groups'], ['Number']);
       if (data.hasOwnProperty('numbers'))
         obj.numbers = ApiClient.convertToType(data['numbers'], ['String']);
+      if (data.hasOwnProperty('filteredViews'))
+        obj.filteredViews = ApiClient.convertToType(data['filteredViews'], ['Number']);
     }
     return obj;
   }
@@ -84,6 +88,11 @@
    * @member {Array.<String>} numbers
    */
   exports.prototype.numbers = undefined;
+
+  /**
+   * @member {Array.<Number>} filteredViews
+   */
+  exports.prototype.filteredViews = undefined;
 
   return exports;
 

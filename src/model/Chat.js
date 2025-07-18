@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Contact', 'model/Country'], factory);
+    define(['ApiClient', 'model/Contact', 'model/Country', 'model/Tag'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Contact'), require('./Country'));
+    module.exports = factory(require('../ApiClient'), require('./Contact'), require('./Country'), require('./Tag'));
   } else {
     // Browser globals (root is window)
     if (!root.TextmagicClient) {
       root.TextmagicClient = {};
     }
-    root.TextmagicClient.Chat = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.Contact, root.TextmagicClient.Country);
+    root.TextmagicClient.Chat = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.Contact, root.TextmagicClient.Country, root.TextmagicClient.Tag);
   }
-}(this, function(ApiClient, Contact, Country) {
+}(this, function(ApiClient, Contact, Country, Tag) {
   'use strict';
 
   /**
    * The Chat model module.
    * @module model/Chat
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -57,8 +57,11 @@
    * @param timeLeftMute {Number} Time left untill the chat will be unmuted (seconds).
    * @param country {module:model/Country} 
    * @param pinned {Boolean} Indicates when the chat is pinned.
+   * @param type {String} Chat type.
+   * @param smsPrice {Number} 
+   * @param mmsPrice {Number} 
    */
-  var exports = function(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned) {
+  var exports = function(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned, type, smsPrice, mmsPrice) {
     this.id = id;
     this.originalId = originalId;
     this.phone = phone;
@@ -76,6 +79,9 @@
     this.timeLeftMute = timeLeftMute;
     this.country = country;
     this.pinned = pinned;
+    this.type = type;
+    this.smsPrice = smsPrice;
+    this.mmsPrice = mmsPrice;
   };
 
   /**
@@ -122,6 +128,14 @@
         obj.country = Country.constructFromObject(data['country']);
       if (data.hasOwnProperty('pinned'))
         obj.pinned = ApiClient.convertToType(data['pinned'], 'Boolean');
+      if (data.hasOwnProperty('type'))
+        obj.type = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('smsPrice'))
+        obj.smsPrice = ApiClient.convertToType(data['smsPrice'], 'Number');
+      if (data.hasOwnProperty('mmsPrice'))
+        obj.mmsPrice = ApiClient.convertToType(data['mmsPrice'], 'Number');
+      if (data.hasOwnProperty('tags'))
+        obj.tags = ApiClient.convertToType(data['tags'], [Tag]);
     }
     return obj;
   }
@@ -224,6 +238,27 @@
    * @member {Boolean} pinned
    */
   exports.prototype.pinned = undefined;
+
+  /**
+   * Chat type.
+   * @member {String} type
+   */
+  exports.prototype.type = undefined;
+
+  /**
+   * @member {Number} smsPrice
+   */
+  exports.prototype.smsPrice = undefined;
+
+  /**
+   * @member {Number} mmsPrice
+   */
+  exports.prototype.mmsPrice = undefined;
+
+  /**
+   * @member {Array.<module:model/Tag>} tags
+   */
+  exports.prototype.tags = undefined;
 
 
   /**

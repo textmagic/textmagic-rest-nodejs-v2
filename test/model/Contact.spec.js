@@ -112,6 +112,18 @@
         // expect(instance.lists).to.be(expectedValueLiteral);
       });
 
+      it('should have the property owner (base name: "owner")', function() {
+        // TODO: update the code to test the property owner
+        expect(instance).to.have.property('owner');
+        // expect(instance.owner).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property tags (base name: "tags")', function() {
+        // TODO: update the code to test the property tags
+        expect(instance).to.have.property('tags');
+        // expect(instance.tags).to.be(expectedValueLiteral);
+      });
+
       it('should have the property phoneType (base name: "phoneType")', function() {
         // TODO: update the code to test the property phoneType
         expect(instance).to.have.property('phoneType');
@@ -128,6 +140,12 @@
         // TODO: update the code to test the property notes
         expect(instance).to.have.property('notes');
         // expect(instance.notes).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property whatsappPhone (base name: "whatsappPhone")', function() {
+        // TODO: update the code to test the property whatsappPhone
+        expect(instance).to.have.property('whatsappPhone');
+        // expect(instance.whatsappPhone).to.be(expectedValueLiteral);
       });
 
     });

@@ -33,7 +33,7 @@
   /**
    * The GetStateResponse model module.
    * @module model/GetStateResponse
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -44,11 +44,13 @@
    * @param systemExit {Number} 
    * @param systemAlert {Number} 
    * @param systemAccountStateChanged {Number} 
+   * @param systemAccountAcceptTermsUpdate {Number} 
    * @param systemAccountClosed {Number} 
    * @param systemAccountAdditionalFields {Number} 
    * @param systemAccountPermissionsChanged {Number} 
    * @param userProfileChanged {Number} 
    * @param userBalanceChanged {Number} 
+   * @param userPresenceStatusChanged {Number} 
    * @param userImpersonationEnd {Number} 
    * @param messageDeleted {Number} 
    * @param messageIncoming {Number} 
@@ -57,6 +59,10 @@
    * @param messageBulkEnd {Number} 
    * @param messageWipeEnd {Number} 
    * @param messageSent {Number} 
+   * @param messageLog {Number} 
+   * @param messageNote {Number} 
+   * @param messageInitial {Number} 
+   * @param lastMessageSet {Number} 
    * @param messageSessionDeleted {Number} 
    * @param messageCacheClear {Number} 
    * @param messageIncomingCacheClear {Number} 
@@ -76,15 +82,31 @@
    * @param chatDeleted {Number} 
    * @param chatClosed {Number} 
    * @param chatReopened {Number} 
+   * @param chatActivated {Number} 
    * @param chatCacheClear {Number} 
    * @param chatRead {Number} 
    * @param chatUnread {Number} 
+   * @param chatAssigneeChanged {Number} 
+   * @param chatTagsChanged {Number} 
+   * @param chatConversationEnded {Number} 
+   * @param chatUpdated {Number} 
+   * @param liveChatAgentChanged {Number} 
+   * @param liveChatRated {Number} 
+   * @param webWidgetUpdated {Number} 
+   * @param webWidgetDeleted {Number} 
    * @param contactAdded {Number} 
    * @param contactDeleted {Number} 
+   * @param contactBulkUpdated {Number} 
    * @param contactStateChanged {Number} 
+   * @param contactUnsubscribed {Number} 
+   * @param contactResubscribed {Number} 
+   * @param contactNoteAdded {Number} 
+   * @param contactNoteDeleted {Number} 
+   * @param contactNoteStateChanged {Number} 
    * @param listAdded {Number} 
    * @param listDeleted {Number} 
    * @param listStateChanged {Number} 
+   * @param listCountMembersUpdated {Number} 
    * @param contactWipeEnd {Number} 
    * @param contactImportEnd {Number} 
    * @param contactCacheClear {Number} 
@@ -93,7 +115,7 @@
    * @param progressCarrierBulkLookup {Number} 
    * @param progressEmailBulkLookup {Number} 
    * @param progressSubAccountBulkImport {Number} 
-   * @param progressContactBulkImport {Number} 
+   * @param importProgressState {Number} 
    * @param forceRefreshWebApp {Number} 
    * @param chatSenderSettingsChanged {Number} 
    * @param countrySenderSettingsChanged {Number} 
@@ -102,17 +124,121 @@
    * @param chatSuggestedReplyChunk {Number} 
    * @param userSubscriptionChanged {Number} 
    * @param userSubscriptionDeleted {Number} 
+   * @param taskCreated {Number} 
+   * @param taskUpdated {Number} 
+   * @param taskReordered {Number} 
+   * @param taskDeleted {Number} 
+   * @param taskMovedAll {Number} 
+   * @param taskStageCreated {Number} 
+   * @param taskStageUpdated {Number} 
+   * @param taskStageDeleted {Number} 
+   * @param taskBoardCreated {Number} 
+   * @param taskBoardUpdated {Number} 
+   * @param taskBoardReordered {Number} 
+   * @param taskBoardDeleted {Number} 
+   * @param taskBoardArchived {Number} 
+   * @param taskChecklistCreated {Number} 
+   * @param taskChecklistUpdated {Number} 
+   * @param taskChecklistDeleted {Number} 
+   * @param taskChecklistBulkMarked {Number} 
+   * @param taskChecklistItemCreated {Number} 
+   * @param taskChecklistItemUpdated {Number} 
+   * @param taskChecklistItemDeleted {Number} 
+   * @param taskCommentCreated {Number} 
+   * @param taskCommentDeleted {Number} 
+   * @param pinnedContactAdded {Number} 
+   * @param pinnedContactRemoved {Number} 
+   * @param pinnedContactReordered {Number} 
+   * @param pinnedContactStateChanged {Number} 
+   * @param whatsappAccountAdded {Number} 
+   * @param whatsappAccountRemoved {Number} 
+   * @param whatsappAccountChanged {Number} 
+   * @param facebookPageAdded {Number} 
+   * @param facebookPageRemoved {Number} 
+   * @param facebookPageChanged {Number} 
+   * @param instagramAccountAdded {Number} 
+   * @param instagramAccountRemoved {Number} 
+   * @param instagramAccountChanged {Number} 
+   * @param unreadTicketsCountUpdated {Number} 
+   * @param ticketDeleted {Number} 
+   * @param ticketUpdated {Number} 
+   * @param ticketCreated {Number} 
+   * @param ticketBulkUpdated {Number} 
+   * @param ticketBulkDeleted {Number} 
+   * @param ticketMessageCreated {Number} 
+   * @param ticketMessageUpdated {Number} 
+   * @param ticketMessageDeleted {Number} 
+   * @param subAccountsClosed {Number} 
+   * @param userInvited {Number} 
+   * @param filteredViewCreated {Number} 
+   * @param filteredViewCountUpdated {Number} 
+   * @param filteredViewDeleted {Number} 
+   * @param forwardingInboxWasVerified {Number} 
+   * @param forwardingInboxCheckWasFailed {Number} 
+   * @param forwardingInboxVerificationLinkWasParsed {Number} 
+   * @param tendlcLinkNumberStatusUpdated {Number} 
+   * @param channelPresence {Number} 
+   * @param dealCreated {Number} 
+   * @param dealUpdated {Number} 
+   * @param dealDeleted {Number} 
+   * @param dealMoved {Number} 
+   * @param dealStageCreated {Number} 
+   * @param dealStageUpdated {Number} 
+   * @param dealStageDeleted {Number} 
+   * @param dealPipelineCreated {Number} 
+   * @param dealPipelineUpdated {Number} 
+   * @param dealPipelineDeleted {Number} 
+   * @param dealPipelineArchived {Number} 
+   * @param dealPipelineReordered {Number} 
+   * @param dealActivityUpdated {Number} 
+   * @param dealActivityItemCreated {Number} 
+   * @param dealActivityItemUpdated {Number} 
+   * @param dealActivityItemDeleted {Number} 
+   * @param dealActivityItemBulkMarked {Number} 
+   * @param dealTimelineItemDeleted {Number} 
+   * @param dealTimelineItemCreated {Number} 
+   * @param aIAssistantCreated {Number} 
+   * @param aIAssistantState {Number} 
+   * @param aIAssistantDeleted {Number} 
+   * @param aIAssistantLinkDeleted {Number} 
+   * @param aIAssistantLinkState {Number} 
+   * @param aIAssistantLinkCreated {Number} 
+   * @param aIAssistantSubLinkState {Number} 
+   * @param aIAssistantSubLinkCreated {Number} 
+   * @param emailCampaignEmailSenderCreated {Number} 
+   * @param emailCampaignEmailSenderUpdated {Number} 
+   * @param emailCampaignEmailSenderDeleted {Number} 
+   * @param emailCampaignDomainCreated {Number} 
+   * @param emailCampaignDomainDeleted {Number} 
+   * @param emailCampaignDomainVerified {Number} 
+   * @param emailCampaignDomainStatusChanged {Number} 
+   * @param emailCampaignDomainDkimVerified {Number} 
+   * @param emailCampaignDomainReturnPathVerified {Number} 
+   * @param emailCampaignDomainDmarcVerified {Number} 
+   * @param emailCampaignDomainEntryVerificationChanged {Number} 
+   * @param emailCampaignProgressState {Number} 
+   * @param emailCampaignUpdated {Number} 
+   * @param smsCampaignInvalidated {Number} 
+   * @param scheduledEmailCampaignCreated {Number} 
+   * @param scheduledEmailCampaignUpdated {Number} 
+   * @param scheduledEmailCampaignStatusUpdated {Number} 
+   * @param scheduledEmailCampaignDeleted {Number} 
+   * @param emailCampaignFailedAttemptCreated {Number} 
+   * @param emailCampaignFailedAttemptDeleted {Number} 
+   * @param emailCampaignFailedAttemptStateUpdated {Number} 
    */
-  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountClosed, systemAccountAdditionalFields, systemAccountPermissionsChanged, userProfileChanged, userBalanceChanged, userImpersonationEnd, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatCacheClear, chatRead, chatUnread, contactAdded, contactDeleted, contactStateChanged, listAdded, listDeleted, listStateChanged, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressEmailBulkLookup, progressSubAccountBulkImport, progressContactBulkImport, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSummaryChunk, chatWaysToReplyChunk, chatSuggestedReplyChunk, userSubscriptionChanged, userSubscriptionDeleted) {
+  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountAcceptTermsUpdate, systemAccountClosed, systemAccountAdditionalFields, systemAccountPermissionsChanged, userProfileChanged, userBalanceChanged, userPresenceStatusChanged, userImpersonationEnd, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageLog, messageNote, messageInitial, lastMessageSet, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatActivated, chatCacheClear, chatRead, chatUnread, chatAssigneeChanged, chatTagsChanged, chatConversationEnded, chatUpdated, liveChatAgentChanged, liveChatRated, webWidgetUpdated, webWidgetDeleted, contactAdded, contactDeleted, contactBulkUpdated, contactStateChanged, contactUnsubscribed, contactResubscribed, contactNoteAdded, contactNoteDeleted, contactNoteStateChanged, listAdded, listDeleted, listStateChanged, listCountMembersUpdated, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressEmailBulkLookup, progressSubAccountBulkImport, importProgressState, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSummaryChunk, chatWaysToReplyChunk, chatSuggestedReplyChunk, userSubscriptionChanged, userSubscriptionDeleted, taskCreated, taskUpdated, taskReordered, taskDeleted, taskMovedAll, taskStageCreated, taskStageUpdated, taskStageDeleted, taskBoardCreated, taskBoardUpdated, taskBoardReordered, taskBoardDeleted, taskBoardArchived, taskChecklistCreated, taskChecklistUpdated, taskChecklistDeleted, taskChecklistBulkMarked, taskChecklistItemCreated, taskChecklistItemUpdated, taskChecklistItemDeleted, taskCommentCreated, taskCommentDeleted, pinnedContactAdded, pinnedContactRemoved, pinnedContactReordered, pinnedContactStateChanged, whatsappAccountAdded, whatsappAccountRemoved, whatsappAccountChanged, facebookPageAdded, facebookPageRemoved, facebookPageChanged, instagramAccountAdded, instagramAccountRemoved, instagramAccountChanged, unreadTicketsCountUpdated, ticketDeleted, ticketUpdated, ticketCreated, ticketBulkUpdated, ticketBulkDeleted, ticketMessageCreated, ticketMessageUpdated, ticketMessageDeleted, subAccountsClosed, userInvited, filteredViewCreated, filteredViewCountUpdated, filteredViewDeleted, forwardingInboxWasVerified, forwardingInboxCheckWasFailed, forwardingInboxVerificationLinkWasParsed, tendlcLinkNumberStatusUpdated, channelPresence, dealCreated, dealUpdated, dealDeleted, dealMoved, dealStageCreated, dealStageUpdated, dealStageDeleted, dealPipelineCreated, dealPipelineUpdated, dealPipelineDeleted, dealPipelineArchived, dealPipelineReordered, dealActivityUpdated, dealActivityItemCreated, dealActivityItemUpdated, dealActivityItemDeleted, dealActivityItemBulkMarked, dealTimelineItemDeleted, dealTimelineItemCreated, aIAssistantCreated, aIAssistantState, aIAssistantDeleted, aIAssistantLinkDeleted, aIAssistantLinkState, aIAssistantLinkCreated, aIAssistantSubLinkState, aIAssistantSubLinkCreated, emailCampaignEmailSenderCreated, emailCampaignEmailSenderUpdated, emailCampaignEmailSenderDeleted, emailCampaignDomainCreated, emailCampaignDomainDeleted, emailCampaignDomainVerified, emailCampaignDomainStatusChanged, emailCampaignDomainDkimVerified, emailCampaignDomainReturnPathVerified, emailCampaignDomainDmarcVerified, emailCampaignDomainEntryVerificationChanged, emailCampaignProgressState, emailCampaignUpdated, smsCampaignInvalidated, scheduledEmailCampaignCreated, scheduledEmailCampaignUpdated, scheduledEmailCampaignStatusUpdated, scheduledEmailCampaignDeleted, emailCampaignFailedAttemptCreated, emailCampaignFailedAttemptDeleted, emailCampaignFailedAttemptStateUpdated) {
     this.systemCacheClear = systemCacheClear;
     this.systemExit = systemExit;
     this.systemAlert = systemAlert;
     this.systemAccountStateChanged = systemAccountStateChanged;
+    this.systemAccountAcceptTermsUpdate = systemAccountAcceptTermsUpdate;
     this.systemAccountClosed = systemAccountClosed;
     this.systemAccountAdditionalFields = systemAccountAdditionalFields;
     this.systemAccountPermissionsChanged = systemAccountPermissionsChanged;
     this.userProfileChanged = userProfileChanged;
     this.userBalanceChanged = userBalanceChanged;
+    this.userPresenceStatusChanged = userPresenceStatusChanged;
     this.userImpersonationEnd = userImpersonationEnd;
     this.messageDeleted = messageDeleted;
     this.messageIncoming = messageIncoming;
@@ -121,6 +247,10 @@
     this.messageBulkEnd = messageBulkEnd;
     this.messageWipeEnd = messageWipeEnd;
     this.messageSent = messageSent;
+    this.messageLog = messageLog;
+    this.messageNote = messageNote;
+    this.messageInitial = messageInitial;
+    this.lastMessageSet = lastMessageSet;
     this.messageSessionDeleted = messageSessionDeleted;
     this.messageCacheClear = messageCacheClear;
     this.messageIncomingCacheClear = messageIncomingCacheClear;
@@ -140,15 +270,31 @@
     this.chatDeleted = chatDeleted;
     this.chatClosed = chatClosed;
     this.chatReopened = chatReopened;
+    this.chatActivated = chatActivated;
     this.chatCacheClear = chatCacheClear;
     this.chatRead = chatRead;
     this.chatUnread = chatUnread;
+    this.chatAssigneeChanged = chatAssigneeChanged;
+    this.chatTagsChanged = chatTagsChanged;
+    this.chatConversationEnded = chatConversationEnded;
+    this.chatUpdated = chatUpdated;
+    this.liveChatAgentChanged = liveChatAgentChanged;
+    this.liveChatRated = liveChatRated;
+    this.webWidgetUpdated = webWidgetUpdated;
+    this.webWidgetDeleted = webWidgetDeleted;
     this.contactAdded = contactAdded;
     this.contactDeleted = contactDeleted;
+    this.contactBulkUpdated = contactBulkUpdated;
     this.contactStateChanged = contactStateChanged;
+    this.contactUnsubscribed = contactUnsubscribed;
+    this.contactResubscribed = contactResubscribed;
+    this.contactNoteAdded = contactNoteAdded;
+    this.contactNoteDeleted = contactNoteDeleted;
+    this.contactNoteStateChanged = contactNoteStateChanged;
     this.listAdded = listAdded;
     this.listDeleted = listDeleted;
     this.listStateChanged = listStateChanged;
+    this.listCountMembersUpdated = listCountMembersUpdated;
     this.contactWipeEnd = contactWipeEnd;
     this.contactImportEnd = contactImportEnd;
     this.contactCacheClear = contactCacheClear;
@@ -157,7 +303,7 @@
     this.progressCarrierBulkLookup = progressCarrierBulkLookup;
     this.progressEmailBulkLookup = progressEmailBulkLookup;
     this.progressSubAccountBulkImport = progressSubAccountBulkImport;
-    this.progressContactBulkImport = progressContactBulkImport;
+    this.importProgressState = importProgressState;
     this.forceRefreshWebApp = forceRefreshWebApp;
     this.chatSenderSettingsChanged = chatSenderSettingsChanged;
     this.countrySenderSettingsChanged = countrySenderSettingsChanged;
@@ -166,6 +312,108 @@
     this.chatSuggestedReplyChunk = chatSuggestedReplyChunk;
     this.userSubscriptionChanged = userSubscriptionChanged;
     this.userSubscriptionDeleted = userSubscriptionDeleted;
+    this.taskCreated = taskCreated;
+    this.taskUpdated = taskUpdated;
+    this.taskReordered = taskReordered;
+    this.taskDeleted = taskDeleted;
+    this.taskMovedAll = taskMovedAll;
+    this.taskStageCreated = taskStageCreated;
+    this.taskStageUpdated = taskStageUpdated;
+    this.taskStageDeleted = taskStageDeleted;
+    this.taskBoardCreated = taskBoardCreated;
+    this.taskBoardUpdated = taskBoardUpdated;
+    this.taskBoardReordered = taskBoardReordered;
+    this.taskBoardDeleted = taskBoardDeleted;
+    this.taskBoardArchived = taskBoardArchived;
+    this.taskChecklistCreated = taskChecklistCreated;
+    this.taskChecklistUpdated = taskChecklistUpdated;
+    this.taskChecklistDeleted = taskChecklistDeleted;
+    this.taskChecklistBulkMarked = taskChecklistBulkMarked;
+    this.taskChecklistItemCreated = taskChecklistItemCreated;
+    this.taskChecklistItemUpdated = taskChecklistItemUpdated;
+    this.taskChecklistItemDeleted = taskChecklistItemDeleted;
+    this.taskCommentCreated = taskCommentCreated;
+    this.taskCommentDeleted = taskCommentDeleted;
+    this.pinnedContactAdded = pinnedContactAdded;
+    this.pinnedContactRemoved = pinnedContactRemoved;
+    this.pinnedContactReordered = pinnedContactReordered;
+    this.pinnedContactStateChanged = pinnedContactStateChanged;
+    this.whatsappAccountAdded = whatsappAccountAdded;
+    this.whatsappAccountRemoved = whatsappAccountRemoved;
+    this.whatsappAccountChanged = whatsappAccountChanged;
+    this.facebookPageAdded = facebookPageAdded;
+    this.facebookPageRemoved = facebookPageRemoved;
+    this.facebookPageChanged = facebookPageChanged;
+    this.instagramAccountAdded = instagramAccountAdded;
+    this.instagramAccountRemoved = instagramAccountRemoved;
+    this.instagramAccountChanged = instagramAccountChanged;
+    this.unreadTicketsCountUpdated = unreadTicketsCountUpdated;
+    this.ticketDeleted = ticketDeleted;
+    this.ticketUpdated = ticketUpdated;
+    this.ticketCreated = ticketCreated;
+    this.ticketBulkUpdated = ticketBulkUpdated;
+    this.ticketBulkDeleted = ticketBulkDeleted;
+    this.ticketMessageCreated = ticketMessageCreated;
+    this.ticketMessageUpdated = ticketMessageUpdated;
+    this.ticketMessageDeleted = ticketMessageDeleted;
+    this.subAccountsClosed = subAccountsClosed;
+    this.userInvited = userInvited;
+    this.filteredViewCreated = filteredViewCreated;
+    this.filteredViewCountUpdated = filteredViewCountUpdated;
+    this.filteredViewDeleted = filteredViewDeleted;
+    this.forwardingInboxWasVerified = forwardingInboxWasVerified;
+    this.forwardingInboxCheckWasFailed = forwardingInboxCheckWasFailed;
+    this.forwardingInboxVerificationLinkWasParsed = forwardingInboxVerificationLinkWasParsed;
+    this.tendlcLinkNumberStatusUpdated = tendlcLinkNumberStatusUpdated;
+    this.channelPresence = channelPresence;
+    this.dealCreated = dealCreated;
+    this.dealUpdated = dealUpdated;
+    this.dealDeleted = dealDeleted;
+    this.dealMoved = dealMoved;
+    this.dealStageCreated = dealStageCreated;
+    this.dealStageUpdated = dealStageUpdated;
+    this.dealStageDeleted = dealStageDeleted;
+    this.dealPipelineCreated = dealPipelineCreated;
+    this.dealPipelineUpdated = dealPipelineUpdated;
+    this.dealPipelineDeleted = dealPipelineDeleted;
+    this.dealPipelineArchived = dealPipelineArchived;
+    this.dealPipelineReordered = dealPipelineReordered;
+    this.dealActivityUpdated = dealActivityUpdated;
+    this.dealActivityItemCreated = dealActivityItemCreated;
+    this.dealActivityItemUpdated = dealActivityItemUpdated;
+    this.dealActivityItemDeleted = dealActivityItemDeleted;
+    this.dealActivityItemBulkMarked = dealActivityItemBulkMarked;
+    this.dealTimelineItemDeleted = dealTimelineItemDeleted;
+    this.dealTimelineItemCreated = dealTimelineItemCreated;
+    this.aIAssistantCreated = aIAssistantCreated;
+    this.aIAssistantState = aIAssistantState;
+    this.aIAssistantDeleted = aIAssistantDeleted;
+    this.aIAssistantLinkDeleted = aIAssistantLinkDeleted;
+    this.aIAssistantLinkState = aIAssistantLinkState;
+    this.aIAssistantLinkCreated = aIAssistantLinkCreated;
+    this.aIAssistantSubLinkState = aIAssistantSubLinkState;
+    this.aIAssistantSubLinkCreated = aIAssistantSubLinkCreated;
+    this.emailCampaignEmailSenderCreated = emailCampaignEmailSenderCreated;
+    this.emailCampaignEmailSenderUpdated = emailCampaignEmailSenderUpdated;
+    this.emailCampaignEmailSenderDeleted = emailCampaignEmailSenderDeleted;
+    this.emailCampaignDomainCreated = emailCampaignDomainCreated;
+    this.emailCampaignDomainDeleted = emailCampaignDomainDeleted;
+    this.emailCampaignDomainVerified = emailCampaignDomainVerified;
+    this.emailCampaignDomainStatusChanged = emailCampaignDomainStatusChanged;
+    this.emailCampaignDomainDkimVerified = emailCampaignDomainDkimVerified;
+    this.emailCampaignDomainReturnPathVerified = emailCampaignDomainReturnPathVerified;
+    this.emailCampaignDomainDmarcVerified = emailCampaignDomainDmarcVerified;
+    this.emailCampaignDomainEntryVerificationChanged = emailCampaignDomainEntryVerificationChanged;
+    this.emailCampaignProgressState = emailCampaignProgressState;
+    this.emailCampaignUpdated = emailCampaignUpdated;
+    this.smsCampaignInvalidated = smsCampaignInvalidated;
+    this.scheduledEmailCampaignCreated = scheduledEmailCampaignCreated;
+    this.scheduledEmailCampaignUpdated = scheduledEmailCampaignUpdated;
+    this.scheduledEmailCampaignStatusUpdated = scheduledEmailCampaignStatusUpdated;
+    this.scheduledEmailCampaignDeleted = scheduledEmailCampaignDeleted;
+    this.emailCampaignFailedAttemptCreated = emailCampaignFailedAttemptCreated;
+    this.emailCampaignFailedAttemptDeleted = emailCampaignFailedAttemptDeleted;
+    this.emailCampaignFailedAttemptStateUpdated = emailCampaignFailedAttemptStateUpdated;
   };
 
   /**
@@ -186,6 +434,8 @@
         obj.systemAlert = ApiClient.convertToType(data['systemAlert'], 'Number');
       if (data.hasOwnProperty('systemAccountStateChanged'))
         obj.systemAccountStateChanged = ApiClient.convertToType(data['systemAccountStateChanged'], 'Number');
+      if (data.hasOwnProperty('systemAccountAcceptTermsUpdate'))
+        obj.systemAccountAcceptTermsUpdate = ApiClient.convertToType(data['systemAccountAcceptTermsUpdate'], 'Number');
       if (data.hasOwnProperty('systemAccountClosed'))
         obj.systemAccountClosed = ApiClient.convertToType(data['systemAccountClosed'], 'Number');
       if (data.hasOwnProperty('systemAccountAdditionalFields'))
@@ -196,6 +446,8 @@
         obj.userProfileChanged = ApiClient.convertToType(data['userProfileChanged'], 'Number');
       if (data.hasOwnProperty('userBalanceChanged'))
         obj.userBalanceChanged = ApiClient.convertToType(data['userBalanceChanged'], 'Number');
+      if (data.hasOwnProperty('userPresenceStatusChanged'))
+        obj.userPresenceStatusChanged = ApiClient.convertToType(data['userPresenceStatusChanged'], 'Number');
       if (data.hasOwnProperty('userImpersonationEnd'))
         obj.userImpersonationEnd = ApiClient.convertToType(data['userImpersonationEnd'], 'Number');
       if (data.hasOwnProperty('messageDeleted'))
@@ -212,6 +464,14 @@
         obj.messageWipeEnd = ApiClient.convertToType(data['messageWipeEnd'], 'Number');
       if (data.hasOwnProperty('messageSent'))
         obj.messageSent = ApiClient.convertToType(data['messageSent'], 'Number');
+      if (data.hasOwnProperty('messageLog'))
+        obj.messageLog = ApiClient.convertToType(data['messageLog'], 'Number');
+      if (data.hasOwnProperty('messageNote'))
+        obj.messageNote = ApiClient.convertToType(data['messageNote'], 'Number');
+      if (data.hasOwnProperty('messageInitial'))
+        obj.messageInitial = ApiClient.convertToType(data['messageInitial'], 'Number');
+      if (data.hasOwnProperty('lastMessageSet'))
+        obj.lastMessageSet = ApiClient.convertToType(data['lastMessageSet'], 'Number');
       if (data.hasOwnProperty('messageSessionDeleted'))
         obj.messageSessionDeleted = ApiClient.convertToType(data['messageSessionDeleted'], 'Number');
       if (data.hasOwnProperty('messageCacheClear'))
@@ -250,24 +510,56 @@
         obj.chatClosed = ApiClient.convertToType(data['chatClosed'], 'Number');
       if (data.hasOwnProperty('chatReopened'))
         obj.chatReopened = ApiClient.convertToType(data['chatReopened'], 'Number');
+      if (data.hasOwnProperty('chatActivated'))
+        obj.chatActivated = ApiClient.convertToType(data['chatActivated'], 'Number');
       if (data.hasOwnProperty('chatCacheClear'))
         obj.chatCacheClear = ApiClient.convertToType(data['chatCacheClear'], 'Number');
       if (data.hasOwnProperty('chatRead'))
         obj.chatRead = ApiClient.convertToType(data['chatRead'], 'Number');
       if (data.hasOwnProperty('chatUnread'))
         obj.chatUnread = ApiClient.convertToType(data['chatUnread'], 'Number');
+      if (data.hasOwnProperty('chatAssigneeChanged'))
+        obj.chatAssigneeChanged = ApiClient.convertToType(data['chatAssigneeChanged'], 'Number');
+      if (data.hasOwnProperty('chatTagsChanged'))
+        obj.chatTagsChanged = ApiClient.convertToType(data['chatTagsChanged'], 'Number');
+      if (data.hasOwnProperty('chatConversationEnded'))
+        obj.chatConversationEnded = ApiClient.convertToType(data['chatConversationEnded'], 'Number');
+      if (data.hasOwnProperty('chatUpdated'))
+        obj.chatUpdated = ApiClient.convertToType(data['chatUpdated'], 'Number');
+      if (data.hasOwnProperty('liveChatAgentChanged'))
+        obj.liveChatAgentChanged = ApiClient.convertToType(data['liveChatAgentChanged'], 'Number');
+      if (data.hasOwnProperty('liveChatRated'))
+        obj.liveChatRated = ApiClient.convertToType(data['liveChatRated'], 'Number');
+      if (data.hasOwnProperty('webWidgetUpdated'))
+        obj.webWidgetUpdated = ApiClient.convertToType(data['webWidgetUpdated'], 'Number');
+      if (data.hasOwnProperty('webWidgetDeleted'))
+        obj.webWidgetDeleted = ApiClient.convertToType(data['webWidgetDeleted'], 'Number');
       if (data.hasOwnProperty('contactAdded'))
         obj.contactAdded = ApiClient.convertToType(data['contactAdded'], 'Number');
       if (data.hasOwnProperty('contactDeleted'))
         obj.contactDeleted = ApiClient.convertToType(data['contactDeleted'], 'Number');
+      if (data.hasOwnProperty('contactBulkUpdated'))
+        obj.contactBulkUpdated = ApiClient.convertToType(data['contactBulkUpdated'], 'Number');
       if (data.hasOwnProperty('contactStateChanged'))
         obj.contactStateChanged = ApiClient.convertToType(data['contactStateChanged'], 'Number');
+      if (data.hasOwnProperty('contactUnsubscribed'))
+        obj.contactUnsubscribed = ApiClient.convertToType(data['contactUnsubscribed'], 'Number');
+      if (data.hasOwnProperty('contactResubscribed'))
+        obj.contactResubscribed = ApiClient.convertToType(data['contactResubscribed'], 'Number');
+      if (data.hasOwnProperty('contactNoteAdded'))
+        obj.contactNoteAdded = ApiClient.convertToType(data['contactNoteAdded'], 'Number');
+      if (data.hasOwnProperty('contactNoteDeleted'))
+        obj.contactNoteDeleted = ApiClient.convertToType(data['contactNoteDeleted'], 'Number');
+      if (data.hasOwnProperty('contactNoteStateChanged'))
+        obj.contactNoteStateChanged = ApiClient.convertToType(data['contactNoteStateChanged'], 'Number');
       if (data.hasOwnProperty('listAdded'))
         obj.listAdded = ApiClient.convertToType(data['listAdded'], 'Number');
       if (data.hasOwnProperty('listDeleted'))
         obj.listDeleted = ApiClient.convertToType(data['listDeleted'], 'Number');
       if (data.hasOwnProperty('listStateChanged'))
         obj.listStateChanged = ApiClient.convertToType(data['listStateChanged'], 'Number');
+      if (data.hasOwnProperty('listCountMembersUpdated'))
+        obj.listCountMembersUpdated = ApiClient.convertToType(data['listCountMembersUpdated'], 'Number');
       if (data.hasOwnProperty('contactWipeEnd'))
         obj.contactWipeEnd = ApiClient.convertToType(data['contactWipeEnd'], 'Number');
       if (data.hasOwnProperty('contactImportEnd'))
@@ -284,8 +576,8 @@
         obj.progressEmailBulkLookup = ApiClient.convertToType(data['progressEmailBulkLookup'], 'Number');
       if (data.hasOwnProperty('progressSubAccountBulkImport'))
         obj.progressSubAccountBulkImport = ApiClient.convertToType(data['progressSubAccountBulkImport'], 'Number');
-      if (data.hasOwnProperty('progressContactBulkImport'))
-        obj.progressContactBulkImport = ApiClient.convertToType(data['progressContactBulkImport'], 'Number');
+      if (data.hasOwnProperty('importProgressState'))
+        obj.importProgressState = ApiClient.convertToType(data['importProgressState'], 'Number');
       if (data.hasOwnProperty('forceRefreshWebApp'))
         obj.forceRefreshWebApp = ApiClient.convertToType(data['forceRefreshWebApp'], 'Number');
       if (data.hasOwnProperty('chatSenderSettingsChanged'))
@@ -302,6 +594,210 @@
         obj.userSubscriptionChanged = ApiClient.convertToType(data['userSubscriptionChanged'], 'Number');
       if (data.hasOwnProperty('userSubscriptionDeleted'))
         obj.userSubscriptionDeleted = ApiClient.convertToType(data['userSubscriptionDeleted'], 'Number');
+      if (data.hasOwnProperty('taskCreated'))
+        obj.taskCreated = ApiClient.convertToType(data['taskCreated'], 'Number');
+      if (data.hasOwnProperty('taskUpdated'))
+        obj.taskUpdated = ApiClient.convertToType(data['taskUpdated'], 'Number');
+      if (data.hasOwnProperty('taskReordered'))
+        obj.taskReordered = ApiClient.convertToType(data['taskReordered'], 'Number');
+      if (data.hasOwnProperty('taskDeleted'))
+        obj.taskDeleted = ApiClient.convertToType(data['taskDeleted'], 'Number');
+      if (data.hasOwnProperty('taskMovedAll'))
+        obj.taskMovedAll = ApiClient.convertToType(data['taskMovedAll'], 'Number');
+      if (data.hasOwnProperty('taskStageCreated'))
+        obj.taskStageCreated = ApiClient.convertToType(data['taskStageCreated'], 'Number');
+      if (data.hasOwnProperty('taskStageUpdated'))
+        obj.taskStageUpdated = ApiClient.convertToType(data['taskStageUpdated'], 'Number');
+      if (data.hasOwnProperty('taskStageDeleted'))
+        obj.taskStageDeleted = ApiClient.convertToType(data['taskStageDeleted'], 'Number');
+      if (data.hasOwnProperty('taskBoardCreated'))
+        obj.taskBoardCreated = ApiClient.convertToType(data['taskBoardCreated'], 'Number');
+      if (data.hasOwnProperty('taskBoardUpdated'))
+        obj.taskBoardUpdated = ApiClient.convertToType(data['taskBoardUpdated'], 'Number');
+      if (data.hasOwnProperty('taskBoardReordered'))
+        obj.taskBoardReordered = ApiClient.convertToType(data['taskBoardReordered'], 'Number');
+      if (data.hasOwnProperty('taskBoardDeleted'))
+        obj.taskBoardDeleted = ApiClient.convertToType(data['taskBoardDeleted'], 'Number');
+      if (data.hasOwnProperty('taskBoardArchived'))
+        obj.taskBoardArchived = ApiClient.convertToType(data['taskBoardArchived'], 'Number');
+      if (data.hasOwnProperty('taskChecklistCreated'))
+        obj.taskChecklistCreated = ApiClient.convertToType(data['taskChecklistCreated'], 'Number');
+      if (data.hasOwnProperty('taskChecklistUpdated'))
+        obj.taskChecklistUpdated = ApiClient.convertToType(data['taskChecklistUpdated'], 'Number');
+      if (data.hasOwnProperty('taskChecklistDeleted'))
+        obj.taskChecklistDeleted = ApiClient.convertToType(data['taskChecklistDeleted'], 'Number');
+      if (data.hasOwnProperty('taskChecklistBulkMarked'))
+        obj.taskChecklistBulkMarked = ApiClient.convertToType(data['taskChecklistBulkMarked'], 'Number');
+      if (data.hasOwnProperty('taskChecklistItemCreated'))
+        obj.taskChecklistItemCreated = ApiClient.convertToType(data['taskChecklistItemCreated'], 'Number');
+      if (data.hasOwnProperty('taskChecklistItemUpdated'))
+        obj.taskChecklistItemUpdated = ApiClient.convertToType(data['taskChecklistItemUpdated'], 'Number');
+      if (data.hasOwnProperty('taskChecklistItemDeleted'))
+        obj.taskChecklistItemDeleted = ApiClient.convertToType(data['taskChecklistItemDeleted'], 'Number');
+      if (data.hasOwnProperty('taskCommentCreated'))
+        obj.taskCommentCreated = ApiClient.convertToType(data['taskCommentCreated'], 'Number');
+      if (data.hasOwnProperty('taskCommentDeleted'))
+        obj.taskCommentDeleted = ApiClient.convertToType(data['taskCommentDeleted'], 'Number');
+      if (data.hasOwnProperty('pinnedContactAdded'))
+        obj.pinnedContactAdded = ApiClient.convertToType(data['pinnedContactAdded'], 'Number');
+      if (data.hasOwnProperty('pinnedContactRemoved'))
+        obj.pinnedContactRemoved = ApiClient.convertToType(data['pinnedContactRemoved'], 'Number');
+      if (data.hasOwnProperty('pinnedContactReordered'))
+        obj.pinnedContactReordered = ApiClient.convertToType(data['pinnedContactReordered'], 'Number');
+      if (data.hasOwnProperty('pinnedContactStateChanged'))
+        obj.pinnedContactStateChanged = ApiClient.convertToType(data['pinnedContactStateChanged'], 'Number');
+      if (data.hasOwnProperty('whatsappAccountAdded'))
+        obj.whatsappAccountAdded = ApiClient.convertToType(data['whatsappAccountAdded'], 'Number');
+      if (data.hasOwnProperty('whatsappAccountRemoved'))
+        obj.whatsappAccountRemoved = ApiClient.convertToType(data['whatsappAccountRemoved'], 'Number');
+      if (data.hasOwnProperty('whatsappAccountChanged'))
+        obj.whatsappAccountChanged = ApiClient.convertToType(data['whatsappAccountChanged'], 'Number');
+      if (data.hasOwnProperty('facebookPageAdded'))
+        obj.facebookPageAdded = ApiClient.convertToType(data['facebookPageAdded'], 'Number');
+      if (data.hasOwnProperty('facebookPageRemoved'))
+        obj.facebookPageRemoved = ApiClient.convertToType(data['facebookPageRemoved'], 'Number');
+      if (data.hasOwnProperty('facebookPageChanged'))
+        obj.facebookPageChanged = ApiClient.convertToType(data['facebookPageChanged'], 'Number');
+      if (data.hasOwnProperty('instagramAccountAdded'))
+        obj.instagramAccountAdded = ApiClient.convertToType(data['instagramAccountAdded'], 'Number');
+      if (data.hasOwnProperty('instagramAccountRemoved'))
+        obj.instagramAccountRemoved = ApiClient.convertToType(data['instagramAccountRemoved'], 'Number');
+      if (data.hasOwnProperty('instagramAccountChanged'))
+        obj.instagramAccountChanged = ApiClient.convertToType(data['instagramAccountChanged'], 'Number');
+      if (data.hasOwnProperty('unreadTicketsCountUpdated'))
+        obj.unreadTicketsCountUpdated = ApiClient.convertToType(data['unreadTicketsCountUpdated'], 'Number');
+      if (data.hasOwnProperty('ticketDeleted'))
+        obj.ticketDeleted = ApiClient.convertToType(data['ticketDeleted'], 'Number');
+      if (data.hasOwnProperty('ticketUpdated'))
+        obj.ticketUpdated = ApiClient.convertToType(data['ticketUpdated'], 'Number');
+      if (data.hasOwnProperty('ticketCreated'))
+        obj.ticketCreated = ApiClient.convertToType(data['ticketCreated'], 'Number');
+      if (data.hasOwnProperty('ticketBulkUpdated'))
+        obj.ticketBulkUpdated = ApiClient.convertToType(data['ticketBulkUpdated'], 'Number');
+      if (data.hasOwnProperty('ticketBulkDeleted'))
+        obj.ticketBulkDeleted = ApiClient.convertToType(data['ticketBulkDeleted'], 'Number');
+      if (data.hasOwnProperty('ticketMessageCreated'))
+        obj.ticketMessageCreated = ApiClient.convertToType(data['ticketMessageCreated'], 'Number');
+      if (data.hasOwnProperty('ticketMessageUpdated'))
+        obj.ticketMessageUpdated = ApiClient.convertToType(data['ticketMessageUpdated'], 'Number');
+      if (data.hasOwnProperty('ticketMessageDeleted'))
+        obj.ticketMessageDeleted = ApiClient.convertToType(data['ticketMessageDeleted'], 'Number');
+      if (data.hasOwnProperty('subAccountsClosed'))
+        obj.subAccountsClosed = ApiClient.convertToType(data['subAccountsClosed'], 'Number');
+      if (data.hasOwnProperty('userInvited'))
+        obj.userInvited = ApiClient.convertToType(data['userInvited'], 'Number');
+      if (data.hasOwnProperty('filteredViewCreated'))
+        obj.filteredViewCreated = ApiClient.convertToType(data['filteredViewCreated'], 'Number');
+      if (data.hasOwnProperty('filteredViewCountUpdated'))
+        obj.filteredViewCountUpdated = ApiClient.convertToType(data['filteredViewCountUpdated'], 'Number');
+      if (data.hasOwnProperty('filteredViewDeleted'))
+        obj.filteredViewDeleted = ApiClient.convertToType(data['filteredViewDeleted'], 'Number');
+      if (data.hasOwnProperty('forwardingInboxWasVerified'))
+        obj.forwardingInboxWasVerified = ApiClient.convertToType(data['forwardingInboxWasVerified'], 'Number');
+      if (data.hasOwnProperty('forwardingInboxCheckWasFailed'))
+        obj.forwardingInboxCheckWasFailed = ApiClient.convertToType(data['forwardingInboxCheckWasFailed'], 'Number');
+      if (data.hasOwnProperty('forwardingInboxVerificationLinkWasParsed'))
+        obj.forwardingInboxVerificationLinkWasParsed = ApiClient.convertToType(data['forwardingInboxVerificationLinkWasParsed'], 'Number');
+      if (data.hasOwnProperty('tendlcLinkNumberStatusUpdated'))
+        obj.tendlcLinkNumberStatusUpdated = ApiClient.convertToType(data['tendlcLinkNumberStatusUpdated'], 'Number');
+      if (data.hasOwnProperty('channelPresence'))
+        obj.channelPresence = ApiClient.convertToType(data['channelPresence'], 'Number');
+      if (data.hasOwnProperty('dealCreated'))
+        obj.dealCreated = ApiClient.convertToType(data['dealCreated'], 'Number');
+      if (data.hasOwnProperty('dealUpdated'))
+        obj.dealUpdated = ApiClient.convertToType(data['dealUpdated'], 'Number');
+      if (data.hasOwnProperty('dealDeleted'))
+        obj.dealDeleted = ApiClient.convertToType(data['dealDeleted'], 'Number');
+      if (data.hasOwnProperty('dealMoved'))
+        obj.dealMoved = ApiClient.convertToType(data['dealMoved'], 'Number');
+      if (data.hasOwnProperty('dealStageCreated'))
+        obj.dealStageCreated = ApiClient.convertToType(data['dealStageCreated'], 'Number');
+      if (data.hasOwnProperty('dealStageUpdated'))
+        obj.dealStageUpdated = ApiClient.convertToType(data['dealStageUpdated'], 'Number');
+      if (data.hasOwnProperty('dealStageDeleted'))
+        obj.dealStageDeleted = ApiClient.convertToType(data['dealStageDeleted'], 'Number');
+      if (data.hasOwnProperty('dealPipelineCreated'))
+        obj.dealPipelineCreated = ApiClient.convertToType(data['dealPipelineCreated'], 'Number');
+      if (data.hasOwnProperty('dealPipelineUpdated'))
+        obj.dealPipelineUpdated = ApiClient.convertToType(data['dealPipelineUpdated'], 'Number');
+      if (data.hasOwnProperty('dealPipelineDeleted'))
+        obj.dealPipelineDeleted = ApiClient.convertToType(data['dealPipelineDeleted'], 'Number');
+      if (data.hasOwnProperty('dealPipelineArchived'))
+        obj.dealPipelineArchived = ApiClient.convertToType(data['dealPipelineArchived'], 'Number');
+      if (data.hasOwnProperty('dealPipelineReordered'))
+        obj.dealPipelineReordered = ApiClient.convertToType(data['dealPipelineReordered'], 'Number');
+      if (data.hasOwnProperty('dealActivityUpdated'))
+        obj.dealActivityUpdated = ApiClient.convertToType(data['dealActivityUpdated'], 'Number');
+      if (data.hasOwnProperty('dealActivityItemCreated'))
+        obj.dealActivityItemCreated = ApiClient.convertToType(data['dealActivityItemCreated'], 'Number');
+      if (data.hasOwnProperty('dealActivityItemUpdated'))
+        obj.dealActivityItemUpdated = ApiClient.convertToType(data['dealActivityItemUpdated'], 'Number');
+      if (data.hasOwnProperty('dealActivityItemDeleted'))
+        obj.dealActivityItemDeleted = ApiClient.convertToType(data['dealActivityItemDeleted'], 'Number');
+      if (data.hasOwnProperty('dealActivityItemBulkMarked'))
+        obj.dealActivityItemBulkMarked = ApiClient.convertToType(data['dealActivityItemBulkMarked'], 'Number');
+      if (data.hasOwnProperty('dealTimelineItemDeleted'))
+        obj.dealTimelineItemDeleted = ApiClient.convertToType(data['dealTimelineItemDeleted'], 'Number');
+      if (data.hasOwnProperty('dealTimelineItemCreated'))
+        obj.dealTimelineItemCreated = ApiClient.convertToType(data['dealTimelineItemCreated'], 'Number');
+      if (data.hasOwnProperty('AIAssistantCreated'))
+        obj.aIAssistantCreated = ApiClient.convertToType(data['AIAssistantCreated'], 'Number');
+      if (data.hasOwnProperty('AIAssistantState'))
+        obj.aIAssistantState = ApiClient.convertToType(data['AIAssistantState'], 'Number');
+      if (data.hasOwnProperty('AIAssistantDeleted'))
+        obj.aIAssistantDeleted = ApiClient.convertToType(data['AIAssistantDeleted'], 'Number');
+      if (data.hasOwnProperty('AIAssistantLinkDeleted'))
+        obj.aIAssistantLinkDeleted = ApiClient.convertToType(data['AIAssistantLinkDeleted'], 'Number');
+      if (data.hasOwnProperty('AIAssistantLinkState'))
+        obj.aIAssistantLinkState = ApiClient.convertToType(data['AIAssistantLinkState'], 'Number');
+      if (data.hasOwnProperty('AIAssistantLinkCreated'))
+        obj.aIAssistantLinkCreated = ApiClient.convertToType(data['AIAssistantLinkCreated'], 'Number');
+      if (data.hasOwnProperty('AIAssistantSubLinkState'))
+        obj.aIAssistantSubLinkState = ApiClient.convertToType(data['AIAssistantSubLinkState'], 'Number');
+      if (data.hasOwnProperty('AIAssistantSubLinkCreated'))
+        obj.aIAssistantSubLinkCreated = ApiClient.convertToType(data['AIAssistantSubLinkCreated'], 'Number');
+      if (data.hasOwnProperty('emailCampaignEmailSenderCreated'))
+        obj.emailCampaignEmailSenderCreated = ApiClient.convertToType(data['emailCampaignEmailSenderCreated'], 'Number');
+      if (data.hasOwnProperty('emailCampaignEmailSenderUpdated'))
+        obj.emailCampaignEmailSenderUpdated = ApiClient.convertToType(data['emailCampaignEmailSenderUpdated'], 'Number');
+      if (data.hasOwnProperty('emailCampaignEmailSenderDeleted'))
+        obj.emailCampaignEmailSenderDeleted = ApiClient.convertToType(data['emailCampaignEmailSenderDeleted'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainCreated'))
+        obj.emailCampaignDomainCreated = ApiClient.convertToType(data['emailCampaignDomainCreated'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainDeleted'))
+        obj.emailCampaignDomainDeleted = ApiClient.convertToType(data['emailCampaignDomainDeleted'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainVerified'))
+        obj.emailCampaignDomainVerified = ApiClient.convertToType(data['emailCampaignDomainVerified'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainStatusChanged'))
+        obj.emailCampaignDomainStatusChanged = ApiClient.convertToType(data['emailCampaignDomainStatusChanged'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainDkimVerified'))
+        obj.emailCampaignDomainDkimVerified = ApiClient.convertToType(data['emailCampaignDomainDkimVerified'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainReturnPathVerified'))
+        obj.emailCampaignDomainReturnPathVerified = ApiClient.convertToType(data['emailCampaignDomainReturnPathVerified'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainDmarcVerified'))
+        obj.emailCampaignDomainDmarcVerified = ApiClient.convertToType(data['emailCampaignDomainDmarcVerified'], 'Number');
+      if (data.hasOwnProperty('emailCampaignDomainEntryVerificationChanged'))
+        obj.emailCampaignDomainEntryVerificationChanged = ApiClient.convertToType(data['emailCampaignDomainEntryVerificationChanged'], 'Number');
+      if (data.hasOwnProperty('emailCampaignProgressState'))
+        obj.emailCampaignProgressState = ApiClient.convertToType(data['emailCampaignProgressState'], 'Number');
+      if (data.hasOwnProperty('emailCampaignUpdated'))
+        obj.emailCampaignUpdated = ApiClient.convertToType(data['emailCampaignUpdated'], 'Number');
+      if (data.hasOwnProperty('smsCampaignInvalidated'))
+        obj.smsCampaignInvalidated = ApiClient.convertToType(data['smsCampaignInvalidated'], 'Number');
+      if (data.hasOwnProperty('scheduledEmailCampaignCreated'))
+        obj.scheduledEmailCampaignCreated = ApiClient.convertToType(data['scheduledEmailCampaignCreated'], 'Number');
+      if (data.hasOwnProperty('scheduledEmailCampaignUpdated'))
+        obj.scheduledEmailCampaignUpdated = ApiClient.convertToType(data['scheduledEmailCampaignUpdated'], 'Number');
+      if (data.hasOwnProperty('scheduledEmailCampaignStatusUpdated'))
+        obj.scheduledEmailCampaignStatusUpdated = ApiClient.convertToType(data['scheduledEmailCampaignStatusUpdated'], 'Number');
+      if (data.hasOwnProperty('scheduledEmailCampaignDeleted'))
+        obj.scheduledEmailCampaignDeleted = ApiClient.convertToType(data['scheduledEmailCampaignDeleted'], 'Number');
+      if (data.hasOwnProperty('emailCampaignFailedAttemptCreated'))
+        obj.emailCampaignFailedAttemptCreated = ApiClient.convertToType(data['emailCampaignFailedAttemptCreated'], 'Number');
+      if (data.hasOwnProperty('emailCampaignFailedAttemptDeleted'))
+        obj.emailCampaignFailedAttemptDeleted = ApiClient.convertToType(data['emailCampaignFailedAttemptDeleted'], 'Number');
+      if (data.hasOwnProperty('emailCampaignFailedAttemptStateUpdated'))
+        obj.emailCampaignFailedAttemptStateUpdated = ApiClient.convertToType(data['emailCampaignFailedAttemptStateUpdated'], 'Number');
     }
     return obj;
   }
@@ -327,6 +823,11 @@
   exports.prototype.systemAccountStateChanged = undefined;
 
   /**
+   * @member {Number} systemAccountAcceptTermsUpdate
+   */
+  exports.prototype.systemAccountAcceptTermsUpdate = undefined;
+
+  /**
    * @member {Number} systemAccountClosed
    */
   exports.prototype.systemAccountClosed = undefined;
@@ -350,6 +851,11 @@
    * @member {Number} userBalanceChanged
    */
   exports.prototype.userBalanceChanged = undefined;
+
+  /**
+   * @member {Number} userPresenceStatusChanged
+   */
+  exports.prototype.userPresenceStatusChanged = undefined;
 
   /**
    * @member {Number} userImpersonationEnd
@@ -390,6 +896,26 @@
    * @member {Number} messageSent
    */
   exports.prototype.messageSent = undefined;
+
+  /**
+   * @member {Number} messageLog
+   */
+  exports.prototype.messageLog = undefined;
+
+  /**
+   * @member {Number} messageNote
+   */
+  exports.prototype.messageNote = undefined;
+
+  /**
+   * @member {Number} messageInitial
+   */
+  exports.prototype.messageInitial = undefined;
+
+  /**
+   * @member {Number} lastMessageSet
+   */
+  exports.prototype.lastMessageSet = undefined;
 
   /**
    * @member {Number} messageSessionDeleted
@@ -487,6 +1013,11 @@
   exports.prototype.chatReopened = undefined;
 
   /**
+   * @member {Number} chatActivated
+   */
+  exports.prototype.chatActivated = undefined;
+
+  /**
    * @member {Number} chatCacheClear
    */
   exports.prototype.chatCacheClear = undefined;
@@ -502,6 +1033,46 @@
   exports.prototype.chatUnread = undefined;
 
   /**
+   * @member {Number} chatAssigneeChanged
+   */
+  exports.prototype.chatAssigneeChanged = undefined;
+
+  /**
+   * @member {Number} chatTagsChanged
+   */
+  exports.prototype.chatTagsChanged = undefined;
+
+  /**
+   * @member {Number} chatConversationEnded
+   */
+  exports.prototype.chatConversationEnded = undefined;
+
+  /**
+   * @member {Number} chatUpdated
+   */
+  exports.prototype.chatUpdated = undefined;
+
+  /**
+   * @member {Number} liveChatAgentChanged
+   */
+  exports.prototype.liveChatAgentChanged = undefined;
+
+  /**
+   * @member {Number} liveChatRated
+   */
+  exports.prototype.liveChatRated = undefined;
+
+  /**
+   * @member {Number} webWidgetUpdated
+   */
+  exports.prototype.webWidgetUpdated = undefined;
+
+  /**
+   * @member {Number} webWidgetDeleted
+   */
+  exports.prototype.webWidgetDeleted = undefined;
+
+  /**
    * @member {Number} contactAdded
    */
   exports.prototype.contactAdded = undefined;
@@ -512,9 +1083,39 @@
   exports.prototype.contactDeleted = undefined;
 
   /**
+   * @member {Number} contactBulkUpdated
+   */
+  exports.prototype.contactBulkUpdated = undefined;
+
+  /**
    * @member {Number} contactStateChanged
    */
   exports.prototype.contactStateChanged = undefined;
+
+  /**
+   * @member {Number} contactUnsubscribed
+   */
+  exports.prototype.contactUnsubscribed = undefined;
+
+  /**
+   * @member {Number} contactResubscribed
+   */
+  exports.prototype.contactResubscribed = undefined;
+
+  /**
+   * @member {Number} contactNoteAdded
+   */
+  exports.prototype.contactNoteAdded = undefined;
+
+  /**
+   * @member {Number} contactNoteDeleted
+   */
+  exports.prototype.contactNoteDeleted = undefined;
+
+  /**
+   * @member {Number} contactNoteStateChanged
+   */
+  exports.prototype.contactNoteStateChanged = undefined;
 
   /**
    * @member {Number} listAdded
@@ -530,6 +1131,11 @@
    * @member {Number} listStateChanged
    */
   exports.prototype.listStateChanged = undefined;
+
+  /**
+   * @member {Number} listCountMembersUpdated
+   */
+  exports.prototype.listCountMembersUpdated = undefined;
 
   /**
    * @member {Number} contactWipeEnd
@@ -572,9 +1178,9 @@
   exports.prototype.progressSubAccountBulkImport = undefined;
 
   /**
-   * @member {Number} progressContactBulkImport
+   * @member {Number} importProgressState
    */
-  exports.prototype.progressContactBulkImport = undefined;
+  exports.prototype.importProgressState = undefined;
 
   /**
    * @member {Number} forceRefreshWebApp
@@ -615,6 +1221,516 @@
    * @member {Number} userSubscriptionDeleted
    */
   exports.prototype.userSubscriptionDeleted = undefined;
+
+  /**
+   * @member {Number} taskCreated
+   */
+  exports.prototype.taskCreated = undefined;
+
+  /**
+   * @member {Number} taskUpdated
+   */
+  exports.prototype.taskUpdated = undefined;
+
+  /**
+   * @member {Number} taskReordered
+   */
+  exports.prototype.taskReordered = undefined;
+
+  /**
+   * @member {Number} taskDeleted
+   */
+  exports.prototype.taskDeleted = undefined;
+
+  /**
+   * @member {Number} taskMovedAll
+   */
+  exports.prototype.taskMovedAll = undefined;
+
+  /**
+   * @member {Number} taskStageCreated
+   */
+  exports.prototype.taskStageCreated = undefined;
+
+  /**
+   * @member {Number} taskStageUpdated
+   */
+  exports.prototype.taskStageUpdated = undefined;
+
+  /**
+   * @member {Number} taskStageDeleted
+   */
+  exports.prototype.taskStageDeleted = undefined;
+
+  /**
+   * @member {Number} taskBoardCreated
+   */
+  exports.prototype.taskBoardCreated = undefined;
+
+  /**
+   * @member {Number} taskBoardUpdated
+   */
+  exports.prototype.taskBoardUpdated = undefined;
+
+  /**
+   * @member {Number} taskBoardReordered
+   */
+  exports.prototype.taskBoardReordered = undefined;
+
+  /**
+   * @member {Number} taskBoardDeleted
+   */
+  exports.prototype.taskBoardDeleted = undefined;
+
+  /**
+   * @member {Number} taskBoardArchived
+   */
+  exports.prototype.taskBoardArchived = undefined;
+
+  /**
+   * @member {Number} taskChecklistCreated
+   */
+  exports.prototype.taskChecklistCreated = undefined;
+
+  /**
+   * @member {Number} taskChecklistUpdated
+   */
+  exports.prototype.taskChecklistUpdated = undefined;
+
+  /**
+   * @member {Number} taskChecklistDeleted
+   */
+  exports.prototype.taskChecklistDeleted = undefined;
+
+  /**
+   * @member {Number} taskChecklistBulkMarked
+   */
+  exports.prototype.taskChecklistBulkMarked = undefined;
+
+  /**
+   * @member {Number} taskChecklistItemCreated
+   */
+  exports.prototype.taskChecklistItemCreated = undefined;
+
+  /**
+   * @member {Number} taskChecklistItemUpdated
+   */
+  exports.prototype.taskChecklistItemUpdated = undefined;
+
+  /**
+   * @member {Number} taskChecklistItemDeleted
+   */
+  exports.prototype.taskChecklistItemDeleted = undefined;
+
+  /**
+   * @member {Number} taskCommentCreated
+   */
+  exports.prototype.taskCommentCreated = undefined;
+
+  /**
+   * @member {Number} taskCommentDeleted
+   */
+  exports.prototype.taskCommentDeleted = undefined;
+
+  /**
+   * @member {Number} pinnedContactAdded
+   */
+  exports.prototype.pinnedContactAdded = undefined;
+
+  /**
+   * @member {Number} pinnedContactRemoved
+   */
+  exports.prototype.pinnedContactRemoved = undefined;
+
+  /**
+   * @member {Number} pinnedContactReordered
+   */
+  exports.prototype.pinnedContactReordered = undefined;
+
+  /**
+   * @member {Number} pinnedContactStateChanged
+   */
+  exports.prototype.pinnedContactStateChanged = undefined;
+
+  /**
+   * @member {Number} whatsappAccountAdded
+   */
+  exports.prototype.whatsappAccountAdded = undefined;
+
+  /**
+   * @member {Number} whatsappAccountRemoved
+   */
+  exports.prototype.whatsappAccountRemoved = undefined;
+
+  /**
+   * @member {Number} whatsappAccountChanged
+   */
+  exports.prototype.whatsappAccountChanged = undefined;
+
+  /**
+   * @member {Number} facebookPageAdded
+   */
+  exports.prototype.facebookPageAdded = undefined;
+
+  /**
+   * @member {Number} facebookPageRemoved
+   */
+  exports.prototype.facebookPageRemoved = undefined;
+
+  /**
+   * @member {Number} facebookPageChanged
+   */
+  exports.prototype.facebookPageChanged = undefined;
+
+  /**
+   * @member {Number} instagramAccountAdded
+   */
+  exports.prototype.instagramAccountAdded = undefined;
+
+  /**
+   * @member {Number} instagramAccountRemoved
+   */
+  exports.prototype.instagramAccountRemoved = undefined;
+
+  /**
+   * @member {Number} instagramAccountChanged
+   */
+  exports.prototype.instagramAccountChanged = undefined;
+
+  /**
+   * @member {Number} unreadTicketsCountUpdated
+   */
+  exports.prototype.unreadTicketsCountUpdated = undefined;
+
+  /**
+   * @member {Number} ticketDeleted
+   */
+  exports.prototype.ticketDeleted = undefined;
+
+  /**
+   * @member {Number} ticketUpdated
+   */
+  exports.prototype.ticketUpdated = undefined;
+
+  /**
+   * @member {Number} ticketCreated
+   */
+  exports.prototype.ticketCreated = undefined;
+
+  /**
+   * @member {Number} ticketBulkUpdated
+   */
+  exports.prototype.ticketBulkUpdated = undefined;
+
+  /**
+   * @member {Number} ticketBulkDeleted
+   */
+  exports.prototype.ticketBulkDeleted = undefined;
+
+  /**
+   * @member {Number} ticketMessageCreated
+   */
+  exports.prototype.ticketMessageCreated = undefined;
+
+  /**
+   * @member {Number} ticketMessageUpdated
+   */
+  exports.prototype.ticketMessageUpdated = undefined;
+
+  /**
+   * @member {Number} ticketMessageDeleted
+   */
+  exports.prototype.ticketMessageDeleted = undefined;
+
+  /**
+   * @member {Number} subAccountsClosed
+   */
+  exports.prototype.subAccountsClosed = undefined;
+
+  /**
+   * @member {Number} userInvited
+   */
+  exports.prototype.userInvited = undefined;
+
+  /**
+   * @member {Number} filteredViewCreated
+   */
+  exports.prototype.filteredViewCreated = undefined;
+
+  /**
+   * @member {Number} filteredViewCountUpdated
+   */
+  exports.prototype.filteredViewCountUpdated = undefined;
+
+  /**
+   * @member {Number} filteredViewDeleted
+   */
+  exports.prototype.filteredViewDeleted = undefined;
+
+  /**
+   * @member {Number} forwardingInboxWasVerified
+   */
+  exports.prototype.forwardingInboxWasVerified = undefined;
+
+  /**
+   * @member {Number} forwardingInboxCheckWasFailed
+   */
+  exports.prototype.forwardingInboxCheckWasFailed = undefined;
+
+  /**
+   * @member {Number} forwardingInboxVerificationLinkWasParsed
+   */
+  exports.prototype.forwardingInboxVerificationLinkWasParsed = undefined;
+
+  /**
+   * @member {Number} tendlcLinkNumberStatusUpdated
+   */
+  exports.prototype.tendlcLinkNumberStatusUpdated = undefined;
+
+  /**
+   * @member {Number} channelPresence
+   */
+  exports.prototype.channelPresence = undefined;
+
+  /**
+   * @member {Number} dealCreated
+   */
+  exports.prototype.dealCreated = undefined;
+
+  /**
+   * @member {Number} dealUpdated
+   */
+  exports.prototype.dealUpdated = undefined;
+
+  /**
+   * @member {Number} dealDeleted
+   */
+  exports.prototype.dealDeleted = undefined;
+
+  /**
+   * @member {Number} dealMoved
+   */
+  exports.prototype.dealMoved = undefined;
+
+  /**
+   * @member {Number} dealStageCreated
+   */
+  exports.prototype.dealStageCreated = undefined;
+
+  /**
+   * @member {Number} dealStageUpdated
+   */
+  exports.prototype.dealStageUpdated = undefined;
+
+  /**
+   * @member {Number} dealStageDeleted
+   */
+  exports.prototype.dealStageDeleted = undefined;
+
+  /**
+   * @member {Number} dealPipelineCreated
+   */
+  exports.prototype.dealPipelineCreated = undefined;
+
+  /**
+   * @member {Number} dealPipelineUpdated
+   */
+  exports.prototype.dealPipelineUpdated = undefined;
+
+  /**
+   * @member {Number} dealPipelineDeleted
+   */
+  exports.prototype.dealPipelineDeleted = undefined;
+
+  /**
+   * @member {Number} dealPipelineArchived
+   */
+  exports.prototype.dealPipelineArchived = undefined;
+
+  /**
+   * @member {Number} dealPipelineReordered
+   */
+  exports.prototype.dealPipelineReordered = undefined;
+
+  /**
+   * @member {Number} dealActivityUpdated
+   */
+  exports.prototype.dealActivityUpdated = undefined;
+
+  /**
+   * @member {Number} dealActivityItemCreated
+   */
+  exports.prototype.dealActivityItemCreated = undefined;
+
+  /**
+   * @member {Number} dealActivityItemUpdated
+   */
+  exports.prototype.dealActivityItemUpdated = undefined;
+
+  /**
+   * @member {Number} dealActivityItemDeleted
+   */
+  exports.prototype.dealActivityItemDeleted = undefined;
+
+  /**
+   * @member {Number} dealActivityItemBulkMarked
+   */
+  exports.prototype.dealActivityItemBulkMarked = undefined;
+
+  /**
+   * @member {Number} dealTimelineItemDeleted
+   */
+  exports.prototype.dealTimelineItemDeleted = undefined;
+
+  /**
+   * @member {Number} dealTimelineItemCreated
+   */
+  exports.prototype.dealTimelineItemCreated = undefined;
+
+  /**
+   * @member {Number} aIAssistantCreated
+   */
+  exports.prototype.aIAssistantCreated = undefined;
+
+  /**
+   * @member {Number} aIAssistantState
+   */
+  exports.prototype.aIAssistantState = undefined;
+
+  /**
+   * @member {Number} aIAssistantDeleted
+   */
+  exports.prototype.aIAssistantDeleted = undefined;
+
+  /**
+   * @member {Number} aIAssistantLinkDeleted
+   */
+  exports.prototype.aIAssistantLinkDeleted = undefined;
+
+  /**
+   * @member {Number} aIAssistantLinkState
+   */
+  exports.prototype.aIAssistantLinkState = undefined;
+
+  /**
+   * @member {Number} aIAssistantLinkCreated
+   */
+  exports.prototype.aIAssistantLinkCreated = undefined;
+
+  /**
+   * @member {Number} aIAssistantSubLinkState
+   */
+  exports.prototype.aIAssistantSubLinkState = undefined;
+
+  /**
+   * @member {Number} aIAssistantSubLinkCreated
+   */
+  exports.prototype.aIAssistantSubLinkCreated = undefined;
+
+  /**
+   * @member {Number} emailCampaignEmailSenderCreated
+   */
+  exports.prototype.emailCampaignEmailSenderCreated = undefined;
+
+  /**
+   * @member {Number} emailCampaignEmailSenderUpdated
+   */
+  exports.prototype.emailCampaignEmailSenderUpdated = undefined;
+
+  /**
+   * @member {Number} emailCampaignEmailSenderDeleted
+   */
+  exports.prototype.emailCampaignEmailSenderDeleted = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainCreated
+   */
+  exports.prototype.emailCampaignDomainCreated = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainDeleted
+   */
+  exports.prototype.emailCampaignDomainDeleted = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainVerified
+   */
+  exports.prototype.emailCampaignDomainVerified = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainStatusChanged
+   */
+  exports.prototype.emailCampaignDomainStatusChanged = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainDkimVerified
+   */
+  exports.prototype.emailCampaignDomainDkimVerified = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainReturnPathVerified
+   */
+  exports.prototype.emailCampaignDomainReturnPathVerified = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainDmarcVerified
+   */
+  exports.prototype.emailCampaignDomainDmarcVerified = undefined;
+
+  /**
+   * @member {Number} emailCampaignDomainEntryVerificationChanged
+   */
+  exports.prototype.emailCampaignDomainEntryVerificationChanged = undefined;
+
+  /**
+   * @member {Number} emailCampaignProgressState
+   */
+  exports.prototype.emailCampaignProgressState = undefined;
+
+  /**
+   * @member {Number} emailCampaignUpdated
+   */
+  exports.prototype.emailCampaignUpdated = undefined;
+
+  /**
+   * @member {Number} smsCampaignInvalidated
+   */
+  exports.prototype.smsCampaignInvalidated = undefined;
+
+  /**
+   * @member {Number} scheduledEmailCampaignCreated
+   */
+  exports.prototype.scheduledEmailCampaignCreated = undefined;
+
+  /**
+   * @member {Number} scheduledEmailCampaignUpdated
+   */
+  exports.prototype.scheduledEmailCampaignUpdated = undefined;
+
+  /**
+   * @member {Number} scheduledEmailCampaignStatusUpdated
+   */
+  exports.prototype.scheduledEmailCampaignStatusUpdated = undefined;
+
+  /**
+   * @member {Number} scheduledEmailCampaignDeleted
+   */
+  exports.prototype.scheduledEmailCampaignDeleted = undefined;
+
+  /**
+   * @member {Number} emailCampaignFailedAttemptCreated
+   */
+  exports.prototype.emailCampaignFailedAttemptCreated = undefined;
+
+  /**
+   * @member {Number} emailCampaignFailedAttemptDeleted
+   */
+  exports.prototype.emailCampaignFailedAttemptDeleted = undefined;
+
+  /**
+   * @member {Number} emailCampaignFailedAttemptStateUpdated
+   */
+  exports.prototype.emailCampaignFailedAttemptStateUpdated = undefined;
 
   return exports;
 

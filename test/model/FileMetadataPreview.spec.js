@@ -30,26 +30,26 @@
   var instance;
 
   describe('(package)', function() {
-    describe('CheckPhoneVerificationCodeTFAInputObject', function() {
+    describe('FileMetadataPreview', function() {
       beforeEach(function() {
-        instance = new TextmagicClient.CheckPhoneVerificationCodeTFAInputObject();
+        instance = new TextmagicClient.FileMetadataPreview();
       });
 
-      it('should create an instance of CheckPhoneVerificationCodeTFAInputObject', function() {
-        // TODO: update the code to test CheckPhoneVerificationCodeTFAInputObject
-        expect(instance).to.be.a(TextmagicClient.CheckPhoneVerificationCodeTFAInputObject);
+      it('should create an instance of FileMetadataPreview', function() {
+        // TODO: update the code to test FileMetadataPreview
+        expect(instance).to.be.a(TextmagicClient.FileMetadataPreview);
       });
 
-      it('should have the property code (base name: "code")', function() {
-        // TODO: update the code to test the property code
-        expect(instance).to.have.property('code');
-        // expect(instance.code).to.be(expectedValueLiteral);
+      it('should have the property height (base name: "height")', function() {
+        // TODO: update the code to test the property height
+        expect(instance).to.have.property('height');
+        // expect(instance.height).to.be(expectedValueLiteral);
       });
 
-      it('should have the property verifyId (base name: "verifyId")', function() {
-        // TODO: update the code to test the property verifyId
-        expect(instance).to.have.property('verifyId');
-        // expect(instance.verifyId).to.be(expectedValueLiteral);
+      it('should have the property width (base name: "width")', function() {
+        // TODO: update the code to test the property width
+        expect(instance).to.have.property('width');
+        // expect(instance.width).to.be(expectedValueLiteral);
       });
 
     });

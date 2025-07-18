@@ -58,6 +58,12 @@
         // expect(instance.numbers).to.be(expectedValueLiteral);
       });
 
+      it('should have the property filteredViews (base name: "filteredViews")', function() {
+        // TODO: update the code to test the property filteredViews
+        expect(instance).to.have.property('filteredViews');
+        // expect(instance.filteredViews).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

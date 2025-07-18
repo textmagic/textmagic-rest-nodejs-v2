@@ -112,6 +112,18 @@
         // expect(instance.country).to.be(expectedValueLiteral);
       });
 
+      it('should have the property tags (base name: "tags")', function() {
+        // TODO: update the code to test the property tags
+        expect(instance).to.have.property('tags');
+        // expect(instance.tags).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property owner (base name: "owner")', function() {
+        // TODO: update the code to test the property owner
+        expect(instance).to.have.property('owner');
+        // expect(instance.owner).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

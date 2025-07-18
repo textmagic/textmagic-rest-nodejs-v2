@@ -33,7 +33,7 @@
   /**
    * The MessageSession model module.
    * @module model/MessageSession
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -48,8 +48,10 @@
    * @param price {Number} Session cost (in account currency).
    * @param numbersCount {Number} Session recipient count.
    * @param destination {module:model/MessageSession.DestinationEnum} Destination type of a Message Session: * **t** – text SMS; * **s** – text-to-speech; * **v** – voice broadcast. 
+   * @param initiatorId {Number} Initiator ID.
+   * @param title {String} 
    */
-  var exports = function(id, startTime, text, source, referenceId, price, numbersCount, destination) {
+  var exports = function(id, startTime, text, source, referenceId, price, numbersCount, destination, initiatorId, title) {
     this.id = id;
     this.startTime = startTime;
     this.text = text;
@@ -58,6 +60,8 @@
     this.price = price;
     this.numbersCount = numbersCount;
     this.destination = destination;
+    this.initiatorId = initiatorId;
+    this.title = title;
   };
 
   /**
@@ -86,6 +90,10 @@
         obj.numbersCount = ApiClient.convertToType(data['numbersCount'], 'Number');
       if (data.hasOwnProperty('destination'))
         obj.destination = ApiClient.convertToType(data['destination'], 'String');
+      if (data.hasOwnProperty('initiatorId'))
+        obj.initiatorId = ApiClient.convertToType(data['initiatorId'], 'Number');
+      if (data.hasOwnProperty('title'))
+        obj.title = ApiClient.convertToType(data['title'], 'String');
     }
     return obj;
   }
@@ -137,6 +145,17 @@
    * @member {module:model/MessageSession.DestinationEnum} destination
    */
   exports.prototype.destination = undefined;
+
+  /**
+   * Initiator ID.
+   * @member {Number} initiatorId
+   */
+  exports.prototype.initiatorId = undefined;
+
+  /**
+   * @member {String} title
+   */
+  exports.prototype.title = undefined;
 
 
   /**

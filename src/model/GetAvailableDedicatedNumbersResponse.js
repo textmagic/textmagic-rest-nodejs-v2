@@ -33,7 +33,7 @@
   /**
    * The GetAvailableDedicatedNumbersResponse model module.
    * @module model/GetAvailableDedicatedNumbersResponse
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -42,10 +42,12 @@
    * @class
    * @param numbers {Array.<String>} Array of phone numbers.
    * @param price {Number} Dedicated number monthly fee for this country. Returned in the current [account](https://docs.textmagic.com/#tag/User) currency.
+   * @param giftType {module:model/GetAvailableDedicatedNumbersResponse.GiftTypeEnum} 
    */
-  var exports = function(numbers, price) {
+  var exports = function(numbers, price, giftType) {
     this.numbers = numbers;
     this.price = price;
+    this.giftType = giftType;
   };
 
   /**
@@ -62,6 +64,8 @@
         obj.numbers = ApiClient.convertToType(data['numbers'], ['String']);
       if (data.hasOwnProperty('price'))
         obj.price = ApiClient.convertToType(data['price'], 'Number');
+      if (data.hasOwnProperty('giftType'))
+        obj.giftType = ApiClient.convertToType(data['giftType'], 'String');
     }
     return obj;
   }
@@ -77,6 +81,43 @@
    * @member {Number} price
    */
   exports.prototype.price = undefined;
+
+  /**
+   * @member {module:model/GetAvailableDedicatedNumbersResponse.GiftTypeEnum} giftType
+   */
+  exports.prototype.giftType = undefined;
+
+
+  /**
+   * Allowed values for the <code>giftType</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.GiftTypeEnum = {
+    /**
+     * value: "none"
+     * @const
+     */
+    none: "none",
+
+    /**
+     * value: "registration"
+     * @const
+     */
+    registration: "registration",
+
+    /**
+     * value: "first_month"
+     * @const
+     */
+    firstMonth: "first_month",
+
+    /**
+     * value: "include_in_plan"
+     * @const
+     */
+    includeInPlan: "include_in_plan"
+  };
 
   return exports;
 

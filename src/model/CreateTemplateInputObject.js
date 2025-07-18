@@ -33,7 +33,7 @@
   /**
    * The CreateTemplateInputObject model module.
    * @module model/CreateTemplateInputObject
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -69,7 +69,7 @@
   exports.prototype.name = undefined;
 
   /**
-   * Template text. May contain tags inside braces. See [Get timezones](https://docs.textmagic.com/#section/Custom-fields-list-(Merge-tags)).
+   * Template text. May contain dynamic fields inside braces. See [Custom fields list](https://docs.textmagic.com/#tag/Templates/Custom-fields-list-(Merge-dynamic-fields)).
    * @member {String} content
    */
   exports.prototype.content = undefined;

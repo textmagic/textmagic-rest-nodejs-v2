@@ -33,7 +33,7 @@
   /**
    * The CreateContactInputObject model module.
    * @module model/CreateContactInputObject
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -78,6 +78,10 @@
         obj.local = ApiClient.convertToType(data['local'], 'Number');
       if (data.hasOwnProperty('country'))
         obj.country = ApiClient.convertToType(data['country'], 'String');
+      if (data.hasOwnProperty('tags'))
+        obj.tags = ApiClient.convertToType(data['tags'], 'String');
+      if (data.hasOwnProperty('owner'))
+        obj.owner = ApiClient.convertToType(data['owner'], 'Number');
     }
     return obj;
   }
@@ -152,6 +156,18 @@
    * @member {String} country
    */
   exports.prototype.country = undefined;
+
+  /**
+   * Contact [list](https://docs.textmagic.com/#tag/Tag) ID. Each contact must be assigned to at least one list.
+   * @member {String} tags
+   */
+  exports.prototype.tags = undefined;
+
+  /**
+   * Contact Owner ID
+   * @member {Number} owner
+   */
+  exports.prototype.owner = undefined;
 
   return exports;
 

@@ -104,42 +104,6 @@
           done();
         });
       });
-      describe('cancelVerification', function() {
-        it('should call cancelVerification successfully', function(done) {
-          // TODO: uncomment, update parameter values for cancelVerification call
-          /*
-          var verifyId = "123e4567-e89b-12d3-a456-426655440000";
-
-          instance.cancelVerification(verifyId).then(function(data) {
-
-            done();
-          }, function(error) {
-            done(error);
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('checkPhoneVerificationCodeTFA', function() {
-        it('should call checkPhoneVerificationCodeTFA successfully', function(done) {
-          // TODO: uncomment, update parameter values for checkPhoneVerificationCodeTFA call
-          /*
-          var checkPhoneVerificationCodeTFAInputObject = new TextmagicClient.CheckPhoneVerificationCodeTFAInputObject();
-          checkPhoneVerificationCodeTFAInputObject.code = 1234;
-          checkPhoneVerificationCodeTFAInputObject.verifyId = "123e4567-e89b-12d3-a456-426655440000";
-
-          instance.checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeTFAInputObject).then(function(data) {
-
-            done();
-          }, function(error) {
-            done(error);
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
       describe('clearAndAssignContactsToList', function() {
         it('should call clearAndAssignContactsToList successfully', function(done) {
           // TODO: uncomment, update parameter values for clearAndAssignContactsToList call and complete the assertions
@@ -233,9 +197,14 @@
           createContactInputObject.type = 1;
           createContactInputObject.customFieldValues = [new TextmagicClient.CustomFieldListItem()];
           createContactInputObject.customFieldValues[0].id = 515;
+          createContactInputObject.customFieldValues[0].userCustomFieldId = 515;
+          createContactInputObject.customFieldValues[0].name = "Custom name";
           createContactInputObject.customFieldValues[0].value = "Custom value";
+          createContactInputObject.customFieldValues[0].createdAt = 2015-02-11T07:33:19+0000;
           createContactInputObject.local = 0;
           createContactInputObject.country = "US";
+          createContactInputObject.tags = "23";
+          createContactInputObject.owner = 2;
 
           instance.createContact(createContactInputObject).then(function(data) {
             // TODO: update response assertions
@@ -1003,6 +972,10 @@
                   expect(data.session.numbersCount).to.be(18);
                   expect(data.session.destination).to.be.a('string');
                   expect(data.session.destination).to.be("t");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(305);
+                  expect(data.session.title).to.be.a('string');
+                  expect(data.session.title).to.be("");
                 expect(data.text).to.be.a('string');
                 expect(data.text).to.be("I Love Textmagic!");
               }
@@ -1079,16 +1052,17 @@
                     expect(dataCtr).to.not.be.empty();
                     for (let p in dataCtr) {
                       let data = dataCtr[p];
-                      expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                      expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(515);
+                      expect(data.userCustomFieldId).to.be.a('number');
+                      expect(data.userCustomFieldId).to.be(515);
+                      expect(data.name).to.be.a('string');
+                      expect(data.name).to.be("Custom name");
                       expect(data.value).to.be.a('string');
-                      expect(data.value).to.be("");
-                      expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                            expect(data.userCustomField.id).to.be.a('number');
-                        expect(data.userCustomField.id).to.be(23);
-                        expect(data.userCustomField.name).to.be.a('string');
-                        expect(data.userCustomField.name).to.be("DOB");
-                        expect(data.userCustomField.createdAt).to.be.a(Date);
-                        expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                      expect(data.value).to.be("Custom value");
+                      expect(data.createdAt).to.be.a(Date);
+                      expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                     }
                   }
                   expect(data.contact.user).to.be.a(TextmagicClient.User);
@@ -1225,6 +1199,72 @@
                       expect(data.isDefault).to.be(false);
                     }
                   }
+                  expect(data.contact.owner).to.be.a(TextmagicClient.User);
+                        expect(data.contact.owner.id).to.be.a('number');
+                    expect(data.contact.owner.id).to.be(305);
+                    expect(data.contact.owner.displayTimeFormat).to.be.a('string');
+                    expect(data.contact.owner.displayTimeFormat).to.be("24h");
+                    expect(data.contact.owner.username).to.be.a('string');
+                    expect(data.contact.owner.username).to.be("charles.conway");
+                    expect(data.contact.owner.firstName).to.be.a('string');
+                    expect(data.contact.owner.firstName).to.be("Charles");
+                    expect(data.contact.owner.lastName).to.be.a('string');
+                    expect(data.contact.owner.lastName).to.be("Conway");
+                    expect(data.contact.owner.email).to.be.a('string');
+                    expect(data.contact.owner.email).to.be("charles@example.com");
+                    expect(data.contact.owner.status).to.be.a('string');
+                    expect(data.contact.owner.status).to.be("A");
+                    expect(data.contact.owner.balance).to.be.a('number');
+                    expect(data.contact.owner.balance).to.be(208.64);
+                    expect(data.contact.owner.phone).to.be.a('string');
+                    expect(data.contact.owner.phone).to.be("447860021130");
+                    expect(data.contact.owner.company).to.be.a('string');
+                    expect(data.contact.owner.company).to.be("Example Ltd.");
+                    expect(data.contact.owner.currency).to.be.a(TextmagicClient.Currency);
+                          expect(data.contact.owner.currency.id).to.be.a('string');
+                      expect(data.contact.owner.currency.id).to.be("GBP");
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be("£");
+                      expect(data.contact.owner.currency.htmlSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.htmlSymbol).to.be("&pound;");
+                    expect(data.contact.owner.country).to.be.a(TextmagicClient.Country);
+                          expect(data.contact.owner.country.id).to.be.a('string');
+                      expect(data.contact.owner.country.id).to.be("US");
+                      expect(data.contact.owner.country.name).to.be.a('string');
+                      expect(data.contact.owner.country.name).to.be("India");
+                    expect(data.contact.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                          expect(data.contact.owner.timezone.id).to.be.a('number');
+                      expect(data.contact.owner.timezone.id).to.be(55);
+                      expect(data.contact.owner.timezone.area).to.be.a('string');
+                      expect(data.contact.owner.timezone.area).to.be("Europe");
+                      expect(data.contact.owner.timezone.dst).to.be.a('number');
+                      expect(data.contact.owner.timezone.dst).to.be(1);
+                      expect(data.contact.owner.timezone.offset).to.be.a('number');
+                      expect(data.contact.owner.timezone.offset).to.be(10800);
+                      expect(data.contact.owner.timezone.timezone).to.be.a('string');
+                      expect(data.contact.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                    expect(data.contact.owner.subaccountType).to.be.a('string');
+                    expect(data.contact.owner.subaccountType).to.be("P");
+                    expect(data.contact.owner.emailAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.emailAccepted).to.be(true);
+                    expect(data.contact.owner.phoneAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.phoneAccepted).to.be(true);
+                    expect(data.contact.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                          expect(data.contact.owner.avatar.href).to.be.a('string');
+                      expect(data.contact.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                  {
+                    let dataCtr = data.contact.tags;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(TextmagicClient.Tag);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(23);
+                      expect(data.title).to.be.a('string');
+                      expect(data.title).to.be("Red");
+                    }
+                  }
                   expect(data.contact.phoneType).to.be.a('string');
                   expect(data.contact.phoneType).to.be("");
                   expect(data.contact.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -1298,6 +1338,8 @@
                           expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                     }
                   }
+                  expect(data.contact.whatsappPhone).to.be.a('string');
+                  expect(data.contact.whatsappPhone).to.be("447860021130");
                 expect(data.unsubscribedContactId).to.be.a('number');
                 expect(data.unsubscribedContactId).to.be(546);
                 expect(data.unread).to.be.a('number');
@@ -1327,6 +1369,25 @@
                   expect(data.country.name).to.be("India");
                 expect(data.pinned).to.be.a('boolean');
                 expect(data.pinned).to.be(true);
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("sms");
+                expect(data.smsPrice).to.be.a('number');
+                expect(data.smsPrice).to.be(12.34);
+                expect(data.mmsPrice).to.be.a('number');
+                expect(data.mmsPrice).to.be(12.34);
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
               }
             }
 
@@ -1441,6 +1502,10 @@
                 expect(data.numbersCount).to.be(18);
                 expect(data.destination).to.be.a('string');
                 expect(data.destination).to.be("t");
+                expect(data.initiatorId).to.be.a('number');
+                expect(data.initiatorId).to.be(305);
+                expect(data.title).to.be.a('string');
+                expect(data.title).to.be("");
               }
             }
 
@@ -1488,6 +1553,8 @@
                 expect(data.text).to.be("I love Textmagic!");
                 expect(data.status).to.be.a('string');
                 expect(data.status).to.be("d");
+                expect(data.rejectReason).to.be.a('string');
+                expect(data.rejectReason).to.be("a");
                 expect(data.contactId).to.be.a('number');
                 expect(data.contactId).to.be(2764);
                 expect(data.sessionId).to.be.a('number');
@@ -1518,6 +1585,40 @@
                 expect(data.fromEmail).to.be("test@email.com");
                 expect(data.fromNumber).to.be.a('string');
                 expect(data.fromNumber).to.be("447624800500");
+                expect(data.senderSource).to.be.a(TextmagicClient.MessageOutSenderSource);
+                      expect(data.senderSource.id).to.be.a('number');
+                  expect(data.senderSource.id).to.be(0);
+                  expect(data.senderSource.phone).to.be.a('string');
+                  expect(data.senderSource.phone).to.be("");
+                  expect(data.senderSource.type).to.be.a('string');
+                  expect(data.senderSource.type).to.be("");
+                  expect(data.senderSource.countryId).to.be.a('string');
+                  expect(data.senderSource.countryId).to.be("");
+                  expect(data.senderSource.label).to.be.a('string');
+                  expect(data.senderSource.label).to.be("");
+                  expect(data.senderSource.status).to.be.a('string');
+                  expect(data.senderSource.status).to.be("");
+                  expect(data.senderSource.carrierStatus).to.be.a('string');
+                  expect(data.senderSource.carrierStatus).to.be("");
+                expect(data.session).to.be.a(TextmagicClient.MessageOutSession);
+                      expect(data.session.id).to.be.a('number');
+                  expect(data.session.id).to.be(0);
+                  expect(data.session.startTime).to.be.a('string');
+                  expect(data.session.startTime).to.be("");
+                  expect(data.session.text).to.be.a('string');
+                  expect(data.session.text).to.be("");
+                  expect(data.session.price).to.be.a('number');
+                  expect(data.session.price).to.be(0.0);
+                  expect(data.session.numbersCount).to.be.a('number');
+                  expect(data.session.numbersCount).to.be(0);
+                  expect(data.session.destination).to.be.a('string');
+                  expect(data.session.destination).to.be("");
+                  expect(data.session.source).to.be.a('string');
+                  expect(data.session.source).to.be("");
+                  expect(data.session.referenceId).to.be.a('string');
+                  expect(data.session.referenceId).to.be("");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(0);
               }
             }
 
@@ -1580,6 +1681,10 @@
                   expect(data.session.numbersCount).to.be(18);
                   expect(data.session.destination).to.be.a('string');
                   expect(data.session.destination).to.be("t");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(305);
+                  expect(data.session.title).to.be.a('string');
+                  expect(data.session.title).to.be("");
                 expect(data.lastSent).to.be.a(Date);
                 expect(data.lastSent).to.be(2015-06-19T09:48:24+0000);
                 expect(data.contactName).to.be.a('string');
@@ -1616,6 +1721,16 @@
                         let data = dataCtr[p];
                         expect(data).to.be.a('string');
                         expect(data).to.be("447860021130");
+                      }
+                    }
+                    {
+                      let dataCtr = data.parameters.recipients.filteredViews;
+                      expect(dataCtr).to.be.an(Array);
+                      expect(dataCtr).to.not.be.empty();
+                      for (let p in dataCtr) {
+                        let data = dataCtr[p];
+                        expect(data).to.be.a('number');
+                        expect(data).to.be(39318);
                       }
                     }
                 expect(data.type).to.be.a('string');
@@ -1737,6 +1852,8 @@
             }
             expect(data.price).to.be.a('number');
             expect(data.price).to.be(2.4);
+            expect(data.giftType).to.be.a('string');
+            expect(data.giftType).to.be("none");
 
             done();
           }, function(error) {
@@ -1809,6 +1926,36 @@
             }
             {
               let dataCtr = data.userCarrierVonage;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.userCarrierSinch;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.uCarrierBandwidth;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a('string');
+                expect(data).to.be("");
+              }
+            }
+            {
+              let dataCtr = data.ucTwilioSenderId;
               expect(dataCtr).to.be.an(Array);
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
@@ -1951,16 +2098,17 @@
                   expect(dataCtr).to.not.be.empty();
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
-                    expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                    expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(515);
+                    expect(data.userCustomFieldId).to.be.a('number');
+                    expect(data.userCustomFieldId).to.be(515);
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("Custom name");
                     expect(data.value).to.be.a('string');
-                    expect(data.value).to.be("");
-                    expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                          expect(data.userCustomField.id).to.be.a('number');
-                      expect(data.userCustomField.id).to.be(23);
-                      expect(data.userCustomField.name).to.be.a('string');
-                      expect(data.userCustomField.name).to.be("DOB");
-                      expect(data.userCustomField.createdAt).to.be.a(Date);
-                      expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                    expect(data.value).to.be("Custom value");
+                    expect(data.createdAt).to.be.a(Date);
+                    expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                   }
                 }
                 expect(data.user).to.be.a(TextmagicClient.User);
@@ -2097,6 +2245,72 @@
                     expect(data.isDefault).to.be(false);
                   }
                 }
+                expect(data.owner).to.be.a(TextmagicClient.User);
+                      expect(data.owner.id).to.be.a('number');
+                  expect(data.owner.id).to.be(305);
+                  expect(data.owner.displayTimeFormat).to.be.a('string');
+                  expect(data.owner.displayTimeFormat).to.be("24h");
+                  expect(data.owner.username).to.be.a('string');
+                  expect(data.owner.username).to.be("charles.conway");
+                  expect(data.owner.firstName).to.be.a('string');
+                  expect(data.owner.firstName).to.be("Charles");
+                  expect(data.owner.lastName).to.be.a('string');
+                  expect(data.owner.lastName).to.be("Conway");
+                  expect(data.owner.email).to.be.a('string');
+                  expect(data.owner.email).to.be("charles@example.com");
+                  expect(data.owner.status).to.be.a('string');
+                  expect(data.owner.status).to.be("A");
+                  expect(data.owner.balance).to.be.a('number');
+                  expect(data.owner.balance).to.be(208.64);
+                  expect(data.owner.phone).to.be.a('string');
+                  expect(data.owner.phone).to.be("447860021130");
+                  expect(data.owner.company).to.be.a('string');
+                  expect(data.owner.company).to.be("Example Ltd.");
+                  expect(data.owner.currency).to.be.a(TextmagicClient.Currency);
+                        expect(data.owner.currency.id).to.be.a('string');
+                    expect(data.owner.currency.id).to.be("GBP");
+                    expect(data.owner.currency.unicodeSymbol).to.be.a('string');
+                    expect(data.owner.currency.unicodeSymbol).to.be("£");
+                    expect(data.owner.currency.htmlSymbol).to.be.a('string');
+                    expect(data.owner.currency.htmlSymbol).to.be("&pound;");
+                  expect(data.owner.country).to.be.a(TextmagicClient.Country);
+                        expect(data.owner.country.id).to.be.a('string');
+                    expect(data.owner.country.id).to.be("US");
+                    expect(data.owner.country.name).to.be.a('string');
+                    expect(data.owner.country.name).to.be("India");
+                  expect(data.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                        expect(data.owner.timezone.id).to.be.a('number');
+                    expect(data.owner.timezone.id).to.be(55);
+                    expect(data.owner.timezone.area).to.be.a('string');
+                    expect(data.owner.timezone.area).to.be("Europe");
+                    expect(data.owner.timezone.dst).to.be.a('number');
+                    expect(data.owner.timezone.dst).to.be(1);
+                    expect(data.owner.timezone.offset).to.be.a('number');
+                    expect(data.owner.timezone.offset).to.be(10800);
+                    expect(data.owner.timezone.timezone).to.be.a('string');
+                    expect(data.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                  expect(data.owner.subaccountType).to.be.a('string');
+                  expect(data.owner.subaccountType).to.be("P");
+                  expect(data.owner.emailAccepted).to.be.a('boolean');
+                  expect(data.owner.emailAccepted).to.be(true);
+                  expect(data.owner.phoneAccepted).to.be.a('boolean');
+                  expect(data.owner.phoneAccepted).to.be(true);
+                  expect(data.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                        expect(data.owner.avatar.href).to.be.a('string');
+                    expect(data.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
                 expect(data.phoneType).to.be.a('string');
                 expect(data.phoneType).to.be("");
                 expect(data.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -2170,6 +2384,8 @@
                         expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                   }
                 }
+                expect(data.whatsappPhone).to.be.a('string');
+                expect(data.whatsappPhone).to.be("447860021130");
               }
             }
 
@@ -2218,6 +2434,10 @@
               expect(data.session.numbersCount).to.be(18);
               expect(data.session.destination).to.be.a('string');
               expect(data.session.destination).to.be("t");
+              expect(data.session.initiatorId).to.be.a('number');
+              expect(data.session.initiatorId).to.be(305);
+              expect(data.session.title).to.be.a('string');
+              expect(data.session.title).to.be("");
             expect(data.text).to.be.a('string');
             expect(data.text).to.be("I Love Textmagic!");
 
@@ -2297,16 +2517,17 @@
                 expect(dataCtr).to.not.be.empty();
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
-                  expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                  expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be(515);
+                  expect(data.userCustomFieldId).to.be.a('number');
+                  expect(data.userCustomFieldId).to.be(515);
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("Custom name");
                   expect(data.value).to.be.a('string');
-                  expect(data.value).to.be("");
-                  expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                        expect(data.userCustomField.id).to.be.a('number');
-                    expect(data.userCustomField.id).to.be(23);
-                    expect(data.userCustomField.name).to.be.a('string');
-                    expect(data.userCustomField.name).to.be("DOB");
-                    expect(data.userCustomField.createdAt).to.be.a(Date);
-                    expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                  expect(data.value).to.be("Custom value");
+                  expect(data.createdAt).to.be.a(Date);
+                  expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                 }
               }
               expect(data.contact.user).to.be.a(TextmagicClient.User);
@@ -2443,6 +2664,72 @@
                   expect(data.isDefault).to.be(false);
                 }
               }
+              expect(data.contact.owner).to.be.a(TextmagicClient.User);
+                    expect(data.contact.owner.id).to.be.a('number');
+                expect(data.contact.owner.id).to.be(305);
+                expect(data.contact.owner.displayTimeFormat).to.be.a('string');
+                expect(data.contact.owner.displayTimeFormat).to.be("24h");
+                expect(data.contact.owner.username).to.be.a('string');
+                expect(data.contact.owner.username).to.be("charles.conway");
+                expect(data.contact.owner.firstName).to.be.a('string');
+                expect(data.contact.owner.firstName).to.be("Charles");
+                expect(data.contact.owner.lastName).to.be.a('string');
+                expect(data.contact.owner.lastName).to.be("Conway");
+                expect(data.contact.owner.email).to.be.a('string');
+                expect(data.contact.owner.email).to.be("charles@example.com");
+                expect(data.contact.owner.status).to.be.a('string');
+                expect(data.contact.owner.status).to.be("A");
+                expect(data.contact.owner.balance).to.be.a('number');
+                expect(data.contact.owner.balance).to.be(208.64);
+                expect(data.contact.owner.phone).to.be.a('string');
+                expect(data.contact.owner.phone).to.be("447860021130");
+                expect(data.contact.owner.company).to.be.a('string');
+                expect(data.contact.owner.company).to.be("Example Ltd.");
+                expect(data.contact.owner.currency).to.be.a(TextmagicClient.Currency);
+                      expect(data.contact.owner.currency.id).to.be.a('string');
+                  expect(data.contact.owner.currency.id).to.be("GBP");
+                  expect(data.contact.owner.currency.unicodeSymbol).to.be.a('string');
+                  expect(data.contact.owner.currency.unicodeSymbol).to.be("£");
+                  expect(data.contact.owner.currency.htmlSymbol).to.be.a('string');
+                  expect(data.contact.owner.currency.htmlSymbol).to.be("&pound;");
+                expect(data.contact.owner.country).to.be.a(TextmagicClient.Country);
+                      expect(data.contact.owner.country.id).to.be.a('string');
+                  expect(data.contact.owner.country.id).to.be("US");
+                  expect(data.contact.owner.country.name).to.be.a('string');
+                  expect(data.contact.owner.country.name).to.be("India");
+                expect(data.contact.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                      expect(data.contact.owner.timezone.id).to.be.a('number');
+                  expect(data.contact.owner.timezone.id).to.be(55);
+                  expect(data.contact.owner.timezone.area).to.be.a('string');
+                  expect(data.contact.owner.timezone.area).to.be("Europe");
+                  expect(data.contact.owner.timezone.dst).to.be.a('number');
+                  expect(data.contact.owner.timezone.dst).to.be(1);
+                  expect(data.contact.owner.timezone.offset).to.be.a('number');
+                  expect(data.contact.owner.timezone.offset).to.be(10800);
+                  expect(data.contact.owner.timezone.timezone).to.be.a('string');
+                  expect(data.contact.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                expect(data.contact.owner.subaccountType).to.be.a('string');
+                expect(data.contact.owner.subaccountType).to.be("P");
+                expect(data.contact.owner.emailAccepted).to.be.a('boolean');
+                expect(data.contact.owner.emailAccepted).to.be(true);
+                expect(data.contact.owner.phoneAccepted).to.be.a('boolean');
+                expect(data.contact.owner.phoneAccepted).to.be(true);
+                expect(data.contact.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                      expect(data.contact.owner.avatar.href).to.be.a('string');
+                  expect(data.contact.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+              {
+                let dataCtr = data.contact.tags;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(TextmagicClient.Tag);
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be(23);
+                  expect(data.title).to.be.a('string');
+                  expect(data.title).to.be("Red");
+                }
+              }
               expect(data.contact.phoneType).to.be.a('string');
               expect(data.contact.phoneType).to.be("");
               expect(data.contact.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -2516,6 +2803,8 @@
                       expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                 }
               }
+              expect(data.contact.whatsappPhone).to.be.a('string');
+              expect(data.contact.whatsappPhone).to.be("447860021130");
             expect(data.unsubscribedContactId).to.be.a('number');
             expect(data.unsubscribedContactId).to.be(546);
             expect(data.unread).to.be.a('number');
@@ -2545,6 +2834,25 @@
               expect(data.country.name).to.be("India");
             expect(data.pinned).to.be.a('boolean');
             expect(data.pinned).to.be(true);
+            expect(data.type).to.be.a('string');
+            expect(data.type).to.be("sms");
+            expect(data.smsPrice).to.be.a('number');
+            expect(data.smsPrice).to.be(12.34);
+            expect(data.mmsPrice).to.be.a('number');
+            expect(data.mmsPrice).to.be(12.34);
+            {
+              let dataCtr = data.tags;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(TextmagicClient.Tag);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(23);
+                expect(data.title).to.be.a('string');
+                expect(data.title).to.be("Red");
+              }
+            }
 
             done();
           }, function(error) {
@@ -2601,16 +2909,17 @@
                 expect(dataCtr).to.not.be.empty();
                 for (let p in dataCtr) {
                   let data = dataCtr[p];
-                  expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                  expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be(515);
+                  expect(data.userCustomFieldId).to.be.a('number');
+                  expect(data.userCustomFieldId).to.be(515);
+                  expect(data.name).to.be.a('string');
+                  expect(data.name).to.be("Custom name");
                   expect(data.value).to.be.a('string');
-                  expect(data.value).to.be("");
-                  expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                        expect(data.userCustomField.id).to.be.a('number');
-                    expect(data.userCustomField.id).to.be(23);
-                    expect(data.userCustomField.name).to.be.a('string');
-                    expect(data.userCustomField.name).to.be("DOB");
-                    expect(data.userCustomField.createdAt).to.be.a(Date);
-                    expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                  expect(data.value).to.be("Custom value");
+                  expect(data.createdAt).to.be.a(Date);
+                  expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                 }
               }
               expect(data.contact.user).to.be.a(TextmagicClient.User);
@@ -2747,6 +3056,72 @@
                   expect(data.isDefault).to.be(false);
                 }
               }
+              expect(data.contact.owner).to.be.a(TextmagicClient.User);
+                    expect(data.contact.owner.id).to.be.a('number');
+                expect(data.contact.owner.id).to.be(305);
+                expect(data.contact.owner.displayTimeFormat).to.be.a('string');
+                expect(data.contact.owner.displayTimeFormat).to.be("24h");
+                expect(data.contact.owner.username).to.be.a('string');
+                expect(data.contact.owner.username).to.be("charles.conway");
+                expect(data.contact.owner.firstName).to.be.a('string');
+                expect(data.contact.owner.firstName).to.be("Charles");
+                expect(data.contact.owner.lastName).to.be.a('string');
+                expect(data.contact.owner.lastName).to.be("Conway");
+                expect(data.contact.owner.email).to.be.a('string');
+                expect(data.contact.owner.email).to.be("charles@example.com");
+                expect(data.contact.owner.status).to.be.a('string');
+                expect(data.contact.owner.status).to.be("A");
+                expect(data.contact.owner.balance).to.be.a('number');
+                expect(data.contact.owner.balance).to.be(208.64);
+                expect(data.contact.owner.phone).to.be.a('string');
+                expect(data.contact.owner.phone).to.be("447860021130");
+                expect(data.contact.owner.company).to.be.a('string');
+                expect(data.contact.owner.company).to.be("Example Ltd.");
+                expect(data.contact.owner.currency).to.be.a(TextmagicClient.Currency);
+                      expect(data.contact.owner.currency.id).to.be.a('string');
+                  expect(data.contact.owner.currency.id).to.be("GBP");
+                  expect(data.contact.owner.currency.unicodeSymbol).to.be.a('string');
+                  expect(data.contact.owner.currency.unicodeSymbol).to.be("£");
+                  expect(data.contact.owner.currency.htmlSymbol).to.be.a('string');
+                  expect(data.contact.owner.currency.htmlSymbol).to.be("&pound;");
+                expect(data.contact.owner.country).to.be.a(TextmagicClient.Country);
+                      expect(data.contact.owner.country.id).to.be.a('string');
+                  expect(data.contact.owner.country.id).to.be("US");
+                  expect(data.contact.owner.country.name).to.be.a('string');
+                  expect(data.contact.owner.country.name).to.be("India");
+                expect(data.contact.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                      expect(data.contact.owner.timezone.id).to.be.a('number');
+                  expect(data.contact.owner.timezone.id).to.be(55);
+                  expect(data.contact.owner.timezone.area).to.be.a('string');
+                  expect(data.contact.owner.timezone.area).to.be("Europe");
+                  expect(data.contact.owner.timezone.dst).to.be.a('number');
+                  expect(data.contact.owner.timezone.dst).to.be(1);
+                  expect(data.contact.owner.timezone.offset).to.be.a('number');
+                  expect(data.contact.owner.timezone.offset).to.be(10800);
+                  expect(data.contact.owner.timezone.timezone).to.be.a('string');
+                  expect(data.contact.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                expect(data.contact.owner.subaccountType).to.be.a('string');
+                expect(data.contact.owner.subaccountType).to.be("P");
+                expect(data.contact.owner.emailAccepted).to.be.a('boolean');
+                expect(data.contact.owner.emailAccepted).to.be(true);
+                expect(data.contact.owner.phoneAccepted).to.be.a('boolean');
+                expect(data.contact.owner.phoneAccepted).to.be(true);
+                expect(data.contact.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                      expect(data.contact.owner.avatar.href).to.be.a('string');
+                  expect(data.contact.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+              {
+                let dataCtr = data.contact.tags;
+                expect(dataCtr).to.be.an(Array);
+                expect(dataCtr).to.not.be.empty();
+                for (let p in dataCtr) {
+                  let data = dataCtr[p];
+                  expect(data).to.be.a(TextmagicClient.Tag);
+                  expect(data.id).to.be.a('number');
+                  expect(data.id).to.be(23);
+                  expect(data.title).to.be.a('string');
+                  expect(data.title).to.be("Red");
+                }
+              }
               expect(data.contact.phoneType).to.be.a('string');
               expect(data.contact.phoneType).to.be("");
               expect(data.contact.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -2820,6 +3195,8 @@
                       expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                 }
               }
+              expect(data.contact.whatsappPhone).to.be.a('string');
+              expect(data.contact.whatsappPhone).to.be("447860021130");
             expect(data.unsubscribedContactId).to.be.a('number');
             expect(data.unsubscribedContactId).to.be(546);
             expect(data.unread).to.be.a('number');
@@ -2849,6 +3226,25 @@
               expect(data.country.name).to.be("India");
             expect(data.pinned).to.be.a('boolean');
             expect(data.pinned).to.be(true);
+            expect(data.type).to.be.a('string');
+            expect(data.type).to.be("sms");
+            expect(data.smsPrice).to.be.a('number');
+            expect(data.smsPrice).to.be(12.34);
+            expect(data.mmsPrice).to.be.a('number');
+            expect(data.mmsPrice).to.be(12.34);
+            {
+              let dataCtr = data.tags;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(TextmagicClient.Tag);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(23);
+                expect(data.title).to.be.a('string');
+                expect(data.title).to.be("Red");
+              }
+            }
 
             done();
           }, function(error) {
@@ -2872,6 +3268,7 @@
           opts.end = "end_example";
           opts.direction = "desc";
           opts.voice = 0;
+          opts.includeNotes = 0;
 
           instance.getChatMessages(id, opts).then(function(data) {
             // TODO: update response assertions
@@ -2911,6 +3308,35 @@
                 expect(data.sessionId).to.be(0);
                 expect(data.initiatorId).to.be.a('number');
                 expect(data.initiatorId).to.be(0);
+                expect(data.messageFileId).to.be.a('number');
+                expect(data.messageFileId).to.be(0);
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("text");
+                expect(data.chatType).to.be.a('string');
+                expect(data.chatType).to.be("text");
+                expect(data.chatId).to.be.a('number');
+                expect(data.chatId).to.be(0);
+                expect(data.isEdited).to.be.a('boolean');
+                expect(data.isEdited).to.be(false);
+                expect(data.errorCode).to.be.a('string');
+                expect(data.errorCode).to.be("test_error_code");
+                {
+                  let dataCtr = data.files;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(File);
+                    expect(data).to.be();
+                  }
+                }
+                expect(data.payload).to.be.a(TextmagicClient.MessagePayload);
+                      expect(data.payload.type).to.be.a('string');
+                  expect(data.payload.type).to.be("story_reply");
+                  expect(data.payload.mediaPreview).to.be.a('string');
+                  expect(data.payload.mediaPreview).to.be("https://example.com/preview.jpg");
+                expect(data.avatar).to.be.a('string');
+                expect(data.avatar).to.be("avatars/dummy_avatar.png");
               }
             }
 
@@ -2959,16 +3385,17 @@
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(515);
+                expect(data.userCustomFieldId).to.be.a('number');
+                expect(data.userCustomFieldId).to.be(515);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("Custom name");
                 expect(data.value).to.be.a('string');
-                expect(data.value).to.be("");
-                expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                      expect(data.userCustomField.id).to.be.a('number');
-                  expect(data.userCustomField.id).to.be(23);
-                  expect(data.userCustomField.name).to.be.a('string');
-                  expect(data.userCustomField.name).to.be("DOB");
-                  expect(data.userCustomField.createdAt).to.be.a(Date);
-                  expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                expect(data.value).to.be("Custom value");
+                expect(data.createdAt).to.be.a(Date);
+                expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
               }
             }
             expect(data.user).to.be.a(TextmagicClient.User);
@@ -3105,6 +3532,72 @@
                 expect(data.isDefault).to.be(false);
               }
             }
+            expect(data.owner).to.be.a(TextmagicClient.User);
+                  expect(data.owner.id).to.be.a('number');
+              expect(data.owner.id).to.be(305);
+              expect(data.owner.displayTimeFormat).to.be.a('string');
+              expect(data.owner.displayTimeFormat).to.be("24h");
+              expect(data.owner.username).to.be.a('string');
+              expect(data.owner.username).to.be("charles.conway");
+              expect(data.owner.firstName).to.be.a('string');
+              expect(data.owner.firstName).to.be("Charles");
+              expect(data.owner.lastName).to.be.a('string');
+              expect(data.owner.lastName).to.be("Conway");
+              expect(data.owner.email).to.be.a('string');
+              expect(data.owner.email).to.be("charles@example.com");
+              expect(data.owner.status).to.be.a('string');
+              expect(data.owner.status).to.be("A");
+              expect(data.owner.balance).to.be.a('number');
+              expect(data.owner.balance).to.be(208.64);
+              expect(data.owner.phone).to.be.a('string');
+              expect(data.owner.phone).to.be("447860021130");
+              expect(data.owner.company).to.be.a('string');
+              expect(data.owner.company).to.be("Example Ltd.");
+              expect(data.owner.currency).to.be.a(TextmagicClient.Currency);
+                    expect(data.owner.currency.id).to.be.a('string');
+                expect(data.owner.currency.id).to.be("GBP");
+                expect(data.owner.currency.unicodeSymbol).to.be.a('string');
+                expect(data.owner.currency.unicodeSymbol).to.be("£");
+                expect(data.owner.currency.htmlSymbol).to.be.a('string');
+                expect(data.owner.currency.htmlSymbol).to.be("&pound;");
+              expect(data.owner.country).to.be.a(TextmagicClient.Country);
+                    expect(data.owner.country.id).to.be.a('string');
+                expect(data.owner.country.id).to.be("US");
+                expect(data.owner.country.name).to.be.a('string');
+                expect(data.owner.country.name).to.be("India");
+              expect(data.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                    expect(data.owner.timezone.id).to.be.a('number');
+                expect(data.owner.timezone.id).to.be(55);
+                expect(data.owner.timezone.area).to.be.a('string');
+                expect(data.owner.timezone.area).to.be("Europe");
+                expect(data.owner.timezone.dst).to.be.a('number');
+                expect(data.owner.timezone.dst).to.be(1);
+                expect(data.owner.timezone.offset).to.be.a('number');
+                expect(data.owner.timezone.offset).to.be(10800);
+                expect(data.owner.timezone.timezone).to.be.a('string');
+                expect(data.owner.timezone.timezone).to.be("Europe\/Tallinn");
+              expect(data.owner.subaccountType).to.be.a('string');
+              expect(data.owner.subaccountType).to.be("P");
+              expect(data.owner.emailAccepted).to.be.a('boolean');
+              expect(data.owner.emailAccepted).to.be(true);
+              expect(data.owner.phoneAccepted).to.be.a('boolean');
+              expect(data.owner.phoneAccepted).to.be(true);
+              expect(data.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                    expect(data.owner.avatar.href).to.be.a('string');
+                expect(data.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+            {
+              let dataCtr = data.tags;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(TextmagicClient.Tag);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(23);
+                expect(data.title).to.be.a('string');
+                expect(data.title).to.be("Red");
+              }
+            }
             expect(data.phoneType).to.be.a('string');
             expect(data.phoneType).to.be("");
             expect(data.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -3178,6 +3671,8 @@
                     expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
               }
             }
+            expect(data.whatsappPhone).to.be.a('string');
+            expect(data.whatsappPhone).to.be("447860021130");
 
             done();
           }, function(error) {
@@ -3224,16 +3719,17 @@
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(515);
+                expect(data.userCustomFieldId).to.be.a('number');
+                expect(data.userCustomFieldId).to.be(515);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("Custom name");
                 expect(data.value).to.be.a('string');
-                expect(data.value).to.be("");
-                expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                      expect(data.userCustomField.id).to.be.a('number');
-                  expect(data.userCustomField.id).to.be(23);
-                  expect(data.userCustomField.name).to.be.a('string');
-                  expect(data.userCustomField.name).to.be("DOB");
-                  expect(data.userCustomField.createdAt).to.be.a(Date);
-                  expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                expect(data.value).to.be("Custom value");
+                expect(data.createdAt).to.be.a(Date);
+                expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
               }
             }
             expect(data.user).to.be.a(TextmagicClient.User);
@@ -3370,6 +3866,72 @@
                 expect(data.isDefault).to.be(false);
               }
             }
+            expect(data.owner).to.be.a(TextmagicClient.User);
+                  expect(data.owner.id).to.be.a('number');
+              expect(data.owner.id).to.be(305);
+              expect(data.owner.displayTimeFormat).to.be.a('string');
+              expect(data.owner.displayTimeFormat).to.be("24h");
+              expect(data.owner.username).to.be.a('string');
+              expect(data.owner.username).to.be("charles.conway");
+              expect(data.owner.firstName).to.be.a('string');
+              expect(data.owner.firstName).to.be("Charles");
+              expect(data.owner.lastName).to.be.a('string');
+              expect(data.owner.lastName).to.be("Conway");
+              expect(data.owner.email).to.be.a('string');
+              expect(data.owner.email).to.be("charles@example.com");
+              expect(data.owner.status).to.be.a('string');
+              expect(data.owner.status).to.be("A");
+              expect(data.owner.balance).to.be.a('number');
+              expect(data.owner.balance).to.be(208.64);
+              expect(data.owner.phone).to.be.a('string');
+              expect(data.owner.phone).to.be("447860021130");
+              expect(data.owner.company).to.be.a('string');
+              expect(data.owner.company).to.be("Example Ltd.");
+              expect(data.owner.currency).to.be.a(TextmagicClient.Currency);
+                    expect(data.owner.currency.id).to.be.a('string');
+                expect(data.owner.currency.id).to.be("GBP");
+                expect(data.owner.currency.unicodeSymbol).to.be.a('string');
+                expect(data.owner.currency.unicodeSymbol).to.be("£");
+                expect(data.owner.currency.htmlSymbol).to.be.a('string');
+                expect(data.owner.currency.htmlSymbol).to.be("&pound;");
+              expect(data.owner.country).to.be.a(TextmagicClient.Country);
+                    expect(data.owner.country.id).to.be.a('string');
+                expect(data.owner.country.id).to.be("US");
+                expect(data.owner.country.name).to.be.a('string');
+                expect(data.owner.country.name).to.be("India");
+              expect(data.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                    expect(data.owner.timezone.id).to.be.a('number');
+                expect(data.owner.timezone.id).to.be(55);
+                expect(data.owner.timezone.area).to.be.a('string');
+                expect(data.owner.timezone.area).to.be("Europe");
+                expect(data.owner.timezone.dst).to.be.a('number');
+                expect(data.owner.timezone.dst).to.be(1);
+                expect(data.owner.timezone.offset).to.be.a('number');
+                expect(data.owner.timezone.offset).to.be(10800);
+                expect(data.owner.timezone.timezone).to.be.a('string');
+                expect(data.owner.timezone.timezone).to.be("Europe\/Tallinn");
+              expect(data.owner.subaccountType).to.be.a('string');
+              expect(data.owner.subaccountType).to.be("P");
+              expect(data.owner.emailAccepted).to.be.a('boolean');
+              expect(data.owner.emailAccepted).to.be(true);
+              expect(data.owner.phoneAccepted).to.be.a('boolean');
+              expect(data.owner.phoneAccepted).to.be(true);
+              expect(data.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                    expect(data.owner.avatar.href).to.be.a('string');
+                expect(data.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+            {
+              let dataCtr = data.tags;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(TextmagicClient.Tag);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(23);
+                expect(data.title).to.be.a('string');
+                expect(data.title).to.be("Red");
+              }
+            }
             expect(data.phoneType).to.be.a('string');
             expect(data.phoneType).to.be("");
             expect(data.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -3443,6 +4005,8 @@
                     expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
               }
             }
+            expect(data.whatsappPhone).to.be.a('string');
+            expect(data.whatsappPhone).to.be("447860021130");
 
             done();
           }, function(error) {
@@ -3489,16 +4053,17 @@
               expect(dataCtr).to.not.be.empty();
               for (let p in dataCtr) {
                 let data = dataCtr[p];
-                expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(515);
+                expect(data.userCustomFieldId).to.be.a('number');
+                expect(data.userCustomFieldId).to.be(515);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("Custom name");
                 expect(data.value).to.be.a('string');
-                expect(data.value).to.be("");
-                expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                      expect(data.userCustomField.id).to.be.a('number');
-                  expect(data.userCustomField.id).to.be(23);
-                  expect(data.userCustomField.name).to.be.a('string');
-                  expect(data.userCustomField.name).to.be("DOB");
-                  expect(data.userCustomField.createdAt).to.be.a(Date);
-                  expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                expect(data.value).to.be("Custom value");
+                expect(data.createdAt).to.be.a(Date);
+                expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
               }
             }
             expect(data.user).to.be.a(TextmagicClient.User);
@@ -3635,6 +4200,72 @@
                 expect(data.isDefault).to.be(false);
               }
             }
+            expect(data.owner).to.be.a(TextmagicClient.User);
+                  expect(data.owner.id).to.be.a('number');
+              expect(data.owner.id).to.be(305);
+              expect(data.owner.displayTimeFormat).to.be.a('string');
+              expect(data.owner.displayTimeFormat).to.be("24h");
+              expect(data.owner.username).to.be.a('string');
+              expect(data.owner.username).to.be("charles.conway");
+              expect(data.owner.firstName).to.be.a('string');
+              expect(data.owner.firstName).to.be("Charles");
+              expect(data.owner.lastName).to.be.a('string');
+              expect(data.owner.lastName).to.be("Conway");
+              expect(data.owner.email).to.be.a('string');
+              expect(data.owner.email).to.be("charles@example.com");
+              expect(data.owner.status).to.be.a('string');
+              expect(data.owner.status).to.be("A");
+              expect(data.owner.balance).to.be.a('number');
+              expect(data.owner.balance).to.be(208.64);
+              expect(data.owner.phone).to.be.a('string');
+              expect(data.owner.phone).to.be("447860021130");
+              expect(data.owner.company).to.be.a('string');
+              expect(data.owner.company).to.be("Example Ltd.");
+              expect(data.owner.currency).to.be.a(TextmagicClient.Currency);
+                    expect(data.owner.currency.id).to.be.a('string');
+                expect(data.owner.currency.id).to.be("GBP");
+                expect(data.owner.currency.unicodeSymbol).to.be.a('string');
+                expect(data.owner.currency.unicodeSymbol).to.be("£");
+                expect(data.owner.currency.htmlSymbol).to.be.a('string');
+                expect(data.owner.currency.htmlSymbol).to.be("&pound;");
+              expect(data.owner.country).to.be.a(TextmagicClient.Country);
+                    expect(data.owner.country.id).to.be.a('string');
+                expect(data.owner.country.id).to.be("US");
+                expect(data.owner.country.name).to.be.a('string');
+                expect(data.owner.country.name).to.be("India");
+              expect(data.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                    expect(data.owner.timezone.id).to.be.a('number');
+                expect(data.owner.timezone.id).to.be(55);
+                expect(data.owner.timezone.area).to.be.a('string');
+                expect(data.owner.timezone.area).to.be("Europe");
+                expect(data.owner.timezone.dst).to.be.a('number');
+                expect(data.owner.timezone.dst).to.be(1);
+                expect(data.owner.timezone.offset).to.be.a('number');
+                expect(data.owner.timezone.offset).to.be(10800);
+                expect(data.owner.timezone.timezone).to.be.a('string');
+                expect(data.owner.timezone.timezone).to.be("Europe\/Tallinn");
+              expect(data.owner.subaccountType).to.be.a('string');
+              expect(data.owner.subaccountType).to.be("P");
+              expect(data.owner.emailAccepted).to.be.a('boolean');
+              expect(data.owner.emailAccepted).to.be(true);
+              expect(data.owner.phoneAccepted).to.be.a('boolean');
+              expect(data.owner.phoneAccepted).to.be(true);
+              expect(data.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                    expect(data.owner.avatar.href).to.be.a('string');
+                expect(data.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+            {
+              let dataCtr = data.tags;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(TextmagicClient.Tag);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(23);
+                expect(data.title).to.be.a('string');
+                expect(data.title).to.be("Red");
+              }
+            }
             expect(data.phoneType).to.be.a('string');
             expect(data.phoneType).to.be("");
             expect(data.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -3708,6 +4339,8 @@
                     expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
               }
             }
+            expect(data.whatsappPhone).to.be.a('string');
+            expect(data.whatsappPhone).to.be("447860021130");
 
             done();
           }, function(error) {
@@ -3969,16 +4602,17 @@
                   expect(dataCtr).to.not.be.empty();
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
-                    expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                    expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(515);
+                    expect(data.userCustomFieldId).to.be.a('number');
+                    expect(data.userCustomFieldId).to.be(515);
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("Custom name");
                     expect(data.value).to.be.a('string');
-                    expect(data.value).to.be("");
-                    expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                          expect(data.userCustomField.id).to.be.a('number');
-                      expect(data.userCustomField.id).to.be(23);
-                      expect(data.userCustomField.name).to.be.a('string');
-                      expect(data.userCustomField.name).to.be("DOB");
-                      expect(data.userCustomField.createdAt).to.be.a(Date);
-                      expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                    expect(data.value).to.be("Custom value");
+                    expect(data.createdAt).to.be.a(Date);
+                    expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                   }
                 }
                 expect(data.user).to.be.a(TextmagicClient.User);
@@ -4115,6 +4749,72 @@
                     expect(data.isDefault).to.be(false);
                   }
                 }
+                expect(data.owner).to.be.a(TextmagicClient.User);
+                      expect(data.owner.id).to.be.a('number');
+                  expect(data.owner.id).to.be(305);
+                  expect(data.owner.displayTimeFormat).to.be.a('string');
+                  expect(data.owner.displayTimeFormat).to.be("24h");
+                  expect(data.owner.username).to.be.a('string');
+                  expect(data.owner.username).to.be("charles.conway");
+                  expect(data.owner.firstName).to.be.a('string');
+                  expect(data.owner.firstName).to.be("Charles");
+                  expect(data.owner.lastName).to.be.a('string');
+                  expect(data.owner.lastName).to.be("Conway");
+                  expect(data.owner.email).to.be.a('string');
+                  expect(data.owner.email).to.be("charles@example.com");
+                  expect(data.owner.status).to.be.a('string');
+                  expect(data.owner.status).to.be("A");
+                  expect(data.owner.balance).to.be.a('number');
+                  expect(data.owner.balance).to.be(208.64);
+                  expect(data.owner.phone).to.be.a('string');
+                  expect(data.owner.phone).to.be("447860021130");
+                  expect(data.owner.company).to.be.a('string');
+                  expect(data.owner.company).to.be("Example Ltd.");
+                  expect(data.owner.currency).to.be.a(TextmagicClient.Currency);
+                        expect(data.owner.currency.id).to.be.a('string');
+                    expect(data.owner.currency.id).to.be("GBP");
+                    expect(data.owner.currency.unicodeSymbol).to.be.a('string');
+                    expect(data.owner.currency.unicodeSymbol).to.be("£");
+                    expect(data.owner.currency.htmlSymbol).to.be.a('string');
+                    expect(data.owner.currency.htmlSymbol).to.be("&pound;");
+                  expect(data.owner.country).to.be.a(TextmagicClient.Country);
+                        expect(data.owner.country.id).to.be.a('string');
+                    expect(data.owner.country.id).to.be("US");
+                    expect(data.owner.country.name).to.be.a('string');
+                    expect(data.owner.country.name).to.be("India");
+                  expect(data.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                        expect(data.owner.timezone.id).to.be.a('number');
+                    expect(data.owner.timezone.id).to.be(55);
+                    expect(data.owner.timezone.area).to.be.a('string');
+                    expect(data.owner.timezone.area).to.be("Europe");
+                    expect(data.owner.timezone.dst).to.be.a('number');
+                    expect(data.owner.timezone.dst).to.be(1);
+                    expect(data.owner.timezone.offset).to.be.a('number');
+                    expect(data.owner.timezone.offset).to.be(10800);
+                    expect(data.owner.timezone.timezone).to.be.a('string');
+                    expect(data.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                  expect(data.owner.subaccountType).to.be.a('string');
+                  expect(data.owner.subaccountType).to.be("P");
+                  expect(data.owner.emailAccepted).to.be.a('boolean');
+                  expect(data.owner.emailAccepted).to.be(true);
+                  expect(data.owner.phoneAccepted).to.be.a('boolean');
+                  expect(data.owner.phoneAccepted).to.be(true);
+                  expect(data.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                        expect(data.owner.avatar.href).to.be.a('string');
+                    expect(data.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
                 expect(data.phoneType).to.be.a('string');
                 expect(data.phoneType).to.be("");
                 expect(data.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -4188,6 +4888,8 @@
                         expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                   }
                 }
+                expect(data.whatsappPhone).to.be.a('string');
+                expect(data.whatsappPhone).to.be("447860021130");
               }
             }
 
@@ -4276,16 +4978,17 @@
                   expect(dataCtr).to.not.be.empty();
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
-                    expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                    expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(515);
+                    expect(data.userCustomFieldId).to.be.a('number');
+                    expect(data.userCustomFieldId).to.be(515);
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("Custom name");
                     expect(data.value).to.be.a('string');
-                    expect(data.value).to.be("");
-                    expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                          expect(data.userCustomField.id).to.be.a('number');
-                      expect(data.userCustomField.id).to.be(23);
-                      expect(data.userCustomField.name).to.be.a('string');
-                      expect(data.userCustomField.name).to.be("DOB");
-                      expect(data.userCustomField.createdAt).to.be.a(Date);
-                      expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                    expect(data.value).to.be("Custom value");
+                    expect(data.createdAt).to.be.a(Date);
+                    expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                   }
                 }
                 expect(data.user).to.be.a(TextmagicClient.User);
@@ -4422,6 +5125,72 @@
                     expect(data.isDefault).to.be(false);
                   }
                 }
+                expect(data.owner).to.be.a(TextmagicClient.User);
+                      expect(data.owner.id).to.be.a('number');
+                  expect(data.owner.id).to.be(305);
+                  expect(data.owner.displayTimeFormat).to.be.a('string');
+                  expect(data.owner.displayTimeFormat).to.be("24h");
+                  expect(data.owner.username).to.be.a('string');
+                  expect(data.owner.username).to.be("charles.conway");
+                  expect(data.owner.firstName).to.be.a('string');
+                  expect(data.owner.firstName).to.be("Charles");
+                  expect(data.owner.lastName).to.be.a('string');
+                  expect(data.owner.lastName).to.be("Conway");
+                  expect(data.owner.email).to.be.a('string');
+                  expect(data.owner.email).to.be("charles@example.com");
+                  expect(data.owner.status).to.be.a('string');
+                  expect(data.owner.status).to.be("A");
+                  expect(data.owner.balance).to.be.a('number');
+                  expect(data.owner.balance).to.be(208.64);
+                  expect(data.owner.phone).to.be.a('string');
+                  expect(data.owner.phone).to.be("447860021130");
+                  expect(data.owner.company).to.be.a('string');
+                  expect(data.owner.company).to.be("Example Ltd.");
+                  expect(data.owner.currency).to.be.a(TextmagicClient.Currency);
+                        expect(data.owner.currency.id).to.be.a('string');
+                    expect(data.owner.currency.id).to.be("GBP");
+                    expect(data.owner.currency.unicodeSymbol).to.be.a('string');
+                    expect(data.owner.currency.unicodeSymbol).to.be("£");
+                    expect(data.owner.currency.htmlSymbol).to.be.a('string');
+                    expect(data.owner.currency.htmlSymbol).to.be("&pound;");
+                  expect(data.owner.country).to.be.a(TextmagicClient.Country);
+                        expect(data.owner.country.id).to.be.a('string');
+                    expect(data.owner.country.id).to.be("US");
+                    expect(data.owner.country.name).to.be.a('string');
+                    expect(data.owner.country.name).to.be("India");
+                  expect(data.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                        expect(data.owner.timezone.id).to.be.a('number');
+                    expect(data.owner.timezone.id).to.be(55);
+                    expect(data.owner.timezone.area).to.be.a('string');
+                    expect(data.owner.timezone.area).to.be("Europe");
+                    expect(data.owner.timezone.dst).to.be.a('number');
+                    expect(data.owner.timezone.dst).to.be(1);
+                    expect(data.owner.timezone.offset).to.be.a('number');
+                    expect(data.owner.timezone.offset).to.be(10800);
+                    expect(data.owner.timezone.timezone).to.be.a('string');
+                    expect(data.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                  expect(data.owner.subaccountType).to.be.a('string');
+                  expect(data.owner.subaccountType).to.be("P");
+                  expect(data.owner.emailAccepted).to.be.a('boolean');
+                  expect(data.owner.emailAccepted).to.be(true);
+                  expect(data.owner.phoneAccepted).to.be.a('boolean');
+                  expect(data.owner.phoneAccepted).to.be(true);
+                  expect(data.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                        expect(data.owner.avatar.href).to.be.a('string');
+                    expect(data.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
                 expect(data.phoneType).to.be.a('string');
                 expect(data.phoneType).to.be("");
                 expect(data.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -4495,6 +5264,8 @@
                         expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                   }
                 }
+                expect(data.whatsappPhone).to.be.a('string');
+                expect(data.whatsappPhone).to.be("447860021130");
               }
             }
 
@@ -5295,6 +6066,8 @@
                 expect(data.text).to.be("I love Textmagic!");
                 expect(data.status).to.be.a('string');
                 expect(data.status).to.be("d");
+                expect(data.rejectReason).to.be.a('string');
+                expect(data.rejectReason).to.be("a");
                 expect(data.contactId).to.be.a('number');
                 expect(data.contactId).to.be(2764);
                 expect(data.sessionId).to.be.a('number');
@@ -5325,6 +6098,40 @@
                 expect(data.fromEmail).to.be("test@email.com");
                 expect(data.fromNumber).to.be.a('string');
                 expect(data.fromNumber).to.be("447624800500");
+                expect(data.senderSource).to.be.a(TextmagicClient.MessageOutSenderSource);
+                      expect(data.senderSource.id).to.be.a('number');
+                  expect(data.senderSource.id).to.be(0);
+                  expect(data.senderSource.phone).to.be.a('string');
+                  expect(data.senderSource.phone).to.be("");
+                  expect(data.senderSource.type).to.be.a('string');
+                  expect(data.senderSource.type).to.be("");
+                  expect(data.senderSource.countryId).to.be.a('string');
+                  expect(data.senderSource.countryId).to.be("");
+                  expect(data.senderSource.label).to.be.a('string');
+                  expect(data.senderSource.label).to.be("");
+                  expect(data.senderSource.status).to.be.a('string');
+                  expect(data.senderSource.status).to.be("");
+                  expect(data.senderSource.carrierStatus).to.be.a('string');
+                  expect(data.senderSource.carrierStatus).to.be("");
+                expect(data.session).to.be.a(TextmagicClient.MessageOutSession);
+                      expect(data.session.id).to.be.a('number');
+                  expect(data.session.id).to.be(0);
+                  expect(data.session.startTime).to.be.a('string');
+                  expect(data.session.startTime).to.be("");
+                  expect(data.session.text).to.be.a('string');
+                  expect(data.session.text).to.be("");
+                  expect(data.session.price).to.be.a('number');
+                  expect(data.session.price).to.be(0.0);
+                  expect(data.session.numbersCount).to.be.a('number');
+                  expect(data.session.numbersCount).to.be(0);
+                  expect(data.session.destination).to.be.a('string');
+                  expect(data.session.destination).to.be("");
+                  expect(data.session.source).to.be.a('string');
+                  expect(data.session.source).to.be("");
+                  expect(data.session.referenceId).to.be.a('string');
+                  expect(data.session.referenceId).to.be("");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(0);
               }
             }
 
@@ -5426,6 +6233,10 @@
             expect(data.numbersCount).to.be(18);
             expect(data.destination).to.be.a('string');
             expect(data.destination).to.be("t");
+            expect(data.initiatorId).to.be.a('number');
+            expect(data.initiatorId).to.be(305);
+            expect(data.title).to.be.a('string');
+            expect(data.title).to.be("");
 
             done();
           }, function(error) {
@@ -5508,6 +6319,8 @@
                 expect(data.text).to.be("I love Textmagic!");
                 expect(data.status).to.be.a('string');
                 expect(data.status).to.be("d");
+                expect(data.rejectReason).to.be.a('string');
+                expect(data.rejectReason).to.be("a");
                 expect(data.contactId).to.be.a('number');
                 expect(data.contactId).to.be(2764);
                 expect(data.sessionId).to.be.a('number');
@@ -5538,6 +6351,40 @@
                 expect(data.fromEmail).to.be("test@email.com");
                 expect(data.fromNumber).to.be.a('string');
                 expect(data.fromNumber).to.be("447624800500");
+                expect(data.senderSource).to.be.a(TextmagicClient.MessageOutSenderSource);
+                      expect(data.senderSource.id).to.be.a('number');
+                  expect(data.senderSource.id).to.be(0);
+                  expect(data.senderSource.phone).to.be.a('string');
+                  expect(data.senderSource.phone).to.be("");
+                  expect(data.senderSource.type).to.be.a('string');
+                  expect(data.senderSource.type).to.be("");
+                  expect(data.senderSource.countryId).to.be.a('string');
+                  expect(data.senderSource.countryId).to.be("");
+                  expect(data.senderSource.label).to.be.a('string');
+                  expect(data.senderSource.label).to.be("");
+                  expect(data.senderSource.status).to.be.a('string');
+                  expect(data.senderSource.status).to.be("");
+                  expect(data.senderSource.carrierStatus).to.be.a('string');
+                  expect(data.senderSource.carrierStatus).to.be("");
+                expect(data.session).to.be.a(TextmagicClient.MessageOutSession);
+                      expect(data.session.id).to.be.a('number');
+                  expect(data.session.id).to.be(0);
+                  expect(data.session.startTime).to.be.a('string');
+                  expect(data.session.startTime).to.be("");
+                  expect(data.session.text).to.be.a('string');
+                  expect(data.session.text).to.be("");
+                  expect(data.session.price).to.be.a('number');
+                  expect(data.session.price).to.be(0.0);
+                  expect(data.session.numbersCount).to.be.a('number');
+                  expect(data.session.numbersCount).to.be(0);
+                  expect(data.session.destination).to.be.a('string');
+                  expect(data.session.destination).to.be("");
+                  expect(data.session.source).to.be.a('string');
+                  expect(data.session.source).to.be("");
+                  expect(data.session.referenceId).to.be.a('string');
+                  expect(data.session.referenceId).to.be("");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(0);
               }
             }
 
@@ -5615,6 +6462,8 @@
             expect(data.text).to.be("I love Textmagic!");
             expect(data.status).to.be.a('string');
             expect(data.status).to.be("d");
+            expect(data.rejectReason).to.be.a('string');
+            expect(data.rejectReason).to.be("a");
             expect(data.contactId).to.be.a('number');
             expect(data.contactId).to.be(2764);
             expect(data.sessionId).to.be.a('number');
@@ -5645,6 +6494,40 @@
             expect(data.fromEmail).to.be("test@email.com");
             expect(data.fromNumber).to.be.a('string');
             expect(data.fromNumber).to.be("447624800500");
+            expect(data.senderSource).to.be.a(TextmagicClient.MessageOutSenderSource);
+                  expect(data.senderSource.id).to.be.a('number');
+              expect(data.senderSource.id).to.be(0);
+              expect(data.senderSource.phone).to.be.a('string');
+              expect(data.senderSource.phone).to.be("");
+              expect(data.senderSource.type).to.be.a('string');
+              expect(data.senderSource.type).to.be("");
+              expect(data.senderSource.countryId).to.be.a('string');
+              expect(data.senderSource.countryId).to.be("");
+              expect(data.senderSource.label).to.be.a('string');
+              expect(data.senderSource.label).to.be("");
+              expect(data.senderSource.status).to.be.a('string');
+              expect(data.senderSource.status).to.be("");
+              expect(data.senderSource.carrierStatus).to.be.a('string');
+              expect(data.senderSource.carrierStatus).to.be("");
+            expect(data.session).to.be.a(TextmagicClient.MessageOutSession);
+                  expect(data.session.id).to.be.a('number');
+              expect(data.session.id).to.be(0);
+              expect(data.session.startTime).to.be.a('string');
+              expect(data.session.startTime).to.be("");
+              expect(data.session.text).to.be.a('string');
+              expect(data.session.text).to.be("");
+              expect(data.session.price).to.be.a('number');
+              expect(data.session.price).to.be(0.0);
+              expect(data.session.numbersCount).to.be.a('number');
+              expect(data.session.numbersCount).to.be(0);
+              expect(data.session.destination).to.be.a('string');
+              expect(data.session.destination).to.be("");
+              expect(data.session.source).to.be.a('string');
+              expect(data.session.source).to.be("");
+              expect(data.session.referenceId).to.be.a('string');
+              expect(data.session.referenceId).to.be("");
+              expect(data.session.initiatorId).to.be.a('number');
+              expect(data.session.initiatorId).to.be(0);
 
             done();
           }, function(error) {
@@ -5692,6 +6575,8 @@
                 expect(data.text).to.be("I love Textmagic!");
                 expect(data.status).to.be.a('string');
                 expect(data.status).to.be("d");
+                expect(data.rejectReason).to.be.a('string');
+                expect(data.rejectReason).to.be("a");
                 expect(data.contactId).to.be.a('number');
                 expect(data.contactId).to.be(2764);
                 expect(data.sessionId).to.be.a('number');
@@ -5722,6 +6607,40 @@
                 expect(data.fromEmail).to.be("test@email.com");
                 expect(data.fromNumber).to.be.a('string');
                 expect(data.fromNumber).to.be("447624800500");
+                expect(data.senderSource).to.be.a(TextmagicClient.MessageOutSenderSource);
+                      expect(data.senderSource.id).to.be.a('number');
+                  expect(data.senderSource.id).to.be(0);
+                  expect(data.senderSource.phone).to.be.a('string');
+                  expect(data.senderSource.phone).to.be("");
+                  expect(data.senderSource.type).to.be.a('string');
+                  expect(data.senderSource.type).to.be("");
+                  expect(data.senderSource.countryId).to.be.a('string');
+                  expect(data.senderSource.countryId).to.be("");
+                  expect(data.senderSource.label).to.be.a('string');
+                  expect(data.senderSource.label).to.be("");
+                  expect(data.senderSource.status).to.be.a('string');
+                  expect(data.senderSource.status).to.be("");
+                  expect(data.senderSource.carrierStatus).to.be.a('string');
+                  expect(data.senderSource.carrierStatus).to.be("");
+                expect(data.session).to.be.a(TextmagicClient.MessageOutSession);
+                      expect(data.session.id).to.be.a('number');
+                  expect(data.session.id).to.be(0);
+                  expect(data.session.startTime).to.be.a('string');
+                  expect(data.session.startTime).to.be("");
+                  expect(data.session.text).to.be.a('string');
+                  expect(data.session.text).to.be("");
+                  expect(data.session.price).to.be.a('number');
+                  expect(data.session.price).to.be(0.0);
+                  expect(data.session.numbersCount).to.be.a('number');
+                  expect(data.session.numbersCount).to.be(0);
+                  expect(data.session.destination).to.be.a('string');
+                  expect(data.session.destination).to.be("");
+                  expect(data.session.source).to.be.a('string');
+                  expect(data.session.source).to.be("");
+                  expect(data.session.referenceId).to.be.a('string');
+                  expect(data.session.referenceId).to.be("");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(0);
               }
             }
 
@@ -5766,6 +6685,10 @@
               expect(data.session.numbersCount).to.be(18);
               expect(data.session.destination).to.be.a('string');
               expect(data.session.destination).to.be("t");
+              expect(data.session.initiatorId).to.be.a('number');
+              expect(data.session.initiatorId).to.be(305);
+              expect(data.session.title).to.be.a('string');
+              expect(data.session.title).to.be("");
             expect(data.lastSent).to.be.a(Date);
             expect(data.lastSent).to.be(2015-06-19T09:48:24+0000);
             expect(data.contactName).to.be.a('string');
@@ -5802,6 +6725,16 @@
                     let data = dataCtr[p];
                     expect(data).to.be.a('string');
                     expect(data).to.be("447860021130");
+                  }
+                }
+                {
+                  let dataCtr = data.parameters.recipients.filteredViews;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a('number');
+                    expect(data).to.be(39318);
                   }
                 }
             expect(data.type).to.be.a('string');
@@ -6891,16 +7824,17 @@
                     expect(dataCtr).to.not.be.empty();
                     for (let p in dataCtr) {
                       let data = dataCtr[p];
-                      expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                      expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(515);
+                      expect(data.userCustomFieldId).to.be.a('number');
+                      expect(data.userCustomFieldId).to.be(515);
+                      expect(data.name).to.be.a('string');
+                      expect(data.name).to.be("Custom name");
                       expect(data.value).to.be.a('string');
-                      expect(data.value).to.be("");
-                      expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                            expect(data.userCustomField.id).to.be.a('number');
-                        expect(data.userCustomField.id).to.be(23);
-                        expect(data.userCustomField.name).to.be.a('string');
-                        expect(data.userCustomField.name).to.be("DOB");
-                        expect(data.userCustomField.createdAt).to.be.a(Date);
-                        expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                      expect(data.value).to.be("Custom value");
+                      expect(data.createdAt).to.be.a(Date);
+                      expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                     }
                   }
                   expect(data.contact.user).to.be.a(TextmagicClient.User);
@@ -7037,6 +7971,72 @@
                       expect(data.isDefault).to.be(false);
                     }
                   }
+                  expect(data.contact.owner).to.be.a(TextmagicClient.User);
+                        expect(data.contact.owner.id).to.be.a('number');
+                    expect(data.contact.owner.id).to.be(305);
+                    expect(data.contact.owner.displayTimeFormat).to.be.a('string');
+                    expect(data.contact.owner.displayTimeFormat).to.be("24h");
+                    expect(data.contact.owner.username).to.be.a('string');
+                    expect(data.contact.owner.username).to.be("charles.conway");
+                    expect(data.contact.owner.firstName).to.be.a('string');
+                    expect(data.contact.owner.firstName).to.be("Charles");
+                    expect(data.contact.owner.lastName).to.be.a('string');
+                    expect(data.contact.owner.lastName).to.be("Conway");
+                    expect(data.contact.owner.email).to.be.a('string');
+                    expect(data.contact.owner.email).to.be("charles@example.com");
+                    expect(data.contact.owner.status).to.be.a('string');
+                    expect(data.contact.owner.status).to.be("A");
+                    expect(data.contact.owner.balance).to.be.a('number');
+                    expect(data.contact.owner.balance).to.be(208.64);
+                    expect(data.contact.owner.phone).to.be.a('string');
+                    expect(data.contact.owner.phone).to.be("447860021130");
+                    expect(data.contact.owner.company).to.be.a('string');
+                    expect(data.contact.owner.company).to.be("Example Ltd.");
+                    expect(data.contact.owner.currency).to.be.a(TextmagicClient.Currency);
+                          expect(data.contact.owner.currency.id).to.be.a('string');
+                      expect(data.contact.owner.currency.id).to.be("GBP");
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be("£");
+                      expect(data.contact.owner.currency.htmlSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.htmlSymbol).to.be("&pound;");
+                    expect(data.contact.owner.country).to.be.a(TextmagicClient.Country);
+                          expect(data.contact.owner.country.id).to.be.a('string');
+                      expect(data.contact.owner.country.id).to.be("US");
+                      expect(data.contact.owner.country.name).to.be.a('string');
+                      expect(data.contact.owner.country.name).to.be("India");
+                    expect(data.contact.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                          expect(data.contact.owner.timezone.id).to.be.a('number');
+                      expect(data.contact.owner.timezone.id).to.be(55);
+                      expect(data.contact.owner.timezone.area).to.be.a('string');
+                      expect(data.contact.owner.timezone.area).to.be("Europe");
+                      expect(data.contact.owner.timezone.dst).to.be.a('number');
+                      expect(data.contact.owner.timezone.dst).to.be(1);
+                      expect(data.contact.owner.timezone.offset).to.be.a('number');
+                      expect(data.contact.owner.timezone.offset).to.be(10800);
+                      expect(data.contact.owner.timezone.timezone).to.be.a('string');
+                      expect(data.contact.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                    expect(data.contact.owner.subaccountType).to.be.a('string');
+                    expect(data.contact.owner.subaccountType).to.be("P");
+                    expect(data.contact.owner.emailAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.emailAccepted).to.be(true);
+                    expect(data.contact.owner.phoneAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.phoneAccepted).to.be(true);
+                    expect(data.contact.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                          expect(data.contact.owner.avatar.href).to.be.a('string');
+                      expect(data.contact.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                  {
+                    let dataCtr = data.contact.tags;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(TextmagicClient.Tag);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(23);
+                      expect(data.title).to.be.a('string');
+                      expect(data.title).to.be("Red");
+                    }
+                  }
                   expect(data.contact.phoneType).to.be.a('string');
                   expect(data.contact.phoneType).to.be("");
                   expect(data.contact.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -7110,6 +8110,8 @@
                           expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                     }
                   }
+                  expect(data.contact.whatsappPhone).to.be.a('string');
+                  expect(data.contact.whatsappPhone).to.be("447860021130");
                 expect(data.unsubscribedContactId).to.be.a('number');
                 expect(data.unsubscribedContactId).to.be(546);
                 expect(data.unread).to.be.a('number');
@@ -7139,6 +8141,25 @@
                   expect(data.country.name).to.be("India");
                 expect(data.pinned).to.be.a('boolean');
                 expect(data.pinned).to.be(true);
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("sms");
+                expect(data.smsPrice).to.be.a('number');
+                expect(data.smsPrice).to.be(12.34);
+                expect(data.mmsPrice).to.be.a('number');
+                expect(data.mmsPrice).to.be(12.34);
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
               }
             }
 
@@ -7210,16 +8231,17 @@
                     expect(dataCtr).to.not.be.empty();
                     for (let p in dataCtr) {
                       let data = dataCtr[p];
-                      expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                      expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(515);
+                      expect(data.userCustomFieldId).to.be.a('number');
+                      expect(data.userCustomFieldId).to.be(515);
+                      expect(data.name).to.be.a('string');
+                      expect(data.name).to.be("Custom name");
                       expect(data.value).to.be.a('string');
-                      expect(data.value).to.be("");
-                      expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                            expect(data.userCustomField.id).to.be.a('number');
-                        expect(data.userCustomField.id).to.be(23);
-                        expect(data.userCustomField.name).to.be.a('string');
-                        expect(data.userCustomField.name).to.be("DOB");
-                        expect(data.userCustomField.createdAt).to.be.a(Date);
-                        expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                      expect(data.value).to.be("Custom value");
+                      expect(data.createdAt).to.be.a(Date);
+                      expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                     }
                   }
                   expect(data.contact.user).to.be.a(TextmagicClient.User);
@@ -7356,6 +8378,72 @@
                       expect(data.isDefault).to.be(false);
                     }
                   }
+                  expect(data.contact.owner).to.be.a(TextmagicClient.User);
+                        expect(data.contact.owner.id).to.be.a('number');
+                    expect(data.contact.owner.id).to.be(305);
+                    expect(data.contact.owner.displayTimeFormat).to.be.a('string');
+                    expect(data.contact.owner.displayTimeFormat).to.be("24h");
+                    expect(data.contact.owner.username).to.be.a('string');
+                    expect(data.contact.owner.username).to.be("charles.conway");
+                    expect(data.contact.owner.firstName).to.be.a('string');
+                    expect(data.contact.owner.firstName).to.be("Charles");
+                    expect(data.contact.owner.lastName).to.be.a('string');
+                    expect(data.contact.owner.lastName).to.be("Conway");
+                    expect(data.contact.owner.email).to.be.a('string');
+                    expect(data.contact.owner.email).to.be("charles@example.com");
+                    expect(data.contact.owner.status).to.be.a('string');
+                    expect(data.contact.owner.status).to.be("A");
+                    expect(data.contact.owner.balance).to.be.a('number');
+                    expect(data.contact.owner.balance).to.be(208.64);
+                    expect(data.contact.owner.phone).to.be.a('string');
+                    expect(data.contact.owner.phone).to.be("447860021130");
+                    expect(data.contact.owner.company).to.be.a('string');
+                    expect(data.contact.owner.company).to.be("Example Ltd.");
+                    expect(data.contact.owner.currency).to.be.a(TextmagicClient.Currency);
+                          expect(data.contact.owner.currency.id).to.be.a('string');
+                      expect(data.contact.owner.currency.id).to.be("GBP");
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be("£");
+                      expect(data.contact.owner.currency.htmlSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.htmlSymbol).to.be("&pound;");
+                    expect(data.contact.owner.country).to.be.a(TextmagicClient.Country);
+                          expect(data.contact.owner.country.id).to.be.a('string');
+                      expect(data.contact.owner.country.id).to.be("US");
+                      expect(data.contact.owner.country.name).to.be.a('string');
+                      expect(data.contact.owner.country.name).to.be("India");
+                    expect(data.contact.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                          expect(data.contact.owner.timezone.id).to.be.a('number');
+                      expect(data.contact.owner.timezone.id).to.be(55);
+                      expect(data.contact.owner.timezone.area).to.be.a('string');
+                      expect(data.contact.owner.timezone.area).to.be("Europe");
+                      expect(data.contact.owner.timezone.dst).to.be.a('number');
+                      expect(data.contact.owner.timezone.dst).to.be(1);
+                      expect(data.contact.owner.timezone.offset).to.be.a('number');
+                      expect(data.contact.owner.timezone.offset).to.be(10800);
+                      expect(data.contact.owner.timezone.timezone).to.be.a('string');
+                      expect(data.contact.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                    expect(data.contact.owner.subaccountType).to.be.a('string');
+                    expect(data.contact.owner.subaccountType).to.be("P");
+                    expect(data.contact.owner.emailAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.emailAccepted).to.be(true);
+                    expect(data.contact.owner.phoneAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.phoneAccepted).to.be(true);
+                    expect(data.contact.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                          expect(data.contact.owner.avatar.href).to.be.a('string');
+                      expect(data.contact.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                  {
+                    let dataCtr = data.contact.tags;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(TextmagicClient.Tag);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(23);
+                      expect(data.title).to.be.a('string');
+                      expect(data.title).to.be("Red");
+                    }
+                  }
                   expect(data.contact.phoneType).to.be.a('string');
                   expect(data.contact.phoneType).to.be("");
                   expect(data.contact.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -7429,6 +8517,8 @@
                           expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                     }
                   }
+                  expect(data.contact.whatsappPhone).to.be.a('string');
+                  expect(data.contact.whatsappPhone).to.be("447860021130");
                 expect(data.unsubscribedContactId).to.be.a('number');
                 expect(data.unsubscribedContactId).to.be(546);
                 expect(data.unread).to.be.a('number');
@@ -7458,6 +8548,25 @@
                   expect(data.country.name).to.be("India");
                 expect(data.pinned).to.be.a('boolean');
                 expect(data.pinned).to.be(true);
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("sms");
+                expect(data.smsPrice).to.be.a('number');
+                expect(data.smsPrice).to.be(12.34);
+                expect(data.mmsPrice).to.be.a('number');
+                expect(data.mmsPrice).to.be(12.34);
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
               }
             }
 
@@ -7530,16 +8639,17 @@
                     expect(dataCtr).to.not.be.empty();
                     for (let p in dataCtr) {
                       let data = dataCtr[p];
-                      expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                      expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(515);
+                      expect(data.userCustomFieldId).to.be.a('number');
+                      expect(data.userCustomFieldId).to.be(515);
+                      expect(data.name).to.be.a('string');
+                      expect(data.name).to.be("Custom name");
                       expect(data.value).to.be.a('string');
-                      expect(data.value).to.be("");
-                      expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                            expect(data.userCustomField.id).to.be.a('number');
-                        expect(data.userCustomField.id).to.be(23);
-                        expect(data.userCustomField.name).to.be.a('string');
-                        expect(data.userCustomField.name).to.be("DOB");
-                        expect(data.userCustomField.createdAt).to.be.a(Date);
-                        expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                      expect(data.value).to.be("Custom value");
+                      expect(data.createdAt).to.be.a(Date);
+                      expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                     }
                   }
                   expect(data.contact.user).to.be.a(TextmagicClient.User);
@@ -7676,6 +8786,72 @@
                       expect(data.isDefault).to.be(false);
                     }
                   }
+                  expect(data.contact.owner).to.be.a(TextmagicClient.User);
+                        expect(data.contact.owner.id).to.be.a('number');
+                    expect(data.contact.owner.id).to.be(305);
+                    expect(data.contact.owner.displayTimeFormat).to.be.a('string');
+                    expect(data.contact.owner.displayTimeFormat).to.be("24h");
+                    expect(data.contact.owner.username).to.be.a('string');
+                    expect(data.contact.owner.username).to.be("charles.conway");
+                    expect(data.contact.owner.firstName).to.be.a('string');
+                    expect(data.contact.owner.firstName).to.be("Charles");
+                    expect(data.contact.owner.lastName).to.be.a('string');
+                    expect(data.contact.owner.lastName).to.be("Conway");
+                    expect(data.contact.owner.email).to.be.a('string');
+                    expect(data.contact.owner.email).to.be("charles@example.com");
+                    expect(data.contact.owner.status).to.be.a('string');
+                    expect(data.contact.owner.status).to.be("A");
+                    expect(data.contact.owner.balance).to.be.a('number');
+                    expect(data.contact.owner.balance).to.be(208.64);
+                    expect(data.contact.owner.phone).to.be.a('string');
+                    expect(data.contact.owner.phone).to.be("447860021130");
+                    expect(data.contact.owner.company).to.be.a('string');
+                    expect(data.contact.owner.company).to.be("Example Ltd.");
+                    expect(data.contact.owner.currency).to.be.a(TextmagicClient.Currency);
+                          expect(data.contact.owner.currency.id).to.be.a('string');
+                      expect(data.contact.owner.currency.id).to.be("GBP");
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.unicodeSymbol).to.be("£");
+                      expect(data.contact.owner.currency.htmlSymbol).to.be.a('string');
+                      expect(data.contact.owner.currency.htmlSymbol).to.be("&pound;");
+                    expect(data.contact.owner.country).to.be.a(TextmagicClient.Country);
+                          expect(data.contact.owner.country.id).to.be.a('string');
+                      expect(data.contact.owner.country.id).to.be("US");
+                      expect(data.contact.owner.country.name).to.be.a('string');
+                      expect(data.contact.owner.country.name).to.be("India");
+                    expect(data.contact.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                          expect(data.contact.owner.timezone.id).to.be.a('number');
+                      expect(data.contact.owner.timezone.id).to.be(55);
+                      expect(data.contact.owner.timezone.area).to.be.a('string');
+                      expect(data.contact.owner.timezone.area).to.be("Europe");
+                      expect(data.contact.owner.timezone.dst).to.be.a('number');
+                      expect(data.contact.owner.timezone.dst).to.be(1);
+                      expect(data.contact.owner.timezone.offset).to.be.a('number');
+                      expect(data.contact.owner.timezone.offset).to.be(10800);
+                      expect(data.contact.owner.timezone.timezone).to.be.a('string');
+                      expect(data.contact.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                    expect(data.contact.owner.subaccountType).to.be.a('string');
+                    expect(data.contact.owner.subaccountType).to.be("P");
+                    expect(data.contact.owner.emailAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.emailAccepted).to.be(true);
+                    expect(data.contact.owner.phoneAccepted).to.be.a('boolean');
+                    expect(data.contact.owner.phoneAccepted).to.be(true);
+                    expect(data.contact.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                          expect(data.contact.owner.avatar.href).to.be.a('string');
+                      expect(data.contact.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                  {
+                    let dataCtr = data.contact.tags;
+                    expect(dataCtr).to.be.an(Array);
+                    expect(dataCtr).to.not.be.empty();
+                    for (let p in dataCtr) {
+                      let data = dataCtr[p];
+                      expect(data).to.be.a(TextmagicClient.Tag);
+                      expect(data.id).to.be.a('number');
+                      expect(data.id).to.be(23);
+                      expect(data.title).to.be.a('string');
+                      expect(data.title).to.be("Red");
+                    }
+                  }
                   expect(data.contact.phoneType).to.be.a('string');
                   expect(data.contact.phoneType).to.be("");
                   expect(data.contact.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -7749,6 +8925,8 @@
                           expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                     }
                   }
+                  expect(data.contact.whatsappPhone).to.be.a('string');
+                  expect(data.contact.whatsappPhone).to.be("447860021130");
                 expect(data.unsubscribedContactId).to.be.a('number');
                 expect(data.unsubscribedContactId).to.be(546);
                 expect(data.unread).to.be.a('number');
@@ -7778,6 +8956,25 @@
                   expect(data.country.name).to.be("India");
                 expect(data.pinned).to.be.a('boolean');
                 expect(data.pinned).to.be(true);
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("sms");
+                expect(data.smsPrice).to.be.a('number');
+                expect(data.smsPrice).to.be(12.34);
+                expect(data.mmsPrice).to.be.a('number');
+                expect(data.mmsPrice).to.be(12.34);
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
               }
             }
 
@@ -7851,16 +9048,17 @@
                   expect(dataCtr).to.not.be.empty();
                   for (let p in dataCtr) {
                     let data = dataCtr[p];
-                    expect(data).to.be.a(TextmagicClient.ContactCustomField);
+                    expect(data).to.be.a(TextmagicClient.CustomFieldListItem);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(515);
+                    expect(data.userCustomFieldId).to.be.a('number');
+                    expect(data.userCustomFieldId).to.be(515);
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("Custom name");
                     expect(data.value).to.be.a('string');
-                    expect(data.value).to.be("");
-                    expect(data.userCustomField).to.be.a(TextmagicClient.UserCustomField);
-                          expect(data.userCustomField.id).to.be.a('number');
-                      expect(data.userCustomField.id).to.be(23);
-                      expect(data.userCustomField.name).to.be.a('string');
-                      expect(data.userCustomField.name).to.be("DOB");
-                      expect(data.userCustomField.createdAt).to.be.a(Date);
-                      expect(data.userCustomField.createdAt).to.be(2015-02-11T07:33:19+0000);
+                    expect(data.value).to.be("Custom value");
+                    expect(data.createdAt).to.be.a(Date);
+                    expect(data.createdAt).to.be(2015-02-11T07:33:19+0000);
                   }
                 }
                 expect(data.user).to.be.a(TextmagicClient.User);
@@ -7997,6 +9195,72 @@
                     expect(data.isDefault).to.be(false);
                   }
                 }
+                expect(data.owner).to.be.a(TextmagicClient.User);
+                      expect(data.owner.id).to.be.a('number');
+                  expect(data.owner.id).to.be(305);
+                  expect(data.owner.displayTimeFormat).to.be.a('string');
+                  expect(data.owner.displayTimeFormat).to.be("24h");
+                  expect(data.owner.username).to.be.a('string');
+                  expect(data.owner.username).to.be("charles.conway");
+                  expect(data.owner.firstName).to.be.a('string');
+                  expect(data.owner.firstName).to.be("Charles");
+                  expect(data.owner.lastName).to.be.a('string');
+                  expect(data.owner.lastName).to.be("Conway");
+                  expect(data.owner.email).to.be.a('string');
+                  expect(data.owner.email).to.be("charles@example.com");
+                  expect(data.owner.status).to.be.a('string');
+                  expect(data.owner.status).to.be("A");
+                  expect(data.owner.balance).to.be.a('number');
+                  expect(data.owner.balance).to.be(208.64);
+                  expect(data.owner.phone).to.be.a('string');
+                  expect(data.owner.phone).to.be("447860021130");
+                  expect(data.owner.company).to.be.a('string');
+                  expect(data.owner.company).to.be("Example Ltd.");
+                  expect(data.owner.currency).to.be.a(TextmagicClient.Currency);
+                        expect(data.owner.currency.id).to.be.a('string');
+                    expect(data.owner.currency.id).to.be("GBP");
+                    expect(data.owner.currency.unicodeSymbol).to.be.a('string');
+                    expect(data.owner.currency.unicodeSymbol).to.be("£");
+                    expect(data.owner.currency.htmlSymbol).to.be.a('string');
+                    expect(data.owner.currency.htmlSymbol).to.be("&pound;");
+                  expect(data.owner.country).to.be.a(TextmagicClient.Country);
+                        expect(data.owner.country.id).to.be.a('string');
+                    expect(data.owner.country.id).to.be("US");
+                    expect(data.owner.country.name).to.be.a('string');
+                    expect(data.owner.country.name).to.be("India");
+                  expect(data.owner.timezone).to.be.a(TextmagicClient.Timezone);
+                        expect(data.owner.timezone.id).to.be.a('number');
+                    expect(data.owner.timezone.id).to.be(55);
+                    expect(data.owner.timezone.area).to.be.a('string');
+                    expect(data.owner.timezone.area).to.be("Europe");
+                    expect(data.owner.timezone.dst).to.be.a('number');
+                    expect(data.owner.timezone.dst).to.be(1);
+                    expect(data.owner.timezone.offset).to.be.a('number');
+                    expect(data.owner.timezone.offset).to.be(10800);
+                    expect(data.owner.timezone.timezone).to.be.a('string');
+                    expect(data.owner.timezone.timezone).to.be("Europe\/Tallinn");
+                  expect(data.owner.subaccountType).to.be.a('string');
+                  expect(data.owner.subaccountType).to.be("P");
+                  expect(data.owner.emailAccepted).to.be.a('boolean');
+                  expect(data.owner.emailAccepted).to.be(true);
+                  expect(data.owner.phoneAccepted).to.be.a('boolean');
+                  expect(data.owner.phoneAccepted).to.be(true);
+                  expect(data.owner.avatar).to.be.a(TextmagicClient.UserImage);
+                        expect(data.owner.avatar.href).to.be.a('string');
+                    expect(data.owner.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
+                {
+                  let dataCtr = data.tags;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(TextmagicClient.Tag);
+                    expect(data.id).to.be.a('number');
+                    expect(data.id).to.be(23);
+                    expect(data.title).to.be.a('string');
+                    expect(data.title).to.be("Red");
+                  }
+                }
                 expect(data.phoneType).to.be.a('string');
                 expect(data.phoneType).to.be("");
                 expect(data.avatar).to.be.a(TextmagicClient.ContactImage);
@@ -8070,6 +9334,8 @@
                         expect(data.user.avatar.href).to.be("avatars/lav5d8de21d89971646555094.png");
                   }
                 }
+                expect(data.whatsappPhone).to.be.a('string');
+                expect(data.whatsappPhone).to.be("447860021130");
               }
             }
 
@@ -8301,6 +9567,8 @@
                 expect(data.text).to.be("I love Textmagic!");
                 expect(data.status).to.be.a('string');
                 expect(data.status).to.be("d");
+                expect(data.rejectReason).to.be.a('string');
+                expect(data.rejectReason).to.be("a");
                 expect(data.contactId).to.be.a('number');
                 expect(data.contactId).to.be(2764);
                 expect(data.sessionId).to.be.a('number');
@@ -8331,6 +9599,40 @@
                 expect(data.fromEmail).to.be("test@email.com");
                 expect(data.fromNumber).to.be.a('string');
                 expect(data.fromNumber).to.be("447624800500");
+                expect(data.senderSource).to.be.a(TextmagicClient.MessageOutSenderSource);
+                      expect(data.senderSource.id).to.be.a('number');
+                  expect(data.senderSource.id).to.be(0);
+                  expect(data.senderSource.phone).to.be.a('string');
+                  expect(data.senderSource.phone).to.be("");
+                  expect(data.senderSource.type).to.be.a('string');
+                  expect(data.senderSource.type).to.be("");
+                  expect(data.senderSource.countryId).to.be.a('string');
+                  expect(data.senderSource.countryId).to.be("");
+                  expect(data.senderSource.label).to.be.a('string');
+                  expect(data.senderSource.label).to.be("");
+                  expect(data.senderSource.status).to.be.a('string');
+                  expect(data.senderSource.status).to.be("");
+                  expect(data.senderSource.carrierStatus).to.be.a('string');
+                  expect(data.senderSource.carrierStatus).to.be("");
+                expect(data.session).to.be.a(TextmagicClient.MessageOutSession);
+                      expect(data.session.id).to.be.a('number');
+                  expect(data.session.id).to.be(0);
+                  expect(data.session.startTime).to.be.a('string');
+                  expect(data.session.startTime).to.be("");
+                  expect(data.session.text).to.be.a('string');
+                  expect(data.session.text).to.be("");
+                  expect(data.session.price).to.be.a('number');
+                  expect(data.session.price).to.be(0.0);
+                  expect(data.session.numbersCount).to.be.a('number');
+                  expect(data.session.numbersCount).to.be(0);
+                  expect(data.session.destination).to.be.a('string');
+                  expect(data.session.destination).to.be("");
+                  expect(data.session.source).to.be.a('string');
+                  expect(data.session.source).to.be("");
+                  expect(data.session.referenceId).to.be.a('string');
+                  expect(data.session.referenceId).to.be("");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(0);
               }
             }
 
@@ -8395,6 +9697,10 @@
                   expect(data.session.numbersCount).to.be(18);
                   expect(data.session.destination).to.be.a('string');
                   expect(data.session.destination).to.be("t");
+                  expect(data.session.initiatorId).to.be.a('number');
+                  expect(data.session.initiatorId).to.be(305);
+                  expect(data.session.title).to.be.a('string');
+                  expect(data.session.title).to.be("");
                 expect(data.lastSent).to.be.a(Date);
                 expect(data.lastSent).to.be(2015-06-19T09:48:24+0000);
                 expect(data.contactName).to.be.a('string');
@@ -8431,6 +9737,16 @@
                         let data = dataCtr[p];
                         expect(data).to.be.a('string');
                         expect(data).to.be("447860021130");
+                      }
+                    }
+                    {
+                      let dataCtr = data.parameters.recipients.filteredViews;
+                      expect(dataCtr).to.be.an(Array);
+                      expect(dataCtr).to.not.be.empty();
+                      for (let p in dataCtr) {
+                        let data = dataCtr[p];
+                        expect(data).to.be.a('number');
+                        expect(data).to.be(39318);
                       }
                     }
                 expect(data.type).to.be.a('string');
@@ -8575,36 +9891,6 @@
             expect(data.scheduleId).to.be(0);
             expect(data.chatId).to.be.a('number');
             expect(data.chatId).to.be(0);
-
-            done();
-          }, function(error) {
-            done(error);
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('sendPhoneVerificationCodeTFA', function() {
-        it('should call sendPhoneVerificationCodeTFA successfully', function(done) {
-          // TODO: uncomment, update parameter values for sendPhoneVerificationCodeTFA call and complete the assertions
-          /*
-          var sendPhoneVerificationCodeTFAInputObject = new TextmagicClient.SendPhoneVerificationCodeTFAInputObject();
-          sendPhoneVerificationCodeTFAInputObject.phone = "447860021130";
-          sendPhoneVerificationCodeTFAInputObject.workflowId = "6";
-          sendPhoneVerificationCodeTFAInputObject.brand = "Textmagic";
-          sendPhoneVerificationCodeTFAInputObject.codeLength = 4;
-          sendPhoneVerificationCodeTFAInputObject.language = "en-gb";
-          sendPhoneVerificationCodeTFAInputObject.senderId = "Textmagic";
-          sendPhoneVerificationCodeTFAInputObject.country = "US";
-
-          instance.sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeTFAInputObject).then(function(data) {
-            // TODO: update response assertions
-            expect(data).to.be.a(TextmagicClient.SendPhoneVerificationCodeResponse);
-            expect(data.verifyId).to.be.a('string');
-            expect(data.verifyId).to.be("123e4567-e89b-12d3-a456-426655440000");
-            expect(data.price).to.be.a('number');
-            expect(data.price).to.be(0.05);
 
             done();
           }, function(error) {
@@ -8801,9 +10087,14 @@
           updateContactInputObject.type = 1;
           updateContactInputObject.customFieldValues = [new TextmagicClient.CustomFieldListItem()];
           updateContactInputObject.customFieldValues[0].id = 515;
+          updateContactInputObject.customFieldValues[0].userCustomFieldId = 515;
+          updateContactInputObject.customFieldValues[0].name = "Custom name";
           updateContactInputObject.customFieldValues[0].value = "Custom value";
+          updateContactInputObject.customFieldValues[0].createdAt = 2015-02-11T07:33:19+0000;
           updateContactInputObject.local = 0;
           updateContactInputObject.country = "US";
+          updateContactInputObject.tags = "10541,18599";
+          updateContactInputObject.owner = 2;
           var id = 1;
 
           instance.updateContact(updateContactInputObject, id).then(function(data) {

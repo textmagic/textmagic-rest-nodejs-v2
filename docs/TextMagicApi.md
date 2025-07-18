@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**assignContactsToList**](TextMagicApi.md#assignContactsToList) | **PUT** /api/v2/lists/{id}/contacts | Assign contacts to a list
 [**blockContact**](TextMagicApi.md#blockContact) | **POST** /api/v2/contacts/block | Block a contact by phone number
 [**buyDedicatedNumber**](TextMagicApi.md#buyDedicatedNumber) | **POST** /api/v2/numbers | Buy a dedicated number
-[**cancelVerification**](TextMagicApi.md#cancelVerification) | **DELETE** /api/v2/verify/{verifyId} | Cancel verification process
-[**checkPhoneVerificationCodeTFA**](TextMagicApi.md#checkPhoneVerificationCodeTFA) | **PUT** /api/v2/verify | Step 2: Check the verification code 
 [**clearAndAssignContactsToList**](TextMagicApi.md#clearAndAssignContactsToList) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts
 [**closeChatsBulk**](TextMagicApi.md#closeChatsBulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**closeReadChats**](TextMagicApi.md#closeReadChats) | **POST** /api/v2/chats/close/read | Close read chats
@@ -130,7 +128,6 @@ Method | HTTP request | Description
 [**searchScheduledMessages**](TextMagicApi.md#searchScheduledMessages) | **GET** /api/v2/schedules/search | Find scheduled messages
 [**searchTemplates**](TextMagicApi.md#searchTemplates) | **GET** /api/v2/templates/search | Find templates by criteria
 [**sendMessage**](TextMagicApi.md#sendMessage) | **POST** /api/v2/messages | Send message
-[**sendPhoneVerificationCodeTFA**](TextMagicApi.md#sendPhoneVerificationCodeTFA) | **POST** /api/v2/verify | Step 1: Send a verification code 
 [**setChatStatus**](TextMagicApi.md#setChatStatus) | **POST** /api/v2/chats/status | Change chat status
 [**unblockContact**](TextMagicApi.md#unblockContact) | **POST** /api/v2/contacts/unblock | Unblock a contact by phone number
 [**unblockContactsBulk**](TextMagicApi.md#unblockContactsBulk) | **POST** /api/v2/contacts/unblock/bulk | Unblock contacts (bulk)
@@ -291,104 +288,6 @@ apiInstance.buyDedicatedNumber(buyDedicatedNumberInputObject).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **buyDedicatedNumberInputObject** | [**BuyDedicatedNumberInputObject**](BuyDedicatedNumberInputObject.md)|  | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="cancelVerification"></a>
-# **cancelVerification**
-> cancelVerification(verifyId)
-
-Cancel verification process
-
-You can cancel the verification not earlier than 30 seconds after the initial request.
-
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var verifyId = "123e4567-e89b-12d3-a456-426655440000"; // String | The verifyId that you received in Step 1.
-
-apiInstance.cancelVerification(verifyId).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **verifyId** | **String**| The verifyId that you received in Step 1. | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="checkPhoneVerificationCodeTFA"></a>
-# **checkPhoneVerificationCodeTFA**
-> checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeTFAInputObject)
-
-Step 2: Check the verification code 
-
-Check received code from user with the code which was actually sent.
-
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var checkPhoneVerificationCodeTFAInputObject = new TextmagicClient.CheckPhoneVerificationCodeTFAInputObject(); // CheckPhoneVerificationCodeTFAInputObject | 
-
-apiInstance.checkPhoneVerificationCodeTFA(checkPhoneVerificationCodeTFAInputObject).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checkPhoneVerificationCodeTFAInputObject** | [**CheckPhoneVerificationCodeTFAInputObject**](CheckPhoneVerificationCodeTFAInputObject.md)|  | 
 
 ### Return type
 
@@ -3170,7 +3069,8 @@ var opts = {
   'start': "start_example", // String | Return messages since specified timestamp only. Required when `end` parameter specified.
   'end': "end_example", // String | Return messages up to specified timestamp only. Required when `start` parameter specified.
   'direction': "desc", // String | Order direction. Default is desc.
-  'voice': 0 // Number | Fetch results with voice calls.
+  'voice': 0, // Number | Fetch results with voice calls.
+  'includeNotes': 0 // Number | Fetch results with messenger notes.
 };
 apiInstance.getChatMessages(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -3192,6 +3092,7 @@ Name | Type | Description  | Notes
  **end** | **String**| Return messages up to specified timestamp only. Required when `start` parameter specified. | [optional] 
  **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
  **voice** | **Number**| Fetch results with voice calls. | [optional] [default to 0]
+ **includeNotes** | **Number**| Fetch results with messenger notes. | [optional] [default to 0]
 
 ### Return type
 
@@ -4331,7 +4232,7 @@ Name | Type | Description  | Notes
 
 Preview message
 
-Get a messages preview (with tags merged) of up to 100 messages per session.
+Get a messages preview (with dynamic fields merged) of up to 100 messages per session. 
 
 ### Example
 ```javascript
@@ -6643,55 +6544,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SendMessageResponse**](SendMessageResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="sendPhoneVerificationCodeTFA"></a>
-# **sendPhoneVerificationCodeTFA**
-> SendPhoneVerificationCodeResponse sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeTFAInputObject)
-
-Step 1: Send a verification code 
-
-Sends a verification code to a specified phone number.
-
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var sendPhoneVerificationCodeTFAInputObject = new TextmagicClient.SendPhoneVerificationCodeTFAInputObject(); // SendPhoneVerificationCodeTFAInputObject | 
-
-apiInstance.sendPhoneVerificationCodeTFA(sendPhoneVerificationCodeTFAInputObject).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sendPhoneVerificationCodeTFAInputObject** | [**SendPhoneVerificationCodeTFAInputObject**](SendPhoneVerificationCodeTFAInputObject.md)|  | 
-
-### Return type
-
-[**SendPhoneVerificationCodeResponse**](SendPhoneVerificationCodeResponse.md)
 
 ### Authorization
 

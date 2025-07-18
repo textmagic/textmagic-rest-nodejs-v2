@@ -88,6 +88,18 @@
         // expect(instance.destination).to.be(expectedValueLiteral);
       });
 
+      it('should have the property initiatorId (base name: "initiatorId")', function() {
+        // TODO: update the code to test the property initiatorId
+        expect(instance).to.have.property('initiatorId');
+        // expect(instance.initiatorId).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property title (base name: "title")', function() {
+        // TODO: update the code to test the property title
+        expect(instance).to.have.property('title');
+        // expect(instance.title).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

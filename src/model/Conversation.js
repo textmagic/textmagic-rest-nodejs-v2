@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/MessagePayload'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./MessagePayload'));
   } else {
     // Browser globals (root is window)
     if (!root.TextmagicClient) {
       root.TextmagicClient = {};
     }
-    root.TextmagicClient.Conversation = factory(root.TextmagicClient.ApiClient);
+    root.TextmagicClient.Conversation = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.MessagePayload);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, MessagePayload) {
   'use strict';
 
   /**
    * The Conversation model module.
    * @module model/Conversation
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -96,6 +96,24 @@
         obj.sessionId = ApiClient.convertToType(data['sessionId'], 'Number');
       if (data.hasOwnProperty('initiatorId'))
         obj.initiatorId = ApiClient.convertToType(data['initiatorId'], 'Number');
+      if (data.hasOwnProperty('messageFileId'))
+        obj.messageFileId = ApiClient.convertToType(data['messageFileId'], 'Number');
+      if (data.hasOwnProperty('type'))
+        obj.type = ApiClient.convertToType(data['type'], 'String');
+      if (data.hasOwnProperty('chatType'))
+        obj.chatType = ApiClient.convertToType(data['chatType'], 'String');
+      if (data.hasOwnProperty('chatId'))
+        obj.chatId = ApiClient.convertToType(data['chatId'], 'Number');
+      if (data.hasOwnProperty('isEdited'))
+        obj.isEdited = ApiClient.convertToType(data['isEdited'], 'Boolean');
+      if (data.hasOwnProperty('errorCode'))
+        obj.errorCode = ApiClient.convertToType(data['errorCode'], 'String');
+      if (data.hasOwnProperty('files'))
+        obj.files = ApiClient.convertToType(data['files'], [File]);
+      if (data.hasOwnProperty('payload'))
+        obj.payload = MessagePayload.constructFromObject(data['payload']);
+      if (data.hasOwnProperty('avatar'))
+        obj.avatar = ApiClient.convertToType(data['avatar'], 'String');
     }
     return obj;
   }
@@ -165,6 +183,56 @@
    */
   exports.prototype.initiatorId = undefined;
 
+  /**
+   * Message file id.
+   * @member {Number} messageFileId
+   */
+  exports.prototype.messageFileId = undefined;
+
+  /**
+   * Message type.
+   * @member {module:model/Conversation.TypeEnum} type
+   */
+  exports.prototype.type = undefined;
+
+  /**
+   * Chat type.
+   * @member {module:model/Conversation.ChatTypeEnum} chatType
+   */
+  exports.prototype.chatType = undefined;
+
+  /**
+   * Chat id.
+   * @member {Number} chatId
+   */
+  exports.prototype.chatId = undefined;
+
+  /**
+   * @member {Boolean} isEdited
+   */
+  exports.prototype.isEdited = undefined;
+
+  /**
+   * Error code.
+   * @member {String} errorCode
+   */
+  exports.prototype.errorCode = undefined;
+
+  /**
+   * @member {Array.<File>} files
+   */
+  exports.prototype.files = undefined;
+
+  /**
+   * @member {module:model/MessagePayload} payload
+   */
+  exports.prototype.payload = undefined;
+
+  /**
+   * @member {String} avatar
+   */
+  exports.prototype.avatar = undefined;
+
 
   /**
    * Allowed values for the <code>direction</code> property.
@@ -195,6 +263,106 @@
      * @const
      */
     i: "i"
+  };
+
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "text"
+     * @const
+     */
+    text: "text",
+
+    /**
+     * value: "image"
+     * @const
+     */
+    image: "image",
+
+    /**
+     * value: "audio"
+     * @const
+     */
+    audio: "audio",
+
+    /**
+     * value: "voice"
+     * @const
+     */
+    voice: "voice",
+
+    /**
+     * value: "document"
+     * @const
+     */
+    document: "document",
+
+    /**
+     * value: "video"
+     * @const
+     */
+    video: "video",
+
+    /**
+     * value: "log"
+     * @const
+     */
+    log: "log",
+
+    /**
+     * value: "initial"
+     * @const
+     */
+    initial: "initial",
+
+    /**
+     * value: "note"
+     * @const
+     */
+    note: "note"
+  };
+
+
+  /**
+   * Allowed values for the <code>chatType</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ChatTypeEnum = {
+    /**
+     * value: "sms"
+     * @const
+     */
+    sms: "sms",
+
+    /**
+     * value: "facebook_messenger"
+     * @const
+     */
+    facebookMessenger: "facebook_messenger",
+
+    /**
+     * value: "instagram"
+     * @const
+     */
+    instagram: "instagram",
+
+    /**
+     * value: "whatsapp_business"
+     * @const
+     */
+    whatsappBusiness: "whatsapp_business",
+
+    /**
+     * value: "live_chat"
+     * @const
+     */
+    liveChat: "live_chat"
   };
 
   return exports;

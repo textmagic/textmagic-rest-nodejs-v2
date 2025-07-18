@@ -52,6 +52,12 @@
         // expect(instance.price).to.be(expectedValueLiteral);
       });
 
+      it('should have the property giftType (base name: "giftType")', function() {
+        // TODO: update the code to test the property giftType
+        expect(instance).to.have.property('giftType');
+        // expect(instance.giftType).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

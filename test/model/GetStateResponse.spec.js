@@ -64,6 +64,12 @@
         // expect(instance.systemAccountStateChanged).to.be(expectedValueLiteral);
       });
 
+      it('should have the property systemAccountAcceptTermsUpdate (base name: "systemAccountAcceptTermsUpdate")', function() {
+        // TODO: update the code to test the property systemAccountAcceptTermsUpdate
+        expect(instance).to.have.property('systemAccountAcceptTermsUpdate');
+        // expect(instance.systemAccountAcceptTermsUpdate).to.be(expectedValueLiteral);
+      });
+
       it('should have the property systemAccountClosed (base name: "systemAccountClosed")', function() {
         // TODO: update the code to test the property systemAccountClosed
         expect(instance).to.have.property('systemAccountClosed');
@@ -92,6 +98,12 @@
         // TODO: update the code to test the property userBalanceChanged
         expect(instance).to.have.property('userBalanceChanged');
         // expect(instance.userBalanceChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property userPresenceStatusChanged (base name: "userPresenceStatusChanged")', function() {
+        // TODO: update the code to test the property userPresenceStatusChanged
+        expect(instance).to.have.property('userPresenceStatusChanged');
+        // expect(instance.userPresenceStatusChanged).to.be(expectedValueLiteral);
       });
 
       it('should have the property userImpersonationEnd (base name: "userImpersonationEnd")', function() {
@@ -140,6 +152,30 @@
         // TODO: update the code to test the property messageSent
         expect(instance).to.have.property('messageSent');
         // expect(instance.messageSent).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property messageLog (base name: "messageLog")', function() {
+        // TODO: update the code to test the property messageLog
+        expect(instance).to.have.property('messageLog');
+        // expect(instance.messageLog).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property messageNote (base name: "messageNote")', function() {
+        // TODO: update the code to test the property messageNote
+        expect(instance).to.have.property('messageNote');
+        // expect(instance.messageNote).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property messageInitial (base name: "messageInitial")', function() {
+        // TODO: update the code to test the property messageInitial
+        expect(instance).to.have.property('messageInitial');
+        // expect(instance.messageInitial).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property lastMessageSet (base name: "lastMessageSet")', function() {
+        // TODO: update the code to test the property lastMessageSet
+        expect(instance).to.have.property('lastMessageSet');
+        // expect(instance.lastMessageSet).to.be(expectedValueLiteral);
       });
 
       it('should have the property messageSessionDeleted (base name: "messageSessionDeleted")', function() {
@@ -256,6 +292,12 @@
         // expect(instance.chatReopened).to.be(expectedValueLiteral);
       });
 
+      it('should have the property chatActivated (base name: "chatActivated")', function() {
+        // TODO: update the code to test the property chatActivated
+        expect(instance).to.have.property('chatActivated');
+        // expect(instance.chatActivated).to.be(expectedValueLiteral);
+      });
+
       it('should have the property chatCacheClear (base name: "chatCacheClear")', function() {
         // TODO: update the code to test the property chatCacheClear
         expect(instance).to.have.property('chatCacheClear');
@@ -274,6 +316,54 @@
         // expect(instance.chatUnread).to.be(expectedValueLiteral);
       });
 
+      it('should have the property chatAssigneeChanged (base name: "chatAssigneeChanged")', function() {
+        // TODO: update the code to test the property chatAssigneeChanged
+        expect(instance).to.have.property('chatAssigneeChanged');
+        // expect(instance.chatAssigneeChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatTagsChanged (base name: "chatTagsChanged")', function() {
+        // TODO: update the code to test the property chatTagsChanged
+        expect(instance).to.have.property('chatTagsChanged');
+        // expect(instance.chatTagsChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatConversationEnded (base name: "chatConversationEnded")', function() {
+        // TODO: update the code to test the property chatConversationEnded
+        expect(instance).to.have.property('chatConversationEnded');
+        // expect(instance.chatConversationEnded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property chatUpdated (base name: "chatUpdated")', function() {
+        // TODO: update the code to test the property chatUpdated
+        expect(instance).to.have.property('chatUpdated');
+        // expect(instance.chatUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property liveChatAgentChanged (base name: "liveChatAgentChanged")', function() {
+        // TODO: update the code to test the property liveChatAgentChanged
+        expect(instance).to.have.property('liveChatAgentChanged');
+        // expect(instance.liveChatAgentChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property liveChatRated (base name: "liveChatRated")', function() {
+        // TODO: update the code to test the property liveChatRated
+        expect(instance).to.have.property('liveChatRated');
+        // expect(instance.liveChatRated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property webWidgetUpdated (base name: "webWidgetUpdated")', function() {
+        // TODO: update the code to test the property webWidgetUpdated
+        expect(instance).to.have.property('webWidgetUpdated');
+        // expect(instance.webWidgetUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property webWidgetDeleted (base name: "webWidgetDeleted")', function() {
+        // TODO: update the code to test the property webWidgetDeleted
+        expect(instance).to.have.property('webWidgetDeleted');
+        // expect(instance.webWidgetDeleted).to.be(expectedValueLiteral);
+      });
+
       it('should have the property contactAdded (base name: "contactAdded")', function() {
         // TODO: update the code to test the property contactAdded
         expect(instance).to.have.property('contactAdded');
@@ -286,10 +376,46 @@
         // expect(instance.contactDeleted).to.be(expectedValueLiteral);
       });
 
+      it('should have the property contactBulkUpdated (base name: "contactBulkUpdated")', function() {
+        // TODO: update the code to test the property contactBulkUpdated
+        expect(instance).to.have.property('contactBulkUpdated');
+        // expect(instance.contactBulkUpdated).to.be(expectedValueLiteral);
+      });
+
       it('should have the property contactStateChanged (base name: "contactStateChanged")', function() {
         // TODO: update the code to test the property contactStateChanged
         expect(instance).to.have.property('contactStateChanged');
         // expect(instance.contactStateChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property contactUnsubscribed (base name: "contactUnsubscribed")', function() {
+        // TODO: update the code to test the property contactUnsubscribed
+        expect(instance).to.have.property('contactUnsubscribed');
+        // expect(instance.contactUnsubscribed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property contactResubscribed (base name: "contactResubscribed")', function() {
+        // TODO: update the code to test the property contactResubscribed
+        expect(instance).to.have.property('contactResubscribed');
+        // expect(instance.contactResubscribed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property contactNoteAdded (base name: "contactNoteAdded")', function() {
+        // TODO: update the code to test the property contactNoteAdded
+        expect(instance).to.have.property('contactNoteAdded');
+        // expect(instance.contactNoteAdded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property contactNoteDeleted (base name: "contactNoteDeleted")', function() {
+        // TODO: update the code to test the property contactNoteDeleted
+        expect(instance).to.have.property('contactNoteDeleted');
+        // expect(instance.contactNoteDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property contactNoteStateChanged (base name: "contactNoteStateChanged")', function() {
+        // TODO: update the code to test the property contactNoteStateChanged
+        expect(instance).to.have.property('contactNoteStateChanged');
+        // expect(instance.contactNoteStateChanged).to.be(expectedValueLiteral);
       });
 
       it('should have the property listAdded (base name: "listAdded")', function() {
@@ -308,6 +434,12 @@
         // TODO: update the code to test the property listStateChanged
         expect(instance).to.have.property('listStateChanged');
         // expect(instance.listStateChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property listCountMembersUpdated (base name: "listCountMembersUpdated")', function() {
+        // TODO: update the code to test the property listCountMembersUpdated
+        expect(instance).to.have.property('listCountMembersUpdated');
+        // expect(instance.listCountMembersUpdated).to.be(expectedValueLiteral);
       });
 
       it('should have the property contactWipeEnd (base name: "contactWipeEnd")', function() {
@@ -358,10 +490,10 @@
         // expect(instance.progressSubAccountBulkImport).to.be(expectedValueLiteral);
       });
 
-      it('should have the property progressContactBulkImport (base name: "progressContactBulkImport")', function() {
-        // TODO: update the code to test the property progressContactBulkImport
-        expect(instance).to.have.property('progressContactBulkImport');
-        // expect(instance.progressContactBulkImport).to.be(expectedValueLiteral);
+      it('should have the property importProgressState (base name: "importProgressState")', function() {
+        // TODO: update the code to test the property importProgressState
+        expect(instance).to.have.property('importProgressState');
+        // expect(instance.importProgressState).to.be(expectedValueLiteral);
       });
 
       it('should have the property forceRefreshWebApp (base name: "forceRefreshWebApp")', function() {
@@ -410,6 +542,618 @@
         // TODO: update the code to test the property userSubscriptionDeleted
         expect(instance).to.have.property('userSubscriptionDeleted');
         // expect(instance.userSubscriptionDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskCreated (base name: "taskCreated")', function() {
+        // TODO: update the code to test the property taskCreated
+        expect(instance).to.have.property('taskCreated');
+        // expect(instance.taskCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskUpdated (base name: "taskUpdated")', function() {
+        // TODO: update the code to test the property taskUpdated
+        expect(instance).to.have.property('taskUpdated');
+        // expect(instance.taskUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskReordered (base name: "taskReordered")', function() {
+        // TODO: update the code to test the property taskReordered
+        expect(instance).to.have.property('taskReordered');
+        // expect(instance.taskReordered).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskDeleted (base name: "taskDeleted")', function() {
+        // TODO: update the code to test the property taskDeleted
+        expect(instance).to.have.property('taskDeleted');
+        // expect(instance.taskDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskMovedAll (base name: "taskMovedAll")', function() {
+        // TODO: update the code to test the property taskMovedAll
+        expect(instance).to.have.property('taskMovedAll');
+        // expect(instance.taskMovedAll).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskStageCreated (base name: "taskStageCreated")', function() {
+        // TODO: update the code to test the property taskStageCreated
+        expect(instance).to.have.property('taskStageCreated');
+        // expect(instance.taskStageCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskStageUpdated (base name: "taskStageUpdated")', function() {
+        // TODO: update the code to test the property taskStageUpdated
+        expect(instance).to.have.property('taskStageUpdated');
+        // expect(instance.taskStageUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskStageDeleted (base name: "taskStageDeleted")', function() {
+        // TODO: update the code to test the property taskStageDeleted
+        expect(instance).to.have.property('taskStageDeleted');
+        // expect(instance.taskStageDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskBoardCreated (base name: "taskBoardCreated")', function() {
+        // TODO: update the code to test the property taskBoardCreated
+        expect(instance).to.have.property('taskBoardCreated');
+        // expect(instance.taskBoardCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskBoardUpdated (base name: "taskBoardUpdated")', function() {
+        // TODO: update the code to test the property taskBoardUpdated
+        expect(instance).to.have.property('taskBoardUpdated');
+        // expect(instance.taskBoardUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskBoardReordered (base name: "taskBoardReordered")', function() {
+        // TODO: update the code to test the property taskBoardReordered
+        expect(instance).to.have.property('taskBoardReordered');
+        // expect(instance.taskBoardReordered).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskBoardDeleted (base name: "taskBoardDeleted")', function() {
+        // TODO: update the code to test the property taskBoardDeleted
+        expect(instance).to.have.property('taskBoardDeleted');
+        // expect(instance.taskBoardDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskBoardArchived (base name: "taskBoardArchived")', function() {
+        // TODO: update the code to test the property taskBoardArchived
+        expect(instance).to.have.property('taskBoardArchived');
+        // expect(instance.taskBoardArchived).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskChecklistCreated (base name: "taskChecklistCreated")', function() {
+        // TODO: update the code to test the property taskChecklistCreated
+        expect(instance).to.have.property('taskChecklistCreated');
+        // expect(instance.taskChecklistCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskChecklistUpdated (base name: "taskChecklistUpdated")', function() {
+        // TODO: update the code to test the property taskChecklistUpdated
+        expect(instance).to.have.property('taskChecklistUpdated');
+        // expect(instance.taskChecklistUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskChecklistDeleted (base name: "taskChecklistDeleted")', function() {
+        // TODO: update the code to test the property taskChecklistDeleted
+        expect(instance).to.have.property('taskChecklistDeleted');
+        // expect(instance.taskChecklistDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskChecklistBulkMarked (base name: "taskChecklistBulkMarked")', function() {
+        // TODO: update the code to test the property taskChecklistBulkMarked
+        expect(instance).to.have.property('taskChecklistBulkMarked');
+        // expect(instance.taskChecklistBulkMarked).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskChecklistItemCreated (base name: "taskChecklistItemCreated")', function() {
+        // TODO: update the code to test the property taskChecklistItemCreated
+        expect(instance).to.have.property('taskChecklistItemCreated');
+        // expect(instance.taskChecklistItemCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskChecklistItemUpdated (base name: "taskChecklistItemUpdated")', function() {
+        // TODO: update the code to test the property taskChecklistItemUpdated
+        expect(instance).to.have.property('taskChecklistItemUpdated');
+        // expect(instance.taskChecklistItemUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskChecklistItemDeleted (base name: "taskChecklistItemDeleted")', function() {
+        // TODO: update the code to test the property taskChecklistItemDeleted
+        expect(instance).to.have.property('taskChecklistItemDeleted');
+        // expect(instance.taskChecklistItemDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskCommentCreated (base name: "taskCommentCreated")', function() {
+        // TODO: update the code to test the property taskCommentCreated
+        expect(instance).to.have.property('taskCommentCreated');
+        // expect(instance.taskCommentCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property taskCommentDeleted (base name: "taskCommentDeleted")', function() {
+        // TODO: update the code to test the property taskCommentDeleted
+        expect(instance).to.have.property('taskCommentDeleted');
+        // expect(instance.taskCommentDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property pinnedContactAdded (base name: "pinnedContactAdded")', function() {
+        // TODO: update the code to test the property pinnedContactAdded
+        expect(instance).to.have.property('pinnedContactAdded');
+        // expect(instance.pinnedContactAdded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property pinnedContactRemoved (base name: "pinnedContactRemoved")', function() {
+        // TODO: update the code to test the property pinnedContactRemoved
+        expect(instance).to.have.property('pinnedContactRemoved');
+        // expect(instance.pinnedContactRemoved).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property pinnedContactReordered (base name: "pinnedContactReordered")', function() {
+        // TODO: update the code to test the property pinnedContactReordered
+        expect(instance).to.have.property('pinnedContactReordered');
+        // expect(instance.pinnedContactReordered).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property pinnedContactStateChanged (base name: "pinnedContactStateChanged")', function() {
+        // TODO: update the code to test the property pinnedContactStateChanged
+        expect(instance).to.have.property('pinnedContactStateChanged');
+        // expect(instance.pinnedContactStateChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property whatsappAccountAdded (base name: "whatsappAccountAdded")', function() {
+        // TODO: update the code to test the property whatsappAccountAdded
+        expect(instance).to.have.property('whatsappAccountAdded');
+        // expect(instance.whatsappAccountAdded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property whatsappAccountRemoved (base name: "whatsappAccountRemoved")', function() {
+        // TODO: update the code to test the property whatsappAccountRemoved
+        expect(instance).to.have.property('whatsappAccountRemoved');
+        // expect(instance.whatsappAccountRemoved).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property whatsappAccountChanged (base name: "whatsappAccountChanged")', function() {
+        // TODO: update the code to test the property whatsappAccountChanged
+        expect(instance).to.have.property('whatsappAccountChanged');
+        // expect(instance.whatsappAccountChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property facebookPageAdded (base name: "facebookPageAdded")', function() {
+        // TODO: update the code to test the property facebookPageAdded
+        expect(instance).to.have.property('facebookPageAdded');
+        // expect(instance.facebookPageAdded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property facebookPageRemoved (base name: "facebookPageRemoved")', function() {
+        // TODO: update the code to test the property facebookPageRemoved
+        expect(instance).to.have.property('facebookPageRemoved');
+        // expect(instance.facebookPageRemoved).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property facebookPageChanged (base name: "facebookPageChanged")', function() {
+        // TODO: update the code to test the property facebookPageChanged
+        expect(instance).to.have.property('facebookPageChanged');
+        // expect(instance.facebookPageChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property instagramAccountAdded (base name: "instagramAccountAdded")', function() {
+        // TODO: update the code to test the property instagramAccountAdded
+        expect(instance).to.have.property('instagramAccountAdded');
+        // expect(instance.instagramAccountAdded).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property instagramAccountRemoved (base name: "instagramAccountRemoved")', function() {
+        // TODO: update the code to test the property instagramAccountRemoved
+        expect(instance).to.have.property('instagramAccountRemoved');
+        // expect(instance.instagramAccountRemoved).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property instagramAccountChanged (base name: "instagramAccountChanged")', function() {
+        // TODO: update the code to test the property instagramAccountChanged
+        expect(instance).to.have.property('instagramAccountChanged');
+        // expect(instance.instagramAccountChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property unreadTicketsCountUpdated (base name: "unreadTicketsCountUpdated")', function() {
+        // TODO: update the code to test the property unreadTicketsCountUpdated
+        expect(instance).to.have.property('unreadTicketsCountUpdated');
+        // expect(instance.unreadTicketsCountUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketDeleted (base name: "ticketDeleted")', function() {
+        // TODO: update the code to test the property ticketDeleted
+        expect(instance).to.have.property('ticketDeleted');
+        // expect(instance.ticketDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketUpdated (base name: "ticketUpdated")', function() {
+        // TODO: update the code to test the property ticketUpdated
+        expect(instance).to.have.property('ticketUpdated');
+        // expect(instance.ticketUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketCreated (base name: "ticketCreated")', function() {
+        // TODO: update the code to test the property ticketCreated
+        expect(instance).to.have.property('ticketCreated');
+        // expect(instance.ticketCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketBulkUpdated (base name: "ticketBulkUpdated")', function() {
+        // TODO: update the code to test the property ticketBulkUpdated
+        expect(instance).to.have.property('ticketBulkUpdated');
+        // expect(instance.ticketBulkUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketBulkDeleted (base name: "ticketBulkDeleted")', function() {
+        // TODO: update the code to test the property ticketBulkDeleted
+        expect(instance).to.have.property('ticketBulkDeleted');
+        // expect(instance.ticketBulkDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketMessageCreated (base name: "ticketMessageCreated")', function() {
+        // TODO: update the code to test the property ticketMessageCreated
+        expect(instance).to.have.property('ticketMessageCreated');
+        // expect(instance.ticketMessageCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketMessageUpdated (base name: "ticketMessageUpdated")', function() {
+        // TODO: update the code to test the property ticketMessageUpdated
+        expect(instance).to.have.property('ticketMessageUpdated');
+        // expect(instance.ticketMessageUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property ticketMessageDeleted (base name: "ticketMessageDeleted")', function() {
+        // TODO: update the code to test the property ticketMessageDeleted
+        expect(instance).to.have.property('ticketMessageDeleted');
+        // expect(instance.ticketMessageDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property subAccountsClosed (base name: "subAccountsClosed")', function() {
+        // TODO: update the code to test the property subAccountsClosed
+        expect(instance).to.have.property('subAccountsClosed');
+        // expect(instance.subAccountsClosed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property userInvited (base name: "userInvited")', function() {
+        // TODO: update the code to test the property userInvited
+        expect(instance).to.have.property('userInvited');
+        // expect(instance.userInvited).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property filteredViewCreated (base name: "filteredViewCreated")', function() {
+        // TODO: update the code to test the property filteredViewCreated
+        expect(instance).to.have.property('filteredViewCreated');
+        // expect(instance.filteredViewCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property filteredViewCountUpdated (base name: "filteredViewCountUpdated")', function() {
+        // TODO: update the code to test the property filteredViewCountUpdated
+        expect(instance).to.have.property('filteredViewCountUpdated');
+        // expect(instance.filteredViewCountUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property filteredViewDeleted (base name: "filteredViewDeleted")', function() {
+        // TODO: update the code to test the property filteredViewDeleted
+        expect(instance).to.have.property('filteredViewDeleted');
+        // expect(instance.filteredViewDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property forwardingInboxWasVerified (base name: "forwardingInboxWasVerified")', function() {
+        // TODO: update the code to test the property forwardingInboxWasVerified
+        expect(instance).to.have.property('forwardingInboxWasVerified');
+        // expect(instance.forwardingInboxWasVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property forwardingInboxCheckWasFailed (base name: "forwardingInboxCheckWasFailed")', function() {
+        // TODO: update the code to test the property forwardingInboxCheckWasFailed
+        expect(instance).to.have.property('forwardingInboxCheckWasFailed');
+        // expect(instance.forwardingInboxCheckWasFailed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property forwardingInboxVerificationLinkWasParsed (base name: "forwardingInboxVerificationLinkWasParsed")', function() {
+        // TODO: update the code to test the property forwardingInboxVerificationLinkWasParsed
+        expect(instance).to.have.property('forwardingInboxVerificationLinkWasParsed');
+        // expect(instance.forwardingInboxVerificationLinkWasParsed).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property tendlcLinkNumberStatusUpdated (base name: "tendlcLinkNumberStatusUpdated")', function() {
+        // TODO: update the code to test the property tendlcLinkNumberStatusUpdated
+        expect(instance).to.have.property('tendlcLinkNumberStatusUpdated');
+        // expect(instance.tendlcLinkNumberStatusUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property channelPresence (base name: "channelPresence")', function() {
+        // TODO: update the code to test the property channelPresence
+        expect(instance).to.have.property('channelPresence');
+        // expect(instance.channelPresence).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealCreated (base name: "dealCreated")', function() {
+        // TODO: update the code to test the property dealCreated
+        expect(instance).to.have.property('dealCreated');
+        // expect(instance.dealCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealUpdated (base name: "dealUpdated")', function() {
+        // TODO: update the code to test the property dealUpdated
+        expect(instance).to.have.property('dealUpdated');
+        // expect(instance.dealUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealDeleted (base name: "dealDeleted")', function() {
+        // TODO: update the code to test the property dealDeleted
+        expect(instance).to.have.property('dealDeleted');
+        // expect(instance.dealDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealMoved (base name: "dealMoved")', function() {
+        // TODO: update the code to test the property dealMoved
+        expect(instance).to.have.property('dealMoved');
+        // expect(instance.dealMoved).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealStageCreated (base name: "dealStageCreated")', function() {
+        // TODO: update the code to test the property dealStageCreated
+        expect(instance).to.have.property('dealStageCreated');
+        // expect(instance.dealStageCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealStageUpdated (base name: "dealStageUpdated")', function() {
+        // TODO: update the code to test the property dealStageUpdated
+        expect(instance).to.have.property('dealStageUpdated');
+        // expect(instance.dealStageUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealStageDeleted (base name: "dealStageDeleted")', function() {
+        // TODO: update the code to test the property dealStageDeleted
+        expect(instance).to.have.property('dealStageDeleted');
+        // expect(instance.dealStageDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealPipelineCreated (base name: "dealPipelineCreated")', function() {
+        // TODO: update the code to test the property dealPipelineCreated
+        expect(instance).to.have.property('dealPipelineCreated');
+        // expect(instance.dealPipelineCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealPipelineUpdated (base name: "dealPipelineUpdated")', function() {
+        // TODO: update the code to test the property dealPipelineUpdated
+        expect(instance).to.have.property('dealPipelineUpdated');
+        // expect(instance.dealPipelineUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealPipelineDeleted (base name: "dealPipelineDeleted")', function() {
+        // TODO: update the code to test the property dealPipelineDeleted
+        expect(instance).to.have.property('dealPipelineDeleted');
+        // expect(instance.dealPipelineDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealPipelineArchived (base name: "dealPipelineArchived")', function() {
+        // TODO: update the code to test the property dealPipelineArchived
+        expect(instance).to.have.property('dealPipelineArchived');
+        // expect(instance.dealPipelineArchived).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealPipelineReordered (base name: "dealPipelineReordered")', function() {
+        // TODO: update the code to test the property dealPipelineReordered
+        expect(instance).to.have.property('dealPipelineReordered');
+        // expect(instance.dealPipelineReordered).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealActivityUpdated (base name: "dealActivityUpdated")', function() {
+        // TODO: update the code to test the property dealActivityUpdated
+        expect(instance).to.have.property('dealActivityUpdated');
+        // expect(instance.dealActivityUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealActivityItemCreated (base name: "dealActivityItemCreated")', function() {
+        // TODO: update the code to test the property dealActivityItemCreated
+        expect(instance).to.have.property('dealActivityItemCreated');
+        // expect(instance.dealActivityItemCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealActivityItemUpdated (base name: "dealActivityItemUpdated")', function() {
+        // TODO: update the code to test the property dealActivityItemUpdated
+        expect(instance).to.have.property('dealActivityItemUpdated');
+        // expect(instance.dealActivityItemUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealActivityItemDeleted (base name: "dealActivityItemDeleted")', function() {
+        // TODO: update the code to test the property dealActivityItemDeleted
+        expect(instance).to.have.property('dealActivityItemDeleted');
+        // expect(instance.dealActivityItemDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealActivityItemBulkMarked (base name: "dealActivityItemBulkMarked")', function() {
+        // TODO: update the code to test the property dealActivityItemBulkMarked
+        expect(instance).to.have.property('dealActivityItemBulkMarked');
+        // expect(instance.dealActivityItemBulkMarked).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealTimelineItemDeleted (base name: "dealTimelineItemDeleted")', function() {
+        // TODO: update the code to test the property dealTimelineItemDeleted
+        expect(instance).to.have.property('dealTimelineItemDeleted');
+        // expect(instance.dealTimelineItemDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property dealTimelineItemCreated (base name: "dealTimelineItemCreated")', function() {
+        // TODO: update the code to test the property dealTimelineItemCreated
+        expect(instance).to.have.property('dealTimelineItemCreated');
+        // expect(instance.dealTimelineItemCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantCreated (base name: "AIAssistantCreated")', function() {
+        // TODO: update the code to test the property aIAssistantCreated
+        expect(instance).to.have.property('aIAssistantCreated');
+        // expect(instance.aIAssistantCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantState (base name: "AIAssistantState")', function() {
+        // TODO: update the code to test the property aIAssistantState
+        expect(instance).to.have.property('aIAssistantState');
+        // expect(instance.aIAssistantState).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantDeleted (base name: "AIAssistantDeleted")', function() {
+        // TODO: update the code to test the property aIAssistantDeleted
+        expect(instance).to.have.property('aIAssistantDeleted');
+        // expect(instance.aIAssistantDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantLinkDeleted (base name: "AIAssistantLinkDeleted")', function() {
+        // TODO: update the code to test the property aIAssistantLinkDeleted
+        expect(instance).to.have.property('aIAssistantLinkDeleted');
+        // expect(instance.aIAssistantLinkDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantLinkState (base name: "AIAssistantLinkState")', function() {
+        // TODO: update the code to test the property aIAssistantLinkState
+        expect(instance).to.have.property('aIAssistantLinkState');
+        // expect(instance.aIAssistantLinkState).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantLinkCreated (base name: "AIAssistantLinkCreated")', function() {
+        // TODO: update the code to test the property aIAssistantLinkCreated
+        expect(instance).to.have.property('aIAssistantLinkCreated');
+        // expect(instance.aIAssistantLinkCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantSubLinkState (base name: "AIAssistantSubLinkState")', function() {
+        // TODO: update the code to test the property aIAssistantSubLinkState
+        expect(instance).to.have.property('aIAssistantSubLinkState');
+        // expect(instance.aIAssistantSubLinkState).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property aIAssistantSubLinkCreated (base name: "AIAssistantSubLinkCreated")', function() {
+        // TODO: update the code to test the property aIAssistantSubLinkCreated
+        expect(instance).to.have.property('aIAssistantSubLinkCreated');
+        // expect(instance.aIAssistantSubLinkCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignEmailSenderCreated (base name: "emailCampaignEmailSenderCreated")', function() {
+        // TODO: update the code to test the property emailCampaignEmailSenderCreated
+        expect(instance).to.have.property('emailCampaignEmailSenderCreated');
+        // expect(instance.emailCampaignEmailSenderCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignEmailSenderUpdated (base name: "emailCampaignEmailSenderUpdated")', function() {
+        // TODO: update the code to test the property emailCampaignEmailSenderUpdated
+        expect(instance).to.have.property('emailCampaignEmailSenderUpdated');
+        // expect(instance.emailCampaignEmailSenderUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignEmailSenderDeleted (base name: "emailCampaignEmailSenderDeleted")', function() {
+        // TODO: update the code to test the property emailCampaignEmailSenderDeleted
+        expect(instance).to.have.property('emailCampaignEmailSenderDeleted');
+        // expect(instance.emailCampaignEmailSenderDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainCreated (base name: "emailCampaignDomainCreated")', function() {
+        // TODO: update the code to test the property emailCampaignDomainCreated
+        expect(instance).to.have.property('emailCampaignDomainCreated');
+        // expect(instance.emailCampaignDomainCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainDeleted (base name: "emailCampaignDomainDeleted")', function() {
+        // TODO: update the code to test the property emailCampaignDomainDeleted
+        expect(instance).to.have.property('emailCampaignDomainDeleted');
+        // expect(instance.emailCampaignDomainDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainVerified (base name: "emailCampaignDomainVerified")', function() {
+        // TODO: update the code to test the property emailCampaignDomainVerified
+        expect(instance).to.have.property('emailCampaignDomainVerified');
+        // expect(instance.emailCampaignDomainVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainStatusChanged (base name: "emailCampaignDomainStatusChanged")', function() {
+        // TODO: update the code to test the property emailCampaignDomainStatusChanged
+        expect(instance).to.have.property('emailCampaignDomainStatusChanged');
+        // expect(instance.emailCampaignDomainStatusChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainDkimVerified (base name: "emailCampaignDomainDkimVerified")', function() {
+        // TODO: update the code to test the property emailCampaignDomainDkimVerified
+        expect(instance).to.have.property('emailCampaignDomainDkimVerified');
+        // expect(instance.emailCampaignDomainDkimVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainReturnPathVerified (base name: "emailCampaignDomainReturnPathVerified")', function() {
+        // TODO: update the code to test the property emailCampaignDomainReturnPathVerified
+        expect(instance).to.have.property('emailCampaignDomainReturnPathVerified');
+        // expect(instance.emailCampaignDomainReturnPathVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainDmarcVerified (base name: "emailCampaignDomainDmarcVerified")', function() {
+        // TODO: update the code to test the property emailCampaignDomainDmarcVerified
+        expect(instance).to.have.property('emailCampaignDomainDmarcVerified');
+        // expect(instance.emailCampaignDomainDmarcVerified).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignDomainEntryVerificationChanged (base name: "emailCampaignDomainEntryVerificationChanged")', function() {
+        // TODO: update the code to test the property emailCampaignDomainEntryVerificationChanged
+        expect(instance).to.have.property('emailCampaignDomainEntryVerificationChanged');
+        // expect(instance.emailCampaignDomainEntryVerificationChanged).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignProgressState (base name: "emailCampaignProgressState")', function() {
+        // TODO: update the code to test the property emailCampaignProgressState
+        expect(instance).to.have.property('emailCampaignProgressState');
+        // expect(instance.emailCampaignProgressState).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignUpdated (base name: "emailCampaignUpdated")', function() {
+        // TODO: update the code to test the property emailCampaignUpdated
+        expect(instance).to.have.property('emailCampaignUpdated');
+        // expect(instance.emailCampaignUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property smsCampaignInvalidated (base name: "smsCampaignInvalidated")', function() {
+        // TODO: update the code to test the property smsCampaignInvalidated
+        expect(instance).to.have.property('smsCampaignInvalidated');
+        // expect(instance.smsCampaignInvalidated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property scheduledEmailCampaignCreated (base name: "scheduledEmailCampaignCreated")', function() {
+        // TODO: update the code to test the property scheduledEmailCampaignCreated
+        expect(instance).to.have.property('scheduledEmailCampaignCreated');
+        // expect(instance.scheduledEmailCampaignCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property scheduledEmailCampaignUpdated (base name: "scheduledEmailCampaignUpdated")', function() {
+        // TODO: update the code to test the property scheduledEmailCampaignUpdated
+        expect(instance).to.have.property('scheduledEmailCampaignUpdated');
+        // expect(instance.scheduledEmailCampaignUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property scheduledEmailCampaignStatusUpdated (base name: "scheduledEmailCampaignStatusUpdated")', function() {
+        // TODO: update the code to test the property scheduledEmailCampaignStatusUpdated
+        expect(instance).to.have.property('scheduledEmailCampaignStatusUpdated');
+        // expect(instance.scheduledEmailCampaignStatusUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property scheduledEmailCampaignDeleted (base name: "scheduledEmailCampaignDeleted")', function() {
+        // TODO: update the code to test the property scheduledEmailCampaignDeleted
+        expect(instance).to.have.property('scheduledEmailCampaignDeleted');
+        // expect(instance.scheduledEmailCampaignDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignFailedAttemptCreated (base name: "emailCampaignFailedAttemptCreated")', function() {
+        // TODO: update the code to test the property emailCampaignFailedAttemptCreated
+        expect(instance).to.have.property('emailCampaignFailedAttemptCreated');
+        // expect(instance.emailCampaignFailedAttemptCreated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignFailedAttemptDeleted (base name: "emailCampaignFailedAttemptDeleted")', function() {
+        // TODO: update the code to test the property emailCampaignFailedAttemptDeleted
+        expect(instance).to.have.property('emailCampaignFailedAttemptDeleted');
+        // expect(instance.emailCampaignFailedAttemptDeleted).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailCampaignFailedAttemptStateUpdated (base name: "emailCampaignFailedAttemptStateUpdated")', function() {
+        // TODO: update the code to test the property emailCampaignFailedAttemptStateUpdated
+        expect(instance).to.have.property('emailCampaignFailedAttemptStateUpdated');
+        // expect(instance.emailCampaignFailedAttemptStateUpdated).to.be(expectedValueLiteral);
       });
 
     });

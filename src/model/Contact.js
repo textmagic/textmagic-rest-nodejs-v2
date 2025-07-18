@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ContactCustomField', 'model/ContactImage', 'model/ContactNote', 'model/Country', 'model/List', 'model/User'], factory);
+    define(['ApiClient', 'model/ContactImage', 'model/ContactNote', 'model/Country', 'model/CustomFieldListItem', 'model/List', 'model/Tag', 'model/User'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ContactCustomField'), require('./ContactImage'), require('./ContactNote'), require('./Country'), require('./List'), require('./User'));
+    module.exports = factory(require('../ApiClient'), require('./ContactImage'), require('./ContactNote'), require('./Country'), require('./CustomFieldListItem'), require('./List'), require('./Tag'), require('./User'));
   } else {
     // Browser globals (root is window)
     if (!root.TextmagicClient) {
       root.TextmagicClient = {};
     }
-    root.TextmagicClient.Contact = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.ContactCustomField, root.TextmagicClient.ContactImage, root.TextmagicClient.ContactNote, root.TextmagicClient.Country, root.TextmagicClient.List, root.TextmagicClient.User);
+    root.TextmagicClient.Contact = factory(root.TextmagicClient.ApiClient, root.TextmagicClient.ContactImage, root.TextmagicClient.ContactNote, root.TextmagicClient.Country, root.TextmagicClient.CustomFieldListItem, root.TextmagicClient.List, root.TextmagicClient.Tag, root.TextmagicClient.User);
   }
-}(this, function(ApiClient, ContactCustomField, ContactImage, ContactNote, Country, List, User) {
+}(this, function(ApiClient, ContactImage, ContactNote, Country, CustomFieldListItem, List, Tag, User) {
   'use strict';
 
   /**
    * The Contact model module.
    * @module model/Contact
-   * @version 2.0.23575
+   * @version 2.0.43640
    */
 
   /**
@@ -49,7 +49,7 @@
    * @param phone {String} Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * @param email {String} Contact email address.
    * @param country {module:model/Country} Contact country.
-   * @param customFields {Array.<module:model/ContactCustomField>} See the [Custom Fields](https://docs.textmagic.com/#tag/Custom-Fields) section.
+   * @param customFields {Array.<module:model/CustomFieldListItem>} 
    * @param user {module:model/User} 
    * @param lists {Array.<module:model/List>} 
    * @param phoneType {String} Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is a Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
@@ -103,17 +103,23 @@
       if (data.hasOwnProperty('country'))
         obj.country = Country.constructFromObject(data['country']);
       if (data.hasOwnProperty('customFields'))
-        obj.customFields = ApiClient.convertToType(data['customFields'], [ContactCustomField]);
+        obj.customFields = ApiClient.convertToType(data['customFields'], [CustomFieldListItem]);
       if (data.hasOwnProperty('user'))
         obj.user = User.constructFromObject(data['user']);
       if (data.hasOwnProperty('lists'))
         obj.lists = ApiClient.convertToType(data['lists'], [List]);
+      if (data.hasOwnProperty('owner'))
+        obj.owner = User.constructFromObject(data['owner']);
+      if (data.hasOwnProperty('tags'))
+        obj.tags = ApiClient.convertToType(data['tags'], [Tag]);
       if (data.hasOwnProperty('phoneType'))
         obj.phoneType = ApiClient.convertToType(data['phoneType'], 'String');
       if (data.hasOwnProperty('avatar'))
         obj.avatar = ContactImage.constructFromObject(data['avatar']);
       if (data.hasOwnProperty('notes'))
         obj.notes = ApiClient.convertToType(data['notes'], [ContactNote]);
+      if (data.hasOwnProperty('whatsappPhone'))
+        obj.whatsappPhone = ApiClient.convertToType(data['whatsappPhone'], 'String');
     }
     return obj;
   }
@@ -173,8 +179,7 @@
   exports.prototype.country = undefined;
 
   /**
-   * See the [Custom Fields](https://docs.textmagic.com/#tag/Custom-Fields) section.
-   * @member {Array.<module:model/ContactCustomField>} customFields
+   * @member {Array.<module:model/CustomFieldListItem>} customFields
    */
   exports.prototype.customFields = undefined;
 
@@ -187,6 +192,17 @@
    * @member {Array.<module:model/List>} lists
    */
   exports.prototype.lists = undefined;
+
+  /**
+   * Contact Owner User ID.
+   * @member {module:model/User} owner
+   */
+  exports.prototype.owner = undefined;
+
+  /**
+   * @member {Array.<module:model/Tag>} tags
+   */
+  exports.prototype.tags = undefined;
 
   /**
    * Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is a Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
@@ -203,6 +219,12 @@
    * @member {Array.<module:model/ContactNote>} notes
    */
   exports.prototype.notes = undefined;
+
+  /**
+   * Whatsapp phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
+   * @member {String} whatsappPhone
+   */
+  exports.prototype.whatsappPhone = undefined;
 
   return exports;
 

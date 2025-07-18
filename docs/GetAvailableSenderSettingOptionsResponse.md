@@ -9,5 +9,8 @@ Name | Type | Description | Notes
 **senderIds** | **[String]** | Array of alphanumeric sender IDs. | 
 **userCarrierTwilio** | **[String]** | Array of alphanumeric sender IDs. | 
 **userCarrierVonage** | **[String]** | Array of alphanumeric sender IDs. | 
+**userCarrierSinch** | **[String]** | Array of alphanumeric sender IDs. | 
+**uCarrierBandwidth** | **[String]** | Array of alphanumeric sender IDs. | [optional] 
+**ucTwilioSenderId** | **[String]** | Array of alphanumeric sender IDs. | [optional] 
 
 
