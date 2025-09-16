@@ -82,6 +82,12 @@
         // expect(instance.systemAccountAdditionalFields).to.be(expectedValueLiteral);
       });
 
+      it('should have the property systemAccountNumbersListChange (base name: "systemAccountNumbersListChange")', function() {
+        // TODO: update the code to test the property systemAccountNumbersListChange
+        expect(instance).to.have.property('systemAccountNumbersListChange');
+        // expect(instance.systemAccountNumbersListChange).to.be(expectedValueLiteral);
+      });
+
       it('should have the property systemAccountPermissionsChanged (base name: "systemAccountPermissionsChanged")', function() {
         // TODO: update the code to test the property systemAccountPermissionsChanged
         expect(instance).to.have.property('systemAccountPermissionsChanged');
@@ -478,16 +484,16 @@
         // expect(instance.progressCarrierBulkLookup).to.be(expectedValueLiteral);
       });
 
-      it('should have the property progressEmailBulkLookup (base name: "progressEmailBulkLookup")', function() {
-        // TODO: update the code to test the property progressEmailBulkLookup
-        expect(instance).to.have.property('progressEmailBulkLookup');
-        // expect(instance.progressEmailBulkLookup).to.be(expectedValueLiteral);
-      });
-
       it('should have the property progressSubAccountBulkImport (base name: "progressSubAccountBulkImport")', function() {
         // TODO: update the code to test the property progressSubAccountBulkImport
         expect(instance).to.have.property('progressSubAccountBulkImport');
         // expect(instance.progressSubAccountBulkImport).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailLookupProgressState (base name: "emailLookupProgressState")', function() {
+        // TODO: update the code to test the property emailLookupProgressState
+        expect(instance).to.have.property('emailLookupProgressState');
+        // expect(instance.emailLookupProgressState).to.be(expectedValueLiteral);
       });
 
       it('should have the property importProgressState (base name: "importProgressState")', function() {
@@ -1106,6 +1112,18 @@
         // TODO: update the code to test the property emailCampaignUpdated
         expect(instance).to.have.property('emailCampaignUpdated');
         // expect(instance.emailCampaignUpdated).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailTemplateImproved (base name: "emailTemplateImproved")', function() {
+        // TODO: update the code to test the property emailTemplateImproved
+        expect(instance).to.have.property('emailTemplateImproved');
+        // expect(instance.emailTemplateImproved).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property emailTemplateImprovingFailed (base name: "emailTemplateImprovingFailed")', function() {
+        // TODO: update the code to test the property emailTemplateImprovingFailed
+        expect(instance).to.have.property('emailTemplateImprovingFailed');
+        // expect(instance.emailTemplateImprovingFailed).to.be(expectedValueLiteral);
       });
 
       it('should have the property smsCampaignInvalidated (base name: "smsCampaignInvalidated")', function() {

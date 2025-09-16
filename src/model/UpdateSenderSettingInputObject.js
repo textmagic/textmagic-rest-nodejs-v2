@@ -33,7 +33,7 @@
   /**
    * The UpdateSenderSettingInputObject model module.
    * @module model/UpdateSenderSettingInputObject
-   * @version 2.0.43640
+   * @version 2.0.43753
    */
 
   /**

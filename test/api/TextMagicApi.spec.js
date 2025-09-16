@@ -272,6 +272,115 @@
           done();
         });
       });
+      describe('createEmailCampaign', function() {
+        it('should call createEmailCampaign successfully', function(done) {
+          // TODO: uncomment, update parameter values for createEmailCampaign call and complete the assertions
+          /*
+          var createEmailCampaignInputObject = new TextmagicClient.CreateEmailCampaignInputObject();
+          createEmailCampaignInputObject.emailSenderId = 123;
+          createEmailCampaignInputObject.subject = "Special Offer - 50% Off Today Only!";
+          createEmailCampaignInputObject.message = "<html><body><h1>Special Offer!</h1><p>Get 50% off all products today only!</p></body></html>";
+          createEmailCampaignInputObject.fromName = "John Smith";
+          createEmailCampaignInputObject.replyToEmail = "support@example.com";
+          createEmailCampaignInputObject.recipients = new TextmagicClient.Apiv2emailcampaignsRecipients();
+          createEmailCampaignInputObject.recipients.contactIds = [1,2,3];
+          createEmailCampaignInputObject.recipients.emails = ["user1@example.com","user2@example.com"];
+          createEmailCampaignInputObject.recipients.groupIds = [10,20];
+
+          instance.createEmailCampaign(createEmailCampaignInputObject).then(function(data) {
+            // TODO: update response assertions
+            expect(data).to.be.a(TextmagicClient.CreateEmailCampaignResponse);
+            expect(data.id).to.be.a('number');
+            expect(data.id).to.be(12345);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("in_progress");
+            expect(data.emailSenderId).to.be.a('number');
+            expect(data.emailSenderId).to.be(123);
+            expect(data.startAt).to.be.a(Date);
+            expect(data.startAt).to.be(2023-12-01T10:00:00Z);
+            expect(data.createdBy).to.be.a(TextmagicClient.UserPersonalInfo);
+                  expect(data.createdBy.id).to.be.a('number');
+              expect(data.createdBy.id).to.be(456);
+              expect(data.createdBy.firstName).to.be.a('string');
+              expect(data.createdBy.firstName).to.be("John");
+              expect(data.createdBy.lastName).to.be.a('string');
+              expect(data.createdBy.lastName).to.be("Smith");
+              expect(data.createdBy.avatarUrl).to.be.a('string');
+              expect(data.createdBy.avatarUrl).to.be("https://example.com/avatar.jpg");
+              expect(data.createdBy.email).to.be.a('string');
+              expect(data.createdBy.email).to.be("john.smith@example.com");
+            expect(data.fromName).to.be.a('string');
+            expect(data.fromName).to.be("John Smith");
+            expect(data.fromEmail).to.be.a('string');
+            expect(data.fromEmail).to.be("noreply@example.com");
+            expect(data.replyToEmail).to.be.a('string');
+            expect(data.replyToEmail).to.be("support@example.com");
+            expect(data.subject).to.be.a('string');
+            expect(data.subject).to.be("Special Offer - 50% Off Today Only!");
+            expect(data.html).to.be.a('string');
+            expect(data.html).to.be("<html><body><h1>Special Offer!</h1><p>Get 50% off all products today only!</p></body></html>");
+            expect(data.cost).to.be.a('number');
+            expect(data.cost).to.be(15.75);
+            expect(data.totals).to.be.a(TextmagicClient.EmailCampaignStatisticTotals);
+                  expect(data.totals.recipients).to.be.a('number');
+              expect(data.totals.recipients).to.be(1250);
+              expect(data.totals.delivered).to.be.a('number');
+              expect(data.totals.delivered).to.be(1180);
+              expect(data.totals.rejected).to.be.a('number');
+              expect(data.totals.rejected).to.be(20);
+              expect(data.totals.failed).to.be.a('number');
+              expect(data.totals.failed).to.be(50);
+              expect(data.totals.opened).to.be.a('number');
+              expect(data.totals.opened).to.be(590);
+              expect(data.totals.clicked).to.be.a('number');
+              expect(data.totals.clicked).to.be(118);
+              expect(data.totals.spamReports).to.be.a('number');
+              expect(data.totals.spamReports).to.be(2);
+              expect(data.totals.unsubscribed).to.be.a('number');
+              expect(data.totals.unsubscribed).to.be(5);
+            expect(data.outboundEmail).to.be.a(TextmagicClient.OutboundEmailResponse);
+                  expect(data.outboundEmail.id).to.be.a('number');
+              expect(data.outboundEmail.id).to.be(78901);
+              expect(data.outboundEmail.sendTime).to.be.a(Date);
+              expect(data.outboundEmail.sendTime).to.be(2023-12-01T10:05:00Z);
+              expect(data.outboundEmail.fromName).to.be.a('string');
+              expect(data.outboundEmail.fromName).to.be("John Smith");
+              expect(data.outboundEmail.fromEmail).to.be.a('string');
+              expect(data.outboundEmail.fromEmail).to.be("noreply@example.com");
+              expect(data.outboundEmail.replyToEmail).to.be.a('string');
+              expect(data.outboundEmail.replyToEmail).to.be("support@example.com");
+              expect(data.outboundEmail.recipientFullName).to.be.a('string');
+              expect(data.outboundEmail.recipientFullName).to.be("Jane Doe");
+              expect(data.outboundEmail.recipientEmail).to.be.a('string');
+              expect(data.outboundEmail.recipientEmail).to.be("jane.doe@example.com");
+              expect(data.outboundEmail.emailSubject).to.be.a('string');
+              expect(data.outboundEmail.emailSubject).to.be("Special Offer - 50% Off Today Only!");
+              expect(data.outboundEmail.emailContent).to.be.a('string');
+              expect(data.outboundEmail.emailContent).to.be("<html><body><h1>Special Offer!</h1><p>Get 50% off all products today only!</p></body></html>");
+              expect(data.outboundEmail.source).to.be.a('string');
+              expect(data.outboundEmail.source).to.be("emailCampaign");
+              expect(data.outboundEmail.status).to.be.a('string');
+              expect(data.outboundEmail.status).to.be("delivered");
+              expect(data.outboundEmail.cost).to.be.a('number');
+              expect(data.outboundEmail.cost).to.be(0.012);
+              expect(data.outboundEmail.statusReason).to.be.a('string');
+              expect(data.outboundEmail.statusReason).to.be("Successfully delivered");
+              expect(data.outboundEmail.contactId).to.be.a('number');
+              expect(data.outboundEmail.contactId).to.be(123);
+              expect(data.outboundEmail.initiatorId).to.be.a('number');
+              expect(data.outboundEmail.initiatorId).to.be(456);
+            expect(data.failedReason).to.be.a('string');
+            expect(data.failedReason).to.be("lowBalance");
+
+            done();
+          }, function(error) {
+            done(error);
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('createList', function() {
         it('should call createList successfully', function(done) {
           // TODO: uncomment, update parameter values for createList call and complete the assertions
@@ -5522,6 +5631,49 @@
           done();
         });
       });
+      describe('getEmailSenders', function() {
+        it('should call getEmailSenders successfully', function(done) {
+          // TODO: uncomment, update parameter values for getEmailSenders call and complete the assertions
+          /*
+          var opts = {};
+          opts.domainId = 56;
+
+          instance.getEmailSenders(opts).then(function(data) {
+            // TODO: update response assertions
+            expect(data).to.be.a(TextmagicClient.GetEmailSendersResponse);
+            {
+              let dataCtr = data.items;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(TextmagicClient.EmailSenderItem);
+                expect(data.id).to.be.a('number');
+                expect(data.id).to.be(456);
+                expect(data.domainId).to.be.a('number');
+                expect(data.domainId).to.be(123);
+                expect(data.email).to.be.a('string');
+                expect(data.email).to.be("noreply@company.com");
+                expect(data.createdAt).to.be.a(Date);
+                expect(data.createdAt).to.be(2023-12-01T10:00:00Z);
+                expect(data.domainStatus).to.be.a('string');
+                expect(data.domainStatus).to.be("verified");
+                expect(data.fromName).to.be.a('string');
+                expect(data.fromName).to.be("Company Newsletter");
+                expect(data.replyTo).to.be.a('string');
+                expect(data.replyTo).to.be("support@company.com");
+              }
+            }
+
+            done();
+          }, function(error) {
+            done(error);
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('getFavorites', function() {
         it('should call getFavorites successfully', function(done) {
           // TODO: uncomment, update parameter values for getFavorites call and complete the assertions
@@ -7755,6 +7907,88 @@
             expect(data.id).to.be(515);
             expect(data.href).to.be.a('string');
             expect(data.href).to.be("/api/v2/entity_name/1");
+
+            done();
+          }, function(error) {
+            done(error);
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('scheduleEmailCampaign', function() {
+        it('should call scheduleEmailCampaign successfully', function(done) {
+          // TODO: uncomment, update parameter values for scheduleEmailCampaign call and complete the assertions
+          /*
+          var scheduleEmailCampaignInputObject = new TextmagicClient.ScheduleEmailCampaignInputObject();
+          scheduleEmailCampaignInputObject.emailSenderId = 123;
+          scheduleEmailCampaignInputObject.subject = "Weekly Newsletter - Week of December 4th";
+          scheduleEmailCampaignInputObject.message = "<html><body><h1>This Week's Updates</h1><p>Here are the latest news and updates...</p></body></html>";
+          scheduleEmailCampaignInputObject.fromName = "Newsletter Team";
+          scheduleEmailCampaignInputObject.replyToEmail = "newsletter@company.com";
+          scheduleEmailCampaignInputObject.recipients = new TextmagicClient.Apiv2emailcampaignsscheduleRecipients();
+          scheduleEmailCampaignInputObject.recipients.contactIds = [101,102,103];
+          scheduleEmailCampaignInputObject.recipients.emails = ["user1@example.com","user2@example.com"];
+          scheduleEmailCampaignInputObject.recipients.groupIds = [456,789];
+          scheduleEmailCampaignInputObject.scheduleParams = new TextmagicClient.Apiv2emailcampaignsscheduleScheduleParams();
+          scheduleEmailCampaignInputObject.scheduleParams.startDateTime = 2023-12-04T09:00:00Z;
+          scheduleEmailCampaignInputObject.scheduleParams.timezone = "America/New_York";
+          scheduleEmailCampaignInputObject.scheduleParams.rrule = "FREQ=WEEKLY;BYDAY=MO";
+
+          instance.scheduleEmailCampaign(scheduleEmailCampaignInputObject).then(function(data) {
+            // TODO: update response assertions
+            expect(data).to.be.a(TextmagicClient.ScheduleEmailCampaignResponse);
+            expect(data.campaign).to.be.a(TextmagicClient.ScheduledEmailCampaignDetails);
+                  expect(data.campaign.id).to.be.a('number');
+              expect(data.campaign.id).to.be(12345);
+              expect(data.campaign.status).to.be.a('string');
+              expect(data.campaign.status).to.be("scheduled");
+              expect(data.campaign.emailSenderId).to.be.a('number');
+              expect(data.campaign.emailSenderId).to.be(123);
+              expect(data.campaign.startAt).to.be.a(Date);
+              expect(data.campaign.startAt).to.be(2023-12-04T14:00:00Z);
+              expect(data.campaign.endAt).to.be.a(Date);
+              expect(data.campaign.endAt).to.be(2024-12-04T14:00:00Z);
+              expect(data.campaign.nextSendAt).to.be.a(Date);
+              expect(data.campaign.nextSendAt).to.be(2023-12-04T14:00:00Z);
+              expect(data.campaign.createdBy).to.be.a(TextmagicClient.UserPersonalInfo);
+                    expect(data.campaign.createdBy.id).to.be.a('number');
+                expect(data.campaign.createdBy.id).to.be(456);
+                expect(data.campaign.createdBy.firstName).to.be.a('string');
+                expect(data.campaign.createdBy.firstName).to.be("John");
+                expect(data.campaign.createdBy.lastName).to.be.a('string');
+                expect(data.campaign.createdBy.lastName).to.be("Smith");
+                expect(data.campaign.createdBy.avatarUrl).to.be.a('string');
+                expect(data.campaign.createdBy.avatarUrl).to.be("https://example.com/avatar.jpg");
+                expect(data.campaign.createdBy.email).to.be.a('string');
+                expect(data.campaign.createdBy.email).to.be("john.smith@example.com");
+              expect(data.campaign.createdAt).to.be.a(Date);
+              expect(data.campaign.createdAt).to.be(2023-12-01T10:30:00Z);
+              expect(data.campaign.updatedAt).to.be.a(Date);
+              expect(data.campaign.updatedAt).to.be(2023-12-01T10:30:00Z);
+              expect(data.campaign.type).to.be.a('string');
+              expect(data.campaign.type).to.be("weekly");
+              expect(data.campaign.fromName).to.be.a('string');
+              expect(data.campaign.fromName).to.be("Newsletter Team");
+              expect(data.campaign.fromEmail).to.be.a('string');
+              expect(data.campaign.fromEmail).to.be("noreply@company.com");
+              expect(data.campaign.replyToEmail).to.be.a('string');
+              expect(data.campaign.replyToEmail).to.be("newsletter@company.com");
+              expect(data.campaign.subject).to.be.a('string');
+              expect(data.campaign.subject).to.be("Weekly Newsletter - Week of December 4th");
+              expect(data.campaign.html).to.be.a('string');
+              expect(data.campaign.html).to.be("<html><body><h1>This Week's Updates</h1><p>Here are the latest news and updates...</p></body></html>");
+              expect(data.campaign.recipientsCount).to.be.a('number');
+              expect(data.campaign.recipientsCount).to.be(1250);
+              expect(data.campaign.sendingTimezone).to.be.a('string');
+              expect(data.campaign.sendingTimezone).to.be("America/New_York");
+              expect(data.campaign.rrule).to.be.a('string');
+              expect(data.campaign.rrule).to.be("FREQ=WEEKLY;BYDAY=MO");
+              expect(data.campaign.occurrenceSummary).to.be.a('string');
+              expect(data.campaign.occurrenceSummary).to.be("Weekly on Monday");
+            expect(data.cost).to.be.a('number');
+            expect(data.cost).to.be(12.5);
 
             done();
           }, function(error) {
