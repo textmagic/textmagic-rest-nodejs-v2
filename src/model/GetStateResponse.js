@@ -33,7 +33,7 @@
   /**
    * The GetStateResponse model module.
    * @module model/GetStateResponse
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**
@@ -123,8 +123,6 @@
    * @param chatSummaryChunk {Number} 
    * @param chatWaysToReplyChunk {Number} 
    * @param chatSuggestedReplyChunk {Number} 
-   * @param userSubscriptionChanged {Number} 
-   * @param userSubscriptionDeleted {Number} 
    * @param taskCreated {Number} 
    * @param taskUpdated {Number} 
    * @param taskReordered {Number} 
@@ -221,6 +219,7 @@
    * @param emailCampaignUpdated {Number} 
    * @param emailTemplateImproved {Number} 
    * @param emailTemplateImprovingFailed {Number} 
+   * @param emailBonusUpdated {Number} 
    * @param smsCampaignInvalidated {Number} 
    * @param scheduledEmailCampaignCreated {Number} 
    * @param scheduledEmailCampaignUpdated {Number} 
@@ -230,7 +229,7 @@
    * @param emailCampaignFailedAttemptDeleted {Number} 
    * @param emailCampaignFailedAttemptStateUpdated {Number} 
    */
-  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountAcceptTermsUpdate, systemAccountClosed, systemAccountAdditionalFields, systemAccountNumbersListChange, systemAccountPermissionsChanged, userProfileChanged, userBalanceChanged, userPresenceStatusChanged, userImpersonationEnd, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageLog, messageNote, messageInitial, lastMessageSet, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatActivated, chatCacheClear, chatRead, chatUnread, chatAssigneeChanged, chatTagsChanged, chatConversationEnded, chatUpdated, liveChatAgentChanged, liveChatRated, webWidgetUpdated, webWidgetDeleted, contactAdded, contactDeleted, contactBulkUpdated, contactStateChanged, contactUnsubscribed, contactResubscribed, contactNoteAdded, contactNoteDeleted, contactNoteStateChanged, listAdded, listDeleted, listStateChanged, listCountMembersUpdated, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressSubAccountBulkImport, emailLookupProgressState, importProgressState, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSummaryChunk, chatWaysToReplyChunk, chatSuggestedReplyChunk, userSubscriptionChanged, userSubscriptionDeleted, taskCreated, taskUpdated, taskReordered, taskDeleted, taskMovedAll, taskStageCreated, taskStageUpdated, taskStageDeleted, taskBoardCreated, taskBoardUpdated, taskBoardReordered, taskBoardDeleted, taskBoardArchived, taskChecklistCreated, taskChecklistUpdated, taskChecklistDeleted, taskChecklistBulkMarked, taskChecklistItemCreated, taskChecklistItemUpdated, taskChecklistItemDeleted, taskCommentCreated, taskCommentDeleted, pinnedContactAdded, pinnedContactRemoved, pinnedContactReordered, pinnedContactStateChanged, whatsappAccountAdded, whatsappAccountRemoved, whatsappAccountChanged, facebookPageAdded, facebookPageRemoved, facebookPageChanged, instagramAccountAdded, instagramAccountRemoved, instagramAccountChanged, unreadTicketsCountUpdated, ticketDeleted, ticketUpdated, ticketCreated, ticketBulkUpdated, ticketBulkDeleted, ticketMessageCreated, ticketMessageUpdated, ticketMessageDeleted, subAccountsClosed, userInvited, filteredViewCreated, filteredViewCountUpdated, filteredViewDeleted, forwardingInboxWasVerified, forwardingInboxCheckWasFailed, forwardingInboxVerificationLinkWasParsed, tendlcLinkNumberStatusUpdated, channelPresence, dealCreated, dealUpdated, dealDeleted, dealMoved, dealStageCreated, dealStageUpdated, dealStageDeleted, dealPipelineCreated, dealPipelineUpdated, dealPipelineDeleted, dealPipelineArchived, dealPipelineReordered, dealActivityUpdated, dealActivityItemCreated, dealActivityItemUpdated, dealActivityItemDeleted, dealActivityItemBulkMarked, dealTimelineItemDeleted, dealTimelineItemCreated, aIAssistantCreated, aIAssistantState, aIAssistantDeleted, aIAssistantLinkDeleted, aIAssistantLinkState, aIAssistantLinkCreated, aIAssistantSubLinkState, aIAssistantSubLinkCreated, emailCampaignEmailSenderCreated, emailCampaignEmailSenderUpdated, emailCampaignEmailSenderDeleted, emailCampaignDomainCreated, emailCampaignDomainDeleted, emailCampaignDomainVerified, emailCampaignDomainStatusChanged, emailCampaignDomainDkimVerified, emailCampaignDomainReturnPathVerified, emailCampaignDomainDmarcVerified, emailCampaignDomainEntryVerificationChanged, emailCampaignProgressState, emailCampaignUpdated, emailTemplateImproved, emailTemplateImprovingFailed, smsCampaignInvalidated, scheduledEmailCampaignCreated, scheduledEmailCampaignUpdated, scheduledEmailCampaignStatusUpdated, scheduledEmailCampaignDeleted, emailCampaignFailedAttemptCreated, emailCampaignFailedAttemptDeleted, emailCampaignFailedAttemptStateUpdated) {
+  var exports = function(systemCacheClear, systemExit, systemAlert, systemAccountStateChanged, systemAccountAcceptTermsUpdate, systemAccountClosed, systemAccountAdditionalFields, systemAccountNumbersListChange, systemAccountPermissionsChanged, userProfileChanged, userBalanceChanged, userPresenceStatusChanged, userImpersonationEnd, messageDeleted, messageIncoming, messageIncomingDeleted, messageStateChanged, messageBulkEnd, messageWipeEnd, messageSent, messageLog, messageNote, messageInitial, lastMessageSet, messageSessionDeleted, messageCacheClear, messageIncomingCacheClear, messageScheduleAdded, messageScheduleStateChanged, messageScheduleDeleted, messageScheduleNotSentStateChanged, messageScheduleCacheClear, messageTemplateCacheClear, callFinished, chatCreated, chatMarkedAsRead, chatMuted, chatUnmuted, chatPinned, chatUnpinned, chatDeleted, chatClosed, chatReopened, chatActivated, chatCacheClear, chatRead, chatUnread, chatAssigneeChanged, chatTagsChanged, chatConversationEnded, chatUpdated, liveChatAgentChanged, liveChatRated, webWidgetUpdated, webWidgetDeleted, contactAdded, contactDeleted, contactBulkUpdated, contactStateChanged, contactUnsubscribed, contactResubscribed, contactNoteAdded, contactNoteDeleted, contactNoteStateChanged, listAdded, listDeleted, listStateChanged, listCountMembersUpdated, contactWipeEnd, contactImportEnd, contactCacheClear, listCacheClear, customFieldsCacheClear, progressCarrierBulkLookup, progressSubAccountBulkImport, emailLookupProgressState, importProgressState, forceRefreshWebApp, chatSenderSettingsChanged, countrySenderSettingsChanged, chatSummaryChunk, chatWaysToReplyChunk, chatSuggestedReplyChunk, taskCreated, taskUpdated, taskReordered, taskDeleted, taskMovedAll, taskStageCreated, taskStageUpdated, taskStageDeleted, taskBoardCreated, taskBoardUpdated, taskBoardReordered, taskBoardDeleted, taskBoardArchived, taskChecklistCreated, taskChecklistUpdated, taskChecklistDeleted, taskChecklistBulkMarked, taskChecklistItemCreated, taskChecklistItemUpdated, taskChecklistItemDeleted, taskCommentCreated, taskCommentDeleted, pinnedContactAdded, pinnedContactRemoved, pinnedContactReordered, pinnedContactStateChanged, whatsappAccountAdded, whatsappAccountRemoved, whatsappAccountChanged, facebookPageAdded, facebookPageRemoved, facebookPageChanged, instagramAccountAdded, instagramAccountRemoved, instagramAccountChanged, unreadTicketsCountUpdated, ticketDeleted, ticketUpdated, ticketCreated, ticketBulkUpdated, ticketBulkDeleted, ticketMessageCreated, ticketMessageUpdated, ticketMessageDeleted, subAccountsClosed, userInvited, filteredViewCreated, filteredViewCountUpdated, filteredViewDeleted, forwardingInboxWasVerified, forwardingInboxCheckWasFailed, forwardingInboxVerificationLinkWasParsed, tendlcLinkNumberStatusUpdated, channelPresence, dealCreated, dealUpdated, dealDeleted, dealMoved, dealStageCreated, dealStageUpdated, dealStageDeleted, dealPipelineCreated, dealPipelineUpdated, dealPipelineDeleted, dealPipelineArchived, dealPipelineReordered, dealActivityUpdated, dealActivityItemCreated, dealActivityItemUpdated, dealActivityItemDeleted, dealActivityItemBulkMarked, dealTimelineItemDeleted, dealTimelineItemCreated, aIAssistantCreated, aIAssistantState, aIAssistantDeleted, aIAssistantLinkDeleted, aIAssistantLinkState, aIAssistantLinkCreated, aIAssistantSubLinkState, aIAssistantSubLinkCreated, emailCampaignEmailSenderCreated, emailCampaignEmailSenderUpdated, emailCampaignEmailSenderDeleted, emailCampaignDomainCreated, emailCampaignDomainDeleted, emailCampaignDomainVerified, emailCampaignDomainStatusChanged, emailCampaignDomainDkimVerified, emailCampaignDomainReturnPathVerified, emailCampaignDomainDmarcVerified, emailCampaignDomainEntryVerificationChanged, emailCampaignProgressState, emailCampaignUpdated, emailTemplateImproved, emailTemplateImprovingFailed, emailBonusUpdated, smsCampaignInvalidated, scheduledEmailCampaignCreated, scheduledEmailCampaignUpdated, scheduledEmailCampaignStatusUpdated, scheduledEmailCampaignDeleted, emailCampaignFailedAttemptCreated, emailCampaignFailedAttemptDeleted, emailCampaignFailedAttemptStateUpdated) {
     this.systemCacheClear = systemCacheClear;
     this.systemExit = systemExit;
     this.systemAlert = systemAlert;
@@ -314,8 +313,6 @@
     this.chatSummaryChunk = chatSummaryChunk;
     this.chatWaysToReplyChunk = chatWaysToReplyChunk;
     this.chatSuggestedReplyChunk = chatSuggestedReplyChunk;
-    this.userSubscriptionChanged = userSubscriptionChanged;
-    this.userSubscriptionDeleted = userSubscriptionDeleted;
     this.taskCreated = taskCreated;
     this.taskUpdated = taskUpdated;
     this.taskReordered = taskReordered;
@@ -412,6 +409,7 @@
     this.emailCampaignUpdated = emailCampaignUpdated;
     this.emailTemplateImproved = emailTemplateImproved;
     this.emailTemplateImprovingFailed = emailTemplateImprovingFailed;
+    this.emailBonusUpdated = emailBonusUpdated;
     this.smsCampaignInvalidated = smsCampaignInvalidated;
     this.scheduledEmailCampaignCreated = scheduledEmailCampaignCreated;
     this.scheduledEmailCampaignUpdated = scheduledEmailCampaignUpdated;
@@ -794,6 +792,8 @@
         obj.emailTemplateImproved = ApiClient.convertToType(data['emailTemplateImproved'], 'Number');
       if (data.hasOwnProperty('emailTemplateImprovingFailed'))
         obj.emailTemplateImprovingFailed = ApiClient.convertToType(data['emailTemplateImprovingFailed'], 'Number');
+      if (data.hasOwnProperty('emailBonusUpdated'))
+        obj.emailBonusUpdated = ApiClient.convertToType(data['emailBonusUpdated'], 'Number');
       if (data.hasOwnProperty('smsCampaignInvalidated'))
         obj.smsCampaignInvalidated = ApiClient.convertToType(data['smsCampaignInvalidated'], 'Number');
       if (data.hasOwnProperty('scheduledEmailCampaignCreated'))
@@ -1718,6 +1718,11 @@
    * @member {Number} emailTemplateImprovingFailed
    */
   exports.prototype.emailTemplateImprovingFailed = undefined;
+
+  /**
+   * @member {Number} emailBonusUpdated
+   */
+  exports.prototype.emailBonusUpdated = undefined;
 
   /**
    * @member {Number} smsCampaignInvalidated

@@ -33,7 +33,7 @@
   /**
    * The CreateEmailCampaignResponse model module.
    * @module model/CreateEmailCampaignResponse
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

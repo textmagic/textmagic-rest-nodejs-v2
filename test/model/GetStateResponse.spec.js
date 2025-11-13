@@ -1126,6 +1126,12 @@
         // expect(instance.emailTemplateImprovingFailed).to.be(expectedValueLiteral);
       });
 
+      it('should have the property emailBonusUpdated (base name: "emailBonusUpdated")', function() {
+        // TODO: update the code to test the property emailBonusUpdated
+        expect(instance).to.have.property('emailBonusUpdated');
+        // expect(instance.emailBonusUpdated).to.be(expectedValueLiteral);
+      });
+
       it('should have the property smsCampaignInvalidated (base name: "smsCampaignInvalidated")', function() {
         // TODO: update the code to test the property smsCampaignInvalidated
         expect(instance).to.have.property('smsCampaignInvalidated');

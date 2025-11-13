@@ -33,7 +33,7 @@
   /**
    * The UserPersonalInfo model module.
    * @module model/UserPersonalInfo
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

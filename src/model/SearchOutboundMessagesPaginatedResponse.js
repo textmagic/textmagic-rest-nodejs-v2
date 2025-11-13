@@ -33,7 +33,7 @@
   /**
    * The SearchOutboundMessagesPaginatedResponse model module.
    * @module model/SearchOutboundMessagesPaginatedResponse
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

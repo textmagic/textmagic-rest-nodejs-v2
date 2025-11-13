@@ -33,7 +33,7 @@
   /**
    * The EmailCampaignStatisticTotals model module.
    * @module model/EmailCampaignStatisticTotals
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

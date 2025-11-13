@@ -86,8 +86,8 @@ Name | Type | Description | Notes
 **chatSummaryChunk** | **Number** |  | 
 **chatWaysToReplyChunk** | **Number** |  | 
 **chatSuggestedReplyChunk** | **Number** |  | 
-**userSubscriptionChanged** | **Number** |  | 
-**userSubscriptionDeleted** | **Number** |  | 
+**userSubscriptionChanged** | **Number** |  | [optional] 
+**userSubscriptionDeleted** | **Number** |  | [optional] 
 **taskCreated** | **Number** |  | 
 **taskUpdated** | **Number** |  | 
 **taskReordered** | **Number** |  | 
@@ -184,6 +184,7 @@ Name | Type | Description | Notes
 **emailCampaignUpdated** | **Number** |  | 
 **emailTemplateImproved** | **Number** |  | 
 **emailTemplateImprovingFailed** | **Number** |  | 
+**emailBonusUpdated** | **Number** |  | 
 **smsCampaignInvalidated** | **Number** |  | 
 **scheduledEmailCampaignCreated** | **Number** |  | 
 **scheduledEmailCampaignUpdated** | **Number** |  | 

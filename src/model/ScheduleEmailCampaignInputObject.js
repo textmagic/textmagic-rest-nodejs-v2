@@ -33,7 +33,7 @@
   /**
    * The ScheduleEmailCampaignInputObject model module.
    * @module model/ScheduleEmailCampaignInputObject
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

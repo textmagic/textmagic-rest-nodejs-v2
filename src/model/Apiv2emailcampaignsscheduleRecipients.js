@@ -33,7 +33,7 @@
   /**
    * The Apiv2emailcampaignsscheduleRecipients model module.
    * @module model/Apiv2emailcampaignsscheduleRecipients
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

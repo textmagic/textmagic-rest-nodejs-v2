@@ -33,7 +33,7 @@
   /**
    * The Apiv2emailcampaignsscheduleScheduleParams model module.
    * @module model/Apiv2emailcampaignsscheduleScheduleParams
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

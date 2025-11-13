@@ -33,7 +33,7 @@
   /**
    * The EmailSenderItem model module.
    * @module model/EmailSenderItem
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * The Apiv2emailcampaignsRecipients model module.
    * @module model/Apiv2emailcampaignsRecipients
-   * @version 2.0.43753
+   * @version 2.0.43821
    */
 
   /**
