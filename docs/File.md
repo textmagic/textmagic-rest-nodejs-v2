@@ -1,6 +1,7 @@
-# TextmagicClient.File
+# TextMagicClient.File
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
@@ -15,25 +16,25 @@ Name | Type | Description | Notes
 **metadata** | [**FileMetadata**](FileMetadata.md) |  | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 
 * `attachment` (value: `"attachment"`)
 
-* `_import` (value: `"import"`)
+* `import` (value: `"import"`)
 
-* `rawEmail` (value: `"raw_email"`)
+* `raw_email` (value: `"raw_email"`)
 
-* `inlineAttachment` (value: `"inline_attachment"`)
+* `inline_attachment` (value: `"inline_attachment"`)
 
-* `chatAttachment` (value: `"chat-attachment"`)
+* `chat-attachment` (value: `"chat-attachment"`)
 
-* `knowledgeBase` (value: `"knowledge_base"`)
+* `knowledge_base` (value: `"knowledge_base"`)
 
-* `facebookPagePicture` (value: `"facebook_page_picture"`)
+* `facebook_page_picture` (value: `"facebook_page_picture"`)
 
-* `instagramAccountPicture` (value: `"instagram_account_picture"`)
+* `instagram_account_picture` (value: `"instagram_account_picture"`)
 
 * `logo` (value: `"logo"`)
 

@@ -1,6 +1,7 @@
-# TextmagicClient.MessagesIcsTextParameters
+# TextMagicClient.MessagesIcsTextParameters
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost** | **Number** | Cost to check that one number is constant – 0.04 in your account currency. | 
@@ -11,13 +12,13 @@ Name | Type | Description | Notes
 **charsetLabel** | **String** | Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS; *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages.  | 
 
 
-<a name="EncodingEnum"></a>
+
 ## Enum: EncodingEnum
 
 
-* `iSO88591` (value: `"ISO-8859-1"`)
+* `ISO-8859-1` (value: `"ISO-8859-1"`)
 
-* `uTF16BE` (value: `"UTF-16BE"`)
+* `UTF-16BE` (value: `"UTF-16BE"`)
 
 
 

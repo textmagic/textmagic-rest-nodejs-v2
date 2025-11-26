@@ -1,6 +1,7 @@
-# TextmagicClient.MessagePayload
+# TextMagicClient.MessagePayload
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | Payload type. | 

@@ -1,6 +1,7 @@
-# TextmagicClient.GetSenderSettingsResponse
+# TextMagicClient.GetSenderSettingsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **user** | [**[SenderSettingsItem]**](SenderSettingsItem.md) |  | 

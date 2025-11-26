@@ -1,4 +1,4 @@
-# TextmagicClient.TextMagicApi
+# TextMagicClient.TextMagicApi
 
 All URIs are relative to *https://rest.textmagic.com*
 
@@ -10,12 +10,12 @@ Method | HTTP request | Description
 [**clearAndAssignContactsToList**](TextMagicApi.md#clearAndAssignContactsToList) | **POST** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts
 [**closeChatsBulk**](TextMagicApi.md#closeChatsBulk) | **POST** /api/v2/chats/close/bulk | Close chats (bulk)
 [**closeReadChats**](TextMagicApi.md#closeReadChats) | **POST** /api/v2/chats/close/read | Close read chats
-[**closeSubaccount**](TextMagicApi.md#closeSubaccount) | **DELETE** /api/v2/subaccounts/{id} | Close sub-account
 [**createContact**](TextMagicApi.md#createContact) | **POST** /api/v2/contacts/normalized | Add a new contact
 [**createContactNote**](TextMagicApi.md#createContactNote) | **POST** /api/v2/contacts/{id}/notes | Create a new contact note
 [**createCustomField**](TextMagicApi.md#createCustomField) | **POST** /api/v2/customfields | Add a new custom field
 [**createEmailCampaign**](TextMagicApi.md#createEmailCampaign) | **POST** /api/v2/email-campaigns | Send email campaign
 [**createList**](TextMagicApi.md#createList) | **POST** /api/v2/lists | Create a new list
+[**createTag**](TextMagicApi.md#createTag) | **POST** /api/v2/tags | Create tag
 [**createTemplate**](TextMagicApi.md#createTemplate) | **POST** /api/v2/templates | Create a template
 [**deleteAllContacts**](TextMagicApi.md#deleteAllContacts) | **DELETE** /api/v2/contact/all | Delete contacts (bulk)
 [**deleteAllOutboundMessages**](TextMagicApi.md#deleteAllOutboundMessages) | **DELETE** /api/v2/message/all | Delete all messages
@@ -86,12 +86,12 @@ Method | HTTP request | Description
 [**getList**](TextMagicApi.md#getList) | **GET** /api/v2/lists/{id} | Get the details of a specific list
 [**getListContactsIds**](TextMagicApi.md#getListContactsIds) | **GET** /api/v2/lists/{id}/contacts/ids | Get all contact IDs in a list
 [**getLists**](TextMagicApi.md#getLists) | **GET** /api/v2/lists | Get all lists
-[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact's lists
+[**getListsOfContact**](TextMagicApi.md#getListsOfContact) | **GET** /api/v2/contacts/{id}/lists | Get a contact&#39;s lists
 [**getMessagePreview**](TextMagicApi.md#getMessagePreview) | **GET** /api/v2/messages/preview | Preview message
 [**getMessagePrice**](TextMagicApi.md#getMessagePrice) | **GET** /api/v2/messages/price/normalized | Check message price
-[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session`s details
-[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session`s statistics
-[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session`s messages
+[**getMessageSession**](TextMagicApi.md#getMessageSession) | **GET** /api/v2/sessions/{id} | Get a session&#x60;s details
+[**getMessageSessionStat**](TextMagicApi.md#getMessageSessionStat) | **GET** /api/v2/sessions/{id}/stat | Get a session&#x60;s statistics
+[**getMessagesBySessionId**](TextMagicApi.md#getMessagesBySessionId) | **GET** /api/v2/sessions/{id}/messages | Get a session&#x60;s messages
 [**getMessagingCounters**](TextMagicApi.md#getMessagingCounters) | **GET** /api/v2/stats/messaging/data | Get sent/received messages counters values
 [**getMessagingStat**](TextMagicApi.md#getMessagingStat) | **GET** /api/v2/stats/messaging | Get messaging statistics
 [**getOutboundMessage**](TextMagicApi.md#getOutboundMessage) | **GET** /api/v2/messages/{id} | Get a single message
@@ -101,24 +101,19 @@ Method | HTTP request | Description
 [**getSenderIds**](TextMagicApi.md#getSenderIds) | **GET** /api/v2/senderids | Get all your approved Sender IDs
 [**getSenderSettings**](TextMagicApi.md#getSenderSettings) | **GET** /api/v2/sender/settings/normalized | Get current sender settings
 [**getSpendingStat**](TextMagicApi.md#getSpendingStat) | **GET** /api/v2/stats/spending | Get spending statistics
-[**getSubaccount**](TextMagicApi.md#getSubaccount) | **GET** /api/v2/subaccounts/{id} | Get sub-account information
-[**getSubaccounts**](TextMagicApi.md#getSubaccounts) | **GET** /api/v2/subaccounts | Get a sub-accounts list
-[**getSubaccountsWithTokens**](TextMagicApi.md#getSubaccountsWithTokens) | **POST** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with a specified app name
-[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template`s details
+[**getTemplate**](TextMagicApi.md#getTemplate) | **GET** /api/v2/templates/{id} | Get a template&#x60;s details
 [**getTimezones**](TextMagicApi.md#getTimezones) | **GET** /api/v2/timezones | Get timezones
 [**getUnreadMessagesTotal**](TextMagicApi.md#getUnreadMessagesTotal) | **GET** /api/v2/chats/unread/count | Get unread messages number
 [**getUnsubscribedContact**](TextMagicApi.md#getUnsubscribedContact) | **GET** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**getUnsubscribers**](TextMagicApi.md#getUnsubscribers) | **GET** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**getUserDedicatedNumbers**](TextMagicApi.md#getUserDedicatedNumbers) | **GET** /api/v2/numbers | Get all your dedicated numbers
 [**importContacts**](TextMagicApi.md#importContacts) | **POST** /api/v2/contacts/import/normalized | Import contacts
-[**inviteSubaccount**](TextMagicApi.md#inviteSubaccount) | **POST** /api/v2/subaccounts | Invite a new sub-account
 [**markChatsReadBulk**](TextMagicApi.md#markChatsReadBulk) | **POST** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**markChatsUnreadBulk**](TextMagicApi.md#markChatsUnreadBulk) | **POST** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**muteChat**](TextMagicApi.md#muteChat) | **POST** /api/v2/chats/mute | Mute chat sounds
 [**muteChatsBulk**](TextMagicApi.md#muteChatsBulk) | **POST** /api/v2/chats/mute/bulk | Mute chats (bulk)
 [**ping**](TextMagicApi.md#ping) | **GET** /api/v2/ping | Ping
 [**reopenChatsBulk**](TextMagicApi.md#reopenChatsBulk) | **POST** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
-[**requestNewSubaccountToken**](TextMagicApi.md#requestNewSubaccountToken) | **POST** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**requestSenderId**](TextMagicApi.md#requestSenderId) | **POST** /api/v2/senderids | Apply for a new Sender ID
 [**scheduleEmailCampaign**](TextMagicApi.md#scheduleEmailCampaign) | **POST** /api/v2/email-campaigns/schedule | Schedule new email campaign
 [**searchChats**](TextMagicApi.md#searchChats) | **GET** /api/v2/chats/search | Find chats by message text
@@ -155,33 +150,31 @@ Method | HTTP request | Description
 [**uploadMessageMMSAttachment**](TextMagicApi.md#uploadMessageMMSAttachment) | **POST** /api/v2/messages/mms/attachment | Upload message mms attachment
 
 
-<a name="assignContactsToList"></a>
-# **assignContactsToList**
-> ResourceLinkResponse assignContactsToList(assignContactsToListInputObject, id)
+
+## assignContactsToList
+
+> ResourceLinkResponse assignContactsToList(id, assignContactsToListInputObject)
 
 Assign contacts to a list
 
-> Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
+&gt; Unlike all other PUT requests, this command does not need old contact IDs to be submitted. For example, if you have a list with contacts 150, 151 and 152 and you want to add contact ID 153, you only need to submit 153 as a parameter of PUT /api/v2/lists/{id}/contacts. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var assignContactsToListInputObject = new TextmagicClient.AssignContactsToListInputObject(); // AssignContactsToListInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.assignContactsToList(assignContactsToListInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let assignContactsToListInputObject = new TextMagicClient.AssignContactsToListRequest(); // AssignContactsToListRequest | 
+apiInstance.assignContactsToList(id, assignContactsToListInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -189,10 +182,11 @@ apiInstance.assignContactsToList(assignContactsToListInputObject, id).then(funct
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assignContactsToListInputObject** | [**AssignContactsToListInputObject**](AssignContactsToListInputObject.md)|  | 
  **id** | **Number**|  | 
+ **assignContactsToListInputObject** | [**AssignContactsToListRequest**](AssignContactsToListRequest.md)|  | 
 
 ### Return type
 
@@ -204,11 +198,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="blockContact"></a>
-# **blockContact**
+
+## blockContact
+
 > ResourceLinkResponse blockContact(blockContactInputObject)
 
 Block a contact by phone number
@@ -216,22 +211,20 @@ Block a contact by phone number
 Block a contact from inbound and outbound communication by phone number.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var blockContactInputObject = new TextmagicClient.BlockContactInputObject(); // BlockContactInputObject | 
-
-apiInstance.blockContact(blockContactInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let blockContactInputObject = new TextMagicClient.BlockContactRequest(); // BlockContactRequest | 
+apiInstance.blockContact(blockContactInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -239,9 +232,10 @@ apiInstance.blockContact(blockContactInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **blockContactInputObject** | [**BlockContactInputObject**](BlockContactInputObject.md)|  | 
+ **blockContactInputObject** | [**BlockContactRequest**](BlockContactRequest.md)|  | 
 
 ### Return type
 
@@ -253,34 +247,33 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="buyDedicatedNumber"></a>
-# **buyDedicatedNumber**
+
+## buyDedicatedNumber
+
 > buyDedicatedNumber(buyDedicatedNumberInputObject)
 
 Buy a dedicated number
 
-To buy a dedicated number, you first need to find an available number matching your criteria using the `/api/v2/numbers/available` command described above.
+To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var buyDedicatedNumberInputObject = new TextmagicClient.BuyDedicatedNumberInputObject(); // BuyDedicatedNumberInputObject | 
-
-apiInstance.buyDedicatedNumber(buyDedicatedNumberInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let buyDedicatedNumberInputObject = new TextMagicClient.BuyDedicatedNumberRequest(); // BuyDedicatedNumberRequest | 
+apiInstance.buyDedicatedNumber(buyDedicatedNumberInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -288,9 +281,10 @@ apiInstance.buyDedicatedNumber(buyDedicatedNumberInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **buyDedicatedNumberInputObject** | [**BuyDedicatedNumberInputObject**](BuyDedicatedNumberInputObject.md)|  | 
+ **buyDedicatedNumberInputObject** | [**BuyDedicatedNumberRequest**](BuyDedicatedNumberRequest.md)|  | 
 
 ### Return type
 
@@ -302,36 +296,32 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="clearAndAssignContactsToList"></a>
-# **clearAndAssignContactsToList**
-> ResourceLinkResponse clearAndAssignContactsToList(clearAndAssignContactsToListInputObject, id)
+
+## clearAndAssignContactsToList
+
+> ResourceLinkResponse clearAndAssignContactsToList(id, clearAndAssignContactsToListInputObject)
 
 Reset list members to the specified contacts
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var clearAndAssignContactsToListInputObject = new TextmagicClient.ClearAndAssignContactsToListInputObject(); // ClearAndAssignContactsToListInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.clearAndAssignContactsToList(clearAndAssignContactsToListInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let clearAndAssignContactsToListInputObject = new TextMagicClient.ClearAndAssignContactsToListRequest(); // ClearAndAssignContactsToListRequest | 
+apiInstance.clearAndAssignContactsToList(id, clearAndAssignContactsToListInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -339,10 +329,11 @@ apiInstance.clearAndAssignContactsToList(clearAndAssignContactsToListInputObject
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clearAndAssignContactsToListInputObject** | [**ClearAndAssignContactsToListInputObject**](ClearAndAssignContactsToListInputObject.md)|  | 
  **id** | **Number**|  | 
+ **clearAndAssignContactsToListInputObject** | [**ClearAndAssignContactsToListRequest**](ClearAndAssignContactsToListRequest.md)|  | 
 
 ### Return type
 
@@ -354,11 +345,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="closeChatsBulk"></a>
-# **closeChatsBulk**
+
+## closeChatsBulk
+
 > closeChatsBulk(closeChatsBulkInputObject)
 
 Close chats (bulk)
@@ -366,22 +358,20 @@ Close chats (bulk)
 Close chats by chat IDs or close all chats
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var closeChatsBulkInputObject = new TextmagicClient.CloseChatsBulkInputObject(); // CloseChatsBulkInputObject | 
-
-apiInstance.closeChatsBulk(closeChatsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let closeChatsBulkInputObject = new TextMagicClient.MarkChatsUnreadBulkRequest(); // MarkChatsUnreadBulkRequest | 
+apiInstance.closeChatsBulk(closeChatsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -389,9 +379,10 @@ apiInstance.closeChatsBulk(closeChatsBulkInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **closeChatsBulkInputObject** | [**CloseChatsBulkInputObject**](CloseChatsBulkInputObject.md)|  | 
+ **closeChatsBulkInputObject** | [**MarkChatsUnreadBulkRequest**](MarkChatsUnreadBulkRequest.md)|  | 
 
 ### Return type
 
@@ -403,11 +394,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="closeReadChats"></a>
-# **closeReadChats**
+
+## closeReadChats
+
 > closeReadChats()
 
 Close read chats
@@ -415,25 +407,26 @@ Close read chats
 Close all chats that have no unread messages.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.closeReadChats().then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.closeReadChats().then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -446,83 +439,31 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-<a name="closeSubaccount"></a>
-# **closeSubaccount**
-> closeSubaccount(id)
-
-Close sub-account
+- **Content-Type**: Not defined
+- **Accept**: */*
 
 
+## createContact
 
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.closeSubaccount(id).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-<a name="createContact"></a>
-# **createContact**
 > ResourceLinkResponse createContact(createContactInputObject)
 
 Add a new contact
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var createContactInputObject = new TextmagicClient.CreateContactInputObject(); // CreateContactInputObject | 
-
-apiInstance.createContact(createContactInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let createContactInputObject = new TextMagicClient.CreateContactRequest(); // CreateContactRequest | 
+apiInstance.createContact(createContactInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -530,9 +471,10 @@ apiInstance.createContact(createContactInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createContactInputObject** | [**CreateContactInputObject**](CreateContactInputObject.md)|  | 
+ **createContactInputObject** | [**CreateContactRequest**](CreateContactRequest.md)|  | 
 
 ### Return type
 
@@ -544,36 +486,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="createContactNote"></a>
-# **createContactNote**
-> ResourceLinkResponse createContactNote(createContactNoteInputObject, id)
+
+## createContactNote
+
+> ResourceLinkResponse createContactNote(id, createContactNoteInputObject)
 
 Create a new contact note
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var createContactNoteInputObject = new TextmagicClient.CreateContactNoteInputObject(); // CreateContactNoteInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.createContactNote(createContactNoteInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let createContactNoteInputObject = new TextMagicClient.CreateContactNoteRequest(); // CreateContactNoteRequest | 
+apiInstance.createContactNote(id, createContactNoteInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -581,10 +519,11 @@ apiInstance.createContactNote(createContactNoteInputObject, id).then(function(da
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createContactNoteInputObject** | [**CreateContactNoteInputObject**](CreateContactNoteInputObject.md)|  | 
  **id** | **Number**|  | 
+ **createContactNoteInputObject** | [**CreateContactNoteRequest**](CreateContactNoteRequest.md)|  | 
 
 ### Return type
 
@@ -596,34 +535,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="createCustomField"></a>
-# **createCustomField**
+
+## createCustomField
+
 > ResourceLinkResponse createCustomField(createCustomFieldInputObject)
 
 Add a new custom field
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var createCustomFieldInputObject = new TextmagicClient.CreateCustomFieldInputObject(); // CreateCustomFieldInputObject | 
-
-apiInstance.createCustomField(createCustomFieldInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let createCustomFieldInputObject = new TextMagicClient.CreateCustomFieldRequest(); // CreateCustomFieldRequest | 
+apiInstance.createCustomField(createCustomFieldInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -631,9 +567,10 @@ apiInstance.createCustomField(createCustomFieldInputObject).then(function(data) 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createCustomFieldInputObject** | [**CreateCustomFieldInputObject**](CreateCustomFieldInputObject.md)|  | 
+ **createCustomFieldInputObject** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)|  | 
 
 ### Return type
 
@@ -645,34 +582,33 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="createEmailCampaign"></a>
-# **createEmailCampaign**
+
+## createEmailCampaign
+
 > CreateEmailCampaignResponse createEmailCampaign(createEmailCampaignInputObject)
 
 Send email campaign
 
-Creates a new email campaign and sends it to the specified recipients.  This endpoint allows you to create and immediately send an email marketing campaign to your contacts, groups, or direct email addresses. The campaign will be processed asynchronously, and you'll receive a campaign object with tracking information.  ## Request Requirements  - **Email Sender ID**: Must be a valid, configured email sender from your account - **Recipients**: At least one recipient type must be specified (contacts, groups, or emails) - **Content**: Subject and HTML message content are required - **Balance**: Sufficient account balance for the estimated campaign cost  ## Recipient Types  You can target multiple recipient types in a single campaign:  - **Contact IDs**: Send to specific contacts from your contact list - **Group IDs**: Send to all contacts within specified groups   - **Direct Emails**: Send to email addresses not in your contact list  ## Content Guidelines  - **Subject**: Maximum 998 characters, should be engaging and relevant - **Message**: HTML content supported, including images, links, and formatting - **From Name**: Optional custom sender name (max 500 characters) - **Reply-To**: Optional custom reply-to email address  ## Cost and Balance  The API automatically calculates campaign costs based on: - Total number of unique recipients across all specified groups, contacts, and emails - Your account's email pricing tier - Any additional features or premium content  If your account balance is insufficient, the request will be rejected with a low balance error.  ## Response Information  Successful campaigns return: - Campaign ID for tracking and analytics - Current campaign status and progress - Cost breakdown and recipient counts - Sender information and content preview - Statistical totals and engagement metrics  ## Error Scenarios  Common error conditions include: - **Validation Errors**: Invalid email addresses, missing required fields, or content that exceeds limits - **Insufficient Balance**: Account balance too low for campaign cost - **Invalid Recipients**: Non-existent contact/group IDs or invalid email formats - **Sender Configuration**: Invalid or unconfigured email sender ID - **No Recipients**: All recipient arrays are empty or invalid 
+Creates a new email campaign and sends it to the specified recipients.  This endpoint allows you to create and immediately send an email marketing campaign to your contacts, groups, or direct email addresses. The campaign will be processed asynchronously, and you&#39;ll receive a campaign object with tracking information.  ## Request Requirements  - **Email Sender ID**: Must be a valid, configured email sender from your account - **Recipients**: At least one recipient type must be specified (contacts, groups, or emails) - **Content**: Subject and HTML message content are required - **Balance**: Sufficient account balance for the estimated campaign cost  ## Recipient Types  You can target multiple recipient types in a single campaign:  - **Contact IDs**: Send to specific contacts from your contact list - **Group IDs**: Send to all contacts within specified groups   - **Direct Emails**: Send to email addresses not in your contact list  ## Content Guidelines  - **Subject**: Maximum 998 characters, should be engaging and relevant - **Message**: HTML content supported, including images, links, and formatting - **From Name**: Optional custom sender name (max 500 characters) - **Reply-To**: Optional custom reply-to email address  ## Cost and Balance  The API automatically calculates campaign costs based on: - Total number of unique recipients across all specified groups, contacts, and emails - Your account&#39;s email pricing tier - Any additional features or premium content  If your account balance is insufficient, the request will be rejected with a low balance error.  ## Response Information  Successful campaigns return: - Campaign ID for tracking and analytics - Current campaign status and progress - Cost breakdown and recipient counts - Sender information and content preview - Statistical totals and engagement metrics  ## Error Scenarios  Common error conditions include: - **Validation Errors**: Invalid email addresses, missing required fields, or content that exceeds limits - **Insufficient Balance**: Account balance too low for campaign cost - **Invalid Recipients**: Non-existent contact/group IDs or invalid email formats - **Sender Configuration**: Invalid or unconfigured email sender ID - **No Recipients**: All recipient arrays are empty or invalid 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var createEmailCampaignInputObject = new TextmagicClient.CreateEmailCampaignInputObject(); // CreateEmailCampaignInputObject | 
-
-apiInstance.createEmailCampaign(createEmailCampaignInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let createEmailCampaignInputObject = new TextMagicClient.CreateEmailCampaignRequest(); // CreateEmailCampaignRequest | 
+apiInstance.createEmailCampaign(createEmailCampaignInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -680,9 +616,10 @@ apiInstance.createEmailCampaign(createEmailCampaignInputObject).then(function(da
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createEmailCampaignInputObject** | [**CreateEmailCampaignInputObject**](CreateEmailCampaignInputObject.md)|  | 
+ **createEmailCampaignInputObject** | [**CreateEmailCampaignRequest**](CreateEmailCampaignRequest.md)|  | 
 
 ### Return type
 
@@ -694,34 +631,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="createList"></a>
-# **createList**
+
+## createList
+
 > ResourceLinkResponse createList(createListInputObject)
 
 Create a new list
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var createListInputObject = new TextmagicClient.CreateListInputObject(); // CreateListInputObject | 
-
-apiInstance.createList(createListInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let createListInputObject = new TextMagicClient.CreateListRequest(); // CreateListRequest | 
+apiInstance.createList(createListInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -729,9 +663,10 @@ apiInstance.createList(createListInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createListInputObject** | [**CreateListInputObject**](CreateListInputObject.md)|  | 
+ **createListInputObject** | [**CreateListRequest**](CreateListRequest.md)|  | 
 
 ### Return type
 
@@ -743,11 +678,61 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="createTemplate"></a>
-# **createTemplate**
+
+## createTag
+
+> CreateTagResponse createTag(createTagInputObject)
+
+Create tag
+
+Creates a new tag for organizing and categorizing contacts.  This endpoint allows you to create a custom tag that can be used to segment and organize your contact database. Tags provide a flexible way to categorize contacts for better contact management.  ## Request Requirements  - **Title**: Required field, must be between 1 and 50 characters - **Uniqueness**: Tag titles must be unique within your account - **Authentication**: Valid API credentials required  ## Common Use Cases  Create tags for various organizational purposes:  - **Customer Types**: \&quot;VIP Customer\&quot;, \&quot;New Lead\&quot;, \&quot;Active Subscriber\&quot; - **Geographic Segments**: \&quot;North Region\&quot;, \&quot;Europe\&quot;, \&quot;Local Customers\&quot; - **Engagement Levels**: \&quot;Highly Engaged\&quot;, \&quot;Inactive\&quot;, \&quot;Recent Purchase\&quot; - **Campaign Categories**: \&quot;Summer Promotion\&quot;, \&quot;Newsletter Subscriber\&quot;, \&quot;Event Attendee\&quot; - **Custom Segments**: Any custom categorization that fits your business needs  ## Response Information  Successful tag creation returns: - **Tag ID**: Unique identifier for the newly created tag - **Title**: The tag name as provided in the request  Use the returned tag ID to assign this tag to contacts or reference it in other API operations.  ## Error Scenarios  Common error conditions include: - **Validation Errors**: Title exceeds 50 characters or is empty - **Duplicate Tag**: A tag with the same title already exists in your account - **Authentication Errors**: Invalid or missing API credentials  ## Next Steps  After creating a tag: 1. Use the tag ID to assign it to contacts via contact management endpoints 2. Reference the tag when filtering contacts 3. Manage and update tags through other Tags API endpoints 
+
+### Example
+
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
+// Configure HTTP basic authorization: BasicAuth
+let BasicAuth = defaultClient.authentications['BasicAuth'];
+BasicAuth.username = 'YOUR USERNAME';
+BasicAuth.password = 'YOUR PASSWORD';
+
+let apiInstance = new TextMagicClient.TextMagicApi();
+let createTagInputObject = new TextMagicClient.CreateTagRequest(); // CreateTagRequest | 
+apiInstance.createTag(createTagInputObject).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createTagInputObject** | [**CreateTagRequest**](CreateTagRequest.md)|  | 
+
+### Return type
+
+[**CreateTagResponse**](CreateTagResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createTemplate
+
 > ResourceLinkResponse createTemplate(createTemplateInputObject)
 
 Create a template
@@ -755,22 +740,20 @@ Create a template
 There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var createTemplateInputObject = new TextmagicClient.CreateTemplateInputObject(); // CreateTemplateInputObject | 
-
-apiInstance.createTemplate(createTemplateInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let createTemplateInputObject = new TextMagicClient.CreateTemplateRequest(); // CreateTemplateRequest | 
+apiInstance.createTemplate(createTemplateInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -778,9 +761,10 @@ apiInstance.createTemplate(createTemplateInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createTemplateInputObject** | [**CreateTemplateInputObject**](CreateTemplateInputObject.md)|  | 
+ **createTemplateInputObject** | [**CreateTemplateRequest**](CreateTemplateRequest.md)|  | 
 
 ### Return type
 
@@ -792,37 +776,37 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="deleteAllContacts"></a>
-# **deleteAllContacts**
+
+## deleteAllContacts
+
 > deleteAllContacts()
 
 Delete contacts (bulk)
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.deleteAllContacts().then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.deleteAllContacts().then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -835,11 +819,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-<a name="deleteAllOutboundMessages"></a>
-# **deleteAllOutboundMessages**
+
+## deleteAllOutboundMessages
+
 > deleteAllOutboundMessages()
 
 Delete all messages
@@ -847,25 +832,26 @@ Delete all messages
 Delete all messages.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.deleteAllOutboundMessages().then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.deleteAllOutboundMessages().then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -878,37 +864,37 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteAvatar"></a>
-# **deleteAvatar**
+
+## deleteAvatar
+
 > deleteAvatar()
 
 Delete an avatar
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.deleteAvatar().then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.deleteAvatar().then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -921,36 +907,34 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteChatMessages"></a>
-# **deleteChatMessages**
-> deleteChatMessages(deleteChatMessagesBulkInputObject, id)
+
+## deleteChatMessages
+
+> deleteChatMessages(id, deleteChatMessagesBulkInputObject)
 
 Delete chat messages by ID(s)
 
 Delete messages from chat by given message IDs.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteChatMessagesBulkInputObject = new TextmagicClient.DeleteChatMessagesBulkInputObject(); // DeleteChatMessagesBulkInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.deleteChatMessages(deleteChatMessagesBulkInputObject, id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let deleteChatMessagesBulkInputObject = new TextMagicClient.DeleteChatMessagesRequest(); // DeleteChatMessagesRequest | 
+apiInstance.deleteChatMessages(id, deleteChatMessagesBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -958,10 +942,11 @@ apiInstance.deleteChatMessages(deleteChatMessagesBulkInputObject, id).then(funct
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteChatMessagesBulkInputObject** | [**DeleteChatMessagesBulkInputObject**](DeleteChatMessagesBulkInputObject.md)|  | 
  **id** | **Number**|  | 
+ **deleteChatMessagesBulkInputObject** | [**DeleteChatMessagesRequest**](DeleteChatMessagesRequest.md)|  | 
 
 ### Return type
 
@@ -973,11 +958,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteChatsBulk"></a>
-# **deleteChatsBulk**
+
+## deleteChatsBulk
+
 > deleteChatsBulk(deleteChatsBulkInputObject)
 
 Delete chats (bulk)
@@ -985,22 +971,20 @@ Delete chats (bulk)
 Delete chats by given IDs or delete all chats.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteChatsBulkInputObject = new TextmagicClient.DeleteChatsBulkInputObject(); // DeleteChatsBulkInputObject | 
-
-apiInstance.deleteChatsBulk(deleteChatsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteChatsBulkInputObject = new TextMagicClient.DeleteChatsBulkRequest(); // DeleteChatsBulkRequest | 
+apiInstance.deleteChatsBulk(deleteChatsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1008,9 +992,10 @@ apiInstance.deleteChatsBulk(deleteChatsBulkInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteChatsBulkInputObject** | [**DeleteChatsBulkInputObject**](DeleteChatsBulkInputObject.md)|  | 
+ **deleteChatsBulkInputObject** | [**DeleteChatsBulkRequest**](DeleteChatsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -1022,40 +1007,40 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteContact"></a>
-# **deleteContact**
+
+## deleteContact
+
 > deleteContact(id)
 
 Delete a contact
 
-> This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
+&gt; This command removes your contact completely. If it was assigned or saved to a shared list, it will disappear from there too. If you only need to remove a contact from selected lists, use the Contact assignment command in the Lists section instead, rather than deleting the contact. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteContact(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteContact(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1071,40 +1056,38 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteContactAvatar"></a>
-# **deleteContactAvatar**
+
+## deleteContactAvatar
+
 > deleteContactAvatar(id)
 
 Delete an avatar
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteContactAvatar(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteContactAvatar(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1120,40 +1103,38 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="deleteContactNote"></a>
-# **deleteContactNote**
+
+## deleteContactNote
+
 > deleteContactNote(id)
 
 Delete a contact note
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteContactNote(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteContactNote(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1169,36 +1150,32 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteContactNotesBulk"></a>
-# **deleteContactNotesBulk**
+
+## deleteContactNotesBulk
+
 > deleteContactNotesBulk(id, deleteContactNotesBulkInputObject)
 
 Delete contact notes (bulk)
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-var deleteContactNotesBulkInputObject = new TextmagicClient.DeleteContactNotesBulkInputObject(); // DeleteContactNotesBulkInputObject | 
-
-apiInstance.deleteContactNotesBulk(id, deleteContactNotesBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let deleteContactNotesBulkInputObject = new TextMagicClient.DeleteContactNotesBulkRequest(); // DeleteContactNotesBulkRequest | 
+apiInstance.deleteContactNotesBulk(id, deleteContactNotesBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1206,10 +1183,11 @@ apiInstance.deleteContactNotesBulk(id, deleteContactNotesBulkInputObject).then(f
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **deleteContactNotesBulkInputObject** | [**DeleteContactNotesBulkInputObject**](DeleteContactNotesBulkInputObject.md)|  | 
+ **deleteContactNotesBulkInputObject** | [**DeleteContactNotesBulkRequest**](DeleteContactNotesBulkRequest.md)|  | 
 
 ### Return type
 
@@ -1221,34 +1199,31 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteContactsByIds"></a>
-# **deleteContactsByIds**
+
+## deleteContactsByIds
+
 > deleteContactsByIds(deleteContactsByIdsInputObject)
 
 Delete contacts by IDs (bulk)
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteContactsByIdsInputObject = new TextmagicClient.DeleteContactsByIdsInputObject(); // DeleteContactsByIdsInputObject | 
-
-apiInstance.deleteContactsByIds(deleteContactsByIdsInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteContactsByIdsInputObject = new TextMagicClient.DeleteContactsByIdsRequest(); // DeleteContactsByIdsRequest | 
+apiInstance.deleteContactsByIds(deleteContactsByIdsInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1256,9 +1231,10 @@ apiInstance.deleteContactsByIds(deleteContactsByIdsInputObject).then(function() 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteContactsByIdsInputObject** | [**DeleteContactsByIdsInputObject**](DeleteContactsByIdsInputObject.md)|  | 
+ **deleteContactsByIdsInputObject** | [**DeleteContactsByIdsRequest**](DeleteContactsByIdsRequest.md)|  | 
 
 ### Return type
 
@@ -1270,36 +1246,34 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteContactsFromList"></a>
-# **deleteContactsFromList**
-> deleteContactsFromList(deleteContacsFromListObject, id)
+
+## deleteContactsFromList
+
+> deleteContactsFromList(id, deleteContacsFromListObject)
 
 Unassign contacts from a list
 
-> When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
+&gt; When you remove contacts from a specific list, they will be deleted permanently, unless they are first saved in another list. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteContacsFromListObject = new TextmagicClient.DeleteContacsFromListObject(); // DeleteContacsFromListObject | 
-
-var id = 1; // Number | 
-
-apiInstance.deleteContactsFromList(deleteContacsFromListObject, id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let deleteContacsFromListObject = new TextMagicClient.DeleteContactsFromListRequest(); // DeleteContactsFromListRequest | 
+apiInstance.deleteContactsFromList(id, deleteContacsFromListObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1307,10 +1281,11 @@ apiInstance.deleteContactsFromList(deleteContacsFromListObject, id).then(functio
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteContacsFromListObject** | [**DeleteContacsFromListObject**](DeleteContacsFromListObject.md)|  | 
  **id** | **Number**|  | 
+ **deleteContacsFromListObject** | [**DeleteContactsFromListRequest**](DeleteContactsFromListRequest.md)|  | 
 
 ### Return type
 
@@ -1322,40 +1297,40 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteCustomField"></a>
-# **deleteCustomField**
+
+## deleteCustomField
+
 > deleteCustomField(id)
 
 Delete a custom field
 
-> When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
+&gt; When a custom field is deleted, all the information that was added to contacts under this custom field will also be lost. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteCustomField(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteCustomField(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1371,40 +1346,38 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteDedicatedNumber"></a>
-# **deleteDedicatedNumber**
+
+## deleteDedicatedNumber
+
 > deleteDedicatedNumber(id)
 
 Cancel a dedicated number subscription
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteDedicatedNumber(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteDedicatedNumber(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1420,40 +1393,40 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteInboundMessage"></a>
-# **deleteInboundMessage**
+
+## deleteInboundMessage
+
 > deleteInboundMessage(id)
 
 Delete a single inbound message
 
-> Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | The unique numeric ID for the inbound message.
-
-apiInstance.deleteInboundMessage(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | The unique numeric ID for the inbound message.
+apiInstance.deleteInboundMessage(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1469,34 +1442,33 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteInboundMessagesBulk"></a>
-# **deleteInboundMessagesBulk**
+
+## deleteInboundMessagesBulk
+
 > deleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject)
 
 Delete inbound messages (bulk)
 
-> Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
+&gt; Note: deleted inbound messages will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteInboundMessagesBulkInputObject = new TextmagicClient.DeleteInboundMessagesBulkInputObject(); // DeleteInboundMessagesBulkInputObject | 
-
-apiInstance.deleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteInboundMessagesBulkInputObject = new TextMagicClient.DeleteListsBulkRequest(); // DeleteListsBulkRequest | 
+apiInstance.deleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1504,9 +1476,10 @@ apiInstance.deleteInboundMessagesBulk(deleteInboundMessagesBulkInputObject).then
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteInboundMessagesBulkInputObject** | [**DeleteInboundMessagesBulkInputObject**](DeleteInboundMessagesBulkInputObject.md)|  | 
+ **deleteInboundMessagesBulkInputObject** | [**DeleteListsBulkRequest**](DeleteListsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -1518,11 +1491,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteList"></a>
-# **deleteList**
+
+## deleteList
+
 > deleteList(id)
 
 Delete a list
@@ -1530,28 +1504,27 @@ Delete a list
 This command has no parameters. If successful, this command will return the standard delete response (204 No Content); otherwise, a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well, unless they were saved in another list.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteList(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteList(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1567,11 +1540,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteListAvatar"></a>
-# **deleteListAvatar**
+
+## deleteListAvatar
+
 > deleteListAvatar(id)
 
 Delete an avatar for a list
@@ -1579,28 +1553,27 @@ Delete an avatar for a list
 Delete an avatar for a list
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteListAvatar(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteListAvatar(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1616,36 +1589,34 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="deleteListContactsBulk"></a>
-# **deleteListContactsBulk**
-> deleteListContactsBulk(deleteListContactsBulkInputObject, id)
+
+## deleteListContactsBulk
+
+> deleteListContactsBulk(id, deleteListContactsBulkInputObject)
 
 Delete contacts from a list (bulk)
 
 Delete contacts from a list (bulk)
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteListContactsBulkInputObject = new TextmagicClient.DeleteListContactsBulkInputObject(); // DeleteListContactsBulkInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.deleteListContactsBulk(deleteListContactsBulkInputObject, id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let deleteListContactsBulkInputObject = new TextMagicClient.UnblockContactsBulkRequest(); // UnblockContactsBulkRequest | 
+apiInstance.deleteListContactsBulk(id, deleteListContactsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1653,10 +1624,11 @@ apiInstance.deleteListContactsBulk(deleteListContactsBulkInputObject, id).then(f
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteListContactsBulkInputObject** | [**DeleteListContactsBulkInputObject**](DeleteListContactsBulkInputObject.md)|  | 
  **id** | **Number**|  | 
+ **deleteListContactsBulkInputObject** | [**UnblockContactsBulkRequest**](UnblockContactsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -1668,34 +1640,31 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteListsBulk"></a>
-# **deleteListsBulk**
+
+## deleteListsBulk
+
 > deleteListsBulk(deleteListsBulkInputObject)
 
 Delete lists (bulk)
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteListsBulkInputObject = new TextmagicClient.DeleteListsBulkInputObject(); // DeleteListsBulkInputObject | 
-
-apiInstance.deleteListsBulk(deleteListsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteListsBulkInputObject = new TextMagicClient.DeleteListsBulkRequest(); // DeleteListsBulkRequest | 
+apiInstance.deleteListsBulk(deleteListsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1703,9 +1672,10 @@ apiInstance.deleteListsBulk(deleteListsBulkInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteListsBulkInputObject** | [**DeleteListsBulkInputObject**](DeleteListsBulkInputObject.md)|  | 
+ **deleteListsBulkInputObject** | [**DeleteListsBulkRequest**](DeleteListsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -1717,40 +1687,40 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteMessageSession"></a>
-# **deleteMessageSession**
+
+## deleteMessageSession
+
 > deleteMessageSession(id)
 
 Delete a session
 
-Delete a message session, together with all nested messages. > You will not be refunded for any deleted sent sessions. 
+Delete a message session, together with all nested messages. &gt; You will not be refunded for any deleted sent sessions. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteMessageSession(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteMessageSession(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1766,11 +1736,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteMessageSessionsBulk"></a>
-# **deleteMessageSessionsBulk**
+
+## deleteMessageSessionsBulk
+
 > deleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject)
 
 Delete sessions (bulk)
@@ -1778,22 +1749,20 @@ Delete sessions (bulk)
 Delete message sessions, together with all nested messages, by given ID(s) or delete all message sessions.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteMessageSessionsBulkInputObject = new TextmagicClient.DeleteMessageSessionsBulkInputObject(); // DeleteMessageSessionsBulkInputObject | 
-
-apiInstance.deleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteMessageSessionsBulkInputObject = new TextMagicClient.DeleteListsBulkRequest(); // DeleteListsBulkRequest | 
+apiInstance.deleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1801,9 +1770,10 @@ apiInstance.deleteMessageSessionsBulk(deleteMessageSessionsBulkInputObject).then
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteMessageSessionsBulkInputObject** | [**DeleteMessageSessionsBulkInputObject**](DeleteMessageSessionsBulkInputObject.md)|  | 
+ **deleteMessageSessionsBulkInputObject** | [**DeleteListsBulkRequest**](DeleteListsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -1815,11 +1785,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteOutboundMessage"></a>
-# **deleteOutboundMessage**
+
+## deleteOutboundMessage
+
 > deleteOutboundMessage(id)
 
 Delete message
@@ -1827,28 +1798,27 @@ Delete message
 Delete a single message.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteOutboundMessage(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteOutboundMessage(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1864,11 +1834,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteOutboundMessagesBulk"></a>
-# **deleteOutboundMessagesBulk**
+
+## deleteOutboundMessagesBulk
+
 > deleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject)
 
 Delete messages (bulk)
@@ -1876,22 +1847,20 @@ Delete messages (bulk)
 Delete outbound messages by the given ID(s) or delete all outbound messages.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteOutboundMessagesBulkInputObject = new TextmagicClient.DeleteOutboundMessagesBulkInputObject(); // DeleteOutboundMessagesBulkInputObject | 
-
-apiInstance.deleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteOutboundMessagesBulkInputObject = new TextMagicClient.DeleteOutboundMessagesBulkRequest(); // DeleteOutboundMessagesBulkRequest | 
+apiInstance.deleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1899,9 +1868,10 @@ apiInstance.deleteOutboundMessagesBulk(deleteOutboundMessagesBulkInputObject).th
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteOutboundMessagesBulkInputObject** | [**DeleteOutboundMessagesBulkInputObject**](DeleteOutboundMessagesBulkInputObject.md)|  | 
+ **deleteOutboundMessagesBulkInputObject** | [**DeleteOutboundMessagesBulkRequest**](DeleteOutboundMessagesBulkRequest.md)|  | 
 
 ### Return type
 
@@ -1913,40 +1883,38 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteScheduledMessage"></a>
-# **deleteScheduledMessage**
+
+## deleteScheduledMessage
+
 > deleteScheduledMessage(id)
 
 Delete a single scheduled message
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteScheduledMessage(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteScheduledMessage(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1962,34 +1930,31 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteScheduledMessagesBulk"></a>
-# **deleteScheduledMessagesBulk**
+
+## deleteScheduledMessagesBulk
+
 > deleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject)
 
 Delete scheduled messages (bulk)
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteScheduledMessagesBulkInputObject = new TextmagicClient.DeleteScheduledMessagesBulkInputObject(); // DeleteScheduledMessagesBulkInputObject | 
-
-apiInstance.deleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteScheduledMessagesBulkInputObject = new TextMagicClient.DeleteScheduledMessagesBulkRequest(); // DeleteScheduledMessagesBulkRequest | 
+apiInstance.deleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -1997,9 +1962,10 @@ apiInstance.deleteScheduledMessagesBulk(deleteScheduledMessagesBulkInputObject).
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteScheduledMessagesBulkInputObject** | [**DeleteScheduledMessagesBulkInputObject**](DeleteScheduledMessagesBulkInputObject.md)|  | 
+ **deleteScheduledMessagesBulkInputObject** | [**DeleteScheduledMessagesBulkRequest**](DeleteScheduledMessagesBulkRequest.md)|  | 
 
 ### Return type
 
@@ -2011,40 +1977,38 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="deleteSenderId"></a>
-# **deleteSenderId**
+
+## deleteSenderId
+
 > deleteSenderId(id)
 
 Delete a Sender ID
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteSenderId(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteSenderId(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2060,40 +2024,38 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteTemplate"></a>
-# **deleteTemplate**
+
+## deleteTemplate
+
 > deleteTemplate(id)
 
 Delete a template
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.deleteTemplate(id).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.deleteTemplate(id).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2109,11 +2071,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
-<a name="deleteTemplatesBulk"></a>
-# **deleteTemplatesBulk**
+
+## deleteTemplatesBulk
+
 > deleteTemplatesBulk(deleteTemplatesBulkInputObject)
 
 Delete templates (bulk)
@@ -2121,22 +2084,20 @@ Delete templates (bulk)
 Delete templates by given IDs or delete all templates.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var deleteTemplatesBulkInputObject = new TextmagicClient.DeleteTemplatesBulkInputObject(); // DeleteTemplatesBulkInputObject | 
-
-apiInstance.deleteTemplatesBulk(deleteTemplatesBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let deleteTemplatesBulkInputObject = new TextMagicClient.DeleteContactNotesBulkRequest(); // DeleteContactNotesBulkRequest | 
+apiInstance.deleteTemplatesBulk(deleteTemplatesBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -2144,9 +2105,10 @@ apiInstance.deleteTemplatesBulk(deleteTemplatesBulkInputObject).then(function() 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteTemplatesBulkInputObject** | [**DeleteTemplatesBulkInputObject**](DeleteTemplatesBulkInputObject.md)|  | 
+ **deleteTemplatesBulkInputObject** | [**DeleteContactNotesBulkRequest**](DeleteContactNotesBulkRequest.md)|  | 
 
 ### Return type
 
@@ -2158,43 +2120,43 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="doCarrierLookup"></a>
-# **doCarrierLookup**
+
+## doCarrierLookup
+
 > DoCarrierLookupResponse doCarrierLookup(phone, opts)
 
 Carrier Lookup
 
-This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  > Numbers must be checked one by one. You cannot check multiple numbers in one request.   
+This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers must be checked one by one. You cannot check multiple numbers in one request.   
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var phone = "447860021130"; // String | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let phone = "447860021130"; // String | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
+let opts = {
   'country': "GB" // String | This option must be specified only if the phone number is in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
 };
-apiInstance.doCarrierLookup(phone, opts).then(function(data) {
+apiInstance.doCarrierLookup(phone, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2211,40 +2173,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="doEmailLookup"></a>
-# **doEmailLookup**
+
+## doEmailLookup
+
 > DoEmailLookupResponse doEmailLookup(email)
 
 Email Lookup
 
-To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  > Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
+To get more details about an email address or to check whether it is a valid email or not, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var email = "john@sample.com"; // String | Email address.
-
-apiInstance.doEmailLookup(email).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let email = "john@sample.com"; // String | Email address.
+apiInstance.doEmailLookup(email).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2260,42 +2222,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAllBulkSessions"></a>
-# **getAllBulkSessions**
+
+## getAllBulkSessions
+
 > GetAllBulkSessionsPaginatedResponse getAllBulkSessions(opts)
 
 Get all bulk sessions
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getAllBulkSessions(opts).then(function(data) {
+apiInstance.getAllBulkSessions(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2312,40 +2273,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAllChats"></a>
-# **getAllChats**
+
+## getAllChats
+
 > GetAllChatsPaginatedResponse getAllChats(opts)
 
 Get all chats
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'status': "a", // String | Fetch only (a)ctive, (c)losed or (d)eleted chats.
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'orderBy': "id", // String | Order results by some field. Default is id.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
   'voice': 0, // Number | Fetch results with voice calls.
-  'flat': 0 // Number | Should additional contact info be included?
+  'flat': 1 // Number | Should additional contact info be included?
 };
-apiInstance.getAllChats(opts).then(function(data) {
+apiInstance.getAllChats(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -2353,12 +2312,13 @@ apiInstance.getAllChats(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **status** | **String**| Fetch only (a)ctive, (c)losed or (d)eleted chats. | [optional] 
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
  **voice** | **Number**| Fetch results with voice calls. | [optional] [default to 0]
  **flat** | **Number**| Should additional contact info be included? | [optional] [default to 0]
 
@@ -2372,38 +2332,36 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAllInboundMessages"></a>
-# **getAllInboundMessages**
+
+## getAllInboundMessages
+
 > GetAllInboundMessagesPaginatedResponse getAllInboundMessages(opts)
 
 Get all inbound messages
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.getAllInboundMessages(opts).then(function(data) {
+apiInstance.getAllInboundMessages(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -2411,12 +2369,13 @@ apiInstance.getAllInboundMessages(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -2428,42 +2387,43 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAllMessageSessions"></a>
-# **getAllMessageSessions**
+
+## getAllMessageSessions
+
 > GetAllMessageSessionsPaginatedResponse getAllMessageSessions(opts)
 
 Get all sessions
 
-Get all message sending sessions. > This list contains all of your sessions, including those which were sent but not via API 
+Get all message sending sessions. &gt; This list contains all of your sessions, including those which were sent but not via API 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getAllMessageSessions(opts).then(function(data) {
+apiInstance.getAllMessageSessions(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2480,11 +2440,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAllOutboundMessages"></a>
-# **getAllOutboundMessages**
+
+## getAllOutboundMessages
+
 > GetAllOutboundMessagesPaginatedResponse getAllOutboundMessages(opts)
 
 Get all messages
@@ -2492,25 +2453,24 @@ Get all messages
 Get all user oubound messages.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'lastId': 56 // Number | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
 };
-apiInstance.getAllOutboundMessages(opts).then(function(data) {
+apiInstance.getAllOutboundMessages(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -2518,11 +2478,12 @@ apiInstance.getAllOutboundMessages(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified. | [optional] 
+ **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional] 
 
 ### Return type
 
@@ -2534,39 +2495,37 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAllScheduledMessages"></a>
-# **getAllScheduledMessages**
+
+## getAllScheduledMessages
+
 > GetAllScheduledMessagesPaginatedResponse getAllScheduledMessages(opts)
 
 Get all scheduled messages
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'status': "x", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'status': "'x'", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.getAllScheduledMessages(opts).then(function(data) {
+apiInstance.getAllScheduledMessages(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -2574,13 +2533,14 @@ apiInstance.getAllScheduledMessages(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to &#39;x&#39;]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -2592,42 +2552,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAllTemplates"></a>
-# **getAllTemplates**
+
+## getAllTemplates
+
 > GetAllTemplatesPaginatedResponse getAllTemplates(opts)
 
 Get all templates
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getAllTemplates(opts).then(function(data) {
+apiInstance.getAllTemplates(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2644,44 +2603,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAvailableDedicatedNumbers"></a>
-# **getAvailableDedicatedNumbers**
+
+## getAvailableDedicatedNumbers
+
 > GetAvailableDedicatedNumbersResponse getAvailableDedicatedNumbers(country, opts)
 
 Find dedicated numbers available for purchase
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var country = "GB"; // String | The 2-letter dedicated number country ISO code.
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let country = "GB"; // String | The 2-letter dedicated number country ISO code.
+let opts = {
   'prefix': 447155, // Number | Desired number prefix. Should include the country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
   'tollfree': 0 // Number | Should we show only tollfree numbers (tollfree available only for US).
 };
-apiInstance.getAvailableDedicatedNumbers(country, opts).then(function(data) {
+apiInstance.getAvailableDedicatedNumbers(country, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2699,41 +2656,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getAvailableSenderSettingOptions"></a>
-# **getAvailableSenderSettingOptions**
+
+## getAvailableSenderSettingOptions
+
 > GetAvailableSenderSettingOptionsResponse getAvailableSenderSettingOptions(opts)
 
 Get available sender settings
 
-Get all available sender setting options which can be used in the \"from\" parameter of the POST messages method.
+Get all available sender setting options which can be used in the \&quot;from\&quot; parameter of the POST messages method.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'country': "US" // String | The 2-letter ISO country ID. If not specified, it returns all the available sender settings.
 };
-apiInstance.getAvailableSenderSettingOptions(opts).then(function(data) {
+apiInstance.getAvailableSenderSettingOptions(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2749,37 +2707,37 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getBalanceNotificationOptions"></a>
-# **getBalanceNotificationOptions**
+
+## getBalanceNotificationOptions
+
 > GetBalanceNotificationOptionsResponse getBalanceNotificationOptions()
 
 Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getBalanceNotificationOptions().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getBalanceNotificationOptions().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -2792,37 +2750,37 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getBalanceNotificationSettings"></a>
-# **getBalanceNotificationSettings**
+
+## getBalanceNotificationSettings
+
 > GetBalanceNotificationSettingsResponse getBalanceNotificationSettings()
 
 Get balance notification settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getBalanceNotificationSettings().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getBalanceNotificationSettings().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -2835,39 +2793,37 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getBlockedContacts"></a>
-# **getBlockedContacts**
+
+## getBlockedContacts
+
 > GetBlockedContactsPaginatedResponse getBlockedContacts(opts)
 
 Get blocked contacts
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find blocked contacts by specified search query.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.getBlockedContacts(opts).then(function(data) {
+apiInstance.getBlockedContacts(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -2875,13 +2831,14 @@ apiInstance.getBlockedContacts(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find blocked contacts by specified search query. | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -2893,40 +2850,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getBulkSession"></a>
-# **getBulkSession**
+
+## getBulkSession
+
 > BulkSession getBulkSession(id)
 
 Get bulk session status
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getBulkSession(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getBulkSession(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2942,37 +2897,37 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCallbackSettings"></a>
-# **getCallbackSettings**
+
+## getCallbackSettings
+
 > GetCallbackSettingsResponse getCallbackSettings()
 
 Fetch callback URL settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getCallbackSettings().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getCallbackSettings().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -2985,40 +2940,38 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getChat"></a>
-# **getChat**
+
+## getChat
+
 > Chat getChat(id)
 
 Get a single chat
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getChat(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getChat(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3034,44 +2987,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getChatByPhone"></a>
-# **getChatByPhone**
+
+## getChatByPhone
+
 > Chat getChatByPhone(phone, opts)
 
 Find chats by phone
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var phone = "447860021130"; // String | 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let phone = "447860021130"; // String | 
+let opts = {
   'upsert': 0, // Number | Create a new chat if not found.
   'reopen': 0 // Number | Reopen chat if found or do not change status.
 };
-apiInstance.getChatByPhone(phone, opts).then(function(data) {
+apiInstance.getChatByPhone(phone, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3089,44 +3040,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getChatMessages"></a>
-# **getChatMessages**
+
+## getChatMessages
+
 > GetChatMessagesPaginatedResponse getChatMessages(id, opts)
 
 Get chat messages
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find messages by specified search query.
   'start': "start_example", // String | Return messages since specified timestamp only. Required when `end` parameter specified.
   'end': "end_example", // String | Return messages up to specified timestamp only. Required when `start` parameter specified.
-  'direction': "desc", // String | Order direction. Default is desc.
+  'direction': "'desc'", // String | Order direction. Default is desc.
   'voice': 0, // Number | Fetch results with voice calls.
   'includeNotes': 0 // Number | Fetch results with messenger notes.
 };
-apiInstance.getChatMessages(id, opts).then(function(data) {
+apiInstance.getChatMessages(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -3134,15 +3082,16 @@ apiInstance.getChatMessages(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find messages by specified search query. | [optional] 
- **start** | **String**| Return messages since specified timestamp only. Required when `end` parameter specified. | [optional] 
- **end** | **String**| Return messages up to specified timestamp only. Required when `start` parameter specified. | [optional] 
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **start** | **String**| Return messages since specified timestamp only. Required when &#x60;end&#x60; parameter specified. | [optional] 
+ **end** | **String**| Return messages up to specified timestamp only. Required when &#x60;start&#x60; parameter specified. | [optional] 
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
  **voice** | **Number**| Fetch results with voice calls. | [optional] [default to 0]
  **includeNotes** | **Number**| Fetch results with messenger notes. | [optional] [default to 0]
 
@@ -3156,40 +3105,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContact"></a>
-# **getContact**
+
+## getContact
+
 > Contact getContact(id)
 
 Get the details of a specific contact
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | Contact ID.
-
-apiInstance.getContact(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | Contact ID.
+apiInstance.getContact(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3205,40 +3152,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactByPhone"></a>
-# **getContactByPhone**
+
+## getContactByPhone
+
 > Contact getContactByPhone(phone)
 
 Get the details of a specific contact by phone number
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var phone = "447860021130"; // String | 
-
-apiInstance.getContactByPhone(phone).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let phone = "447860021130"; // String | 
+apiInstance.getContactByPhone(phone).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3254,40 +3199,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactIfBlocked"></a>
-# **getContactIfBlocked**
+
+## getContactIfBlocked
+
 > Contact getContactIfBlocked(phone)
 
 Check if a phone number is blocked
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var phone = "447860021130"; // String | Phone number to check.
-
-apiInstance.getContactIfBlocked(phone).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let phone = "447860021130"; // String | Phone number to check.
+apiInstance.getContactIfBlocked(phone).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3303,11 +3246,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactImportSessionProgress"></a>
-# **getContactImportSessionProgress**
+
+## getContactImportSessionProgress
+
 > GetContactImportSessionProgressResponse getContactImportSessionProgress(id)
 
 Check import progress
@@ -3315,28 +3259,27 @@ Check import progress
 Get contact import session progress.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getContactImportSessionProgress(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getContactImportSessionProgress(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3352,40 +3295,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactNote"></a>
-# **getContactNote**
+
+## getContactNote
+
 > ContactNote getContactNote(id)
 
 Get a contact note
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getContactNote(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getContactNote(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3401,44 +3342,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactNotes"></a>
-# **getContactNotes**
+
+## getContactNotes
+
 > GetContactNotesPaginatedResponse getContactNotes(id, opts)
 
 Fetch notes assigned to a given contact
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getContactNotes(id, opts).then(function(data) {
+apiInstance.getContactNotes(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3456,39 +3395,37 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContacts"></a>
-# **getContacts**
+
+## getContacts
+
 > GetContactsPaginatedResponse getContacts(opts)
 
 Get all contacts
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'shared': 0, // Number | Should shared contacts be included?
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.getContacts(opts).then(function(data) {
+apiInstance.getContacts(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -3496,13 +3433,14 @@ apiInstance.getContacts(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **shared** | **Number**| Should shared contacts be included? | [optional] [default to 0]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -3514,44 +3452,44 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactsAutocomplete"></a>
-# **getContactsAutocomplete**
-> GetContactsAutocompleteResponse getContactsAutocomplete(query, opts)
+
+## getContactsAutocomplete
+
+> [GetContactsAutocompleteResponseItem] getContactsAutocomplete(query, opts)
 
 Get contacts autocomplete suggestions
 
 Get contacts autocomplete suggestions by given search terms.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var query = "A"; // String | Find recipients by specified search query.
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let query = "A"; // String | Find recipients by specified search query.
+let opts = {
   'limit': 10, // Number | The number of results per page.
   'lists': 0 // Number | Should lists be returned or not?
 };
-apiInstance.getContactsAutocomplete(query, opts).then(function(data) {
+apiInstance.getContactsAutocomplete(query, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3561,7 +3499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContactsAutocompleteResponse**](GetContactsAutocompleteResponse.md)
+[**[GetContactsAutocompleteResponseItem]**](GetContactsAutocompleteResponseItem.md)
 
 ### Authorization
 
@@ -3569,40 +3507,39 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getContactsByListId"></a>
-# **getContactsByListId**
+
+## getContactsByListId
+
 > GetContactsByListIdPaginatedResponse getContactsByListId(id, opts)
 
 Get all contacts in a list
 
-A useful synonym for the \"contacts/search\" command with the provided \"listId\" parameter.
+A useful synonym for the \&quot;contacts/search\&quot; command with the provided \&quot;listId\&quot; parameter.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | Given group ID.
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | Given group ID.
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.getContactsByListId(id, opts).then(function(data) {
+apiInstance.getContactsByListId(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -3610,13 +3547,14 @@ apiInstance.getContactsByListId(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Given group ID. | 
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -3628,42 +3566,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCountries"></a>
-# **getCountries**
-> GetCountriesResponse getCountries()
+
+## getCountries
+
+> [Country] getCountries()
 
 Get countries
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getCountries().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getCountries().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-[**GetCountriesResponse**](GetCountriesResponse.md)
+[**[Country]**](Country.md)
 
 ### Authorization
 
@@ -3671,37 +3609,37 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCurrentUser"></a>
-# **getCurrentUser**
+
+## getCurrentUser
+
 > User getCurrentUser()
 
 Get current account information
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getCurrentUser().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getCurrentUser().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -3714,40 +3652,38 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCustomField"></a>
-# **getCustomField**
+
+## getCustomField
+
 > UserCustomField getCustomField(id)
 
 Get the details of a specific custom field
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getCustomField(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getCustomField(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3763,42 +3699,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getCustomFields"></a>
-# **getCustomFields**
+
+## getCustomFields
+
 > GetCustomFieldsPaginatedResponse getCustomFields(opts)
 
 Get all custom fields
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getCustomFields(opts).then(function(data) {
+apiInstance.getCustomFields(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3815,40 +3750,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getDedicatedNumber"></a>
-# **getDedicatedNumber**
+
+## getDedicatedNumber
+
 > UsersInbound getDedicatedNumber(id)
 
 Get the details of a specific dedicated number
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getDedicatedNumber(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getDedicatedNumber(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3864,11 +3797,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getEmailSenders"></a>
-# **getEmailSenders**
+
+## getEmailSenders
+
 > GetEmailSendersResponse getEmailSenders(opts)
 
 Get list of email senders
@@ -3876,29 +3810,29 @@ Get list of email senders
 Retrieves a list of configured email senders available for creating email campaigns.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'domainId': 56 // Number | Filter email senders by specific domain ID.
 };
-apiInstance.getEmailSenders(opts).then(function(data) {
+apiInstance.getEmailSenders(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3914,43 +3848,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getFavorites"></a>
-# **getFavorites**
+
+## getFavorites
+
 > GetFavoritesPaginatedResponse getFavorites(opts)
 
 Get favorite contacts and lists
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "A" // String | Find contacts or lists by specified search query.
 };
-apiInstance.getFavorites(opts).then(function(data) {
+apiInstance.getFavorites(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -3968,40 +3901,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getInboundMessage"></a>
-# **getInboundMessage**
+
+## getInboundMessage
+
 > MessageIn getInboundMessage(id)
 
 Get a single inbound message
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1782832; // Number | The unique numeric ID for the inbound message.
-
-apiInstance.getInboundMessage(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1782832; // Number | The unique numeric ID for the inbound message.
+apiInstance.getInboundMessage(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4017,37 +3948,37 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getInboundMessagesNotificationSettings"></a>
-# **getInboundMessagesNotificationSettings**
+
+## getInboundMessagesNotificationSettings
+
 > GetInboundMessagesNotificationSettingsResponse getInboundMessagesNotificationSettings()
 
 Get inbound messages notification settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getInboundMessagesNotificationSettings().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getInboundMessagesNotificationSettings().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -4060,11 +3991,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getInvoices"></a>
-# **getInvoices**
+
+## getInvoices
+
 > GetInvoicesPaginatedResponse getInvoices(opts)
 
 Get all invoices
@@ -4072,30 +4004,30 @@ Get all invoices
 With the TextMagic API, you can check the invoices and transactions for your account.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getInvoices(opts).then(function(data) {
+apiInstance.getInvoices(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4112,34 +4044,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getList"></a>
-# **getList**
-> List getList(id)
+
+## getList
+
+> Array getList(id)
 
 Get the details of a specific list
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getList(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getList(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -4147,13 +4076,14 @@ apiInstance.getList(id).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
 
 ### Return type
 
-[**List**](List.md)
+**Array**
 
 ### Authorization
 
@@ -4161,34 +4091,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getListContactsIds"></a>
-# **getListContactsIds**
-> GetListContactsIdsResponse getListContactsIds(id)
+
+## getListContactsIds
+
+> [Number] getListContactsIds(id)
 
 Get all contact IDs in a list
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getListContactsIds(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getListContactsIds(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -4196,13 +4123,14 @@ apiInstance.getListContactsIds(id).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
 
 ### Return type
 
-[**GetListContactsIdsResponse**](GetListContactsIdsResponse.md)
+**[Number]**
 
 ### Authorization
 
@@ -4210,53 +4138,52 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getLists"></a>
-# **getLists**
+
+## getLists
+
 > GetListsPaginatedResponse getLists(opts)
 
 Get all lists
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | The current fetched page.
   'limit': 10, // Number | The number of results per page.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc", // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'", // String | Order direction. Default is desc.
   'favoriteOnly': 0, // Number | Return only favorited lists.
   'onlyMine': 0 // Number | Return only current user lists.
 };
-apiInstance.getLists(opts).then(function(data) {
+apiInstance.getLists(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| The current fetched page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
  **favoriteOnly** | **Number**| Return only favorited lists. | [optional] [default to 0]
  **onlyMine** | **Number**| Return only current user lists. | [optional] [default to 0]
 
@@ -4270,44 +4197,44 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getListsOfContact"></a>
-# **getListsOfContact**
+
+## getListsOfContact
+
 > GetListsOfContactPaginatedResponse getListsOfContact(id, opts)
 
-Get a contact's lists
+Get a contact&#39;s lists
 
 Get all the lists in which a contact is included.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getListsOfContact(id, opts).then(function(data) {
+apiInstance.getListsOfContact(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4325,11 +4252,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getMessagePreview"></a>
-# **getMessagePreview**
+
+## getMessagePreview
+
 > GetMessagePreviewResponse getMessagePreview(opts)
 
 Preview message
@@ -4337,18 +4265,17 @@ Preview message
 Get a messages preview (with dynamic fields merged) of up to 100 messages per session. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'text': "Test message test", // String | Message text. Required if **template_id** is not set.
   'templateId': 1, // Number | Template used instead of message text. Required if **text** is not set.
   'sendingTime': 1565606455, // Number | DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time is in unix timestamp format. Default is now.
@@ -4367,9 +4294,9 @@ var opts = {
   'local': 0, // Number | Treat phone numbers passed in the \\'phones\\' field as local.
   'localCountry': "US" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 };
-apiInstance.getMessagePreview(opts).then(function(data) {
+apiInstance.getMessagePreview(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -4377,13 +4304,14 @@ apiInstance.getMessagePreview(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **text** | **String**| Message text. Required if **template_id** is not set. | [optional] 
  **templateId** | **Number**| Template used instead of message text. Required if **text** is not set. | [optional] 
  **sendingTime** | **Number**| DEPRECATED, consider using sendingDateTime and sendingTimezone parameters instead: Optional (required with rrule set). Message sending time is in unix timestamp format. Default is now. | [optional] 
  **sendingDateTime** | **String**| Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone. | [optional] 
- **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
+ **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when the sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
  **contacts** | **String**| Comma-separated array of contact resources id message will be sent to. | [optional] 
  **lists** | **String**| Comma-separated array of list resources id message will be sent to. | [optional] 
  **phones** | **String**| Comma-separated array of E.164 phone numbers message will be sent to. | [optional] 
@@ -4394,8 +4322,8 @@ Name | Type | Description  | Notes
  **rule** | **String**| An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. | [optional] 
  **createChat** | **Number**| Should the sending method try to create new Chat(if not exist) with specified recipients? | [optional] [default to 0]
  **tts** | **Number**| Send Text-to-Speech message. | [optional] [default to 0]
- **local** | **Number**| Treat phone numbers passed in the \\'phones\\' field as local. | [optional] [default to 0]
- **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country. | [optional] 
+ **local** | **Number**| Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. | [optional] [default to 0]
+ **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. | [optional] 
 
 ### Return type
 
@@ -4407,11 +4335,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getMessagePrice"></a>
-# **getMessagePrice**
+
+## getMessagePrice
+
 > GetMessagePriceResponse getMessagePrice(opts)
 
 Check message price
@@ -4419,18 +4348,17 @@ Check message price
 Check pricing for a new outbound message.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'includeBlocked': 0, // Number | Should we show the pricing for blocked contacts?
   'text': "Test message test", // String | Message text. Required if the **template_id** is not set.
   'templateId': 1, // Number | Template used instead of message text. Required if the **text** is not set.
@@ -4450,15 +4378,16 @@ var opts = {
   'local': 0, // Number | Treat phone numbers passed in the \\'phones\\' field as local.
   'localCountry': "US" // String | The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country.
 };
-apiInstance.getMessagePrice(opts).then(function(data) {
+apiInstance.getMessagePrice(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4467,7 +4396,7 @@ Name | Type | Description  | Notes
  **templateId** | **Number**| Template used instead of message text. Required if the **text** is not set. | [optional] 
  **sendingTime** | **Number**| DEPRECATED, consider using the sendingDateTime and sendingTimezone parameters instead: optional (required with rrule set). Message sending time is in unix timestamp format. Default is now. | [optional] 
  **sendingDateTime** | **String**| Sending time is in Y-m-d H:i:s format (e.g. 2016-05-27 13:02:33). This time is relative to the sendingTimezone. | [optional] 
- **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime = \\\"2016-05-27 13:02:33\\\" and sendingTimezone = \\\"America/Buenos_Aires\\\", your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
+ **sendingTimezone** | **String**| The ID or ISO-name of the timezone used for sending when sendingDateTime parameter is set, e.g. if you specify sendingDateTime &#x3D; \\\&quot;2016-05-27 13:02:33\\\&quot; and sendingTimezone &#x3D; \\\&quot;America/Buenos_Aires\\\&quot;, your message will be sent on May 27, 2016 13:02:33 Buenos Aires time, or 16:02:33 UTC. Default is the account timezone. | [optional] 
  **contacts** | **String**| Comma-separated array of contact resources id message will be sent to. | [optional] 
  **lists** | **String**| Comma-separated array of list resources id message will be sent to. | [optional] 
  **phones** | **String**| Comma-separated array of E.164 phone numbers message will be sent to. | [optional] 
@@ -4478,8 +4407,8 @@ Name | Type | Description  | Notes
  **rule** | **String**| An iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as the start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details. | [optional] 
  **createChat** | **Number**| Should the sending method try to create new Chat (if not exist) with specified recipients? | [optional] [default to 0]
  **tts** | **Number**| Send a Text-to-Speech message. | [optional] [default to 0]
- **local** | **Number**| Treat phone numbers passed in the \\'phones\\' field as local. | [optional] [default to 0]
- **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\'local\\' is set to true. Default is the account country. | [optional] 
+ **local** | **Number**| Treat phone numbers passed in the \\&#39;phones\\&#39; field as local. | [optional] [default to 0]
+ **localCountry** | **String**| The 2-letter ISO country code for local phone numbers, used when \\&#39;local\\&#39; is set to true. Default is the account country. | [optional] 
 
 ### Return type
 
@@ -4491,40 +4420,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getMessageSession"></a>
-# **getMessageSession**
+
+## getMessageSession
+
 > MessageSession getMessageSession(id)
 
-Get a session`s details
+Get a session&#x60;s details
 
 Get a specific session’s details.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | Session ID.
-
-apiInstance.getMessageSession(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | Session ID.
+apiInstance.getMessageSession(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4540,43 +4469,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getMessageSessionStat"></a>
-# **getMessageSessionStat**
+
+## getMessageSessionStat
+
 > GetMessageSessionStatResponse getMessageSessionStat(id, opts)
 
-Get a session`s statistics
-
-
+Get a session&#x60;s statistics
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let opts = {
   'includeDeleted': 0 // Number | Search also in deleted messages.
 };
-apiInstance.getMessageSessionStat(id, opts).then(function(data) {
+apiInstance.getMessageSessionStat(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4593,46 +4520,46 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getMessagesBySessionId"></a>
-# **getMessagesBySessionId**
+
+## getMessagesBySessionId
+
 > GetMessagesBySessionIdPaginatedResponse getMessagesBySessionId(id, opts)
 
-Get a session`s messages
+Get a session&#x60;s messages
 
-A useful synonym for the \"messages/search\" command with the provided \"sessionId\" parameter.
+A useful synonym for the \&quot;messages/search\&quot; command with the provided \&quot;sessionId\&quot; parameter.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'statuses': "statuses_example", // String | Find messages by status.
   'includeDeleted': 0 // Number | Search also in deleted messages.
 };
-apiInstance.getMessagesBySessionId(id, opts).then(function(data) {
+apiInstance.getMessagesBySessionId(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4652,11 +4579,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getMessagingCounters"></a>
-# **getMessagingCounters**
+
+## getMessagingCounters
+
 > GetMessagingCountersResponse getMessagingCounters()
 
 Get sent/received messages counters values
@@ -4664,25 +4592,26 @@ Get sent/received messages counters values
 Get total contacts, sent messages and received messages counters values.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getMessagingCounters().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getMessagingCounters().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -4695,37 +4624,35 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getMessagingStat"></a>
-# **getMessagingStat**
-> GetMessagingStatResponse getMessagingStat(opts)
+
+## getMessagingStat
+
+> [MessagingStatItem] getMessagingStat(opts)
 
 Get messaging statistics
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'by': "off", // String | *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year. 
   'start': 1430438400, // Number | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
   'end': 1431648000 // Number | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 };
-apiInstance.getMessagingStat(opts).then(function(data) {
+apiInstance.getMessagingStat(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -4733,15 +4660,16 @@ apiInstance.getMessagingStat(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **by** | **String**| *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year.  | [optional] [default to off]
+ **by** | **String**| *   **off** - to get total values per specified time interval; *   **day** - to show values grouped by day; *   **month** - to show values grouped by month; *   **year** - to show values grouped by year.  | [optional] [default to &#39;off&#39;]
  **start** | **Number**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | [optional] 
  **end** | **Number**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | [optional] 
 
 ### Return type
 
-[**GetMessagingStatResponse**](GetMessagingStatResponse.md)
+[**[MessagingStatItem]**](MessagingStatItem.md)
 
 ### Authorization
 
@@ -4749,11 +4677,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getOutboundMessage"></a>
-# **getOutboundMessage**
+
+## getOutboundMessage
+
 > MessageOut getOutboundMessage(id)
 
 Get a single message
@@ -4761,28 +4690,27 @@ Get a single message
 Get a single outgoing message.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getOutboundMessage(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getOutboundMessage(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4798,11 +4726,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getOutboundMessagesHistory"></a>
-# **getOutboundMessagesHistory**
+
+## getOutboundMessagesHistory
+
 > GetOutboundMessagesHistoryPaginatedResponse getOutboundMessagesHistory(opts)
 
 Get history
@@ -4810,27 +4739,26 @@ Get history
 Get the outbound messages history.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'limit': 10, // Number | The number of results per page.
   'lastId': 56, // Number | Filter results by ID, selecting all values lesser than the specified ID.
   'query': "query_example", // String | Find message by specified search query.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.getOutboundMessagesHistory(opts).then(function(data) {
+apiInstance.getOutboundMessagesHistory(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -4838,13 +4766,14 @@ apiInstance.getOutboundMessagesHistory(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. | [optional] 
  **query** | **String**| Find message by specified search query. | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -4856,40 +4785,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getScheduledMessage"></a>
-# **getScheduledMessage**
+
+## getScheduledMessage
+
 > MessagesIcs getScheduledMessage(id)
 
 Get a single scheduled message
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getScheduledMessage(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getScheduledMessage(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4905,40 +4832,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getSenderId"></a>
-# **getSenderId**
+
+## getSenderId
+
 > SenderId getSenderId(id)
 
 Get the details of a specific Sender ID
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getSenderId(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getSenderId(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -4954,42 +4879,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getSenderIds"></a>
-# **getSenderIds**
+
+## getSenderIds
+
 > GetSenderIdsPaginatedResponse getSenderIds(opts)
 
 Get all your approved Sender IDs
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getSenderIds(opts).then(function(data) {
+apiInstance.getSenderIds(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5006,41 +4930,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getSenderSettings"></a>
-# **getSenderSettings**
+
+## getSenderSettings
+
 > GetSenderSettingsResponse getSenderSettings(opts)
 
 Get current sender settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'country': "US" // String | Return sender settings enabled for sending to a specified country. Should be 2 upper-case characters.
 };
-apiInstance.getSenderSettings(opts).then(function(data) {
+apiInstance.getSenderSettings(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5056,44 +4979,43 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getSpendingStat"></a>
-# **getSpendingStat**
+
+## getSpendingStat
+
 > GetSpendingStatPaginatedResponse getSpendingStat(opts)
 
 Get spending statistics
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'start': "2018-11-11 11:11", // String | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
   'end': "2019-11-11 11:11" // String | Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 };
-apiInstance.getSpendingStat(opts).then(function(data) {
+apiInstance.getSpendingStat(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5112,196 +5034,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getSubaccount"></a>
-# **getSubaccount**
-> User getSubaccount(id)
-
-Get sub-account information
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## getTemplate
 
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getSubaccount(id).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Number**|  | 
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getSubaccounts"></a>
-# **getSubaccounts**
-> User getSubaccounts(opts)
-
-Get a sub-accounts list
-
-
-
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
-  'page': 1, // Number | Fetch specified results page.
-  'limit': 10 // Number | The number of results per page.
-};
-apiInstance.getSubaccounts(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
- **limit** | **Number**| The number of results per page. | [optional] [default to 10]
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getSubaccountsWithTokens"></a>
-# **getSubaccountsWithTokens**
-> GetSubaccountsWithTokensResponse getSubaccountsWithTokens(getSubaccountsWithTokensInputObject, opts)
-
-Get all sub-accounts with their REST API tokens associated with a specified app name
-
-Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
-
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var getSubaccountsWithTokensInputObject = new TextmagicClient.GetSubaccountsWithTokensInputObject(); // GetSubaccountsWithTokensInputObject | 
-
-var opts = { 
-  'page': 1, // Number | Fetch specified results page.
-  'limit': 10 // Number | The number of results per page.
-};
-apiInstance.getSubaccountsWithTokens(getSubaccountsWithTokensInputObject, opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **getSubaccountsWithTokensInputObject** | [**GetSubaccountsWithTokensInputObject**](GetSubaccountsWithTokensInputObject.md)|  | 
- **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
- **limit** | **Number**| The number of results per page. | [optional] [default to 10]
-
-### Return type
-
-[**GetSubaccountsWithTokensResponse**](GetSubaccountsWithTokensResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getTemplate"></a>
-# **getTemplate**
 > MessageTemplate getTemplate(id)
 
-Get a template`s details
+Get a template&#x60;s details
 
 Get a single template.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getTemplate(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getTemplate(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5317,41 +5083,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getTimezones"></a>
-# **getTimezones**
-> GetTimezonesResponse getTimezones(opts)
+
+## getTimezones
+
+> Object getTimezones(opts)
 
 Get timezones
 
 Return all available timezone IDs
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'full': 0 // Number | Return full info about timezones in array (0 or 1). Default is 0.
 };
-apiInstance.getTimezones(opts).then(function(data) {
+apiInstance.getTimezones(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5359,7 +5126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetTimezonesResponse**](GetTimezonesResponse.md)
+**Object**
 
 ### Authorization
 
@@ -5367,11 +5134,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getUnreadMessagesTotal"></a>
-# **getUnreadMessagesTotal**
+
+## getUnreadMessagesTotal
+
 > GetUnreadMessagesTotalResponse getUnreadMessagesTotal()
 
 Get unread messages number
@@ -5379,25 +5147,26 @@ Get unread messages number
 Get the total amount of unread messages in the current user chats.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.getUnreadMessagesTotal().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.getUnreadMessagesTotal().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -5410,40 +5179,38 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getUnsubscribedContact"></a>
-# **getUnsubscribedContact**
+
+## getUnsubscribedContact
+
 > UnsubscribedContact getUnsubscribedContact(id)
 
 Get the details of a specific unsubscribed contact
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-apiInstance.getUnsubscribedContact(id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+apiInstance.getUnsubscribedContact(id).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5459,11 +5226,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getUnsubscribers"></a>
-# **getUnsubscribers**
+
+## getUnsubscribers
+
 > GetUnsubscribersPaginatedResponse getUnsubscribers(opts)
 
 Get all unsubscribed contacts
@@ -5471,30 +5239,30 @@ Get all unsubscribed contacts
 When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed status, use: 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10 // Number | The number of results per page.
 };
-apiInstance.getUnsubscribers(opts).then(function(data) {
+apiInstance.getUnsubscribers(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5511,43 +5279,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getUserDedicatedNumbers"></a>
-# **getUserDedicatedNumbers**
+
+## getUserDedicatedNumbers
+
 > GetUserDedicatedNumbersPaginatedResponse getUserDedicatedNumbers(opts)
 
 Get all your dedicated numbers
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'surveyId': 56 // Number | Fetch only those numbers that are ready for the survey.
 };
-apiInstance.getUserDedicatedNumbers(opts).then(function(data) {
+apiInstance.getUserDedicatedNumbers(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -5565,40 +5332,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="importContacts"></a>
-# **importContacts**
-> ResourceLinkResponse importContacts(file, column, opts)
+
+## importContacts
+
+> ResourceLinkResponse importContacts(column, file, opts)
 
 Import contacts
 
 Import contacts from the CSV, XLS or XLSX file.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var file = "/path/to/file.txt"; // File | File containing contacts in csv or xls(x) formats.
-
-var column = "0:firstName;1:lastName;3:phone;4:email"; // String | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required. 
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let column = "0:firstName;1:lastName;3:phone;4:email"; // String | Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required. 
+let file = "/path/to/file"; // File | File containing contacts in csv or xls(x) formats.
+let opts = {
   'listId': 443, // Number | List that ID contacts will be imported to. Ignored if `listName` is specified. 
   'listName': "A new list" // String | List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified. 
 };
-apiInstance.importContacts(file, column, opts).then(function(data) {
+apiInstance.importContacts(column, file, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -5606,12 +5371,13 @@ apiInstance.importContacts(file, column, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **column** | **String**| Import file column mapping. The string must contain sub-strings of mapping in format &#x60;columnNumber:field&#x60; glued by &#x60;;&#x60;. For example: &#x60;0:firstName;1:lastName;3:phone;4:email&#x60; where the value before &#x60;:&#x60; is a number of the column in the file, and the value after &#x60;:&#x60; is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: &#x60;firstName&#x60;, &#x60;lastName&#x60;, &#x60;phone&#x60;, &#x60;email&#x60;. Existing of &#x60;phone&#x60; mapping is required.  | 
  **file** | **File**| File containing contacts in csv or xls(x) formats. | 
- **column** | **String**| Import file column mapping. The string must contain sub-strings of mapping in format `columnNumber:field` glued by `;`. For example: `0:firstName;1:lastName;3:phone;4:email` where the value before `:` is a number of the column in the file, and the value after `:` is a field of the newly created contact or the ID of a custom field. Numbers of columns begin from zero. Allowed built-in contact fields are: `firstName`, `lastName`, `phone`, `email`. Existing of `phone` mapping is required.  | 
- **listId** | **Number**| List that ID contacts will be imported to. Ignored if `listName` is specified.  | [optional] 
- **listName** | **String**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if `listId` is specified.  | [optional] 
+ **listId** | **Number**| List that ID contacts will be imported to. Ignored if &#x60;listName&#x60; is specified.  | [optional] 
+ **listName** | **String**| List name. This list will be created during import. If such name is already taken, an ordinal (1, 2, ...) will be added to the end. Ignored if &#x60;listId&#x60; is specified.  | [optional] 
 
 ### Return type
 
@@ -5623,60 +5389,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
-
-<a name="inviteSubaccount"></a>
-# **inviteSubaccount**
-> inviteSubaccount(inviteSubaccountInputObject)
-
-Invite a new sub-account
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
 
+## markChatsReadBulk
 
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var inviteSubaccountInputObject = new TextmagicClient.InviteSubaccountInputObject(); // InviteSubaccountInputObject | 
-
-apiInstance.inviteSubaccount(inviteSubaccountInputObject).then(function() {
-  console.log('API called successfully.');
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inviteSubaccountInputObject** | [**InviteSubaccountInputObject**](InviteSubaccountInputObject.md)|  | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-<a name="markChatsReadBulk"></a>
-# **markChatsReadBulk**
 > markChatsReadBulk(markChatsReadBulkInputObject)
 
 Mark chats as read (bulk)
@@ -5684,22 +5402,20 @@ Mark chats as read (bulk)
 Mark several chats as read by chat IDs or mark all chats as read
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var markChatsReadBulkInputObject = new TextmagicClient.MarkChatsReadBulkInputObject(); // MarkChatsReadBulkInputObject | 
-
-apiInstance.markChatsReadBulk(markChatsReadBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let markChatsReadBulkInputObject = new TextMagicClient.MarkChatsUnreadBulkRequest(); // MarkChatsUnreadBulkRequest | 
+apiInstance.markChatsReadBulk(markChatsReadBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -5707,9 +5423,10 @@ apiInstance.markChatsReadBulk(markChatsReadBulkInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **markChatsReadBulkInputObject** | [**MarkChatsReadBulkInputObject**](MarkChatsReadBulkInputObject.md)|  | 
+ **markChatsReadBulkInputObject** | [**MarkChatsUnreadBulkRequest**](MarkChatsUnreadBulkRequest.md)|  | 
 
 ### Return type
 
@@ -5721,11 +5438,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="markChatsUnreadBulk"></a>
-# **markChatsUnreadBulk**
+
+## markChatsUnreadBulk
+
 > markChatsUnreadBulk(markChatsUnreadBulkInputObject)
 
 Mark chats as unread (bulk)
@@ -5733,22 +5451,20 @@ Mark chats as unread (bulk)
 Mark several chats as UNread by chat IDs or mark all chats as UNread
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var markChatsUnreadBulkInputObject = new TextmagicClient.MarkChatsUnreadBulkInputObject(); // MarkChatsUnreadBulkInputObject | 
-
-apiInstance.markChatsUnreadBulk(markChatsUnreadBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let markChatsUnreadBulkInputObject = new TextMagicClient.MarkChatsUnreadBulkRequest(); // MarkChatsUnreadBulkRequest | 
+apiInstance.markChatsUnreadBulk(markChatsUnreadBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -5756,9 +5472,10 @@ apiInstance.markChatsUnreadBulk(markChatsUnreadBulkInputObject).then(function() 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **markChatsUnreadBulkInputObject** | [**MarkChatsUnreadBulkInputObject**](MarkChatsUnreadBulkInputObject.md)|  | 
+ **markChatsUnreadBulkInputObject** | [**MarkChatsUnreadBulkRequest**](MarkChatsUnreadBulkRequest.md)|  | 
 
 ### Return type
 
@@ -5770,34 +5487,31 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="muteChat"></a>
-# **muteChat**
+
+## muteChat
+
 > ResourceLinkResponse muteChat(muteChatInputObject)
 
 Mute chat sounds
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var muteChatInputObject = new TextmagicClient.MuteChatInputObject(); // MuteChatInputObject | 
-
-apiInstance.muteChat(muteChatInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let muteChatInputObject = new TextMagicClient.MuteChatRequest(); // MuteChatRequest | 
+apiInstance.muteChat(muteChatInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -5805,9 +5519,10 @@ apiInstance.muteChat(muteChatInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **muteChatInputObject** | [**MuteChatInputObject**](MuteChatInputObject.md)|  | 
+ **muteChatInputObject** | [**MuteChatRequest**](MuteChatRequest.md)|  | 
 
 ### Return type
 
@@ -5819,11 +5534,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="muteChatsBulk"></a>
-# **muteChatsBulk**
+
+## muteChatsBulk
+
 > muteChatsBulk(muteChatsBulkInputObject)
 
 Mute chats (bulk)
@@ -5831,22 +5547,20 @@ Mute chats (bulk)
 Mute several chats by chat ids or mute all chats.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var muteChatsBulkInputObject = new TextmagicClient.MuteChatsBulkInputObject(); // MuteChatsBulkInputObject | 
-
-apiInstance.muteChatsBulk(muteChatsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let muteChatsBulkInputObject = new TextMagicClient.MuteChatsBulkRequest(); // MuteChatsBulkRequest | 
+apiInstance.muteChatsBulk(muteChatsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -5854,9 +5568,10 @@ apiInstance.muteChatsBulk(muteChatsBulkInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **muteChatsBulkInputObject** | [**MuteChatsBulkInputObject**](MuteChatsBulkInputObject.md)|  | 
+ **muteChatsBulkInputObject** | [**MuteChatsBulkRequest**](MuteChatsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -5868,11 +5583,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="ping"></a>
-# **ping**
+
+## ping
+
 > PingResponse ping()
 
 Ping
@@ -5880,25 +5596,26 @@ Ping
 Make a simple ping request.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-apiInstance.ping().then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+apiInstance.ping().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -5911,11 +5628,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="reopenChatsBulk"></a>
-# **reopenChatsBulk**
+
+## reopenChatsBulk
+
 > reopenChatsBulk(reopenChatsBulkInputObject)
 
 Reopen chats (bulk)
@@ -5923,22 +5641,20 @@ Reopen chats (bulk)
 Reopen chats by chat IDs or reopen all chats
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var reopenChatsBulkInputObject = new TextmagicClient.ReopenChatsBulkInputObject(); // ReopenChatsBulkInputObject | 
-
-apiInstance.reopenChatsBulk(reopenChatsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let reopenChatsBulkInputObject = new TextMagicClient.MarkChatsUnreadBulkRequest(); // MarkChatsUnreadBulkRequest | 
+apiInstance.reopenChatsBulk(reopenChatsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -5946,9 +5662,10 @@ apiInstance.reopenChatsBulk(reopenChatsBulkInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reopenChatsBulkInputObject** | [**ReopenChatsBulkInputObject**](ReopenChatsBulkInputObject.md)|  | 
+ **reopenChatsBulkInputObject** | [**MarkChatsUnreadBulkRequest**](MarkChatsUnreadBulkRequest.md)|  | 
 
 ### Return type
 
@@ -5960,83 +5677,33 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="requestNewSubaccountToken"></a>
-# **requestNewSubaccountToken**
-> User requestNewSubaccountToken(requestNewSubaccountTokenInputObject)
 
-Request a new REST API token for sub-account
+## requestSenderId
 
-Returning user object, key and app name.
-
-### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
-
-// Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
-BasicAuth.username = 'YOUR USERNAME';
-BasicAuth.password = 'YOUR PASSWORD';
-
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var requestNewSubaccountTokenInputObject = new TextmagicClient.RequestNewSubaccountTokenInputObject(); // RequestNewSubaccountTokenInputObject | 
-
-apiInstance.requestNewSubaccountToken(requestNewSubaccountTokenInputObject).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestNewSubaccountTokenInputObject** | [**RequestNewSubaccountTokenInputObject**](RequestNewSubaccountTokenInputObject.md)|  | 
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="requestSenderId"></a>
-# **requestSenderId**
 > ResourceLinkResponse requestSenderId(requestSenderIdInputObject)
 
 Apply for a new Sender ID
 
-> Sender IDs are shared among all of your sub-accounts.
+&gt; Sender IDs are shared among all of your sub-accounts.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var requestSenderIdInputObject = new TextmagicClient.RequestSenderIdInputObject(); // RequestSenderIdInputObject | 
-
-apiInstance.requestSenderId(requestSenderIdInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let requestSenderIdInputObject = new TextMagicClient.RequestSenderIdRequest(); // RequestSenderIdRequest | 
+apiInstance.requestSenderId(requestSenderIdInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6044,9 +5711,10 @@ apiInstance.requestSenderId(requestSenderIdInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestSenderIdInputObject** | [**RequestSenderIdInputObject**](RequestSenderIdInputObject.md)|  | 
+ **requestSenderIdInputObject** | [**RequestSenderIdRequest**](RequestSenderIdRequest.md)|  | 
 
 ### Return type
 
@@ -6058,11 +5726,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="scheduleEmailCampaign"></a>
-# **scheduleEmailCampaign**
+
+## scheduleEmailCampaign
+
 > ScheduleEmailCampaignResponse scheduleEmailCampaign(scheduleEmailCampaignInputObject)
 
 Schedule new email campaign
@@ -6070,22 +5739,20 @@ Schedule new email campaign
 Creates a new scheduled email campaign that will be sent at a specified time or according to a recurring schedule.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var scheduleEmailCampaignInputObject = new TextmagicClient.ScheduleEmailCampaignInputObject(); // ScheduleEmailCampaignInputObject | 
-
-apiInstance.scheduleEmailCampaign(scheduleEmailCampaignInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let scheduleEmailCampaignInputObject = new TextMagicClient.ScheduleEmailCampaignRequest(); // ScheduleEmailCampaignRequest | 
+apiInstance.scheduleEmailCampaign(scheduleEmailCampaignInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6093,9 +5760,10 @@ apiInstance.scheduleEmailCampaign(scheduleEmailCampaignInputObject).then(functio
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scheduleEmailCampaignInputObject** | [**ScheduleEmailCampaignInputObject**](ScheduleEmailCampaignInputObject.md)|  | 
+ **scheduleEmailCampaignInputObject** | [**ScheduleEmailCampaignRequest**](ScheduleEmailCampaignRequest.md)|  | 
 
 ### Return type
 
@@ -6107,43 +5775,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="searchChats"></a>
-# **searchChats**
+
+## searchChats
+
 > SearchChatsPaginatedResponse searchChats(opts)
 
 Find chats by message text
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example" // String | Find chats by specified search query.
 };
-apiInstance.searchChats(opts).then(function(data) {
+apiInstance.searchChats(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -6161,43 +5828,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchChatsByIds"></a>
-# **searchChatsByIds**
+
+## searchChatsByIds
+
 > SearchChatsByIdsPaginatedResponse searchChatsByIds(opts)
 
 Find chats (bulk)
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'ids': "ids_example" // String | Find chats by ID(s).
 };
-apiInstance.searchChatsByIds(opts).then(function(data) {
+apiInstance.searchChatsByIds(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -6215,11 +5881,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchChatsByReceipent"></a>
-# **searchChatsByReceipent**
+
+## searchChatsByReceipent
+
 > SearchChatsByReceipentPaginatedResponse searchChatsByReceipent(opts)
 
 Find chats by recipient
@@ -6227,26 +5894,25 @@ Find chats by recipient
 Find chats by recipient (contact, list name or phone number).
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find chats by specified search query.
-  'orderBy': "id" // String | Order results by some field. Default is id.
+  'orderBy': "'id'" // String | Order results by some field. Default is id.
 };
-apiInstance.searchChatsByReceipent(opts).then(function(data) {
+apiInstance.searchChatsByReceipent(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6254,12 +5920,13 @@ apiInstance.searchChatsByReceipent(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find chats by specified search query. | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
 
 ### Return type
 
@@ -6271,30 +5938,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchContacts"></a>
-# **searchContacts**
+
+## searchContacts
+
 > SearchContactsPaginatedResponse searchContacts(opts)
 
 Find contacts by given criteria
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'shared': 0, // Number | Should shared contacts be included?
@@ -6305,18 +5970,20 @@ var opts = {
   'local': 0, // Number | Treat phone number passed in the \"query\" field as local. Default is 0.
   'exactMatch': 0, // Number | Return only exactly matching contacts. Default is 0.
   'country': "country_example", // String | The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'", // String | Order direction. Default is desc.
+  'tagIds': "tagIds_example" // String | Find contacts by tag ID(s). Multiple IDs can be separated by comma.
 };
-apiInstance.searchContacts(opts).then(function(data) {
+apiInstance.searchContacts(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -6327,11 +5994,12 @@ Name | Type | Description  | Notes
  **listId** | **Number**| Find contacts by List ID. | [optional] 
  **includeBlocked** | **Number**| Should blocked contacts be included? | [optional] 
  **query** | **String**| Find contacts by specified search query. | [optional] 
- **local** | **Number**| Treat phone number passed in the \"query\" field as local. Default is 0. | [optional] [default to 0]
+ **local** | **Number**| Treat phone number passed in the \&quot;query\&quot; field as local. Default is 0. | [optional] [default to 0]
  **exactMatch** | **Number**| Return only exactly matching contacts. Default is 0. | [optional] [default to 0]
- **country** | **String**| The 2-letter ISO country code for local phone numbers, used when \"local\" is set to true. Default is the account country. | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **country** | **String**| The 2-letter ISO country code for local phone numbers, used when \&quot;local\&quot; is set to true. Default is the account country. | [optional] 
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
+ **tagIds** | **String**| Find contacts by tag ID(s). Multiple IDs can be separated by comma. | [optional] 
 
 ### Return type
 
@@ -6343,11 +6011,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchInboundMessages"></a>
-# **searchInboundMessages**
+
+## searchInboundMessages
+
 > SearchInboundMessagesPaginatedResponse searchInboundMessages(opts)
 
 Find inbound messages
@@ -6355,29 +6024,28 @@ Find inbound messages
 Find inbound messages by given parameters.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'ids': "ids_example", // String | Find message by ID(s).
   'query': "query_example", // String | Find recipients by specified search query.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc", // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'", // String | Order direction. Default is desc.
   'expand': 0 // Number | Expand by adding firstName, lastName and contactId.
 };
-apiInstance.searchInboundMessages(opts).then(function(data) {
+apiInstance.searchInboundMessages(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6385,14 +6053,15 @@ apiInstance.searchInboundMessages(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **ids** | **String**| Find message by ID(s). | [optional] 
  **query** | **String**| Find recipients by specified search query. | [optional] 
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
  **expand** | **Number**| Expand by adding firstName, lastName and contactId. | [optional] [default to 0]
 
 ### Return type
@@ -6405,48 +6074,47 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchLists"></a>
-# **searchLists**
+
+## searchLists
+
 > SearchListsPaginatedResponse searchLists(opts)
 
 Find lists by given criteria
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'ids': "1,2,3,4", // String | Find lists by IDs.
   'query': "A", // String | Find lists by specified search query.
   'onlyMine': 0, // Number | Return only current user lists.
   'onlyDefault': 0, // Number | Return only default lists.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.searchLists(opts).then(function(data) {
+apiInstance.searchLists(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -6456,8 +6124,8 @@ Name | Type | Description  | Notes
  **query** | **String**| Find lists by specified search query. | [optional] 
  **onlyMine** | **Number**| Return only current user lists. | [optional] [default to 0]
  **onlyDefault** | **Number**| Return only default lists. | [optional] [default to 0]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -6469,11 +6137,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchOutboundMessages"></a>
-# **searchOutboundMessages**
+
+## searchOutboundMessages
+
 > SearchOutboundMessagesPaginatedResponse searchOutboundMessages(opts)
 
 Find messages
@@ -6481,18 +6150,17 @@ Find messages
 Find outbound messages by given parameters.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'lastId': 56, // Number | Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified.
@@ -6502,9 +6170,9 @@ var opts = {
   'includeDeleted': 0, // Number | Search also in deleted messages.
   'query': "query_example" // String | Find messages by specified search query.
 };
-apiInstance.searchOutboundMessages(opts).then(function(data) {
+apiInstance.searchOutboundMessages(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6512,11 +6180,12 @@ apiInstance.searchOutboundMessages(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
- **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\'page\\' parameter is ignored when \\'lastId\\' is specified. | [optional] 
+ **lastId** | **Number**| Filter results by ID, selecting all values lesser than the specified ID. Note that the \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified. | [optional] 
  **ids** | **String**| Find message by ID(s). | [optional] 
  **sessionId** | **Number**| Find messages by session ID. | [optional] 
  **statuses** | **String**| Find messages by status. | [optional] 
@@ -6533,41 +6202,39 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchScheduledMessages"></a>
-# **searchScheduledMessages**
+
+## searchScheduledMessages
+
 > SearchScheduledMessagesPaginatedResponse searchScheduledMessages(opts)
 
 Find scheduled messages
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'query': "query_example", // String | Find messages by specified search query.
   'ids': "ids_example", // String | Find schedules by ID(s).
-  'status': "x", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
-  'orderBy': "id", // String | Order results by some field. Default is id.
-  'direction': "desc" // String | Order direction. Default is desc.
+  'status': "'x'", // String | Fetch schedules with a specific status: a - actual, c - completed, x - all.
+  'orderBy': "'id'", // String | Order results by some field. Default is id.
+  'direction': "'desc'" // String | Order direction. Default is desc.
 };
-apiInstance.searchScheduledMessages(opts).then(function(data) {
+apiInstance.searchScheduledMessages(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6575,15 +6242,16 @@ apiInstance.searchScheduledMessages(opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Number**| Fetch specified results page. | [optional] [default to 1]
  **limit** | **Number**| The number of results per page. | [optional] [default to 10]
  **query** | **String**| Find messages by specified search query. | [optional] 
  **ids** | **String**| Find schedules by ID(s). | [optional] 
- **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to x]
- **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to id]
- **direction** | **String**| Order direction. Default is desc. | [optional] [default to desc]
+ **status** | **String**| Fetch schedules with a specific status: a - actual, c - completed, x - all. | [optional] [default to &#39;x&#39;]
+ **orderBy** | **String**| Order results by some field. Default is id. | [optional] [default to &#39;id&#39;]
+ **direction** | **String**| Order direction. Default is desc. | [optional] [default to &#39;desc&#39;]
 
 ### Return type
 
@@ -6595,11 +6263,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="searchTemplates"></a>
-# **searchTemplates**
+
+## searchTemplates
+
 > SearchTemplatesPaginatedResponse searchTemplates(opts)
 
 Find templates by criteria
@@ -6607,33 +6276,33 @@ Find templates by criteria
 Find user templates by given parameters.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var opts = { 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let opts = {
   'page': 1, // Number | Fetch specified results page.
   'limit': 10, // Number | The number of results per page.
   'ids': "ids_example", // String | Find template by ID(s).
   'name': "name_example", // String | Find template by name.
   'content': "content_example" // String | Find template by content.
 };
-apiInstance.searchTemplates(opts).then(function(data) {
+apiInstance.searchTemplates(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -6653,11 +6322,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="sendMessage"></a>
-# **sendMessage**
+
+## sendMessage
+
 > SendMessageResponse sendMessage(sendMessageInputObject)
 
 Send message
@@ -6665,22 +6335,20 @@ Send message
 This is the main entrypoint to send messages. See the examples above for the reference.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var sendMessageInputObject = new TextmagicClient.SendMessageInputObject(); // SendMessageInputObject | 
-
-apiInstance.sendMessage(sendMessageInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let sendMessageInputObject = new TextMagicClient.SendMessageRequest(); // SendMessageRequest | 
+apiInstance.sendMessage(sendMessageInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6688,9 +6356,10 @@ apiInstance.sendMessage(sendMessageInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendMessageInputObject** | [**SendMessageInputObject**](SendMessageInputObject.md)|  | 
+ **sendMessageInputObject** | [**SendMessageRequest**](SendMessageRequest.md)|  | 
 
 ### Return type
 
@@ -6702,11 +6371,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="setChatStatus"></a>
-# **setChatStatus**
+
+## setChatStatus
+
 > ResourceLinkResponse setChatStatus(setChatStatusInputObject)
 
 Change chat status
@@ -6714,22 +6384,20 @@ Change chat status
 Set the status of the chat given by ID.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var setChatStatusInputObject = new TextmagicClient.SetChatStatusInputObject(); // SetChatStatusInputObject | 
-
-apiInstance.setChatStatus(setChatStatusInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let setChatStatusInputObject = new TextMagicClient.SetChatStatusRequest(); // SetChatStatusRequest | 
+apiInstance.setChatStatus(setChatStatusInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6737,9 +6405,10 @@ apiInstance.setChatStatus(setChatStatusInputObject).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **setChatStatusInputObject** | [**SetChatStatusInputObject**](SetChatStatusInputObject.md)|  | 
+ **setChatStatusInputObject** | [**SetChatStatusRequest**](SetChatStatusRequest.md)|  | 
 
 ### Return type
 
@@ -6751,11 +6420,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="unblockContact"></a>
-# **unblockContact**
+
+## unblockContact
+
 > unblockContact(unblockContactInputObject)
 
 Unblock a contact by phone number
@@ -6763,22 +6433,20 @@ Unblock a contact by phone number
 Unblock a contact by phone number
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var unblockContactInputObject = new TextmagicClient.UnblockContactInputObject(); // UnblockContactInputObject | 
-
-apiInstance.unblockContact(unblockContactInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let unblockContactInputObject = new TextMagicClient.BlockContactRequest(); // BlockContactRequest | 
+apiInstance.unblockContact(unblockContactInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6786,9 +6454,10 @@ apiInstance.unblockContact(unblockContactInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unblockContactInputObject** | [**UnblockContactInputObject**](UnblockContactInputObject.md)|  | 
+ **unblockContactInputObject** | [**BlockContactRequest**](BlockContactRequest.md)|  | 
 
 ### Return type
 
@@ -6800,11 +6469,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="unblockContactsBulk"></a>
-# **unblockContactsBulk**
+
+## unblockContactsBulk
+
 > unblockContactsBulk(unblockContactsBulkInputObject)
 
 Unblock contacts (bulk)
@@ -6812,22 +6482,20 @@ Unblock contacts (bulk)
 Unblock several contacts by blocked contact IDs or unblock all contacts.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var unblockContactsBulkInputObject = new TextmagicClient.UnblockContactsBulkInputObject(); // UnblockContactsBulkInputObject | 
-
-apiInstance.unblockContactsBulk(unblockContactsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let unblockContactsBulkInputObject = new TextMagicClient.UnblockContactsBulkRequest(); // UnblockContactsBulkRequest | 
+apiInstance.unblockContactsBulk(unblockContactsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6835,9 +6503,10 @@ apiInstance.unblockContactsBulk(unblockContactsBulkInputObject).then(function() 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unblockContactsBulkInputObject** | [**UnblockContactsBulkInputObject**](UnblockContactsBulkInputObject.md)|  | 
+ **unblockContactsBulkInputObject** | [**UnblockContactsBulkRequest**](UnblockContactsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -6849,11 +6518,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="unmuteChatsBulk"></a>
-# **unmuteChatsBulk**
+
+## unmuteChatsBulk
+
 > unmuteChatsBulk(unmuteChatsBulkInputObject)
 
 Unmute chats (bulk)
@@ -6861,22 +6531,20 @@ Unmute chats (bulk)
 Unmute several chats by chat ids or unmute all chats.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var unmuteChatsBulkInputObject = new TextmagicClient.UnmuteChatsBulkInputObject(); // UnmuteChatsBulkInputObject | 
-
-apiInstance.unmuteChatsBulk(unmuteChatsBulkInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let unmuteChatsBulkInputObject = new TextMagicClient.UnmuteChatsBulkRequest(); // UnmuteChatsBulkRequest | 
+apiInstance.unmuteChatsBulk(unmuteChatsBulkInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6884,9 +6552,10 @@ apiInstance.unmuteChatsBulk(unmuteChatsBulkInputObject).then(function() {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unmuteChatsBulkInputObject** | [**UnmuteChatsBulkInputObject**](UnmuteChatsBulkInputObject.md)|  | 
+ **unmuteChatsBulkInputObject** | [**UnmuteChatsBulkRequest**](UnmuteChatsBulkRequest.md)|  | 
 
 ### Return type
 
@@ -6898,34 +6567,33 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="unsubscribeContact"></a>
-# **unsubscribeContact**
+
+## unsubscribeContact
+
 > ResourceLinkResponse unsubscribeContact(unsubscribeContactInputObject)
 
 Manually unsubscribe a contact
 
-> Please note, if you unsubscribe a contact, this action cannot be reversed. 
+&gt; Please note, if you unsubscribe a contact, this action cannot be reversed. 
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var unsubscribeContactInputObject = new TextmagicClient.UnsubscribeContactInputObject(); // UnsubscribeContactInputObject | 
-
-apiInstance.unsubscribeContact(unsubscribeContactInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let unsubscribeContactInputObject = new TextMagicClient.UnsubscribeContactRequest(); // UnsubscribeContactRequest | 
+apiInstance.unsubscribeContact(unsubscribeContactInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6933,9 +6601,10 @@ apiInstance.unsubscribeContact(unsubscribeContactInputObject).then(function(data
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unsubscribeContactInputObject** | [**UnsubscribeContactInputObject**](UnsubscribeContactInputObject.md)|  | 
+ **unsubscribeContactInputObject** | [**UnsubscribeContactRequest**](UnsubscribeContactRequest.md)|  | 
 
 ### Return type
 
@@ -6947,34 +6616,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateBalanceNotificationSettings"></a>
-# **updateBalanceNotificationSettings**
+
+## updateBalanceNotificationSettings
+
 > updateBalanceNotificationSettings(updateBalanceNotificationSettingsInputObject)
 
 Update balance notification settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateBalanceNotificationSettingsInputObject = new TextmagicClient.UpdateBalanceNotificationSettingsInputObject(); // UpdateBalanceNotificationSettingsInputObject | 
-
-apiInstance.updateBalanceNotificationSettings(updateBalanceNotificationSettingsInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let updateBalanceNotificationSettingsInputObject = new TextMagicClient.UpdateBalanceNotificationSettingsRequest(); // UpdateBalanceNotificationSettingsRequest | 
+apiInstance.updateBalanceNotificationSettings(updateBalanceNotificationSettingsInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -6982,9 +6648,10 @@ apiInstance.updateBalanceNotificationSettings(updateBalanceNotificationSettingsI
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateBalanceNotificationSettingsInputObject** | [**UpdateBalanceNotificationSettingsInputObject**](UpdateBalanceNotificationSettingsInputObject.md)|  | 
+ **updateBalanceNotificationSettingsInputObject** | [**UpdateBalanceNotificationSettingsRequest**](UpdateBalanceNotificationSettingsRequest.md)|  | 
 
 ### Return type
 
@@ -6996,34 +6663,31 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="updateCallbackSettings"></a>
-# **updateCallbackSettings**
+
+## updateCallbackSettings
+
 > updateCallbackSettings(updateCallbackSettingsInputObject)
 
 Update callback URL settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateCallbackSettingsInputObject = new TextmagicClient.UpdateCallbackSettingsInputObject(); // UpdateCallbackSettingsInputObject | 
-
-apiInstance.updateCallbackSettings(updateCallbackSettingsInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let updateCallbackSettingsInputObject = new TextMagicClient.UpdateCallbackSettingsRequest(); // UpdateCallbackSettingsRequest | 
+apiInstance.updateCallbackSettings(updateCallbackSettingsInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7031,9 +6695,10 @@ apiInstance.updateCallbackSettings(updateCallbackSettingsInputObject).then(funct
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateCallbackSettingsInputObject** | [**UpdateCallbackSettingsInputObject**](UpdateCallbackSettingsInputObject.md)|  | 
+ **updateCallbackSettingsInputObject** | [**UpdateCallbackSettingsRequest**](UpdateCallbackSettingsRequest.md)|  | 
 
 ### Return type
 
@@ -7045,34 +6710,31 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateChatDesktopNotificationSettings"></a>
-# **updateChatDesktopNotificationSettings**
+
+## updateChatDesktopNotificationSettings
+
 > updateChatDesktopNotificationSettings(updateChatDesktopNotificationSettingsInputObject)
 
 Update chat desktop notification settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateChatDesktopNotificationSettingsInputObject = new TextmagicClient.UpdateChatDesktopNotificationSettingsInputObject(); // UpdateChatDesktopNotificationSettingsInputObject | 
-
-apiInstance.updateChatDesktopNotificationSettings(updateChatDesktopNotificationSettingsInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let updateChatDesktopNotificationSettingsInputObject = new TextMagicClient.UpdateChatDesktopNotificationSettingsRequest(); // UpdateChatDesktopNotificationSettingsRequest | 
+apiInstance.updateChatDesktopNotificationSettings(updateChatDesktopNotificationSettingsInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7080,9 +6742,10 @@ apiInstance.updateChatDesktopNotificationSettings(updateChatDesktopNotificationS
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateChatDesktopNotificationSettingsInputObject** | [**UpdateChatDesktopNotificationSettingsInputObject**](UpdateChatDesktopNotificationSettingsInputObject.md)|  | 
+ **updateChatDesktopNotificationSettingsInputObject** | [**UpdateChatDesktopNotificationSettingsRequest**](UpdateChatDesktopNotificationSettingsRequest.md)|  | 
 
 ### Return type
 
@@ -7094,36 +6757,32 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateContact"></a>
-# **updateContact**
-> ResourceLinkResponse updateContact(updateContactInputObject, id)
+
+## updateContact
+
+> ResourceLinkResponse updateContact(id, updateContactInputObject)
 
 Edit a contact
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateContactInputObject = new TextmagicClient.UpdateContactInputObject(); // UpdateContactInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.updateContact(updateContactInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let updateContactInputObject = new TextMagicClient.UpdateContactRequest(); // UpdateContactRequest | 
+apiInstance.updateContact(id, updateContactInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7131,10 +6790,11 @@ apiInstance.updateContact(updateContactInputObject, id).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateContactInputObject** | [**UpdateContactInputObject**](UpdateContactInputObject.md)|  | 
  **id** | **Number**|  | 
+ **updateContactInputObject** | [**UpdateContactRequest**](UpdateContactRequest.md)|  | 
 
 ### Return type
 
@@ -7146,36 +6806,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateContactNote"></a>
-# **updateContactNote**
-> ResourceLinkResponse updateContactNote(updateContactNoteInputObject, id)
+
+## updateContactNote
+
+> ResourceLinkResponse updateContactNote(id, updateContactNoteInputObject)
 
 Update a contact note
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateContactNoteInputObject = new TextmagicClient.UpdateContactNoteInputObject(); // UpdateContactNoteInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.updateContactNote(updateContactNoteInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let updateContactNoteInputObject = new TextMagicClient.UpdateContactNoteRequest(); // UpdateContactNoteRequest | 
+apiInstance.updateContactNote(id, updateContactNoteInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7183,10 +6839,11 @@ apiInstance.updateContactNote(updateContactNoteInputObject, id).then(function(da
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateContactNoteInputObject** | [**UpdateContactNoteInputObject**](UpdateContactNoteInputObject.md)|  | 
  **id** | **Number**|  | 
+ **updateContactNoteInputObject** | [**UpdateContactNoteRequest**](UpdateContactNoteRequest.md)|  | 
 
 ### Return type
 
@@ -7198,34 +6855,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateCurrentUser"></a>
-# **updateCurrentUser**
+
+## updateCurrentUser
+
 > UpdateCurrentUserResponse updateCurrentUser(updateCurrentUserInputObject)
 
 Edit current account info
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateCurrentUserInputObject = new TextmagicClient.UpdateCurrentUserInputObject(); // UpdateCurrentUserInputObject | 
-
-apiInstance.updateCurrentUser(updateCurrentUserInputObject).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let updateCurrentUserInputObject = new TextMagicClient.UpdateCurrentUserRequest(); // UpdateCurrentUserRequest | 
+apiInstance.updateCurrentUser(updateCurrentUserInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7233,9 +6887,10 @@ apiInstance.updateCurrentUser(updateCurrentUserInputObject).then(function(data) 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateCurrentUserInputObject** | [**UpdateCurrentUserInputObject**](UpdateCurrentUserInputObject.md)|  | 
+ **updateCurrentUserInputObject** | [**UpdateCurrentUserRequest**](UpdateCurrentUserRequest.md)|  | 
 
 ### Return type
 
@@ -7247,36 +6902,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateCustomField"></a>
-# **updateCustomField**
-> ResourceLinkResponse updateCustomField(updateCustomFieldInputObject, id)
+
+## updateCustomField
+
+> ResourceLinkResponse updateCustomField(id, updateCustomFieldInputObject)
 
 Edit a custom field
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateCustomFieldInputObject = new TextmagicClient.UpdateCustomFieldInputObject(); // UpdateCustomFieldInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.updateCustomField(updateCustomFieldInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let updateCustomFieldInputObject = new TextMagicClient.CreateCustomFieldRequest(); // CreateCustomFieldRequest | 
+apiInstance.updateCustomField(id, updateCustomFieldInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7284,10 +6935,11 @@ apiInstance.updateCustomField(updateCustomFieldInputObject, id).then(function(da
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateCustomFieldInputObject** | [**UpdateCustomFieldInputObject**](UpdateCustomFieldInputObject.md)|  | 
  **id** | **Number**|  | 
+ **updateCustomFieldInputObject** | [**CreateCustomFieldRequest**](CreateCustomFieldRequest.md)|  | 
 
 ### Return type
 
@@ -7299,36 +6951,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateCustomFieldValue"></a>
-# **updateCustomFieldValue**
-> ResourceLinkResponse updateCustomFieldValue(updateCustomFieldValueInputObject, id)
+
+## updateCustomFieldValue
+
+> ResourceLinkResponse updateCustomFieldValue(id, updateCustomFieldValueInputObject)
 
 Edit the custom field value of a specified contact
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateCustomFieldValueInputObject = new TextmagicClient.UpdateCustomFieldValueInputObject(); // UpdateCustomFieldValueInputObject | 
-
-var id = 554; // Number | 
-
-apiInstance.updateCustomFieldValue(updateCustomFieldValueInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 554; // Number | 
+let updateCustomFieldValueInputObject = new TextMagicClient.UpdateCustomFieldValueRequest(); // UpdateCustomFieldValueRequest | 
+apiInstance.updateCustomFieldValue(id, updateCustomFieldValueInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7336,10 +6984,11 @@ apiInstance.updateCustomFieldValue(updateCustomFieldValueInputObject, id).then(f
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateCustomFieldValueInputObject** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
  **id** | **Number**|  | 
+ **updateCustomFieldValueInputObject** | [**UpdateCustomFieldValueRequest**](UpdateCustomFieldValueRequest.md)|  | 
 
 ### Return type
 
@@ -7351,34 +7000,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateInboundMessagesNotificationSettings"></a>
-# **updateInboundMessagesNotificationSettings**
+
+## updateInboundMessagesNotificationSettings
+
 > updateInboundMessagesNotificationSettings(updateInboundMessagesNotificationSettingsInputObject)
 
 Update inbound messages notification settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateInboundMessagesNotificationSettingsInputObject = new TextmagicClient.UpdateInboundMessagesNotificationSettingsInputObject(); // UpdateInboundMessagesNotificationSettingsInputObject | 
-
-apiInstance.updateInboundMessagesNotificationSettings(updateInboundMessagesNotificationSettingsInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let updateInboundMessagesNotificationSettingsInputObject = new TextMagicClient.UpdateInboundMessagesNotificationSettingsRequest(); // UpdateInboundMessagesNotificationSettingsRequest | 
+apiInstance.updateInboundMessagesNotificationSettings(updateInboundMessagesNotificationSettingsInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7386,9 +7032,10 @@ apiInstance.updateInboundMessagesNotificationSettings(updateInboundMessagesNotif
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateInboundMessagesNotificationSettingsInputObject** | [**UpdateInboundMessagesNotificationSettingsInputObject**](UpdateInboundMessagesNotificationSettingsInputObject.md)|  | 
+ **updateInboundMessagesNotificationSettingsInputObject** | [**UpdateInboundMessagesNotificationSettingsRequest**](UpdateInboundMessagesNotificationSettingsRequest.md)|  | 
 
 ### Return type
 
@@ -7400,37 +7047,34 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="updateList"></a>
-# **updateList**
+
+## updateList
+
 > ResourceLinkResponse updateList(id, opts)
 
 Edit a list
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var id = 1; // Number | 
-
-var opts = { 
-  'updateListObject': new TextmagicClient.UpdateListObject() // UpdateListObject | 
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let opts = {
+  'updateListObject': new TextMagicClient.UpdateListRequest() // UpdateListRequest | 
 };
-apiInstance.updateList(id, opts).then(function(data) {
+apiInstance.updateList(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7438,10 +7082,11 @@ apiInstance.updateList(id, opts).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**|  | 
- **updateListObject** | [**UpdateListObject**](UpdateListObject.md)|  | [optional] 
+ **updateListObject** | [**UpdateListRequest**](UpdateListRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -7453,34 +7098,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="updateSenderSetting"></a>
-# **updateSenderSetting**
+
+## updateSenderSetting
+
 > updateSenderSetting(updateSenderSettingInputObject)
 
 Change sender settings
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateSenderSettingInputObject = new TextmagicClient.UpdateSenderSettingInputObject(); // UpdateSenderSettingInputObject | 
-
-apiInstance.updateSenderSetting(updateSenderSettingInputObject).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let updateSenderSettingInputObject = new TextMagicClient.UpdateSenderSettingRequest(); // UpdateSenderSettingRequest | 
+apiInstance.updateSenderSetting(updateSenderSettingInputObject).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7488,9 +7130,10 @@ apiInstance.updateSenderSetting(updateSenderSettingInputObject).then(function() 
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateSenderSettingInputObject** | [**UpdateSenderSettingInputObject**](UpdateSenderSettingInputObject.md)|  | 
+ **updateSenderSettingInputObject** | [**UpdateSenderSettingRequest**](UpdateSenderSettingRequest.md)|  | 
 
 ### Return type
 
@@ -7502,36 +7145,32 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: application/json
+- **Accept**: */*
 
-<a name="updateTemplate"></a>
-# **updateTemplate**
-> ResourceLinkResponse updateTemplate(updateTemplateInputObject, id)
+
+## updateTemplate
+
+> ResourceLinkResponse updateTemplate(id, updateTemplateInputObject)
 
 Update a template
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var updateTemplateInputObject = new TextmagicClient.UpdateTemplateInputObject(); // UpdateTemplateInputObject | 
-
-var id = 1; // Number | 
-
-apiInstance.updateTemplate(updateTemplateInputObject, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let updateTemplateInputObject = new TextMagicClient.CreateTemplateRequest(); // CreateTemplateRequest | 
+apiInstance.updateTemplate(id, updateTemplateInputObject).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7539,10 +7178,11 @@ apiInstance.updateTemplate(updateTemplateInputObject, id).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateTemplateInputObject** | [**UpdateTemplateInputObject**](UpdateTemplateInputObject.md)|  | 
  **id** | **Number**|  | 
+ **updateTemplateInputObject** | [**CreateTemplateRequest**](CreateTemplateRequest.md)|  | 
 
 ### Return type
 
@@ -7554,40 +7194,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="uploadAvatar"></a>
-# **uploadAvatar**
+
+## uploadAvatar
+
 > uploadAvatar(image)
 
 Upload an avatar
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var image = "/path/to/file.txt"; // File | User avatar. Should be a PNG or JPG file not more than 10 MB.
-
-apiInstance.uploadAvatar(image).then(function() {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let image = "/path/to/file"; // File | User avatar. Should be a PNG or JPG file not more than 10 MB.
+apiInstance.uploadAvatar(image).then(() => {
   console.log('API called successfully.');
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -7603,36 +7241,32 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
-<a name="uploadContactAvatar"></a>
-# **uploadContactAvatar**
-> ResourceLinkResponse uploadContactAvatar(image, id)
+
+## uploadContactAvatar
+
+> ResourceLinkResponse uploadContactAvatar(id, image)
 
 Upload an avatar
 
-
-
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var image = "/path/to/file.txt"; // File | Contact avatar. Should be a PNG or JPG file not more than 10 MB.
-
-var id = 1; // Number | 
-
-apiInstance.uploadContactAvatar(image, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let image = "/path/to/file"; // File | Contact avatar. Should be a PNG or JPG file not more than 10 MB.
+apiInstance.uploadContactAvatar(id, image).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7640,10 +7274,11 @@ apiInstance.uploadContactAvatar(image, id).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
  **image** | **File**| Contact avatar. Should be a PNG or JPG file not more than 10 MB. | 
- **id** | **Number**|  | 
 
 ### Return type
 
@@ -7655,36 +7290,34 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
-<a name="uploadListAvatar"></a>
-# **uploadListAvatar**
-> ResourceLinkResponse uploadListAvatar(image, id)
+
+## uploadListAvatar
+
+> ResourceLinkResponse uploadListAvatar(id, image)
 
 Add an avatar for a list
 
 Add an avatar for a list
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var image = "/path/to/file.txt"; // File | List avatar. Should be a PNG or JPG file not more than 10 MB.
-
-var id = 1; // Number | 
-
-apiInstance.uploadListAvatar(image, id).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let id = 1; // Number | 
+let image = "/path/to/file"; // File | List avatar. Should be a PNG or JPG file not more than 10 MB.
+apiInstance.uploadListAvatar(id, image).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7692,10 +7325,11 @@ apiInstance.uploadListAvatar(image, id).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **image** | **File**| List avatar. Should be a PNG or JPG file not more than 10 MB. | 
  **id** | **Number**|  | 
+ **image** | **File**| List avatar. Should be a PNG or JPG file not more than 10 MB. | 
 
 ### Return type
 
@@ -7707,11 +7341,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
-<a name="uploadMessageAttachment"></a>
-# **uploadMessageAttachment**
+
+## uploadMessageAttachment
+
 > UploadMessageAttachmentResponse uploadMessageAttachment(file)
 
 Upload message attachment
@@ -7719,22 +7354,20 @@ Upload message attachment
 Upload a new file to insert it as a link.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var file = "/path/to/file.txt"; // File | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
-
-apiInstance.uploadMessageAttachment(file).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let file = "/path/to/file"; // File | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
+apiInstance.uploadMessageAttachment(file).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7742,9 +7375,10 @@ apiInstance.uploadMessageAttachment(file).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats. | 
+ **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. | 
 
 ### Return type
 
@@ -7756,11 +7390,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
-<a name="uploadMessageMMSAttachment"></a>
-# **uploadMessageMMSAttachment**
+
+## uploadMessageMMSAttachment
+
 > UploadMessageAttachmentResponse uploadMessageMMSAttachment(file)
 
 Upload message mms attachment
@@ -7768,22 +7403,20 @@ Upload message mms attachment
 Upload a new file to mms.
 
 ### Example
-```javascript
-var TextmagicClient = require('textmagic-client');
-var defaultClient = TextmagicClient.ApiClient.instance;
 
+```javascript
+import TextMagicClient from 'textmagic-client';
+let defaultClient = TextMagicClient.ApiClient.instance;
 // Configure HTTP basic authorization: BasicAuth
-var BasicAuth = defaultClient.authentications['BasicAuth'];
+let BasicAuth = defaultClient.authentications['BasicAuth'];
 BasicAuth.username = 'YOUR USERNAME';
 BasicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new TextmagicClient.TextMagicApi();
-
-var file = "/path/to/file.txt"; // File | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
-
-apiInstance.uploadMessageMMSAttachment(file).then(function(data) {
+let apiInstance = new TextMagicClient.TextMagicApi();
+let file = "/path/to/file"; // File | Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats.
+apiInstance.uploadMessageMMSAttachment(file).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -7791,9 +7424,10 @@ apiInstance.uploadMessageMMSAttachment(file).then(function(data) {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats. | 
+ **file** | **File**| Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx &amp; .vcf file formats. | 
 
 ### Return type
 
@@ -7805,6 +7439,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 

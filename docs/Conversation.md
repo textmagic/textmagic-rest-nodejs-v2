@@ -1,6 +1,7 @@
-# TextmagicClient.Conversation
+# TextMagicClient.Conversation
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **sender** | **String** | Sender phone number. | 
 **messageTime** | **Date** | Time when  the message arrived at Textmagic. | 
 **text** | **String** | Message text. | 
-**receiver** | **String** | Receiver's phone number. | 
+**receiver** | **String** | Receiver&#39;s phone number. | 
 **status** | **String** | Message status (for chats outbound only). See [message delivery statuses](https://docs.textmagic.com/#section/Delivery-status-codes) for details. | 
 **firstName** | **String** | Contact first name. | 
 **lastName** | **String** | Contact last name. | 
@@ -25,11 +26,11 @@ Name | Type | Description | Notes
 **avatar** | **String** |  | [optional] 
 
 
-<a name="DirectionEnum"></a>
+
 ## Enum: DirectionEnum
 
 
-* `_in` (value: `"in"`)
+* `in` (value: `"in"`)
 
 * `out` (value: `"out"`)
 
@@ -40,7 +41,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 
@@ -65,19 +66,19 @@ Name | Type | Description | Notes
 
 
 
-<a name="ChatTypeEnum"></a>
+
 ## Enum: ChatTypeEnum
 
 
 * `sms` (value: `"sms"`)
 
-* `facebookMessenger` (value: `"facebook_messenger"`)
+* `facebook_messenger` (value: `"facebook_messenger"`)
 
 * `instagram` (value: `"instagram"`)
 
-* `whatsappBusiness` (value: `"whatsapp_business"`)
+* `whatsapp_business` (value: `"whatsapp_business"`)
 
-* `liveChat` (value: `"live_chat"`)
+* `live_chat` (value: `"live_chat"`)
 
 
 

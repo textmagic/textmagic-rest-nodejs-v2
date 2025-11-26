@@ -1,6 +1,7 @@
-# TextmagicClient.Invoice
+# TextMagicClient.Invoice
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | The invoice ID. | 

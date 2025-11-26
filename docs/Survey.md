@@ -1,6 +1,7 @@
-# TextmagicClient.Survey
+# TextMagicClient.Survey
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | 

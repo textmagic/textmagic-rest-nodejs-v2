@@ -1,6 +1,7 @@
-# TextmagicClient.MessageSession
+# TextMagicClient.MessageSession
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Session ID. | 
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | 
 
 
-<a name="DestinationEnum"></a>
+
 ## Enum: DestinationEnum
 
 

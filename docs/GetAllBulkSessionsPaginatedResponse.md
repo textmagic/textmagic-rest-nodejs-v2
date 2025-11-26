@@ -1,6 +1,7 @@
-# TextmagicClient.GetAllBulkSessionsPaginatedResponse
+# TextMagicClient.GetAllBulkSessionsPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

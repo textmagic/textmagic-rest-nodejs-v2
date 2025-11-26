@@ -1,6 +1,7 @@
-# TextmagicClient.EmailCampaignStatisticTotals
+# TextMagicClient.EmailCampaignStatisticTotals
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **recipients** | **Number** | Total number of recipients. | 

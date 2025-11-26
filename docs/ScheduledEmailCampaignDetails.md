@@ -1,6 +1,7 @@
-# TextmagicClient.ScheduledEmailCampaignDetails
+# TextMagicClient.ScheduledEmailCampaignDetails
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Unique scheduled campaign ID. | 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **createdAt** | **Date** | Campaign creation timestamp. | 
 **updatedAt** | **Date** | Last update timestamp. | 
 **type** | **String** | Campaign recurrence type. | 
-**fromName** | **String** | Sender name displayed in recipient's inbox. | [optional] 
+**fromName** | **String** | Sender name displayed in recipient&#39;s inbox. | [optional] 
 **fromEmail** | **String** | Sender email address. | 
 **replyToEmail** | **String** | Reply-to email address. | 
 **subject** | **String** | Email subject line. | 
@@ -24,7 +25,7 @@ Name | Type | Description | Notes
 **occurrenceSummary** | **String** | Human-readable schedule description. | [optional] 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 
@@ -43,7 +44,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 
@@ -59,7 +60,7 @@ Name | Type | Description | Notes
 
 * `yearly` (value: `"yearly"`)
 
-* `followUp` (value: `"follow-up"`)
+* `follow-up` (value: `"follow-up"`)
 
 
 

@@ -1,6 +1,7 @@
-# TextmagicClient.OutboundEmailResponse
+# TextMagicClient.OutboundEmailResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Outbound email ID. | 
@@ -8,8 +9,8 @@ Name | Type | Description | Notes
 **fromName** | **String** | Sender name. | [optional] 
 **fromEmail** | **String** | Sender email address. | 
 **replyToEmail** | **String** | Reply-to email address. | 
-**recipientFullName** | **String** | Recipient's full name. | [optional] 
-**recipientEmail** | **String** | Recipient's email address. | [optional] 
+**recipientFullName** | **String** | Recipient&#39;s full name. | [optional] 
+**recipientEmail** | **String** | Recipient&#39;s email address. | [optional] 
 **emailSubject** | **String** | Email subject line. | 
 **emailContent** | **String** | HTML email content. | 
 **source** | **String** | Source of the outbound email. | 
@@ -20,7 +21,7 @@ Name | Type | Description | Notes
 **initiatorId** | **Number** | ID of user who initiated the email. | 
 
 
-<a name="SourceEnum"></a>
+
 ## Enum: SourceEnum
 
 
@@ -31,7 +32,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 

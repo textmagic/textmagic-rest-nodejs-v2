@@ -1,6 +1,7 @@
-# TextmagicClient.GetCustomFieldsPaginatedResponse
+# TextMagicClient.GetCustomFieldsPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

@@ -1,6 +1,7 @@
-# TextmagicClient.Currency
+# TextMagicClient.Currency
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The 3-letter ISO currency ID. | 

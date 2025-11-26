@@ -1,6 +1,7 @@
-# TextmagicClient.SearchChatsByReceipentPaginatedResponse
+# TextMagicClient.SearchChatsByReceipentPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

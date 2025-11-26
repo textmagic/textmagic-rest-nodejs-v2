@@ -1,6 +1,7 @@
-# TextmagicClient.GetBalanceNotificationSettingsResponse
+# TextMagicClient.GetBalanceNotificationSettingsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lowBalanceNotification** | **Boolean** | Should user receive low balance notification. | 

@@ -1,6 +1,7 @@
-# TextmagicClient.GetAvailableSenderSettingOptionsResponse
+# TextMagicClient.GetAvailableSenderSettingOptionsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dedicated** | **[String]** | Array of dedicated number strings. | 

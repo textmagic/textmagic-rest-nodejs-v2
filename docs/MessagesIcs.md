@@ -1,10 +1,11 @@
-# TextmagicClient.MessagesIcs
+# TextMagicClient.MessagesIcs
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Schedule ID. | 
-**nextSend** | **Date** | The next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format.  | 
+**nextSend** | **Date** | The next send date in [ISO 8601](https://en.wikipedia.org/?title&#x3D;ISO_8601) format.  | 
 **rrule** | **String** | [iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string.  | 
 **session** | [**MessageSession**](MessageSession.md) |  | 
 **lastSent** | **Date** | The date and time when the last message was sent. | 
@@ -14,7 +15,7 @@ Name | Type | Description | Notes
 **summary** | **String** | A human-readable summary of the sending schedule. | 
 **textParameters** | [**MessagesIcsTextParameters**](MessagesIcsTextParameters.md) |  | 
 **firstOccurrence** | **Date** | First occurence date. | 
-**lastOccurrence** | **Date** | Last occurence date (could be `null` if the schedule is endless). | 
+**lastOccurrence** | **Date** | Last occurence date (could be &#x60;null&#x60; if the schedule is endless). | 
 **recipientsCount** | **Number** | Amount of actual recipients. | 
 **timezone** | **String** | User-friendly timezone name (with spaces replaced by underscores). | 
 **completed** | **Boolean** | Indicates that scheduling has been completed. | 
@@ -22,21 +23,21 @@ Name | Type | Description | Notes
 **createdAt** | **Date** | Scheduling creation time. | 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 
-* `once` (value: `"Once"`)
+* `Once` (value: `"Once"`)
 
-* `hourly` (value: `"Hourly"`)
+* `Hourly` (value: `"Hourly"`)
 
-* `daily` (value: `"Daily"`)
+* `Daily` (value: `"Daily"`)
 
-* `weekly` (value: `"Weekly"`)
+* `Weekly` (value: `"Weekly"`)
 
-* `monthly` (value: `"Monthly"`)
+* `Monthly` (value: `"Monthly"`)
 
-* `yearly` (value: `"Yearly"`)
+* `Yearly` (value: `"Yearly"`)
 
 
 

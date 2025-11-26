@@ -1,6 +1,7 @@
-# TextmagicClient.Country
+# TextMagicClient.Country
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The 2-letter ISO country ID. | 

@@ -1,6 +1,7 @@
-# TextmagicClient.GetMessagePreviewResponse
+# TextMagicClient.GetMessagePreviewResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **messages** | [**[MessageOut]**](MessageOut.md) |  | [optional] 

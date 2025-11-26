@@ -1,6 +1,7 @@
-# TextmagicClient.FileMetadata
+# TextMagicClient.FileMetadata
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | File metadata type. | 
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 **preview** | [**FileMetadataPreview**](FileMetadataPreview.md) |  | 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

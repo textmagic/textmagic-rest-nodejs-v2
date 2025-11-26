@@ -1,6 +1,7 @@
-# TextmagicClient.GetSurveysPaginatedResponse
+# TextMagicClient.GetSurveysPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

@@ -1,6 +1,7 @@
-# TextmagicClient.SendMessageResponse
+# TextMagicClient.SendMessageResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Message ID. | 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **chatId** | **Number** | Message Chat ID. | 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 

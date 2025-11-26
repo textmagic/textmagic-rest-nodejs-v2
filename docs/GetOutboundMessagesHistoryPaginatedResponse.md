@@ -1,6 +1,7 @@
-# TextmagicClient.GetOutboundMessagesHistoryPaginatedResponse
+# TextMagicClient.GetOutboundMessagesHistoryPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lastId** | **Number** |  | 

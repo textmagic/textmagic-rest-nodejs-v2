@@ -1,6 +1,7 @@
-# TextmagicClient.GetSurveyNodesResponse
+# TextMagicClient.GetSurveyNodesResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nodes** | **Object** |  | 

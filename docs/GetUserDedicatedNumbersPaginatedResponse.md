@@ -1,6 +1,7 @@
-# TextmagicClient.GetUserDedicatedNumbersPaginatedResponse
+# TextMagicClient.GetUserDedicatedNumbersPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

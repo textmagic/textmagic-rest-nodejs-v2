@@ -1,6 +1,7 @@
-# TextmagicClient.CallPriceResponse
+# TextMagicClient.CallPriceResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **outbound** | **Number** | Price for outbound message. | 

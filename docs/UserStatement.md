@@ -1,11 +1,12 @@
-# TextmagicClient.UserStatement
+# TextMagicClient.UserStatement
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | User statement ID. | 
 **userId** | **Number** | User ID. | 
-**_date** | **Date** | User statement date. | 
+**date** | **Date** | User statement date. | 
 **balance** | **Number** |  | 
 **delta** | **Number** | Balance change amount. | 
 **type** | **String** | Type of statement (what you have been charged for): *   **sms** - for sending SMS *   **number** - for renewing a dedicated number; *   **schedule** - for scheduling text messages; *   **topup** - for adding credits to your account.  | 

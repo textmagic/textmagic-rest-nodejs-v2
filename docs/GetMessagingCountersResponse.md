@@ -1,6 +1,7 @@
-# TextmagicClient.GetMessagingCountersResponse
+# TextMagicClient.GetMessagingCountersResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contacts** | **Number** | Total contacts amount. | 

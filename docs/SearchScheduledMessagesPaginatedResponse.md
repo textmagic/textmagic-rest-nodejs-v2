@@ -1,6 +1,7 @@
-# TextmagicClient.SearchScheduledMessagesPaginatedResponse
+# TextMagicClient.SearchScheduledMessagesPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

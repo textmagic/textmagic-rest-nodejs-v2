@@ -1,6 +1,7 @@
-# TextmagicClient.FileMetadataPreview
+# TextMagicClient.FileMetadataPreview
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **height** | **Number** |  | 

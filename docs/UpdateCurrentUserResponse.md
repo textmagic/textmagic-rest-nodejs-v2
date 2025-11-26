@@ -1,6 +1,7 @@
-# TextmagicClient.UpdateCurrentUserResponse
+# TextMagicClient.UpdateCurrentUserResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **String** | Username. | [optional] 

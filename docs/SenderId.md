@@ -1,6 +1,7 @@
-# TextmagicClient.SenderId
+# TextMagicClient.SenderId
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Numeric sender ID. | 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 **status** | **String** | *   **P** for Pending - this Sender ID is being reviewed by our support team; *   **R** for Rejected - our support team rejected your application for this Sender ID; *   **A** for Active.  | 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 

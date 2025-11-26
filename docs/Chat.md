@@ -1,11 +1,12 @@
-# TextmagicClient.Chat
+# TextMagicClient.Chat
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Chat ID. | 
 **originalId** | **Number** |  | 
-**phone** | **String** | Chat partner's phone number. | 
+**phone** | **String** | Chat partner&#39;s phone number. | 
 **contact** | [**Contact**](Contact.md) |  | 
 **unsubscribedContactId** | **Number** | If this field has a value, it means that the chat phone number has been unsubscribed from you and this value is an ID of an Unsubscribed contact entity. See [Get all unsubscribed contacts](https://docs.textmagic.com/#operation/getUnsubscribers). | 
 **unread** | **Number** | Total unread incoming messages. | 
@@ -26,7 +27,7 @@ Name | Type | Description | Notes
 **tags** | [**[Tag]**](Tag.md) |  | [optional] 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 
@@ -39,7 +40,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="DirectionEnum"></a>
+
 ## Enum: DirectionEnum
 
 

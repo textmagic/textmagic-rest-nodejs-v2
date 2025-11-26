@@ -1,6 +1,7 @@
-# TextmagicClient.GetAllScheduledMessagesPaginatedResponse
+# TextMagicClient.GetAllScheduledMessagesPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

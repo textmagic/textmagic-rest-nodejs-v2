@@ -1,6 +1,7 @@
-# TextmagicClient.GetInboundMessagesNotificationSettingsResponse
+# TextMagicClient.GetInboundMessagesNotificationSettingsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **inboundMessageNotification** | **Boolean** | Should user receive notification about new incoming messages. | 

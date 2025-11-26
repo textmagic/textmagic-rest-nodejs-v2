@@ -1,6 +1,7 @@
-# TextmagicClient.GetAllMessageSessionsPaginatedResponse
+# TextMagicClient.GetAllMessageSessionsPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

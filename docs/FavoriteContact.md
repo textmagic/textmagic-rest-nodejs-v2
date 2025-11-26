@@ -1,6 +1,7 @@
-# TextmagicClient.FavoriteContact
+# TextMagicClient.FavoriteContact
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entityId** | **Number** | List or Contact ID. | 
@@ -11,7 +12,7 @@ Name | Type | Description | Notes
 **avatar** | **String** |  | 
 
 
-<a name="EntityTypeEnum"></a>
+
 ## Enum: EntityTypeEnum
 
 

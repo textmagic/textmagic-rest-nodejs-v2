@@ -1,6 +1,7 @@
-# TextmagicClient.SearchOutboundMessagesPaginatedResponse
+# TextMagicClient.SearchOutboundMessagesPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

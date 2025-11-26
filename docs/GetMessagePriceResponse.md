@@ -1,6 +1,7 @@
-# TextmagicClient.GetMessagePriceResponse
+# TextMagicClient.GetMessagePriceResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **total** | **Number** | Total price of the message. | 

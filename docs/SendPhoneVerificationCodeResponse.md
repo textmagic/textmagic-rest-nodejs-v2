@@ -1,6 +1,7 @@
-# TextmagicClient.SendPhoneVerificationCodeResponse
+# TextMagicClient.SendPhoneVerificationCodeResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **verifyId** | **String** | The ID of a verification request. This is required to finish the verification request in the next step. | 

@@ -1,6 +1,7 @@
-# TextmagicClient.CustomFieldListItem
+# TextMagicClient.CustomFieldListItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Custom Field ID. | 

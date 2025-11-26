@@ -1,6 +1,7 @@
-# TextmagicClient.UsersInbound
+# TextMagicClient.UsersInbound
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Dedicated number ID. | 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **country** | [**Country**](Country.md) |  | 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 

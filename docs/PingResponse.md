@@ -1,6 +1,7 @@
-# TextmagicClient.PingResponse
+# TextMagicClient.PingResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **userId** | **Number** | Current user Id. | 

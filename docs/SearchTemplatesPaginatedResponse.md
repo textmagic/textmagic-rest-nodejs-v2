@@ -1,6 +1,7 @@
-# TextmagicClient.SearchTemplatesPaginatedResponse
+# TextMagicClient.SearchTemplatesPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

@@ -1,6 +1,7 @@
-# TextmagicClient.GetUnsubscribersPaginatedResponse
+# TextMagicClient.GetUnsubscribersPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

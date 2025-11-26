@@ -1,6 +1,7 @@
-# TextmagicClient.GetVersionsResponse
+# TextMagicClient.GetVersionsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ios** | **String** |  | 

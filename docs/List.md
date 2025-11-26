@@ -1,6 +1,7 @@
-# TextmagicClient.List
+# TextMagicClient.List
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | List ID. | 

@@ -1,6 +1,7 @@
-# TextmagicClient.DoAuthResponse
+# TextMagicClient.DoAuthResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **String** |  | 

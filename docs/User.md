@@ -1,17 +1,18 @@
-# TextmagicClient.User
+# TextMagicClient.User
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | User ID. | 
-**displayTimeFormat** | **String** | User's preferred format of time display: * *12h* - AM/PM format; * *24h* - 24-hour clock format.  | [optional] 
+**displayTimeFormat** | **String** | User&#39;s preferred format of time display: * *12h* - AM/PM format; * *24h* - 24-hour clock format.  | [optional] 
 **username** | **String** | Username. | 
 **firstName** | **String** | Account first name. | 
 **lastName** | **String** | Account last name. | 
 **email** | **String** | User email address. | 
 **status** | **String** | Current account status: * **A** for Active; * **T** for Trial.  | 
 **balance** | **Number** | Account balance (in account currency). | 
-**phone** | **String** | User's phone number. | 
+**phone** | **String** | User&#39;s phone number. | 
 **company** | **String** | Account company name. | 
 **currency** | [**Currency**](Currency.md) |  | 
 **country** | [**Country**](Country.md) |  | 
@@ -22,18 +23,18 @@ Name | Type | Description | Notes
 **avatar** | [**UserImage**](UserImage.md) |  | 
 
 
-<a name="DisplayTimeFormatEnum"></a>
+
 ## Enum: DisplayTimeFormatEnum
 
 
-* `_12h` (value: `"12h"`)
+* `12h` (value: `"12h"`)
 
-* `_24h` (value: `"24h"`)
-
-
+* `24h` (value: `"24h"`)
 
 
-<a name="StatusEnum"></a>
+
+
+
 ## Enum: StatusEnum
 
 
@@ -44,7 +45,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="SubaccountTypeEnum"></a>
+
 ## Enum: SubaccountTypeEnum
 
 

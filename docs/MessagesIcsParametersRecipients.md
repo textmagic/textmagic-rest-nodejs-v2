@@ -1,6 +1,7 @@
-# TextmagicClient.MessagesIcsParametersRecipients
+# TextMagicClient.MessagesIcsParametersRecipients
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contacts** | **[Number]** |  | 

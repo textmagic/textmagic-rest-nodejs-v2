@@ -1,6 +1,7 @@
-# TextmagicClient.BadRequestResponse
+# TextMagicClient.BadRequestResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **Number** | Error code. Meanings of error codes are similar to [HTTP response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). | [optional] 

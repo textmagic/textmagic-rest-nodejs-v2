@@ -1,6 +1,7 @@
-# TextmagicClient.UpdateSurveyCountryItem
+# TextMagicClient.UpdateSurveyCountryItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **country** | **String** | The 2-letter ISO country code. | 

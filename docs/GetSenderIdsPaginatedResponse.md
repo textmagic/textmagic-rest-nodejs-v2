@@ -1,6 +1,7 @@
-# TextmagicClient.GetSenderIdsPaginatedResponse
+# TextMagicClient.GetSenderIdsPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

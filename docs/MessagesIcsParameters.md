@@ -1,6 +1,7 @@
-# TextmagicClient.MessagesIcsParameters
+# TextMagicClient.MessagesIcsParameters
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **text** | **String** | Scheduled message text. | 

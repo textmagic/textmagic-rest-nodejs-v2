@@ -1,6 +1,7 @@
-# TextmagicClient.GetAvailableDedicatedNumbersResponse
+# TextMagicClient.GetAvailableDedicatedNumbersResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **numbers** | **[String]** | Array of phone numbers. | 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **giftType** | **String** |  | 
 
 
-<a name="GiftTypeEnum"></a>
+
 ## Enum: GiftTypeEnum
 
 
@@ -16,9 +17,9 @@ Name | Type | Description | Notes
 
 * `registration` (value: `"registration"`)
 
-* `firstMonth` (value: `"first_month"`)
+* `first_month` (value: `"first_month"`)
 
-* `includeInPlan` (value: `"include_in_plan"`)
+* `include_in_plan` (value: `"include_in_plan"`)
 
 
 

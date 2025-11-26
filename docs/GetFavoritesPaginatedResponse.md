@@ -1,6 +1,7 @@
-# TextmagicClient.GetFavoritesPaginatedResponse
+# TextMagicClient.GetFavoritesPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

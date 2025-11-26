@@ -1,6 +1,7 @@
-# TextmagicClient.GetMessageSessionStatResponse
+# TextMagicClient.GetMessageSessionStatResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **failed** | **Number** | Amount of failed messages. | 

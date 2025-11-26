@@ -1,6 +1,7 @@
-# TextmagicClient.GetInvoicesPaginatedResponse
+# TextMagicClient.GetInvoicesPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

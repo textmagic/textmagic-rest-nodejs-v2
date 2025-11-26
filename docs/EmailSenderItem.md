@@ -1,6 +1,7 @@
-# TextmagicClient.EmailSenderItem
+# TextMagicClient.EmailSenderItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Unique email sender identifier. | 
@@ -12,15 +13,15 @@ Name | Type | Description | Notes
 **replyTo** | **String** | Reply-to email address. | [optional] 
 
 
-<a name="DomainStatusEnum"></a>
+
 ## Enum: DomainStatusEnum
 
 
-* `notVerified` (value: `"not_verified"`)
+* `not_verified` (value: `"not_verified"`)
 
 * `pending` (value: `"pending"`)
 
-* `manualReview` (value: `"manual_review"`)
+* `manual_review` (value: `"manual_review"`)
 
 * `rejected` (value: `"rejected"`)
 

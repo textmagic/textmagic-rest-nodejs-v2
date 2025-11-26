@@ -1,6 +1,7 @@
-# TextmagicClient.BulkSession
+# TextMagicClient.BulkSession
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Bulk Session ID. | 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 **text** | **String** | Message text of a Bulk Session. | 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 

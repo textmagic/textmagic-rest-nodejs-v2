@@ -1,6 +1,7 @@
-# TextmagicClient.DoAuthResponseMinVersions
+# TextMagicClient.DoAuthResponseMinVersions
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ios** | **String** |  | 

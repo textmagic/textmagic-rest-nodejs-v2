@@ -1,6 +1,7 @@
-# TextmagicClient.CreateEmailCampaignResponse
+# TextMagicClient.CreateEmailCampaignResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Unique campaign ID. | 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **emailSenderId** | **Number** | Email sender ID used for this campaign. | [optional] 
 **startAt** | **Date** | Campaign start timestamp. | 
 **createdBy** | [**UserPersonalInfo**](UserPersonalInfo.md) |  | 
-**fromName** | **String** | Sender name displayed in recipient's inbox. | [optional] 
+**fromName** | **String** | Sender name displayed in recipient&#39;s inbox. | [optional] 
 **fromEmail** | **String** | Sender email address. | 
 **replyToEmail** | **String** | Reply-to email address. | 
 **subject** | **String** | Email subject line. | 
@@ -19,7 +20,7 @@ Name | Type | Description | Notes
 **failedReason** | **String** | Reason for campaign failure if applicable. | [optional] 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 
@@ -27,7 +28,7 @@ Name | Type | Description | Notes
 
 * `sent` (value: `"sent"`)
 
-* `inProgress` (value: `"in_progress"`)
+* `in_progress` (value: `"in_progress"`)
 
 * `failed` (value: `"failed"`)
 
@@ -42,7 +43,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="FailedReasonEnum"></a>
+
 ## Enum: FailedReasonEnum
 
 

@@ -1,6 +1,7 @@
-# TextmagicClient.GetSpendingStatPaginatedResponse
+# TextMagicClient.GetSpendingStatPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

@@ -1,6 +1,7 @@
-# TextmagicClient.GetContactsPaginatedResponse
+# TextMagicClient.GetContactsPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

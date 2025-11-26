@@ -1,6 +1,7 @@
-# TextmagicClient.ScheduleEmailCampaignResponse
+# TextMagicClient.ScheduleEmailCampaignResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **campaign** | [**ScheduledEmailCampaignDetails**](ScheduledEmailCampaignDetails.md) |  | 

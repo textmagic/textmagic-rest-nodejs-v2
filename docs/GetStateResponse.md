@@ -1,6 +1,7 @@
-# TextmagicClient.GetStateResponse
+# TextMagicClient.GetStateResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **systemCacheClear** | **Number** |  | 

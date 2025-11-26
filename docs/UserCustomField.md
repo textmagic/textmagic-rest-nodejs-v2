@@ -1,6 +1,7 @@
-# TextmagicClient.UserCustomField
+# TextMagicClient.UserCustomField
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Custom field ID. | 

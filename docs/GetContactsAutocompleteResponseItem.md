@@ -1,6 +1,7 @@
-# TextmagicClient.GetContactsAutocompleteResponseItem
+# TextMagicClient.GetContactsAutocompleteResponseItem
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entityId** | **Number** | Id of entity. 0 if object is a reply. | 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **value** | **String** | ID of the contact/list if entityType is contact/list OR phone number if entityType is reply. | 
 **label** | **String** | Name of the contact/list if entityType is contact/list OR phone number if entityType is reply. | 
 **sharedBy** | **String** | If contact or list was shared by another sub-account, the name of this user will be shown. | 
-**isShared** | **Boolean** | If contact or list was shared by another sub-account then `true` will be set. | 
+**isShared** | **Boolean** | If contact or list was shared by another sub-account then &#x60;true&#x60; will be set. | 
 **avatar** | **String** | Contact avatar URI. | 
 **favorited** | **Boolean** | If contact has been marked as favorite. | 
 **userId** | **Number** | Owner ID of the contact/list (if it was shared). | 
@@ -17,7 +18,7 @@ Name | Type | Description | Notes
 **rposition** | **Number** |  | 
 
 
-<a name="EntityTypeEnum"></a>
+
 ## Enum: EntityTypeEnum
 
 

@@ -1,6 +1,7 @@
-# TextmagicClient.ResourceLinkResponse
+# TextMagicClient.ResourceLinkResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Resource ID. | 

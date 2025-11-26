@@ -1,6 +1,7 @@
-# TextmagicClient.UnsubscribedContact
+# TextMagicClient.UnsubscribedContact
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Unsubscribed contact ID. | 

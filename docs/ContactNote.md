@@ -1,6 +1,7 @@
-# TextmagicClient.ContactNote
+# TextMagicClient.ContactNote
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Contact note ID. | 

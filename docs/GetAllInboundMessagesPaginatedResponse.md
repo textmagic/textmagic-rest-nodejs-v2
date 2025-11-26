@@ -1,6 +1,7 @@
-# TextmagicClient.GetAllInboundMessagesPaginatedResponse
+# TextMagicClient.GetAllInboundMessagesPaginatedResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 

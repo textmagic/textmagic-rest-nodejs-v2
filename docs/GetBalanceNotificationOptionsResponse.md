@@ -1,6 +1,7 @@
-# TextmagicClient.GetBalanceNotificationOptionsResponse
+# TextMagicClient.GetBalanceNotificationOptionsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_1** | **String** | Contains sign of currency in Unicode hex code. | 

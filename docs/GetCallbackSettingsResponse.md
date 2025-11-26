@@ -1,6 +1,7 @@
-# TextmagicClient.GetCallbackSettingsResponse
+# TextMagicClient.GetCallbackSettingsResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **outUrl** | **String** | This URL is used to push message delivery status updates to your application. | 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **format** | **String** | Desired callback data format. m - multipart/form-data, u - application/x-www-form-urlencoded, j - application/json. | 
 
 
-<a name="FormatEnum"></a>
+
 ## Enum: FormatEnum
 
 

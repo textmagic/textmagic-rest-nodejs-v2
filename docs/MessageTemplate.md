@@ -1,6 +1,7 @@
-# TextmagicClient.MessageTemplate
+# TextMagicClient.MessageTemplate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | Template ID. | 
