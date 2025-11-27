@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Timezone model module.
  * @module model/Timezone
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class Timezone {
     /**

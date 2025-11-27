@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UnsubscribedContact model module.
  * @module model/UnsubscribedContact
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UnsubscribedContact {
     /**

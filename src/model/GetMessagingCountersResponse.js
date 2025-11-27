@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetMessagingCountersResponse model module.
  * @module model/GetMessagingCountersResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetMessagingCountersResponse {
     /**

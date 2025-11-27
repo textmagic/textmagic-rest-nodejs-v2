@@ -18,7 +18,7 @@ import SurveySenderCountries from './SurveySenderCountries';
 /**
  * The Survey model module.
  * @module model/Survey
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class Survey {
     /**

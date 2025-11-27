@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MarkChatsUnreadBulkRequest model module.
  * @module model/MarkChatsUnreadBulkRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MarkChatsUnreadBulkRequest {
     /**

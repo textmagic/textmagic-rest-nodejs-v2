@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailSenderItem model module.
  * @module model/EmailSenderItem
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class EmailSenderItem {
     /**

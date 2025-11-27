@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SurveySenderCountries model module.
  * @module model/SurveySenderCountries
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class SurveySenderCountries {
     /**

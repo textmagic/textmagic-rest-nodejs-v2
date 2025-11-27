@@ -212,7 +212,7 @@ import TextMagicApi from './api/TextMagicApi';
 * </pre>
 * </p>
 * @module index
-* @version 3.0.43874
+* @version 3.0.43879
 */
 export {
     /**

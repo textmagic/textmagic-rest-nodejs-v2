@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RequestNewSubaccountTokenRequest model module.
  * @module model/RequestNewSubaccountTokenRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class RequestNewSubaccountTokenRequest {
     /**

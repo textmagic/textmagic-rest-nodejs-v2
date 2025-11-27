@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ListImage model module.
  * @module model/ListImage
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class ListImage {
     /**

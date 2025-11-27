@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetListsOfContactPaginatedResponse model module.
  * @module model/GetListsOfContactPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetListsOfContactPaginatedResponse {
     /**

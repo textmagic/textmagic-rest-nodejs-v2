@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCampaignStatisticTotals model module.
  * @module model/EmailCampaignStatisticTotals
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class EmailCampaignStatisticTotals {
     /**

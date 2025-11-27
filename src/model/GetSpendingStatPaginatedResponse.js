@@ -17,7 +17,7 @@ import UserStatement from './UserStatement';
 /**
  * The GetSpendingStatPaginatedResponse model module.
  * @module model/GetSpendingStatPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetSpendingStatPaginatedResponse {
     /**

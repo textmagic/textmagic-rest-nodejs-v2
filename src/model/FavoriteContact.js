@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FavoriteContact model module.
  * @module model/FavoriteContact
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class FavoriteContact {
     /**

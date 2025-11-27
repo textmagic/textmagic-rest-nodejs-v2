@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateContactNoteRequest model module.
  * @module model/CreateContactNoteRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class CreateContactNoteRequest {
     /**

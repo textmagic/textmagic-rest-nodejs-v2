@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateCustomFieldRequest model module.
  * @module model/CreateCustomFieldRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class CreateCustomFieldRequest {
     /**

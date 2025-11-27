@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InviteSubaccountRequest model module.
  * @module model/InviteSubaccountRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class InviteSubaccountRequest {
     /**

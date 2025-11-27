@@ -17,7 +17,7 @@ import EmailSenderItem from './EmailSenderItem';
 /**
  * The GetEmailSendersResponse model module.
  * @module model/GetEmailSendersResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetEmailSendersResponse {
     /**

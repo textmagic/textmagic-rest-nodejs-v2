@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserImage model module.
  * @module model/UserImage
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UserImage {
     /**

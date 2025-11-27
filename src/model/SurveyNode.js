@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SurveyNode model module.
  * @module model/SurveyNode
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class SurveyNode {
     /**

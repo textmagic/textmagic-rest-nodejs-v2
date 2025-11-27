@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserCustomField model module.
  * @module model/UserCustomField
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UserCustomField {
     /**

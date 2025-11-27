@@ -20,7 +20,7 @@ import UserImage from './UserImage';
 /**
  * The User model module.
  * @module model/User
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class User {
     /**

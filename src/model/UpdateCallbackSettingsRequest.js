@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateCallbackSettingsRequest model module.
  * @module model/UpdateCallbackSettingsRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UpdateCallbackSettingsRequest {
     /**

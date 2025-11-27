@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MuteChatsBulkRequest model module.
  * @module model/MuteChatsBulkRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MuteChatsBulkRequest {
     /**

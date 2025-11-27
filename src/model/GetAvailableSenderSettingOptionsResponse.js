@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetAvailableSenderSettingOptionsResponse model module.
  * @module model/GetAvailableSenderSettingOptionsResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAvailableSenderSettingOptionsResponse {
     /**

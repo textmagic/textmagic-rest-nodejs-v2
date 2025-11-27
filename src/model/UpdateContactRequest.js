@@ -17,7 +17,7 @@ import CustomFieldListItem from './CustomFieldListItem';
 /**
  * The UpdateContactRequest model module.
  * @module model/UpdateContactRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UpdateContactRequest {
     /**

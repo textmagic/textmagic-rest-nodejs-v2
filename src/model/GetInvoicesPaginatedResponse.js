@@ -17,7 +17,7 @@ import Invoice from './Invoice';
 /**
  * The GetInvoicesPaginatedResponse model module.
  * @module model/GetInvoicesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetInvoicesPaginatedResponse {
     /**

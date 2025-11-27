@@ -17,7 +17,7 @@ import MessageSession from './MessageSession';
 /**
  * The BulkSession model module.
  * @module model/BulkSession
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class BulkSession {
     /**

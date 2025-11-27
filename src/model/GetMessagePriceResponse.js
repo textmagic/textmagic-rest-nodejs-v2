@@ -17,7 +17,7 @@ import GetMessagePriceResponseCountriesItem from './GetMessagePriceResponseCount
 /**
  * The GetMessagePriceResponse model module.
  * @module model/GetMessagePriceResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetMessagePriceResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteChatsBulkRequest model module.
  * @module model/DeleteChatsBulkRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class DeleteChatsBulkRequest {
     /**

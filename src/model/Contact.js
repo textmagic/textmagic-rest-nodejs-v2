@@ -22,7 +22,7 @@ import User from './User';
 /**
  * The Contact model module.
  * @module model/Contact
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class Contact {
     /**

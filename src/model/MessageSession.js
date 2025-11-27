@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessageSession model module.
  * @module model/MessageSession
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessageSession {
     /**

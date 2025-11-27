@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AssignContactsToListRequest model module.
  * @module model/AssignContactsToListRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class AssignContactsToListRequest {
     /**

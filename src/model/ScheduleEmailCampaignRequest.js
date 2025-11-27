@@ -18,7 +18,7 @@ import ScheduleEmailCampaignRequestScheduleParams from './ScheduleEmailCampaignR
 /**
  * The ScheduleEmailCampaignRequest model module.
  * @module model/ScheduleEmailCampaignRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class ScheduleEmailCampaignRequest {
     /**

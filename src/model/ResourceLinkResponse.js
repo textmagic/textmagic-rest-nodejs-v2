@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResourceLinkResponse model module.
  * @module model/ResourceLinkResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class ResourceLinkResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessageOutSenderSource model module.
  * @module model/MessageOutSenderSource
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessageOutSenderSource {
     /**

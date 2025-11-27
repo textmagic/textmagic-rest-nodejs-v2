@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteScheduledMessagesBulkRequest model module.
  * @module model/DeleteScheduledMessagesBulkRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class DeleteScheduledMessagesBulkRequest {
     /**

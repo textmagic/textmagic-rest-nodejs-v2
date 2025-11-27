@@ -17,7 +17,7 @@ import UnsubscribedContact from './UnsubscribedContact';
 /**
  * The GetUnsubscribersPaginatedResponse model module.
  * @module model/GetUnsubscribersPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetUnsubscribersPaginatedResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ClearAndAssignContactsToListRequest model module.
  * @module model/ClearAndAssignContactsToListRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class ClearAndAssignContactsToListRequest {
     /**

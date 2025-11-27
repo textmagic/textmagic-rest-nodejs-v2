@@ -19,7 +19,7 @@ import Tag from './Tag';
 /**
  * The Chat model module.
  * @module model/Chat
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class Chat {
     /**

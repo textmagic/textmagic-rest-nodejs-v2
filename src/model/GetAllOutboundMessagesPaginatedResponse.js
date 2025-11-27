@@ -17,7 +17,7 @@ import MessageOut from './MessageOut';
 /**
  * The GetAllOutboundMessagesPaginatedResponse model module.
  * @module model/GetAllOutboundMessagesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAllOutboundMessagesPaginatedResponse {
     /**

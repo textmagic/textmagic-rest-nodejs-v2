@@ -18,7 +18,7 @@ import User from './User';
 /**
  * The UsersInbound model module.
  * @module model/UsersInbound
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UsersInbound {
     /**

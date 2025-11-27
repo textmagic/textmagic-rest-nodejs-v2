@@ -17,7 +17,7 @@ import MessageSession from './MessageSession';
 /**
  * The GetAllMessageSessionsPaginatedResponse model module.
  * @module model/GetAllMessageSessionsPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAllMessageSessionsPaginatedResponse {
     /**

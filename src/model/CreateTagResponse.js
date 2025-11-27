@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateTagResponse model module.
  * @module model/CreateTagResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class CreateTagResponse {
     /**

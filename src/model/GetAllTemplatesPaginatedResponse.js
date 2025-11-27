@@ -17,7 +17,7 @@ import MessageTemplate from './MessageTemplate';
 /**
  * The GetAllTemplatesPaginatedResponse model module.
  * @module model/GetAllTemplatesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAllTemplatesPaginatedResponse {
     /**

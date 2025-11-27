@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The NotFoundResponse model module.
  * @module model/NotFoundResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class NotFoundResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateListRequest model module.
  * @module model/UpdateListRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UpdateListRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetSurveyNodesResponse model module.
  * @module model/GetSurveyNodesResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetSurveyNodesResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CallPriceResponse model module.
  * @module model/CallPriceResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class CallPriceResponse {
     /**

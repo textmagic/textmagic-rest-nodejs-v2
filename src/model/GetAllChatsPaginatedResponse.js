@@ -17,7 +17,7 @@ import Chat from './Chat';
 /**
  * The GetAllChatsPaginatedResponse model module.
  * @module model/GetAllChatsPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAllChatsPaginatedResponse {
     /**

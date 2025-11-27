@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessagePriceItem model module.
  * @module model/MessagePriceItem
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessagePriceItem {
     /**

@@ -17,7 +17,7 @@ import UserCustomField from './UserCustomField';
 /**
  * The ContactCustomField model module.
  * @module model/ContactCustomField
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class ContactCustomField {
     /**

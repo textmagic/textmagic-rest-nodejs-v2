@@ -17,7 +17,7 @@ import MessagesIcsParametersRecipients from './MessagesIcsParametersRecipients';
 /**
  * The MessagesIcsParameters model module.
  * @module model/MessagesIcsParameters
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessagesIcsParameters {
     /**

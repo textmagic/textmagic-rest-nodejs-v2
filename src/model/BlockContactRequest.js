@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BlockContactRequest model module.
  * @module model/BlockContactRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class BlockContactRequest {
     /**

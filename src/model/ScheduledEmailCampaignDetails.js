@@ -17,7 +17,7 @@ import UserPersonalInfo from './UserPersonalInfo';
 /**
  * The ScheduledEmailCampaignDetails model module.
  * @module model/ScheduledEmailCampaignDetails
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class ScheduledEmailCampaignDetails {
     /**

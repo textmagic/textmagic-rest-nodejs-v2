@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessagePayload model module.
  * @module model/MessagePayload
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessagePayload {
     /**

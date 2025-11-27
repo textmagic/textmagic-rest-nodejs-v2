@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetUnreadMessagesTotalResponse model module.
  * @module model/GetUnreadMessagesTotalResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetUnreadMessagesTotalResponse {
     /**

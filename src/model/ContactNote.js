@@ -17,7 +17,7 @@ import User from './User';
 /**
  * The ContactNote model module.
  * @module model/ContactNote
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class ContactNote {
     /**

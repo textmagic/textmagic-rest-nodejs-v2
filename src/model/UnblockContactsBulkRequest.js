@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UnblockContactsBulkRequest model module.
  * @module model/UnblockContactsBulkRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UnblockContactsBulkRequest {
     /**

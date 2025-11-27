@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateTemplateRequest model module.
  * @module model/CreateTemplateRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class CreateTemplateRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserStatement model module.
  * @module model/UserStatement
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UserStatement {
     /**

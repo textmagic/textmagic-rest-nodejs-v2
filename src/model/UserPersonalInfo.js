@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserPersonalInfo model module.
  * @module model/UserPersonalInfo
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UserPersonalInfo {
     /**

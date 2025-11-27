@@ -17,7 +17,7 @@ import Chat from './Chat';
 /**
  * The SearchChatsByReceipentPaginatedResponse model module.
  * @module model/SearchChatsByReceipentPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class SearchChatsByReceipentPaginatedResponse {
     /**

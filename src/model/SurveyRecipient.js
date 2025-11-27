@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SurveyRecipient model module.
  * @module model/SurveyRecipient
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class SurveyRecipient {
     /**

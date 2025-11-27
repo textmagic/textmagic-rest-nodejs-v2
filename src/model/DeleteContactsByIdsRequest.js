@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteContactsByIdsRequest model module.
  * @module model/DeleteContactsByIdsRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class DeleteContactsByIdsRequest {
     /**

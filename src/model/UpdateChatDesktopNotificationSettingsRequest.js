@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateChatDesktopNotificationSettingsRequest model module.
  * @module model/UpdateChatDesktopNotificationSettingsRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UpdateChatDesktopNotificationSettingsRequest {
     /**

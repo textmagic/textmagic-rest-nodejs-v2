@@ -17,7 +17,7 @@ import MessageIn from './MessageIn';
 /**
  * The GetAllInboundMessagesPaginatedResponse model module.
  * @module model/GetAllInboundMessagesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAllInboundMessagesPaginatedResponse {
     /**

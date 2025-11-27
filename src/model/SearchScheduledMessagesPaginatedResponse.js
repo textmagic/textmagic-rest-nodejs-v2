@@ -17,7 +17,7 @@ import MessagesIcs from './MessagesIcs';
 /**
  * The SearchScheduledMessagesPaginatedResponse model module.
  * @module model/SearchScheduledMessagesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class SearchScheduledMessagesPaginatedResponse {
     /**

@@ -18,7 +18,7 @@ import MessageOutSession from './MessageOutSession';
 /**
  * The MessageOut model module.
  * @module model/MessageOut
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessageOut {
     /**

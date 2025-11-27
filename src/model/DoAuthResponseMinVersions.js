@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DoAuthResponseMinVersions model module.
  * @module model/DoAuthResponseMinVersions
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class DoAuthResponseMinVersions {
     /**

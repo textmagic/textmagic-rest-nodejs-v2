@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessagingStatItem model module.
  * @module model/MessagingStatItem
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessagingStatItem {
     /**

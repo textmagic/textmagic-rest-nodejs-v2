@@ -17,7 +17,7 @@ import UserCustomField from './UserCustomField';
 /**
  * The GetCustomFieldsPaginatedResponse model module.
  * @module model/GetCustomFieldsPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetCustomFieldsPaginatedResponse {
     /**

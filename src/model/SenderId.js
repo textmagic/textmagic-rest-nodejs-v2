@@ -17,7 +17,7 @@ import User from './User';
 /**
  * The SenderId model module.
  * @module model/SenderId
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class SenderId {
     /**

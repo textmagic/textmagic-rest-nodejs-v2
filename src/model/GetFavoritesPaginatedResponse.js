@@ -17,7 +17,7 @@ import FavoriteContact from './FavoriteContact';
 /**
  * The GetFavoritesPaginatedResponse model module.
  * @module model/GetFavoritesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetFavoritesPaginatedResponse {
     /**

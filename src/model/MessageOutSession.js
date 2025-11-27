@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessageOutSession model module.
  * @module model/MessageOutSession
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class MessageOutSession {
     /**

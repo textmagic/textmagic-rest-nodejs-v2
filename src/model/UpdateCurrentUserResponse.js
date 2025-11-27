@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateCurrentUserResponse model module.
  * @module model/UpdateCurrentUserResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class UpdateCurrentUserResponse {
     /**

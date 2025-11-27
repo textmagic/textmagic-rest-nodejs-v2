@@ -17,7 +17,7 @@ import MessageOut from './MessageOut';
 /**
  * The SearchOutboundMessagesPaginatedResponse model module.
  * @module model/SearchOutboundMessagesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class SearchOutboundMessagesPaginatedResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetAvailableDedicatedNumbersResponse model module.
  * @module model/GetAvailableDedicatedNumbersResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAvailableDedicatedNumbersResponse {
     /**

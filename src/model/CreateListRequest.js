@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateListRequest model module.
  * @module model/CreateListRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class CreateListRequest {
     /**

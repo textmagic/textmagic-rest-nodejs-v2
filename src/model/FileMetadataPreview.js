@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FileMetadataPreview model module.
  * @module model/FileMetadataPreview
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class FileMetadataPreview {
     /**

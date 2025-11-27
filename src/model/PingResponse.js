@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PingResponse model module.
  * @module model/PingResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class PingResponse {
     /**

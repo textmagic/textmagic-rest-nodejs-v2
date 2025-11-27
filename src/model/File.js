@@ -17,7 +17,7 @@ import FileMetadata from './FileMetadata';
 /**
  * The File model module.
  * @module model/File
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class File {
     /**

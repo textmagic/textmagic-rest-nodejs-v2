@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetMessageSessionStatResponse model module.
  * @module model/GetMessageSessionStatResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetMessageSessionStatResponse {
     /**

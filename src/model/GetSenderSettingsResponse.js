@@ -17,7 +17,7 @@ import SenderSettingsItem from './SenderSettingsItem';
 /**
  * The GetSenderSettingsResponse model module.
  * @module model/GetSenderSettingsResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetSenderSettingsResponse {
     /**

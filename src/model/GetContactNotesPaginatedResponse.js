@@ -17,7 +17,7 @@ import ContactNote from './ContactNote';
 /**
  * The GetContactNotesPaginatedResponse model module.
  * @module model/GetContactNotesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetContactNotesPaginatedResponse {
     /**

@@ -17,7 +17,7 @@ import CreateEmailCampaignRequestRecipients from './CreateEmailCampaignRequestRe
 /**
  * The CreateEmailCampaignRequest model module.
  * @module model/CreateEmailCampaignRequest
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class CreateEmailCampaignRequest {
     /**

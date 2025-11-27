@@ -20,7 +20,7 @@ TextMagic's application programming interface (API) provides the communication l
 ### Via npm (Recommended)
 
 ```bash
-npm install textmagic-client@3.0.43874 --save
+npm install textmagic-client --save
 ```
 
 ### Via yarn
@@ -135,7 +135,15 @@ sendMessage();
 ### Getting Outgoing Messages
 
 ```javascript
+const TextMagicClient = require('textmagic-client');
+
 async function getMessages() {
+  const defaultClient = TextMagicClient.ApiClient.instance;
+  const BasicAuth = defaultClient.authentications['BasicAuth'];
+
+  BasicAuth.username = 'YOUR_USERNAME';
+  BasicAuth.password = 'YOUR_API_KEY';
+
   const api = new TextMagicClient.TextMagicApi();
 
   try {
@@ -158,9 +166,16 @@ getMessages();
 ### Uploading Files
 
 ```javascript
+const TextMagicClient = require('textmagic-client');
 const fs = require('fs');
 
 async function uploadAvatar() {
+  const defaultClient = TextMagicClient.ApiClient.instance;
+  const BasicAuth = defaultClient.authentications['BasicAuth'];
+
+  BasicAuth.username = 'YOUR_USERNAME';
+  BasicAuth.password = 'YOUR_API_KEY';
+
   const api = new TextMagicClient.TextMagicApi();
 
   try {
@@ -174,6 +189,92 @@ async function uploadAvatar() {
 
 uploadAvatar();
 ```
+
+## Error Handling
+
+The SDK uses Promises and can throw errors that should be properly handled:
+
+```javascript
+const TextMagicClient = require('textmagic-client');
+
+async function handleErrors() {
+  const defaultClient = TextMagicClient.ApiClient.instance;
+  const BasicAuth = defaultClient.authentications['BasicAuth'];
+
+  BasicAuth.username = 'YOUR_USERNAME';
+  BasicAuth.password = 'YOUR_API_KEY';
+
+  const api = new TextMagicClient.TextMagicApi();
+
+  try {
+    const result = await api.sendMessage({
+      text: 'Test message',
+      phones: '+1234567890'
+    });
+    console.log('Success:', result);
+  } catch (error) {
+    // Handle different types of errors
+    if (error.response) {
+      // API returned an error response
+      console.error('API Error:', error.response.status);
+      console.error('Error details:', error.response.body);
+    } else if (error.request) {
+      // Request was made but no response received
+      console.error('Network Error:', error.message);
+    } else {
+      // Something else went wrong
+      console.error('Error:', error.message);
+    }
+  }
+}
+
+handleErrors();
+```
+
+### Common Error Codes
+
+- **401 Unauthorized** - Invalid credentials
+- **400 Bad Request** - Invalid parameters
+- **404 Not Found** - Resource not found
+- **429 Too Many Requests** - Rate limit exceeded
+- **500 Internal Server Error** - Server error
+
+## API Documentation
+
+For complete API documentation, including all available methods, parameters, and response formats, please visit:
+
+- 📖 **[TextMagic API Documentation](https://docs.textmagic.com/)**
+- 🔗 **[API Reference](https://docs.textmagic.com/#tag/TextMagic-API)**
+
+### Available API Methods
+
+The SDK provides access to all TextMagic API endpoints through the `TextMagicApi` class. Some commonly used methods include:
+
+**Messaging:**
+- `sendMessage(request)` - Send SMS messages
+- `getAllOutboundMessages(page, limit)` - Get sent messages
+- `getAllInboundMessages(page, limit)` - Get received messages
+- `deleteMessage(id)` - Delete a message
+
+**Contacts:**
+- `createContact(request)` - Create a new contact
+- `getContact(id)` - Get contact details
+- `updateContact(id, request)` - Update contact information
+- `deleteContact(id)` - Delete a contact
+- `getAllContacts(page, limit)` - Get all contacts
+
+**Lists:**
+- `createList(request)` - Create a contact list
+- `getList(id)` - Get list details
+- `getAllLists(page, limit)` - Get all lists
+- `assignContactsToList(request)` - Add contacts to a list
+
+**Account:**
+- `ping()` - Test API connection
+- `getUser()` - Get account information
+- `getUserBalance()` - Get account balance
+
+For a complete list of available methods, please refer to the generated SDK documentation in the `docs/` directory.
 
 ## Migration Guide from v2.x to v3.x
 
@@ -254,8 +355,8 @@ api.getContact(id);
 
 2. **Update Package Dependencies**
    ```bash
-   # Update package.json
-   npm install textmagic-client@^3.0.0 --save
+   # Update to latest version
+   npm install textmagic-client@latest --save
 
    # Or update all dependencies
    npm update

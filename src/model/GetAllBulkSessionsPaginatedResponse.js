@@ -17,7 +17,7 @@ import BulkSession from './BulkSession';
 /**
  * The GetAllBulkSessionsPaginatedResponse model module.
  * @module model/GetAllBulkSessionsPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAllBulkSessionsPaginatedResponse {
     /**

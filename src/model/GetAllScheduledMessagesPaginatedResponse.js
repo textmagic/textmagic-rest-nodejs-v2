@@ -17,7 +17,7 @@ import MessagesIcs from './MessagesIcs';
 /**
  * The GetAllScheduledMessagesPaginatedResponse model module.
  * @module model/GetAllScheduledMessagesPaginatedResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetAllScheduledMessagesPaginatedResponse {
     /**

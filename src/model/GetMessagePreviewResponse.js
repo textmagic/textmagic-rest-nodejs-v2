@@ -17,7 +17,7 @@ import MessageOut from './MessageOut';
 /**
  * The GetMessagePreviewResponse model module.
  * @module model/GetMessagePreviewResponse
- * @version 3.0.43874
+ * @version 3.0.43879
  */
 class GetMessagePreviewResponse {
     /**
