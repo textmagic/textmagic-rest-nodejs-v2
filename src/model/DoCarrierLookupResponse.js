@@ -17,7 +17,7 @@ import Country from './Country';
 /**
  * The DoCarrierLookupResponse model module.
  * @module model/DoCarrierLookupResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class DoCarrierLookupResponse {
     /**

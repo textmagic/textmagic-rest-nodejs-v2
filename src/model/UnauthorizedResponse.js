@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UnauthorizedResponse model module.
  * @module model/UnauthorizedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class UnauthorizedResponse {
     /**

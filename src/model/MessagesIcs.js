@@ -19,7 +19,7 @@ import MessagesIcsTextParameters from './MessagesIcsTextParameters';
 /**
  * The MessagesIcs model module.
  * @module model/MessagesIcs
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class MessagesIcs {
     /**

@@ -17,7 +17,7 @@ import BadRequestResponseErrors from './BadRequestResponseErrors';
 /**
  * The BadRequestResponse model module.
  * @module model/BadRequestResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class BadRequestResponse {
     /**

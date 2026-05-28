@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UploadMessageAttachmentResponse model module.
  * @module model/UploadMessageAttachmentResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class UploadMessageAttachmentResponse {
     /**

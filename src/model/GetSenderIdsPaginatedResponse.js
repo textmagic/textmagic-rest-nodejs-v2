@@ -17,7 +17,7 @@ import SenderId from './SenderId';
 /**
  * The GetSenderIdsPaginatedResponse model module.
  * @module model/GetSenderIdsPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetSenderIdsPaginatedResponse {
     /**

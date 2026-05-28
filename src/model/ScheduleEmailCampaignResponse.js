@@ -17,7 +17,7 @@ import ScheduledEmailCampaignDetails from './ScheduledEmailCampaignDetails';
 /**
  * The ScheduleEmailCampaignResponse model module.
  * @module model/ScheduleEmailCampaignResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class ScheduleEmailCampaignResponse {
     /**

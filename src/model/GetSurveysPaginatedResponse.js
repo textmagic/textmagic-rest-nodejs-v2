@@ -17,7 +17,7 @@ import Survey from './Survey';
 /**
  * The GetSurveysPaginatedResponse model module.
  * @module model/GetSurveysPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetSurveysPaginatedResponse {
     /**

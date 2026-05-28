@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetBalanceNotificationOptionsResponse model module.
  * @module model/GetBalanceNotificationOptionsResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetBalanceNotificationOptionsResponse {
     /**

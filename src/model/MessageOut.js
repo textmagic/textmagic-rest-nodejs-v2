@@ -18,7 +18,7 @@ import MessageOutSession from './MessageOutSession';
 /**
  * The MessageOut model module.
  * @module model/MessageOut
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class MessageOut {
     /**
@@ -107,6 +107,9 @@ class MessageOut {
             }
             if (data.hasOwnProperty('deleted')) {
                 obj['deleted'] = ApiClient.convertToType(data['deleted'], 'Boolean');
+            }
+            if (data.hasOwnProperty('deliveredAt')) {
+                obj['deliveredAt'] = ApiClient.convertToType(data['deliveredAt'], 'Date');
             }
             if (data.hasOwnProperty('charset')) {
                 obj['charset'] = ApiClient.convertToType(data['charset'], 'String');
@@ -296,6 +299,12 @@ MessageOut.prototype['avatar'] = undefined;
  * @member {Boolean} deleted
  */
 MessageOut.prototype['deleted'] = undefined;
+
+/**
+ * Time when message was delivered.
+ * @member {Date} deliveredAt
+ */
+MessageOut.prototype['deliveredAt'] = undefined;
 
 /**
  * Message charset. Could be: *   **ISO-8859-1** for plaintext SMS; *   **UTF-16BE** for Unicode SMS. 

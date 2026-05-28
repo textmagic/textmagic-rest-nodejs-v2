@@ -17,7 +17,7 @@ import UsersInbound from './UsersInbound';
 /**
  * The GetUserDedicatedNumbersPaginatedResponse model module.
  * @module model/GetUserDedicatedNumbersPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetUserDedicatedNumbersPaginatedResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateCustomFieldValueRequest model module.
  * @module model/UpdateCustomFieldValueRequest
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class UpdateCustomFieldValueRequest {
     /**

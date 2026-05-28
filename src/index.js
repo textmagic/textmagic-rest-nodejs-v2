@@ -40,6 +40,7 @@ import CreateTagResponse from './model/CreateTagResponse';
 import CreateTemplateRequest from './model/CreateTemplateRequest';
 import Currency from './model/Currency';
 import CustomFieldListItem from './model/CustomFieldListItem';
+import CustomFieldValues from './model/CustomFieldValues';
 import DeleteChatMessagesRequest from './model/DeleteChatMessagesRequest';
 import DeleteChatsBulkRequest from './model/DeleteChatsBulkRequest';
 import DeleteContactNotesBulkRequest from './model/DeleteContactNotesBulkRequest';
@@ -124,6 +125,7 @@ import MessagingStatItem from './model/MessagingStatItem';
 import MuteChatRequest from './model/MuteChatRequest';
 import MuteChatsBulkRequest from './model/MuteChatsBulkRequest';
 import NotFoundResponse from './model/NotFoundResponse';
+import NullableUserPersonalInfo from './model/NullableUserPersonalInfo';
 import OutboundEmailResponse from './model/OutboundEmailResponse';
 import PingResponse from './model/PingResponse';
 import PushToken from './model/PushToken';
@@ -212,7 +214,7 @@ import TextMagicApi from './api/TextMagicApi';
 * </pre>
 * </p>
 * @module index
-* @version 3.0.43879
+* @version 3.0.50062
 */
 export {
     /**
@@ -382,6 +384,12 @@ export {
      * @property {module:model/CustomFieldListItem}
      */
     CustomFieldListItem,
+
+    /**
+     * The CustomFieldValues model constructor.
+     * @property {module:model/CustomFieldValues}
+     */
+    CustomFieldValues,
 
     /**
      * The DeleteChatMessagesRequest model constructor.
@@ -886,6 +894,12 @@ export {
      * @property {module:model/NotFoundResponse}
      */
     NotFoundResponse,
+
+    /**
+     * The NullableUserPersonalInfo model constructor.
+     * @property {module:model/NullableUserPersonalInfo}
+     */
+    NullableUserPersonalInfo,
 
     /**
      * The OutboundEmailResponse model constructor.

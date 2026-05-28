@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateEmailCampaignRequestRecipients model module.
  * @module model/CreateEmailCampaignRequestRecipients
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class CreateEmailCampaignRequestRecipients {
     /**

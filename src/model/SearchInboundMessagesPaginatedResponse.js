@@ -17,7 +17,7 @@ import MessageIn from './MessageIn';
 /**
  * The SearchInboundMessagesPaginatedResponse model module.
  * @module model/SearchInboundMessagesPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class SearchInboundMessagesPaginatedResponse {
     /**

@@ -59,6 +59,7 @@ Name | Type | Description | Notes
 **liveChatRated** | **Number** |  | 
 **webWidgetUpdated** | **Number** |  | 
 **webWidgetDeleted** | **Number** |  | 
+**webWidgetCreated** | **Number** |  | 
 **contactAdded** | **Number** |  | 
 **contactDeleted** | **Number** |  | 
 **contactBulkUpdated** | **Number** |  | 
@@ -194,5 +195,17 @@ Name | Type | Description | Notes
 **emailCampaignFailedAttemptCreated** | **Number** |  | 
 **emailCampaignFailedAttemptDeleted** | **Number** |  | 
 **emailCampaignFailedAttemptStateUpdated** | **Number** |  | 
+**tollFreePreFillCompleted** | **Number** |  | 
+**tollFreePreFillFailed** | **Number** |  | 
+**tollFreeComplianceCheckCompleted** | **Number** |  | 
+**tollFreeComplianceCheckFailed** | **Number** |  | 
+**tenDlcPreFillCompleted** | **Number** |  | 
+**tenDlcPreFillFailed** | **Number** |  | 
+**tenDlcComplianceCheckCompleted** | **Number** |  | 
+**tenDlcComplianceCheckFailed** | **Number** |  | 
+**marketingDataModalChanged** | **Number** |  | 
+**integrationStatusChanged** | **Number** |  | 
+**integrationCustomerSyncProgressState** | **Number** |  | 
+**integrationCustomerSyncEnd** | **Number** |  | 
 
 

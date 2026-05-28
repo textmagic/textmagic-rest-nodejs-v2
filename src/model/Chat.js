@@ -14,12 +14,13 @@
 import ApiClient from '../ApiClient';
 import Contact from './Contact';
 import Country from './Country';
+import NullableUserPersonalInfo from './NullableUserPersonalInfo';
 import Tag from './Tag';
 
 /**
  * The Chat model module.
  * @module model/Chat
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class Chat {
     /**
@@ -45,10 +46,13 @@ class Chat {
      * @param type {String} Chat type.
      * @param smsPrice {Number} 
      * @param mmsPrice {Number} 
+     * @param assigneeId {Number} 
+     * @param createdAt {Date} Chat creation date and time.
+     * @param messageTime {Date} Chat last message date and time.
      */
-    constructor(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned, type, smsPrice, mmsPrice) { 
+    constructor(id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned, type, smsPrice, mmsPrice, assigneeId, createdAt, messageTime) { 
         
-        Chat.initialize(this, id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned, type, smsPrice, mmsPrice);
+        Chat.initialize(this, id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned, type, smsPrice, mmsPrice, assigneeId, createdAt, messageTime);
     }
 
     /**
@@ -56,7 +60,7 @@ class Chat {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned, type, smsPrice, mmsPrice) { 
+    static initialize(obj, id, originalId, phone, contact, unsubscribedContactId, unread, updatedAt, status, mute, lastMessage, direction, replyOptionsType, from, mutedUntil, timeLeftMute, country, pinned, type, smsPrice, mmsPrice, assigneeId, createdAt, messageTime) { 
         obj['id'] = id;
         obj['originalId'] = originalId;
         obj['phone'] = phone;
@@ -77,6 +81,9 @@ class Chat {
         obj['type'] = type;
         obj['smsPrice'] = smsPrice;
         obj['mmsPrice'] = mmsPrice;
+        obj['assigneeId'] = assigneeId;
+        obj['createdAt'] = createdAt;
+        obj['messageTime'] = messageTime;
     }
 
     /**
@@ -153,6 +160,18 @@ class Chat {
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [Tag]);
             }
+            if (data.hasOwnProperty('assigneeId')) {
+                obj['assigneeId'] = ApiClient.convertToType(data['assigneeId'], 'Number');
+            }
+            if (data.hasOwnProperty('updatedBy')) {
+                obj['updatedBy'] = NullableUserPersonalInfo.constructFromObject(data['updatedBy']);
+            }
+            if (data.hasOwnProperty('createdAt')) {
+                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
+            }
+            if (data.hasOwnProperty('messageTime')) {
+                obj['messageTime'] = ApiClient.convertToType(data['messageTime'], 'Date');
+            }
         }
         return obj;
     }
@@ -215,6 +234,10 @@ class Chat {
                 Tag.validateJSON(item);
             };
         }
+        // validate the optional field `updatedBy`
+        if (data['updatedBy']) { // data not null
+          NullableUserPersonalInfo.validateJSON(data['updatedBy']);
+        }
 
         return true;
     }
@@ -222,7 +245,7 @@ class Chat {
 
 }
 
-Chat.RequiredProperties = ["id", "originalId", "phone", "contact", "unsubscribedContactId", "unread", "updatedAt", "status", "mute", "lastMessage", "direction", "replyOptionsType", "from", "mutedUntil", "timeLeftMute", "country", "pinned", "type", "smsPrice", "mmsPrice"];
+Chat.RequiredProperties = ["id", "originalId", "phone", "contact", "unsubscribedContactId", "unread", "updatedAt", "status", "mute", "lastMessage", "direction", "replyOptionsType", "from", "mutedUntil", "timeLeftMute", "country", "pinned", "type", "smsPrice", "mmsPrice", "assigneeId", "createdAt", "messageTime"];
 
 /**
  * Chat ID.
@@ -343,6 +366,28 @@ Chat.prototype['mmsPrice'] = undefined;
  * @member {Array.<module:model/Tag>} tags
  */
 Chat.prototype['tags'] = undefined;
+
+/**
+ * @member {Number} assigneeId
+ */
+Chat.prototype['assigneeId'] = undefined;
+
+/**
+ * @member {module:model/NullableUserPersonalInfo} updatedBy
+ */
+Chat.prototype['updatedBy'] = undefined;
+
+/**
+ * Chat creation date and time.
+ * @member {Date} createdAt
+ */
+Chat.prototype['createdAt'] = undefined;
+
+/**
+ * Chat last message date and time.
+ * @member {Date} messageTime
+ */
+Chat.prototype['messageTime'] = undefined;
 
 
 

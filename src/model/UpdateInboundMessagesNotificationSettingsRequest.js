@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateInboundMessagesNotificationSettingsRequest model module.
  * @module model/UpdateInboundMessagesNotificationSettingsRequest
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class UpdateInboundMessagesNotificationSettingsRequest {
     /**

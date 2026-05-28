@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ContactImage model module.
  * @module model/ContactImage
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class ContactImage {
     /**

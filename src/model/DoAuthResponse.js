@@ -17,7 +17,7 @@ import DoAuthResponseMinVersions from './DoAuthResponseMinVersions';
 /**
  * The DoAuthResponse model module.
  * @module model/DoAuthResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class DoAuthResponse {
     /**

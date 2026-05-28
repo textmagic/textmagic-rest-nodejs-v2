@@ -17,7 +17,7 @@ import Conversation from './Conversation';
 /**
  * The GetChatMessagesPaginatedResponse model module.
  * @module model/GetChatMessagesPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetChatMessagesPaginatedResponse {
     /**

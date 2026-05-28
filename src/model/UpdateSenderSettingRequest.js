@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateSenderSettingRequest model module.
  * @module model/UpdateSenderSettingRequest
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class UpdateSenderSettingRequest {
     /**

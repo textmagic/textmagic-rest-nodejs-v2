@@ -17,7 +17,7 @@ import FileMetadataPreview from './FileMetadataPreview';
 /**
  * The FileMetadata model module.
  * @module model/FileMetadata
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class FileMetadata {
     /**

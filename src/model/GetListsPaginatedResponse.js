@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetListsPaginatedResponse model module.
  * @module model/GetListsPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetListsPaginatedResponse {
     /**

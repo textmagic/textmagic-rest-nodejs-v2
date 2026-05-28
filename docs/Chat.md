@@ -25,6 +25,10 @@ Name | Type | Description | Notes
 **smsPrice** | **Number** |  | 
 **mmsPrice** | **Number** |  | 
 **tags** | [**[Tag]**](Tag.md) |  | [optional] 
+**assigneeId** | **Number** |  | 
+**updatedBy** | [**NullableUserPersonalInfo**](NullableUserPersonalInfo.md) |  | [optional] 
+**createdAt** | **Date** | Chat creation date and time. | 
+**messageTime** | **Date** | Chat last message date and time. | 
 
 
 

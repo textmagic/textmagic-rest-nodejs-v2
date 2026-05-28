@@ -17,7 +17,7 @@ import MessagePayload from './MessagePayload';
 /**
  * The Conversation model module.
  * @module model/Conversation
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class Conversation {
     /**

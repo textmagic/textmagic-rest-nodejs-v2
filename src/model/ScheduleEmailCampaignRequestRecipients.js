@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScheduleEmailCampaignRequestRecipients model module.
  * @module model/ScheduleEmailCampaignRequestRecipients
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class ScheduleEmailCampaignRequestRecipients {
     /**

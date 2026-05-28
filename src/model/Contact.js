@@ -16,13 +16,14 @@ import ContactImage from './ContactImage';
 import ContactNote from './ContactNote';
 import Country from './Country';
 import CustomFieldListItem from './CustomFieldListItem';
+import CustomFieldValues from './CustomFieldValues';
 import Tag from './Tag';
 import User from './User';
 
 /**
  * The Contact model module.
  * @module model/Contact
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class Contact {
     /**
@@ -38,15 +39,16 @@ class Contact {
      * @param email {String} Contact email address.
      * @param country {module:model/Country} 
      * @param customFields {Array.<module:model/CustomFieldListItem>} 
+     * @param customFieldValues {Array.<module:model/CustomFieldValues>} 
      * @param user {module:model/User} 
      * @param lists {Array.<Array>} 
      * @param phoneType {String} Phone number type: * **0** if it is fixed-line; * **1** if it is mobile; * **2** if it is mobile or fixed-line (in case we cannot distingush between fixed-line or mobile); * **3** if it is toll-free; * **4** if it is a premium rate phone; * **5** if it is a shared cost phone; * **6** if it is a VoIP; * **7** if it is a [Personal Number](); * **8** if it is a pager; * **9** if it is a Universal Access Number; * **10** if the phone type is unknown; * **-1** if the phone type is not yet processed or cannot be determined. 
      * @param avatar {module:model/ContactImage} 
      * @param notes {Array.<module:model/ContactNote>} 
      */
-    constructor(id, favorited, blocked, firstName, lastName, companyName, phone, email, country, customFields, user, lists, phoneType, avatar, notes) { 
+    constructor(id, favorited, blocked, firstName, lastName, companyName, phone, email, country, customFields, customFieldValues, user, lists, phoneType, avatar, notes) { 
         
-        Contact.initialize(this, id, favorited, blocked, firstName, lastName, companyName, phone, email, country, customFields, user, lists, phoneType, avatar, notes);
+        Contact.initialize(this, id, favorited, blocked, firstName, lastName, companyName, phone, email, country, customFields, customFieldValues, user, lists, phoneType, avatar, notes);
     }
 
     /**
@@ -54,7 +56,7 @@ class Contact {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, favorited, blocked, firstName, lastName, companyName, phone, email, country, customFields, user, lists, phoneType, avatar, notes) { 
+    static initialize(obj, id, favorited, blocked, firstName, lastName, companyName, phone, email, country, customFields, customFieldValues, user, lists, phoneType, avatar, notes) { 
         obj['id'] = id;
         obj['favorited'] = favorited;
         obj['blocked'] = blocked;
@@ -65,6 +67,7 @@ class Contact {
         obj['email'] = email;
         obj['country'] = country;
         obj['customFields'] = customFields;
+        obj['customFieldValues'] = customFieldValues;
         obj['user'] = user;
         obj['lists'] = lists;
         obj['phoneType'] = phoneType;
@@ -112,6 +115,9 @@ class Contact {
             }
             if (data.hasOwnProperty('customFields')) {
                 obj['customFields'] = ApiClient.convertToType(data['customFields'], [CustomFieldListItem]);
+            }
+            if (data.hasOwnProperty('customFieldValues')) {
+                obj['customFieldValues'] = ApiClient.convertToType(data['customFieldValues'], [CustomFieldValues]);
             }
             if (data.hasOwnProperty('user')) {
                 obj['user'] = User.constructFromObject(data['user']);
@@ -187,6 +193,16 @@ class Contact {
                 CustomFieldListItem.validateJSON(item);
             };
         }
+        if (data['customFieldValues']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['customFieldValues'])) {
+                throw new Error("Expected the field `customFieldValues` to be an array in the JSON data but got " + data['customFieldValues']);
+            }
+            // validate the optional field `customFieldValues` (array)
+            for (const item of data['customFieldValues']) {
+                CustomFieldValues.validateJSON(item);
+            };
+        }
         // validate the optional field `user`
         if (data['user']) { // data not null
           User.validateJSON(data['user']);
@@ -244,7 +260,7 @@ class Contact {
 
 }
 
-Contact.RequiredProperties = ["id", "favorited", "blocked", "firstName", "lastName", "companyName", "phone", "email", "country", "customFields", "user", "lists", "phoneType", "avatar", "notes"];
+Contact.RequiredProperties = ["id", "favorited", "blocked", "firstName", "lastName", "companyName", "phone", "email", "country", "customFields", "customFieldValues", "user", "lists", "phoneType", "avatar", "notes"];
 
 /**
  * Contact ID.
@@ -303,6 +319,11 @@ Contact.prototype['country'] = undefined;
  * @member {Array.<module:model/CustomFieldListItem>} customFields
  */
 Contact.prototype['customFields'] = undefined;
+
+/**
+ * @member {Array.<module:model/CustomFieldValues>} customFieldValues
+ */
+Contact.prototype['customFieldValues'] = undefined;
 
 /**
  * @member {module:model/User} user

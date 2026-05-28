@@ -17,7 +17,7 @@ import MessageTemplate from './MessageTemplate';
 /**
  * The SearchTemplatesPaginatedResponse model module.
  * @module model/SearchTemplatesPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class SearchTemplatesPaginatedResponse {
     /**

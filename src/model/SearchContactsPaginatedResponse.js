@@ -17,7 +17,7 @@ import Contact from './Contact';
 /**
  * The SearchContactsPaginatedResponse model module.
  * @module model/SearchContactsPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class SearchContactsPaginatedResponse {
     /**

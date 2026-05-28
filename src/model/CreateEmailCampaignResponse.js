@@ -19,7 +19,7 @@ import UserPersonalInfo from './UserPersonalInfo';
 /**
  * The CreateEmailCampaignResponse model module.
  * @module model/CreateEmailCampaignResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class CreateEmailCampaignResponse {
     /**

@@ -132,7 +132,7 @@ import UsersInbound from '../model/UsersInbound';
 /**
 * TextMagic service.
 * @module api/TextMagicApi
-* @version 3.0.43879
+* @version 3.0.50062
 */
 export default class TextMagicApi {
 

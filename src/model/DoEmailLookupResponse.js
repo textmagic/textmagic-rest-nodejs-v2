@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DoEmailLookupResponse model module.
  * @module model/DoEmailLookupResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class DoEmailLookupResponse {
     /**

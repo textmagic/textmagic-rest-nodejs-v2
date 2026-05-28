@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MessagesIcsParametersRecipients model module.
  * @module model/MessagesIcsParametersRecipients
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class MessagesIcsParametersRecipients {
     /**

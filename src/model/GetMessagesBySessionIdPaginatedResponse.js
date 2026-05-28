@@ -17,7 +17,7 @@ import MessageOut from './MessageOut';
 /**
  * The GetMessagesBySessionIdPaginatedResponse model module.
  * @module model/GetMessagesBySessionIdPaginatedResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetMessagesBySessionIdPaginatedResponse {
     /**

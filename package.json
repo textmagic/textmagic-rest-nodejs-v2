@@ -1,6 +1,6 @@
 {
   "name": "textmagic-client",
-  "version": "3.0.43879",
+  "version": "3.0.50062",
   "description": "JavaScript wrapper library for TextMagic API",
   "license": "MIT",
   "main": "dist/index.js",

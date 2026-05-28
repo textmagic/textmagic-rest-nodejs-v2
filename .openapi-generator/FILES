@@ -29,6 +29,7 @@ docs/CreateTagResponse.md
 docs/CreateTemplateRequest.md
 docs/Currency.md
 docs/CustomFieldListItem.md
+docs/CustomFieldValues.md
 docs/DeleteChatMessagesRequest.md
 docs/DeleteChatsBulkRequest.md
 docs/DeleteContactNotesBulkRequest.md
@@ -113,6 +114,7 @@ docs/MessagingStatItem.md
 docs/MuteChatRequest.md
 docs/MuteChatsBulkRequest.md
 docs/NotFoundResponse.md
+docs/NullableUserPersonalInfo.md
 docs/OutboundEmailResponse.md
 docs/PingResponse.md
 docs/PushToken.md
@@ -203,6 +205,7 @@ src/model/CreateTagResponse.js
 src/model/CreateTemplateRequest.js
 src/model/Currency.js
 src/model/CustomFieldListItem.js
+src/model/CustomFieldValues.js
 src/model/DeleteChatMessagesRequest.js
 src/model/DeleteChatsBulkRequest.js
 src/model/DeleteContactNotesBulkRequest.js
@@ -287,6 +290,7 @@ src/model/MessagingStatItem.js
 src/model/MuteChatRequest.js
 src/model/MuteChatsBulkRequest.js
 src/model/NotFoundResponse.js
+src/model/NullableUserPersonalInfo.js
 src/model/OutboundEmailResponse.js
 src/model/PingResponse.js
 src/model/PushToken.js

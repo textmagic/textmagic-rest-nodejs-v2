@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetCallbackSettingsResponse model module.
  * @module model/GetCallbackSettingsResponse
- * @version 3.0.43879
+ * @version 3.0.50062
  */
 class GetCallbackSettingsResponse {
     /**
